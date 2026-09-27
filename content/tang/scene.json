@@ -1,0 +1,92 @@
+{
+  "scene": {
+    "id": "tang_bunian_scroll",
+    "name": "《步辇图》横向画卷",
+    "scene_kind": "image",
+    "background_asset_id": "/assets/tang/bunian-original.jpg",
+    "width": 3053,
+    "height": 853,
+    "disclaimer": "历史画是理解历史的重要图像材料，但画面表现、艺术创作和历史现场之间不能简单画等号。具体历史事实需要与文献和其他材料互相核验。",
+    "asset_source": "historical_original",
+    "asset_source_url": "https://commons.wikimedia.org/wiki/File:Buliantu.jpg",
+    "asset_license": "Public domain",
+    "aspect_note": "画卷为横向手卷形态，画心据故宫博物院藏品页著录为纵38.5厘米、横129厘米，场景画布按约3.33:1设定，仅用于交互布局，不代表文物实际尺寸。",
+    "interaction_note": "画面所有人物热点均为人工预标注，不使用图像识别、人脸识别或OCR自动生成。",
+    "review_status": "review",
+    "content_team_todo": "1) 待《步辇图》合法高清图确定后，由内容组按最终图重标本场景全部热点坐标；2) 画布宽高比需按最终采用的图像文件实际像素复核；3) 免责声明文案与 §2.4 固定提示一致，改文须同步更新前端固定组件。"
+  },
+  "hotspots": [
+    {
+      "id": "hs_bunian_taizong",
+      "entity_id": "person_emperor_taizong",
+      "shape": "polygon",
+      "normalized_points": [[0.78, 0.31], [0.86, 0.30], [0.87, 0.80], [0.77, 0.82]],
+      "label": "唐太宗",
+      "group_key": null,
+      "annotation_type": "curated",
+      "sort_order": 1,
+      "review_status": "review",
+      "content_team_todo": "本坐标为按画面布局给出的初值（规格文档未提供该热点坐标）。待最终高清图确定后重新标注：应贴合唐太宗坐于步辇之上的人物轮廓，避免覆盖两侧宫女与掌扇、持华盖人物。"
+    },
+    {
+      "id": "hs_bunian_ludongzan",
+      "entity_id": "person_ludongzan",
+      "shape": "polygon",
+      "normalized_points": [[0.54, 0.36], [0.61, 0.35], [0.62, 0.87], [0.53, 0.87]],
+      "label": "禄东赞",
+      "group_key": null,
+      "annotation_type": "curated",
+      "sort_order": 2,
+      "review_status": "review",
+      "content_team_todo": "坐标取自规格文档 §8.3 预标注值（原文亦注明「实际坐标需要根据最终高清图重新标注」）。正式上线前须按最终高清图复核，确保贴合拱手而立的禄东赞人物轮廓。"
+    },
+    {
+      "id": "hs_bunian_introductory_official",
+      "entity_id": "figure_introductory_official",
+      "shape": "polygon",
+      "normalized_points": [[0.61, 0.31], [0.69, 0.30], [0.70, 0.88], [0.60, 0.88]],
+      "label": "引见官员",
+      "group_key": null,
+      "annotation_type": "curated",
+      "sort_order": 3,
+      "review_status": "review",
+      "content_team_todo": "本坐标为按画面布局给出的初值。故宫藏品页称三人中「最右侧穿大红袍者是引见官员」，须按最终高清图复核其实际横向位置与轮廓；同时待规格文档 §43 第3项确认该角色做 Entity 还是仅做 Annotation。"
+    },
+    {
+      "id": "hs_bunian_inner_attendant",
+      "entity_id": "figure_inner_attendant",
+      "shape": "polygon",
+      "normalized_points": [[0.46, 0.36], [0.53, 0.35], [0.54, 0.88], [0.45, 0.87]],
+      "label": "内官",
+      "group_key": null,
+      "annotation_type": "curated",
+      "sort_order": 4,
+      "review_status": "review",
+      "content_team_todo": "本坐标为按画面布局给出的初值。故宫藏品页称三人中「最左侧白袍者为内官」，故其横向位置应小于禄东赞；须按最终高清图复核，并待 §43 第3项确认其建模方式。"
+    },
+    {
+      "id": "hs_bunian_palace_women",
+      "entity_id": "group_palace_women",
+      "shape": "polygon",
+      "normalized_points": [[0.72, 0.25], [0.97, 0.23], [0.97, 0.94], [0.71, 0.94]],
+      "label": "宫女群体",
+      "group_key": "palace_women",
+      "annotation_type": "curated",
+      "sort_order": 5,
+      "review_status": "review",
+      "content_team_todo": "本坐标为覆盖抬辇与掌扇、持华盖宫女的整体范围初值，与唐太宗热点存在覆盖关系，需在前端确定层级与点击优先顺序。须按最终高清图重新标注；不得为任何一位宫女虚构真实身份，也不得把文成公主指认为其中某一位。"
+    },
+    {
+      "id": "hs_bunian_artwork_self",
+      "entity_id": "artifact_bunian_tu",
+      "shape": "polygon",
+      "normalized_points": [[0.0, 0.0], [1.0, 0.0], [1.0, 1.0], [0.0, 1.0]],
+      "label": "《步辇图》",
+      "group_key": "artwork_self",
+      "annotation_type": "curated",
+      "sort_order": 99,
+      "review_status": "review",
+      "content_team_todo": "作品本体热点采用整卷范围，作为点击空白区域时的兜底命中项，前端须将其置于最低点击优先级。待最终高清图与版式确定后，可改为只覆盖画心范围，或拆分为「画心」「题跋」两个热点（题跋部分涉及本幅无画家款印与北宋章伯益篆书题，需单独审核）。"
+    }
+  ]
+}

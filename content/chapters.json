@@ -1,0 +1,122 @@
+[
+  {
+    "id": "han_encounter",
+    "era": "汉代",
+    "keyword": "相遇",
+    "title": "张骞与丝路交通",
+    "date_label": "公元前202—公元220",
+    "guiding_question": "一件后世出土的织锦，如何证明长期联系，又不被误写成张骞的直接遗物？",
+    "display_question": "一件织锦如何成为交通网络的物证，同时守住年代与因果边界？",
+    "accent": "#B1783A",
+    "primary_interaction": "route_flow",
+    "ai_character_id": "person_zhang_qian",
+    "core_entity_ids": [
+      "person_zhang_qian",
+      "concept_silk_road_network",
+      "site_niya",
+      "artifact_five_star_brocade"
+    ],
+    "narration": "我自长安出发时，并未想到这条路会延续这么久。后来往来的，不只是使者，还有商旅、僧侣与定居的人群。货物在这条网络上流转，作物、技艺与消息也随之移动。它并非一条固定的道路，而是一张长期生长出来的联系网络。",
+    "sort_order": 1
+  },
+  {
+    "id": "northern_wei_integration",
+    "era": "北魏",
+    "keyword": "交融",
+    "title": "从平城到洛阳",
+    "date_label": "386—534",
+    "guiding_question": "一方墓志能说明一个人的变化，能不能代表整个时代？",
+    "display_question": "墓志、石窟与器物如何共同呈现延续、变化与并存？",
+    "accent": "#657887",
+    "primary_interaction": "evidence_compare",
+    "ai_character_id": "person_emperor_xiaowen",
+    "core_entity_ids": [
+      "person_emperor_xiaowen",
+      "heritage_yungang",
+      "heritage_longmen",
+      "artifact_yuanyu_epitaph"
+    ],
+    "narration": "平城与洛阳之间，不只是都城位置的移动。人群迁徙、制度调整、信仰传播与工匠流动同时发生，造像的样式、服饰的形制、乐舞的构成都在这段时间里发生变化。这些变化并非简单替代，而是在长期社会生活中不断吸收、改变与重构。",
+    "sort_order": 2
+  },
+  {
+    "id": "tang_exchange",
+    "era": "唐代",
+    "keyword": "交流",
+    "title": "从《步辇图》走进画外历史",
+    "date_label": "618—907",
+    "guiding_question": "一位使臣背后连接着怎样的人物与事件？",
+    "display_question": "一幅画能连接出多少画外的人物与事件？",
+    "accent": "#9B3D35",
+    "primary_interaction": "scroll_relation",
+    "ai_character_id": "artifact_bunian_tu",
+    "core_entity_ids": [
+      "artifact_bunian_tu",
+      "person_emperor_taizong",
+      "person_ludongzan",
+      "person_princess_wencheng",
+      "event_tang_tubo_marriage_641"
+    ],
+    "narration": "我的画面中，描绘的是唐太宗接见吐蕃使臣禄东赞的场景。画中的人物有限，但画外连接的人与事要多得多。文成公主并不在我的画面里，她需要经由禄东赞、经由历史事件，才能被追溯出来。",
+    "sort_order": 3
+  },
+  {
+    "id": "yuan_yuntai",
+    "era": "元代",
+    "keyword": "共存",
+    "title": "居庸关云台",
+    "date_label": "1271—1368",
+    "guiding_question": "为什么多种文字会同时出现在一座建筑上？",
+    "display_question": "为什么多种书写系统会同时出现在这里？",
+    "accent": "#2C6F89",
+    "primary_interaction": "script_lens",
+    "ai_character_id": "artifact_yuntai",
+    "core_entity_ids": [
+      "artifact_yuntai",
+      "inscription_six_scripts"
+    ],
+    "narration": "我的券洞石壁上，保存着多种书写系统的题刻。它们出现在同一处空间里，年代相近，位置相邻。这处遗存后来成为研究元代宗教、文字与人群往来的一份材料。",
+    "sort_order": 4
+  },
+  {
+    "id": "qing_return",
+    "era": "清代",
+    "keyword": "归属",
+    "title": "土尔扈特东归",
+    "date_label": "1636—1912",
+    "guiding_question": "一件宫廷纪念物能记录东归的哪些面向，又遗漏了哪些声音？",
+    "display_question": "图屏、路线与多来源记录如何共同讲述东归？",
+    "accent": "#7A513B",
+    "primary_interaction": "migration_timeline",
+    "ai_character_id": "person_ubashi",
+    "core_entity_ids": [
+      "person_ubashi",
+      "group_torghut",
+      "event_torghut_return_1771",
+      "region_ili",
+      "text_torghut_relief_record",
+      "artifact_wanfa_guiyi_screen"
+    ],
+    "narration": "1771年，土尔扈特部众自伏尔加河流域向东迁徙，最终抵达伊犁河流域。此后清廷进行接应、赈济与安置，相关首领赴承德觐见，并留下御制记文与纪念性器物。关于这一过程，不同来源的记录在路线细节与人数统计上并不完全一致。",
+    "sort_order": 5
+  },
+  {
+    "id": "contemporary_qiang_embroidery",
+    "era": "当代",
+    "keyword": "传承",
+    "title": "羌绣数字工坊",
+    "date_label": "1949年至今",
+    "guiding_question": "一件羌绣作品进入数字共创前，谁有权决定它如何被使用？",
+    "display_question": "如何在理解作品、尊重创作者与明确授权之后参与数字共创？",
+    "accent": "#B64D43",
+    "primary_interaction": "knowledge_cocreation",
+    "ai_character_id": "qiang_workshop_narrator",
+    "core_entity_ids": [
+      "ich_qiang_embroidery",
+      "technique_tiaohua",
+      "institution_wenchuan_cultural_center"
+    ],
+    "narration": "羌族刺绣是国家级非物质文化遗产代表性项目，常见针法包括架花（挑花）、织字、纳花、撇花、勾花等，题材多取花草蔬果、飞禽走兽与人物。今天，数字化建档、非遗工坊、学校课程与文创开发，都是这项技艺在当代继续发展的一部分。",
+    "sort_order": 6
+  }
+]

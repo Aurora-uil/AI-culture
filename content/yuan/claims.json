@@ -1,0 +1,316 @@
+[
+  {
+    "id": "claim_yuntai_yuan",
+    "entity_id": "artifact_yuntai",
+    "relation_id": "rel_yuntai_built_during_yuan",
+    "claim_text": "居庸关云台为元代遗存。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_chronology", "src_bjgov_juyongguan"]
+  },
+  {
+    "id": "claim_yuntai_is_pagoda_base",
+    "entity_id": "artifact_yuntai",
+    "relation_id": null,
+    "claim_text": "居庸关云台是元代过街塔的塔基；过街塔是跨在道路之上、行人从塔下通过的塔。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_chronology"],
+    "content_team_todo": "§26「第一批实体 ID」中没有为「过街塔」单列实体，因此本事实登记为实体属性 claim，未建图谱边。待内容组确认是否需要补建过街塔实体并增加相应关系。"
+  },
+  {
+    "id": "claim_yuntai_pagoda_destroyed",
+    "entity_id": "artifact_yuntai",
+    "relation_id": null,
+    "claim_text": "云台台体之上的塔身今已不存，现仅存塔基部分。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_chronology"]
+  },
+  {
+    "id": "claim_yuntai_pagoda_destruction_disputed",
+    "entity_id": "artifact_yuntai",
+    "relation_id": null,
+    "claim_text": "云台塔身毁弃的具体时间与原因，公开材料与研究中存在不同说法。",
+    "claim_type": "interpretation",
+    "controversy_status": "disputed",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_chronology", "src_academic_yuntai_inscription_reading"],
+    "content_team_todo": "本条为 disputed，AI 回答时必须说明「存在不同说法」。内容组核验后，若官方资料对塔毁时间有明确表述，可改写或补充限定语。"
+  },
+  {
+    "id": "claim_yuntai_built_1342_1345",
+    "entity_id": "artifact_yuntai",
+    "relation_id": "rel_yuntai_built_during_yuan",
+    "claim_text": "北京市文物局公开资料记载，居庸关云台始建于元至正二年至五年，即1342—1345年。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_chronology"]
+  },
+  {
+    "id": "claim_yuntai_located_juyong",
+    "entity_id": "artifact_yuntai",
+    "relation_id": "rel_yuntai_located_juyong",
+    "claim_text": "居庸关云台位于居庸关关城内。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjgov_juyongguan", "src_bjww_yuntai_chronology"]
+  },
+  {
+    "id": "claim_juyong_located_changping",
+    "entity_id": "place_juyong_pass",
+    "relation_id": "rel_juyong_located_changping",
+    "claim_text": "居庸关位于今北京市昌平区境内。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjgov_juyongguan"]
+  },
+  {
+    "id": "claim_yuntai_six_scripts",
+    "entity_id": "artifact_yuntai",
+    "relation_id": "rel_yuntai_has_six_scripts",
+    "claim_text": "居庸关云台券洞内保存有六种不同文字的石刻。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjgov_juyongguan", "src_bjww_yuntai_inscriptions"]
+  },
+  {
+    "id": "claim_yuntai_six_scripts_list",
+    "entity_id": "inscription_six_scripts",
+    "relation_id": "rel_yuntai_has_six_scripts",
+    "claim_text": "本章采用的六种书写系统为：梵文书写系统、藏文、八思巴文、回鹘文、汉文、西夏文。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_inscriptions"],
+    "content_team_todo": "六种文字的原始排列顺序以官方介绍为准，本项目显示顺序由 §9.1 确定为上述次序，需在示例图上与文物部门说明比对确认。"
+  },
+  {
+    "id": "claim_yuntai_has_buddhist_carving",
+    "entity_id": "artifact_yuntai",
+    "relation_id": "rel_yuntai_associated_buddhist_carving",
+    "claim_text": "云台券洞内保存有佛教造像。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_inscriptions"]
+  },
+  {
+    "id": "claim_yuntai_carving_naming_scope",
+    "entity_id": "concept_buddhist_stone_carving",
+    "relation_id": "rel_yuntai_associated_buddhist_carving",
+    "claim_text": "券洞内佛教造像的存在有公开资料支持；具体造像题材的定名与组合关系属于专业研究范围，需以文物部门正式说明与权威研究为准。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_inscriptions"],
+    "content_team_todo": "内容组若可确认造像题材的权威定名，可另建 catalogue_fact 类 claim 并在实体中补入；在此之前平台不输出任何尊像定名。"
+  },
+  {
+    "id": "claim_yuntai_research_material",
+    "entity_id": "artifact_yuntai",
+    "relation_id": null,
+    "claim_text": "官方公开介绍将云台券洞内的佛教造像与多种文字石刻，视为研究元代宗教、文字及多民族文化交流的重要材料。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_inscriptions"],
+    "content_team_todo": "引用时必须标明这是官方公开介绍的定位表述（attribution），不得改写为平台自有的历史结论。"
+  },
+  {
+    "id": "claim_yuntai_protected_site",
+    "entity_id": "artifact_yuntai",
+    "relation_id": null,
+    "claim_text": "居庸关云台为全国重点文物保护单位。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_bjww_yuntai_chronology"],
+    "content_team_todo": "实现方仅写到「全国重点文物保护单位」这一层级，未写公布批次与年份。待内容组按文物主管部门正式名录核验公布批次、年份与名录中的正式名称后，可转为 approved 并补充完整表述。"
+  },
+  {
+    "id": "claim_script_not_language",
+    "entity_id": "inscription_six_scripts",
+    "relation_id": null,
+    "claim_text": "文字书写系统（Script）与语言（Language）不是一一对应的关系：同一套文字可以被用来书写不同语言，同一种语言也可以用不同文字书写。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_scripts_overview", "src_academic_phagspa"],
+    "content_team_todo": "本条是本章的内容红线依据，适用于全部六个文字节点。内容组需指定具体文献作为通识性陈述的出处（见 src_academic_scripts_overview 的待办）。"
+  },
+  {
+    "id": "claim_six_scripts_not_six_ethnic_groups",
+    "entity_id": "inscription_six_scripts",
+    "relation_id": null,
+    "claim_text": "「六种书写系统」不等于「六个民族」，也不等于「六种语言」。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_scripts_overview"],
+    "content_team_todo": "本条为禁止性表述红线，需在 AI 回答核验（Prompt D 第 4 项）中作为固定检查项。"
+  },
+  {
+    "id": "claim_sanskrit_lantsa_nature",
+    "entity_id": "script_sanskrit_lantsa",
+    "relation_id": "rel_six_scripts_uses_sanskrit",
+    "claim_text": "云台题刻中的梵文内容以书写梵语的文字刻写，石刻中常见的兰札体一类书体多与佛教经咒题刻相关。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_scripts_overview"],
+    "content_team_todo": "「兰札体」为通识性表述，需由内容组指定具体文献出处并核定中文写法（兰札体／兰查体／Lantsa）。script_sanskrit_lantsa 的最终中文显示名待内容组统一规范。"
+  },
+  {
+    "id": "claim_tibetan_script_nature",
+    "entity_id": "script_tibetan",
+    "relation_id": "rel_six_scripts_uses_tibetan",
+    "claim_text": "藏文是用于书写藏语的书写系统，元代随藏传佛教的传播而在多地使用。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_scripts_overview"]
+  },
+  {
+    "id": "claim_phagspa_nature",
+    "entity_id": "script_phagspa",
+    "relation_id": "rel_six_scripts_uses_phagspa",
+    "claim_text": "八思巴文是元代创制的一套书写系统，可用于拼写蒙古语、汉语等多种语言；元亡之后逐渐不再通行。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_phagspa"]
+  },
+  {
+    "id": "claim_phagspa_creation",
+    "entity_id": "script_phagspa",
+    "relation_id": null,
+    "claim_text": "八思巴文的创制与颁行与元世祖时期有关（13世纪）。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_phagspa"],
+    "content_team_todo": "平台未给出具体年份。若内容组可核定创制与颁行的确切年份，可另建更精确的 claim 或补充本条文本。"
+  },
+  {
+    "id": "claim_old_uyghur_nature",
+    "entity_id": "script_old_uyghur",
+    "relation_id": "rel_six_scripts_uses_old_uyghur",
+    "claim_text": "回鹘文是用于书写回鹘语的书写系统，元代仍在使用，并与后来蒙古文字的形成有过关联。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_scripts_overview"]
+  },
+  {
+    "id": "claim_chinese_script_nature",
+    "entity_id": "script_chinese",
+    "relation_id": "rel_six_scripts_uses_chinese",
+    "claim_text": "汉文是用于书写汉语的书写系统，在元代是通行范围较广的书写系统之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_scripts_overview"]
+  },
+  {
+    "id": "claim_tangut_script_nature",
+    "entity_id": "script_tangut",
+    "relation_id": "rel_six_scripts_uses_tangut",
+    "claim_text": "西夏文创制并通行于西夏时期，用于书写西夏语。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_tangut_in_yuan"],
+    "content_team_todo": "平台未给出创制的具体年份。若内容组可核定，可补充更精确表述。"
+  },
+  {
+    "id": "claim_tangut_in_yuan",
+    "entity_id": "script_tangut",
+    "relation_id": null,
+    "claim_text": "西夏政权结束后，西夏文仍在一定范围内被继续使用；元代遗存中出现西夏文题刻，是相关研究关注并讨论的现象之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_academic_tangut_in_yuan"]
+  },
+  {
+    "id": "claim_tangut_background_discussed",
+    "entity_id": "script_tangut",
+    "relation_id": null,
+    "claim_text": "关于云台西夏文题刻出现的具体背景，公开材料没有可以简单概括的统一结论，研究中存在讨论。",
+    "claim_type": "interpretation",
+    "controversy_status": "disputed",
+    "review_status": "approved",
+    "source_ids": ["src_academic_tangut_in_yuan"],
+    "content_team_todo": "本条为 disputed，AI 回答「西夏文为什么会出现在元代遗存上」时必须说明存在不同研究观点，不得给出单一原因。"
+  },
+  {
+    "id": "claim_six_scripts_contain_dharani",
+    "entity_id": "inscription_six_scripts",
+    "relation_id": "rel_six_scripts_contains_dharani",
+    "claim_text": "云台券洞题刻中包含佛教咒语（陀罗尼）类文本。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_bjww_yuntai_inscriptions", "src_academic_yuntai_inscription_reading"],
+    "content_team_todo": "§28.1 要求按具体题刻与权威释读做 claim-level 审核。待补：对应题刻位置、涉及书写系统、权威释读出处。审核通过后转 approved。"
+  },
+  {
+    "id": "claim_six_scripts_contain_merit_record",
+    "entity_id": "inscription_six_scripts",
+    "relation_id": "rel_six_scripts_contains_merit_record",
+    "claim_text": "云台券洞题刻中包含造塔功德相关记录。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_bjww_yuntai_inscriptions", "src_academic_yuntai_inscription_reading"],
+    "content_team_todo": "§28.1 要求按具体题刻与权威释读做 claim-level 审核。待补：对应题刻位置、涉及书写系统、权威释读出处。审核通过后转 approved。"
+  },
+  {
+    "id": "claim_yuntai_supports_yuan_religion",
+    "entity_id": "concept_yuan_religion_study",
+    "relation_id": "rel_yuntai_supports_yuan_religion_study",
+    "claim_text": "从研究视角看，云台券洞内的佛教石雕与题刻可以为元代宗教史研究提供材料。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_inscriptions"]
+  },
+  {
+    "id": "claim_yuntai_supports_script_study",
+    "entity_id": "concept_ancient_script_study",
+    "relation_id": "rel_yuntai_supports_script_study",
+    "claim_text": "从研究视角看，云台券洞内六种书写系统同处一室，可以为古代文字研究提供对照材料。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_inscriptions"]
+  },
+  {
+    "id": "claim_yuntai_supports_ethnic_exchange",
+    "entity_id": "concept_ethnic_cultural_exchange",
+    "relation_id": "rel_yuntai_supports_ethnic_exchange_study",
+    "claim_text": "官方公开介绍把云台石刻视为研究元代多民族文化交流的重要材料；这是研究视角的表述，不是对当时人群活动的具体判定。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_inscriptions"]
+  },
+  {
+    "id": "claim_six_scripts_multiscript_coexistence",
+    "entity_id": "concept_multiscript_coexistence",
+    "relation_id": "rel_six_scripts_associated_multiscript_coexistence",
+    "claim_text": "六体文字题刻体现多种书写系统在同一处空间中的共存；这一现象不等于多种语言或多个民族的并列。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_bjww_yuntai_inscriptions"]
+  }
+]

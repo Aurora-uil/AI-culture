@@ -1,0 +1,29 @@
+{
+  "name": "tongxin-millennia-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "《同心千年》AI中华民族交往交流交融数字叙事平台 — 前端",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit",
+    "test:artifact-story": "python tests/e2e_artifact_story_check.py"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "echarts": "^5.6.0",
+    "gsap": "^3.12.5",
+    "pinia": "^2.3.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.7",
+    "vue-tsc": "^2.2.0"
+  }
+}

@@ -1,0 +1,502 @@
+[
+  {
+    "id": "claim_wudi_ordered_first_mission",
+    "entity_id": "person_emperor_wu_han",
+    "relation_id": "rel_wudi_ordered_first_mission",
+    "claim_text": "公元前138年，汉武帝派张骞出使西域。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_zhangqian_participated_first_mission",
+    "entity_id": "person_zhang_qian",
+    "relation_id": "rel_zhangqian_first_mission",
+    "claim_text": "张骞参与了第一次出使西域。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_first_mission_departed_changan",
+    "entity_id": "event_zhangqian_first_mission",
+    "relation_id": "rel_first_mission_changan",
+    "claim_text": "张骞第一次出使西域从长安出发。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_first_mission_mission_to_western_regions",
+    "entity_id": "event_zhangqian_first_mission",
+    "relation_id": "rel_first_mission_western_regions",
+    "claim_text": "张骞第一次出使西域的目的地，在史料中以“西域”这一地域概念表述。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_first_mission_purpose_dayuezhi",
+    "entity_id": "event_zhangqian_first_mission",
+    "relation_id": null,
+    "claim_text": "张骞第一次出使的直接政治任务，与联络大月氏共同应对匈奴有关。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_zhangqian_second_mission_exists",
+    "entity_id": "person_zhang_qian",
+    "relation_id": null,
+    "claim_text": "张骞在第一次出使之后，还进行了第二次出使。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_zhangqian_participated_second_mission",
+    "entity_id": "person_zhang_qian",
+    "relation_id": "rel_zhangqian_second_mission",
+    "claim_text": "张骞参与了第二次出使西域。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_second_mission_departed_changan",
+    "entity_id": "event_zhangqian_second_mission",
+    "relation_id": "rel_second_mission_changan",
+    "claim_text": "张骞第二次出使西域从长安出发。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_second_mission_mission_to_western_regions",
+    "entity_id": "event_zhangqian_second_mission",
+    "relation_id": "rel_second_mission_western_regions",
+    "claim_text": "张骞第二次出使西域的目的地，在史料中以“西域”这一地域概念表述。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_second_mission_envoys_increase",
+    "entity_id": "event_zhangqian_second_mission",
+    "relation_id": null,
+    "claim_text": "第二次出使之后，汉与西域多个地区之间的使者往来进一步增加。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_period_western_han_context",
+    "entity_id": "period_western_han",
+    "relation_id": null,
+    "claim_text": "张骞第一次出使西域发生在西汉时期，派遣者是西汉皇帝汉武帝。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_chnmuseum_silk_road"]
+  },
+  {
+    "id": "claim_silk_road_network_definition",
+    "entity_id": "concept_silk_road_network",
+    "relation_id": null,
+    "claim_text": "后世所谓“丝绸之路”是长期形成、不断变化的交通与交流网络，而不是一条唯一固定路线。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_zhangqian_not_creator",
+    "entity_id": "person_zhang_qian",
+    "relation_id": null,
+    "claim_text": "张骞出使是汉与西域关系发展中的重要历史节点，但不能说丝绸之路由他一人创造。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_unesco_changan_tianshan", "src_chnmuseum_silk_road"]
+  },
+  {
+    "id": "claim_changan_hexi_western_regions_nodes",
+    "entity_id": "concept_silk_road_network",
+    "relation_id": null,
+    "claim_text": "长安、河西走廊、西域可以作为理解汉代西向交通的重要空间节点。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_changan_part_of_network",
+    "entity_id": "place_changan",
+    "relation_id": "rel_changan_part_of_corridor",
+    "claim_text": "汉长安城未央宫遗址作为“丝绸之路：长安—天山廊道的路网”的组成部分，于2014年列入联合国教科文组织《世界遗产名录》。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_hexi_part_of_network",
+    "entity_id": "region_hexi_corridor",
+    "relation_id": "rel_hexi_part_of_corridor",
+    "claim_text": "河西走廊处于长安—天山廊道交通网络所覆盖的空间范围之内。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_corridor_unesco_listing",
+    "entity_id": "concept_changan_tianshan_corridor",
+    "relation_id": null,
+    "claim_text": "“丝绸之路：长安—天山廊道的路网”于2014年列入《世界遗产名录》，由中国、哈萨克斯坦、吉尔吉斯斯坦联合申报，共包含33处遗产点。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_niya_location_minfeng",
+    "entity_id": "site_niya",
+    "relation_id": null,
+    "claim_text": "尼雅遗址位于今天新疆民丰地区，是丝路沿线重要考古遗址之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ncha_niya"]
+  },
+  {
+    "id": "claim_niya_discovered_1901",
+    "entity_id": "site_niya",
+    "relation_id": null,
+    "claim_text": "尼雅遗址自1901年被发现以来，考古调查已持续逾百年。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ncha_niya"]
+  },
+  {
+    "id": "claim_niya_finds_types",
+    "entity_id": "site_niya",
+    "relation_id": null,
+    "claim_text": "历次考古调查在尼雅遗址发现房屋建筑遗迹、墓葬、水利设施、城址等，出土佉卢文文书、汉文文书、建筑构件、钱币、丝绸及艺术品等文物。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ncha_niya"]
+  },
+  {
+    "id": "claim_niya_jingjue_confirm",
+    "entity_id": "site_niya",
+    "relation_id": null,
+    "claim_text": "相关考察与研究确认，尼雅遗址即汉代文献所记“精绝国”故地。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ncha_niya"]
+  },
+  {
+    "id": "claim_niya_sino_japanese_survey",
+    "entity_id": "site_niya",
+    "relation_id": null,
+    "claim_text": "1988年及1990年代，中日双方组成联合学术考察队，对尼雅遗址进行了多次调查与发掘；1995年的发掘清理了精绝王及贵族墓地。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ncha_niya"]
+  },
+  {
+    "id": "claim_niya_part_of_silk_road_network",
+    "entity_id": "site_niya",
+    "relation_id": "rel_niya_part_of_silk_road_network",
+    "claim_text": "尼雅遗址是丝路沿线的重要考古遗址之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ncha_niya"]
+  },
+  {
+    "id": "claim_fivestar_excavated_1995_m8",
+    "entity_id": "artifact_five_star_brocade",
+    "relation_id": "rel_fivestar_excavated_niya",
+    "claim_text": "“五星出东方利中国”锦护膊于1995年出土于尼雅遗址1号墓地M8。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_ncha_niya"]
+  },
+  {
+    "id": "claim_fivestar_dating_hanjin_label",
+    "entity_id": "artifact_five_star_brocade",
+    "relation_id": "rel_fivestar_han_jin",
+    "claim_text": "中国国家博物馆相关公开展览资料将该文物断代标为“汉晋（公元前202—公元420年）”。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road"]
+  },
+  {
+    "id": "claim_han_jin_range_label",
+    "entity_id": "period_han_jin",
+    "relation_id": null,
+    "claim_text": "“汉晋”在本章中对应公元前202年至公元420年的断代表述。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road"]
+  },
+  {
+    "id": "claim_fivestar_no_direct_relation",
+    "entity_id": "artifact_five_star_brocade",
+    "relation_id": null,
+    "claim_text": "现有资料不支持张骞与“五星出东方利中国”锦护膊之间存在直接关系。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_fivestar_inscription_interpretation_disputed",
+    "entity_id": "artifact_five_star_brocade",
+    "relation_id": null,
+    "claim_text": "涉及“五星出东方利中国”铭文及其与同墓残片、相关军事文献对应关系的解释，属于研究讨论范围，存在不同研究观点。",
+    "claim_type": "interpretation",
+    "controversy_status": "disputed",
+    "review_status": "review",
+    "source_ids": ["src_rmrb_five_star"]
+  },
+  {
+    "id": "claim_fivestar_inscription_astrology_reading",
+    "entity_id": "artifact_five_star_brocade",
+    "relation_id": null,
+    "claim_text": "一种解释认为，铭文中的“五星”指金、木、水、火、土五大行星，“中国”在当时指黄河中下游的中原地区，整句为古代星占用辞中的吉祥语。",
+    "claim_type": "interpretation",
+    "controversy_status": "disputed",
+    "review_status": "review",
+    "source_ids": ["src_rmrb_five_star"]
+  },
+  {
+    "id": "claim_fivestar_inscription_modern_meaning_guard",
+    "entity_id": "artifact_five_star_brocade",
+    "relation_id": null,
+    "claim_text": "“五星出东方利中国”铭文不应被解释成现代政治含义；其历史语境中的“中国”指黄河中下游的中原地区。",
+    "claim_type": "interpretation",
+    "controversy_status": "disputed",
+    "review_status": "review",
+    "source_ids": ["src_rmrb_five_star"]
+  },
+  {
+    "id": "claim_fivestar_armguard_type",
+    "entity_id": "artifact_five_star_brocade",
+    "relation_id": null,
+    "claim_text": "据同墓出土的弓、箭、箭箙等物推测，该锦护膊是射箭时所用的护臂用具。",
+    "claim_type": "interpretation",
+    "controversy_status": "disputed",
+    "review_status": "review",
+    "source_ids": ["src_rmrb_five_star"]
+  },
+  {
+    "id": "claim_fivestar_chapter_positioning",
+    "entity_id": "artifact_five_star_brocade",
+    "relation_id": "rel_zhangqian_fivestar_curatorial",
+    "claim_text": "五星锦在本章中的定位是从抽象交通交流走向真实丝路沿线物质遗存的关键节点，而不是张骞故事的道具。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road"]
+  },
+  {
+    "id": "claim_fivestar_supports_textile_study",
+    "entity_id": "artifact_five_star_brocade",
+    "relation_id": "rel_fivestar_supports_textile_technology",
+    "claim_text": "该锦护膊可以用于研究汉晋时期的纺织技术、纹样体系与文字使用。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_chnmuseum_silk_road", "src_rmrb_five_star"]
+  },
+  {
+    "id": "claim_niya_supports_society_culture_study",
+    "entity_id": "site_niya",
+    "relation_id": "rel_niya_supports_society_culture",
+    "claim_text": "尼雅遗址出土的建筑遗迹、墓葬、文书与器物，可以用于研究丝路沿线的社会与文化。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ncha_niya"]
+  },
+  {
+    "id": "claim_silkroad_supports_material_exchange_study",
+    "entity_id": "concept_silk_road_network",
+    "relation_id": "rel_silkroad_supports_material_exchange",
+    "claim_text": "丝路交通网络长期承载商品与物质的跨区域流动，因此可以作为研究长距离物质交流的对象。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_silkroad_supports_people_mobility_study",
+    "entity_id": "concept_silk_road_network",
+    "relation_id": "rel_silkroad_supports_people_mobility",
+    "claim_text": "丝路交通网络长期承载人员往来，因此可以作为研究人员流动的对象。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_first_mission_supports_people_mobility_study",
+    "entity_id": "event_zhangqian_first_mission",
+    "relation_id": "rel_first_mission_supports_people_mobility",
+    "claim_text": "张骞出使为研究汉与西域之间的人员往来提供了依据；但不能据此认为网络上所有人员流动都由官方使节推动。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_people_mobility_scope",
+    "entity_id": "concept_people_mobility",
+    "relation_id": null,
+    "claim_text": "人员流动包括使者、商旅、随行人员与在不同地区定居的人群，不等于官方使节往来。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_material_exchange_scope",
+    "entity_id": "concept_material_exchange",
+    "relation_id": null,
+    "claim_text": "物质交流中的每一类物品都应作为“交流类别”呈现，不能绑定唯一的原产地与目的地。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_cultural_exchange_scope",
+    "entity_id": "concept_cultural_exchange",
+    "relation_id": null,
+    "claim_text": "文化交流是在长期接触中逐步发生的，不能用一次使节往来的时间点去解释。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_flow_silk_evidence",
+    "entity_id": "flow_silk_textiles",
+    "relation_id": null,
+    "claim_text": "丝绸是长距离交流中的重要高价值商品之一；但不能推出所有丝织品都沿同一路线流动，或都由同一群人运输。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road"]
+  },
+  {
+    "id": "claim_species_not_all_zhangqian",
+    "entity_id": "flow_plants_food",
+    "relation_id": null,
+    "claim_text": "现有资料不支持把所有西域物种的传入归因于张骞个人。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_route_map_is_schematic",
+    "entity_id": "concept_silk_road_network",
+    "relation_id": null,
+    "claim_text": "本章地图中的连线是为帮助理解绘制的示意连接，不等同于现代导航轨迹；古代路线会随时期、政治环境、自然条件和具体行程而变化。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road"]
+  },
+  {
+    "id": "claim_zhangqian_route_vs_longterm_network",
+    "entity_id": "concept_silk_road_network",
+    "relation_id": null,
+    "claim_text": "“张骞行程相关”与“长期交通网络”必须分开查看，否则会让人误以为所有丝路节点都由张骞本人走过。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road"]
+  },
+  {
+    "id": "claim_western_regions_concept_note",
+    "entity_id": "region_western_regions",
+    "relation_id": null,
+    "claim_text": "明代以前，“西域”是地域概念，通常泛指玉门关、阳关以西的广大地区，不对应现代任何一个行政区。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_han_shu_xiyu_zhuan"]
+  },
+  {
+    "id": "claim_hexi_corridor_region_note",
+    "entity_id": "region_hexi_corridor",
+    "relation_id": null,
+    "claim_text": "河西走廊是历史区域概念，不应与现代省级行政区直接画等号。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_dunhuang_corridor_node",
+    "entity_id": "place_dunhuang",
+    "relation_id": null,
+    "claim_text": "敦煌位于河西走廊西端，处于长安—天山廊道交通网络所覆盖的空间范围之内。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  },
+  {
+    "id": "claim_yumen_pass_gateway",
+    "entity_id": "place_yumen_pass",
+    "relation_id": null,
+    "claim_text": "玉门关是汉代在河西走廊西端设置的关隘，在后世叙述中常被用来表述中原通往西域方向的门户位置。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_han_shu_xiyu_zhuan"]
+  },
+  {
+    "id": "claim_changan_han_context",
+    "entity_id": "place_changan",
+    "relation_id": null,
+    "claim_text": "长安是西汉都城；张骞第一次与第二次出使西域均从长安出发。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han"]
+  },
+  {
+    "id": "claim_central_asia_geographic_note",
+    "entity_id": "region_central_asia",
+    "relation_id": null,
+    "claim_text": "“中亚”是现代地理学的区域概念，并非汉代文献中的原始地名，不应与现代国界一一对应。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_unesco_changan_tianshan"]
+  }
+]

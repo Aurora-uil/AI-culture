@@ -1,0 +1,1144 @@
+[
+  {
+    "id": "chunk_wei_001",
+    "source_id": "src_unesco_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "period_northern_wei",
+      "heritage_yungang"
+    ],
+    "claim_ids": [
+      "claim_wei_period_386_534"
+    ],
+    "title": "北魏的时间范围与本章的时间框架",
+    "text": "北魏是公元386年至534年间存在于中国北方的王朝。本章把它当作一个时间框架来使用，而不是一个现成的结论。在这个框架内，都城从平城移到洛阳，佛教石窟营造从云冈延续到龙门，姓氏、服饰与朝堂语言等方面相继出现制度调整。\n\n需要说明的是，本章并不主张这些变化是一条直线上的先后替代。同一时期的不同地区、不同群体、不同场合中，既有新制度的推行，也有旧传统的沿用与改造。因此本章不使用「北魏完成了民族融合」这样的整段结论，而是把变化拆成可以分别查看的具体证据，让用户先看材料，再谈理解。\n\n关于王朝起讫与都城沿革的具体年份，本平台保留来源表述，相关条目在内容组完成核定前不进入 AI 检索，回答时会说明「该条内容尚未完成审核」。\n\n本章在时间轴与实体卡上都会显示内容状态：已完成审核的内容可以进入 AI 检索；仍在核验中的内容只保留展示结构，回答时会说明资料状态。这样用户可以分辨哪些是已经核对的史实，哪些还在等待进一步确认。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "王朝起讫年份需内容组依据正式史料或权威工具书补充来源与定位。"
+  },
+  {
+    "id": "chunk_wei_002",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "place_pingcheng",
+      "place_luoyang",
+      "heritage_yungang",
+      "heritage_longmen"
+    ],
+    "claim_ids": [
+      "claim_longmen_has_wei_phase",
+      "claim_yungang_5_6_century"
+    ],
+    "title": "两个都城、两处石窟：本章的空间结构",
+    "text": "本章的基本空间结构是「两个都城、两处石窟、一条时间线」：平城与云冈构成前期一侧，洛阳与龙门构成后期一侧，中间以迁都洛阳这一事件相连。\n\n云冈石窟位于北魏平城附近的武州山，主要开凿于公元5世纪至6世纪，核心营造阶段属于北魏。龙门石窟位于洛阳，UNESCO资料指出其保存大量北魏晚期与唐代的佛教石刻艺术，也就是说，北魏晚期只是龙门多个营造阶段中的一个。\n\n正因为两处遗产的时间跨度与阶段构成并不相同，本章在并置两者时反复强调：这是策展对照，不是「前期—后期」的替代关系。用户在双场景中可以分别查看两侧的证据热点，再把它们放进同一个对照槽进行比较。所有热点坐标均由内容人员预先标注，不依赖任何视觉识别或自动分类算法。\n\n在页面结构上，双场景采用左右分栏：左侧固定为云冈，右侧为龙门，底部是证据类别筛选（造像艺术、服饰生活、文字墓志、都城制度）。同一对照组的热点带有相同的 group_key，点击「同步对比」时两侧会同时高亮，便于用户把注意力放在同一类证据上。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_003",
+    "source_id": "src_unesco_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_cultural_interaction",
+      "period_northern_wei"
+    ],
+    "claim_ids": [
+      "claim_cultural_interaction_analytical",
+      "claim_reform_not_single_cause"
+    ],
+    "title": "为什么不能用一句话概括北魏的文化变化",
+    "text": "把北魏历史压缩成「鲜卑文化—孝文帝改革—完全变成汉文化—民族融合完成」这样一条直线，会带来几个具体问题：把长期变化全部归因于一个皇帝；把制度、艺术、服饰与日常生活混成一个概念；把文化交融误写成单向替代；忽略不同传统的保留、改造与再流行；以及把现代概念直接套成古人的主观目标。\n\n本章因此改用的结构是多来源、多层次的：北方草原与鲜卑文化传统、北魏国家制度建设、中原礼制与官制、佛教传播、中原艺术、南亚与中亚佛教艺术因素等，在同一时期相互作用，形成长期、不同步的吸收与重构，并分别留在云冈与龙门的材料中。\n\n需要提醒的是，「文化互动」这个词本身也是今天研究者与策展使用的分析概念，不是北魏人自己使用的历史词汇。界面在首次出现时应说明这一点，以免让用户误以为古人也在使用同一套说法。\n\n对用户来说，这套结构带来的直接体验是：页面不会先给一句「北魏实现了民族交融」，而是先请他看一处造像、一方墓志或一件陶俑，再告诉他这处材料能支持什么、不能推出什么。结论是探索的结果，而不是入口。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_004",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_institutional_change",
+      "artifact_yuanyu_epitaph"
+    ],
+    "claim_ids": [
+      "claim_epitaph_cannot_represent_all",
+      "claim_reform_not_overnight"
+    ],
+    "title": "本章怎么使用证据：观察、事实、解释与边界",
+    "text": "本章的每一张证据卡固定显示四层信息：看到什么、资料能确认什么、研究者如何解释、不能直接推出什么。这四层不是排版装饰，而是本章处理历史材料的基本方法。\n\n以实物材料为例：一件陶俑可以被具体观察（冠式、衣襟、衣裤组合），也可以被用来支持「北魏后期存在这样的服饰形制」这一判断；但它不能直接证明当时居民的日常普遍穿着，更不能用来推断某个人的民族身份。同样，一方墓志可以记录墓主的姓名、身份与籍贯，却不能代表当时所有社会群体在同一时间发生了同步变化。\n\n因此，本章在页面上区分「实物／文献事实」与「研究解释」两类标记，并在图谱中用实线、虚线、点划线分别表示事实关系、解释关系与策展关系。策展关系只说明平台为什么把这些材料放在一起看，不代表历史因果。\n\n对于无法确证的内容，平台宁可留空也不填充。以本章为例，朝堂语言相关规定、部分建筑类与音乐类证据目前均标为待核验，页面上会保留位置并说明原因，AI 遇到相关提问时回答资料不足，而不是依据常识补写。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_005",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "place_pingcheng",
+      "period_northern_wei"
+    ],
+    "claim_ids": [
+      "claim_wei_capital_pingcheng",
+      "claim_pingcheng_location_datong"
+    ],
+    "title": "平城与北魏前期",
+    "text": "平城是北魏前期的都城，位于今山西省大同市一带。云冈石窟即营造于平城附近的武州山，因此平城既是政治空间，也是理解云冈营造背景的地理坐标。\n\n在本章的结构中，平城与云冈一起构成「平城时期」一侧。用户从平城进入云冈，观察造像、建筑形象、服饰与音乐等相关证据，再沿时间轴移动到迁都前后，切换到洛阳与龙门。\n\n有两点边界需要说明。第一，本章不使用「平城代表鲜卑、洛阳代表汉化」的对应关系，两者之间是策展并置。第二，古代都城的范围与现代行政区划不是同一个概念，「位于今山西大同」只作方位性说明，不能据此界定古代都城的边界。\n\n关于平城作为都城的具体起讫年份，本平台当前只表述为「前期都城」，相关条目仍在核验中，回答时会说明资料状态。\n\n在实体卡上，平城条目还会显示与其相关的关系数量与来源数量，用户可以直接跳到云冈石窟、迁都洛阳等节点。仍在核验中的条目也会标明状态，避免用户把结构位置误当成已完成审核的内容。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需补充平城作为都城的具体起讫年份与正式来源，并核定古今地名对应的规范表述。"
+  },
+  {
+    "id": "chunk_wei_006",
+    "source_id": "src_unesco_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_yungang",
+      "place_pingcheng",
+      "place_datong"
+    ],
+    "claim_ids": [
+      "claim_yungang_near_pingcheng",
+      "claim_yungang_unesco_2001"
+    ],
+    "title": "云冈石窟的位置与基本情况",
+    "text": "云冈石窟位于今山西省大同市，距北魏平城所在的区域不远，营造于武州山一带。2001年，云冈石窟列入联合国教科文组织《世界遗产名录》，是世界遗产名录中的第1039项。\n\n从本章的角度看，云冈最重要的两点是：第一，它的主要开凿年代为公元5世纪至6世纪，核心营造阶段属于北魏时期，因此可以与北魏前期的都城平城放在同一时间与空间脉络中理解；第二，它的艺术面貌包含多个来源，UNESCO资料在说明其价值时，既提到南亚和中亚佛教石窟艺术的影响，也提到它形成了具有中国文化传统和地方特色的表达。\n\n本章只选取云冈的少数几处核心证据进行展示，不做完整景区导览，也不做全洞窟数据库。用户在云冈一侧可以看到昙曜五窟、建筑形象、样式交流、伎乐与乐器等热点。\n\n需要说明的是，世界遗产身份说明的是遗产价值获得国际认可，并不等于对该遗产所有学术问题的定论。云冈的分期、各洞窟的年代与工匠来源等问题，学界仍在持续研究，本章只呈现其中已有可靠来源支持的部分。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_007",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "period_northern_wei",
+      "place_pingcheng",
+      "place_luoyang",
+      "event_capital_move_luoyang"
+    ],
+    "claim_ids": [
+      "claim_wei_capital_luoyang_late",
+      "claim_move_capital_process"
+    ],
+    "title": "时间轴上的关键节点：从平城到洛阳",
+    "text": "本章的时间轴标示了几个节点：平城时期、云冈重要开凿活动开始、迁都洛阳、改姓等制度调整、北魏结束。规格文档明确要求，正式生产前每个具体时间点都必须绑定 Claim 与来源，因此本平台在时间轴上只展示已完成核验的节点，未完成核验的节点会显示为待核验状态。\n\n其中最关键、也最需要小心处理的是迁都节点。平台默认显示为「493—494年前后，北魏完成从平城向洛阳的迁都过程」，并提供「为什么资料中有493和494两种写法？」的说明入口。\n\n需要强调的是，时间轴的作用是给出顺序感，而不是暗示因果。把云冈放在前面、龙门放在后面，是时间上的先后，不等于前者「变成」了后者，也不等于所有变化都由迁都这一件事引起。\n\n时间轴的另一个作用是帮助用户理解「同期不同步」。同一个时间点上，不同地区、不同群体发生的变化并不一致，因此本章在时间轴上不画单一的进度条，也不做「文化融合度」这类量化展示，避免把复杂过程压缩成一个百分比。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_008",
+    "source_id": "src_unesco_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_yungang"
+    ],
+    "claim_ids": [
+      "claim_yungang_5_6_century",
+      "claim_yungang_unesco_2001"
+    ],
+    "title": "云冈石窟的年代范围",
+    "text": "云冈石窟的主要开凿年代为公元5世纪至6世纪。UNESCO世界遗产资料在介绍云冈时，把它放在5至6世纪中国佛教石窟艺术的脉络中，并指出其核心营造阶段与北魏密切相关。\n\n对本章来说，这个年代范围有两层意义。第一，它与北魏前期的都城平城在时间上重合，因此可以把云冈的营造放在北魏国家建设与佛教传播的背景中理解。第二，5至6世纪是一个跨度较长的区间，意味着云冈本身经历了持续营造与变化，而不是一次性完成的工程。\n\n所以在页面上，本章不会把云冈描述为「一个时期的统一风格」，而是提示用户注意洞窟之间可能存在的阶段差异。具体的分期方案、洞窟编号与各阶段特征，需要内容组依据云冈研究院等正式资料核定后再细化展示。\n\n此外，云冈的营造并不是在一次政令下完成的工程。它跨越数十年，涉及不同赞助者与工匠群体，其间还经历过都城迁移带来的变化。把云冈理解为「一个持续进行的营造过程」，比理解为「一次完成的创作」更接近实际情况。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_009",
+    "source_id": "src_unesco_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_yungang",
+      "period_northern_wei"
+    ],
+    "claim_ids": [
+      "claim_yungang_5_6_century",
+      "claim_yungang_has_tanyao"
+    ],
+    "title": "世界遗产视角下的云冈石窟",
+    "text": "2001年，云冈石窟以符合世界遗产相关标准列入《世界遗产名录》。世界遗产资料在说明其价值时指出，云冈石窟艺术受到南亚和中亚佛教石窟艺术的影响，同时形成了具有中国文化传统和地方特色的表达，并提到其中包含由昙曜主持开凿的一组早期洞窟。\n\n这段表述对本平台特别重要，因为它同时给出了两个方向：一是影响来自外部，二是本地形成了自己的表达。本章在页面与 AI 回答中都按这两层来组织内容，避免把云冈说成单纯的「外来艺术」或单纯的「本地风格」。\n\n同时也要注意，世界遗产资料的表述是概括性的。它支持「云冈艺术中存在南亚与中亚方向的影响」这一判断，但不支持据此判定某一件具体造像的国别来源，也不支持编造某位具体工匠的身份与经历。\n\n在页面上，这条来源主要用于三个位置：云冈的实体卡介绍、证据卡「来源如何描述」一层，以及 AI 回答中与艺术影响相关的引用。用户在史料证据页可以展开这条来源，看到它具体支持了哪些 Claim，以及这些 Claim 对应哪些实体。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_010",
+    "source_id": "src_shanxi_wenwuju_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_yungang",
+      "place_pingcheng"
+    ],
+    "claim_ids": [
+      "claim_yungang_near_pingcheng",
+      "claim_yungang_not_single_style"
+    ],
+    "title": "云冈石窟的营造与平城时期的社会背景",
+    "text": "云冈石窟位于北魏平城附近的武州山一带，其早期大型洞窟的营造与北魏皇室、佛教僧团及国家制度之间存在联系。文物主管部门的公开资料在介绍云冈时，通常会同时说明其地理位置、开凿背景与艺术特征。\n\n把云冈放回平城时期来理解，可以看到营造活动并不是孤立发生的：它需要稳定的政治中心、组织者与工匠群体、以及一套支持大规模工程的制度条件。这也是本章把平城与云冈放在同一侧展示的原因。\n\n但需要避免一种推论：有了这些条件，并不意味着可以反推出「当时整个社会的信仰状况」或「所有居民的生活都围绕佛教展开」。石窟是特定的宗教与政治实践留下的材料，它反映的内容有明确范围。\n\n本条相关的具体描述仍在核验中，未完成核验的内容不进入 AI 检索。\n\n在实体卡上，云冈条目会显示其与平城、北魏、昙曜五窟等节点的关系。用户点开任意一条关系，都可以查看「为什么有这条关系」以及支撑它的来源与 Claim，这正是本章「可解释图谱」的基本要求。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需补充文物主管部门资料中的具体表述与来源定位，并核定「平城时期社会背景」相关表述的边界。"
+  },
+  {
+    "id": "chunk_wei_011",
+    "source_id": "src_people_daily_hwb_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "cave_tanyao_five",
+      "heritage_yungang"
+    ],
+    "claim_ids": [
+      "claim_yungang_has_tanyao",
+      "claim_tanyao_460"
+    ],
+    "title": "昙曜五窟是什么",
+    "text": "昙曜五窟是云冈石窟最早开凿的一组大型洞窟，通常指第16至20窟。据《魏书·释老志》相关记载，北魏和平初年（约公元460年），文成帝下诏，以「沙门统」昙曜为主事者，在武州山开凿五所大像窟。\n\n这组洞窟在云冈的诸多洞窟中地位特殊：它是云冈早期营造的代表，也常被用来说明北魏皇室与佛教营造之间的关系。此后从文成帝经献文帝、冯太后到孝文帝迁都，皇家经营持续了数十年，陆续完成大窟大像的开凿。\n\n需要注意表达边界。洞窟编号、开凿年份与营造次序的具体细节，本平台当前依据的是公开报道与地方文物部门资料，仍需内容组返回云冈研究院等正式来源复核后再作为确定事实展示。在该条完成核验之前，AI 回答时应说明资料来源状态，不得给出未经核验的精确数字。\n\n本条还涉及一个常见误解需要澄清：开凿年代的「和平初年」依据的是文献记载，而洞窟本身没有留下说明开工时间的铭刻。文献与实物在此是互补关系：文献给出时间框架，实物提供实际形制，两者不能互相替代。",
+    "source_level": "B",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需核定洞窟编号、开凿年代与营造次序，并补充云冈研究院等正式来源；当前来源为媒体与地方文物部门资料。"
+  },
+  {
+    "id": "chunk_wei_012",
+    "source_id": "src_people_daily_hwb_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "cave_tanyao_five"
+    ],
+    "claim_ids": [
+      "claim_tanyao_460",
+      "claim_tanyao_five_emperors"
+    ],
+    "title": "昙曜五窟的开凿缘起与记载",
+    "text": "关于昙曜五窟的开凿缘起，目前可依据的是《魏书·释老志》的相关记载：北魏和平初年，文成帝下诏，由沙门统昙曜主持在武州山开凿五所大像窟，佛像体量宏大，雕饰精美。这一记载为理解这组洞窟的营造背景提供了文字依据。\n\n从证据类型的角度，这里同时出现了两类材料：一是文献记载（《魏书》），二是实物遗存（洞窟与造像本身）。两者可以相互参照，但并不能互相替代。文献说明的是「谁、在什么时候、以什么名义」组织营造；实物说明的是「实际留下了什么」。\n\n因此本章在处理这类问题时，会分别说明「资料记载了什么」与「洞窟中可以看到什么」，不把文献记载直接当作对洞窟内容的自证。相关引文与年份的准确表述，仍需内容组核对《魏书》原文后定稿。\n\n在史料证据页上，这一条会以「文献记载支持了什么」的形式展示，并同时显示其局限：文献说明的是营造的组织者与名义，不说明洞窟中每一处造像的具体含义。用户若继续追问，AI 会区分「记载说了什么」与「研究解释了什么」。",
+    "source_level": "B",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需核对《魏书·释老志》原文引文与年份表述，并补充正式学术来源。"
+  },
+  {
+    "id": "chunk_wei_013",
+    "source_id": "src_people_daily_hwb_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "cave_tanyao_five"
+    ],
+    "claim_ids": [
+      "claim_tanyao_five_emperors"
+    ],
+    "title": "五窟与五位皇帝：一种学术解释",
+    "text": "在讨论昙曜五窟时，常会提到一种解释：五窟中的五尊大像分别对应北魏的五位皇帝。这种说法在研究著作与科普材料中流传较广，但它属于**研究者的解释**，而不是洞窟自身的文字自证——洞窟中并没有直接说明「这尊像对应哪位皇帝」的铭刻。\n\n本章的处理方式因此是：在证据卡上把这一内容放在「研究者如何解释」一层，并使用「研究者一般认为」这样的措辞；在「不能直接推出什么」一层写明，不能把这种对应关系当作可以确证的事实，也不能据此推断当时的政治观念已经等同于某种成体系的宗教政治理论。\n\n同样需要说明的是，即使五尊大像与皇帝存在对应关系，也不能由这一组洞窟推断整个北魏社会的信仰状况。造像的营造者是特定的政治与宗教群体，其表达有明确的范围。\n\n本条的处理方式可以推广到本章其他材料：凡是涉及「某处造像对应某位人物」这类判断，平台都会先确认它属于实物观察、文献记载还是研究解释，再决定用哪种措辞。如果三者混淆，用户就无法判断依据的强度。",
+    "source_level": "B",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需补充支持该对应关系的正式学术论文来源，并保持「研究者一般认为」的措辞。"
+  },
+  {
+    "id": "chunk_wei_014",
+    "source_id": "src_shanxi_wenwuju_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "cave_tanyao_five",
+      "heritage_yungang"
+    ],
+    "claim_ids": [
+      "claim_yungang_architecture_imitation",
+      "claim_yungang_not_single_style"
+    ],
+    "title": "昙曜五窟的窟形与造像特点",
+    "text": "在关于云冈早期洞窟的公开介绍中，昙曜五窟常被描述为形制相近的一组大像窟：规模宏大，主像体量突出，窟内空间与造像组合经过整体设计。这些描述可以在洞窟现场直接观察到，属于实物层面的内容。\n\n对于本章的对照功能来说，这组洞窟的价值在于它提供了一个可以具体讨论的对象：用户可以观察窟形、造像比例与衣饰处理，再与龙门一侧的材料并置。这样的比较停留在「看到了什么」的层面，不预设谁代表哪种文化。\n\n必须避免的表述包括：把这组洞窟的整体面貌概括为单一的「鲜卑风格」；由窟形特征直接判定营造者的族属；或把某一处造像当作整个北魏社会已经完成文化融合的证据。以上内容均属于过度推断。\n\n本条的窟形描述术语、洞窟编号与分期表述仍需内容组依据正式资料核定。\n\n在双场景中，这条证据位于云冈一侧的「造像艺术」与「建筑」两个类别下，可以与龙门一侧的龛像材料并置。对照结果不会由系统自动生成，而是显示审核配置过的相同点、差异点与不能直接得出的结论。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需核定窟形描述术语、洞窟编号与分期表述，并补充建筑史与考古方向的正式来源。"
+  },
+  {
+    "id": "chunk_wei_015",
+    "source_id": "src_unesco_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_yungang",
+      "concept_south_central_asian_buddhist_art"
+    ],
+    "claim_ids": [
+      "claim_yungang_art_exchange_unesco",
+      "claim_yungang_local_tradition"
+    ],
+    "title": "UNESCO如何描述云冈的艺术影响",
+    "text": "UNESCO世界遗产资料在介绍云冈石窟时指出：云冈石窟艺术受到南亚和中亚佛教石窟艺术的影响，同时形成了具有中国文化传统和地方特色的表达。这是本章关于云冈艺术来源最主要的审核来源之一。\n\n这句话包含两个并列的判断，本章在页面上也分成两层呈现。第一层是影响方向：云冈艺术中存在来自南亚与中亚方向的佛教石窟艺术因素。第二层是本地表达：这些因素并不是简单照搬，而是在本地形成了具有自身传统与地方特色的面貌。\n\n两层合起来支持的说法是「多来源艺术因素在长期营造中相互结合」。它不能支持的说法包括：某一处造像必然出自某一国工匠之手；某位具体的中亚工匠曾在某个洞窟工作；以及把云冈整体概括为「外国风格」或「鲜卑风格」。任何涉及具体人物与国别的故事，在资料明确支持之前都不得编造。\n\n在证据卡上，这条材料被标记为「实物／文献事实」与「研究解释」的组合：影响关系的存在属于资料支持的判断，而具体到某一处造像的来源分析则属于研究讨论。两者在界面上以不同符号区分，避免用户把研究观点当成文物自证。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_016",
+    "source_id": "src_unesco_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_yungang",
+      "concept_artistic_exchange"
+    ],
+    "claim_ids": [
+      "claim_yungang_not_single_style",
+      "claim_yungang_local_tradition"
+    ],
+    "title": "为什么云冈不能简单称为「鲜卑艺术」",
+    "text": "把云冈石窟简单称为「鲜卑艺术」会遇到两个问题。第一，从艺术来源看，世界遗产资料明确指出云冈艺术受到南亚和中亚佛教石窟艺术的影响，同时形成具有中国文化传统和地方特色的表达，这显然不是单一来源可以概括的。第二，从时间跨度看，云冈的主要开凿年代为5至6世纪，跨越较长时段，不同洞窟与不同阶段之间存在可见差异，也不宜用同一个风格标签统摄。\n\n本章因此不使用「云冈＝鲜卑」这样的对应，并且在证据卡的「不能直接推出什么」一层明确写出：不能把云冈所有造像特征直接对应某一个民族，也不能由一处洞窟推断整个北魏社会的情况。\n\n需要区分的是，「艺术风格」与「人群归属」是两个不同层面的问题。风格面貌可以讨论来源与影响，但不能直接用来反推营造者或使用者的族属。\n\n对于用户提出的「云冈是不是单纯的鲜卑艺术」，回答的结构是先说明来源的多样性，再说明本地表达的形成，最后指出风格与族属属于不同层面的问题。这三个步骤缺一不可，否则就会退回二元对立的说法。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_017",
+    "source_id": "src_shanxi_wenwuju_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_yungang",
+      "evidence_yungang_style_exchange"
+    ],
+    "claim_ids": [
+      "claim_yungang_not_single_style",
+      "claim_art_change_not_single_cause"
+    ],
+    "title": "云冈自身也有阶段变化",
+    "text": "云冈石窟的主要开凿年代跨越了5至6世纪，其间持续营造与改建，因此窟与窟之间、同一窟的不同壁面之间都可能存在处理方式上的差异。这种差异可以在现场被观察到，属于实物层面的现象。\n\n本章把这类材料单独列为一条证据（云冈样式交流证据），用途是纠正一种常见的简化：把云冈描述成「同一时期、同一风格的统一整体」。当用户点击这条证据时，证据卡仍然按照四层结构显示：看到什么（不同洞窟与阶段在比例、面相与衣纹处理上存在差异）、可以确认什么（云冈内部存在阶段差异）、如何解释（艺术面貌在长期营造中持续变化）、不能直接推出什么。\n\n其中最重要的是最后一层：不能把这种阶段差异直接写成「外来因素减少、本地因素增加」的线性过程，也不能把某一阶段的变化归因于某一条政令。分期方案需以正式学术研究为准。\n\n在对照槽中，这条证据通常与龙门北魏阶段的材料并置，用来讨论「同一类文化实践在不同时期与空间中呈现出什么差异」。系统只呈现两侧的观察与边界，不自动给出「谁更汉化」之类的判断。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需补充云冈分期的正式学术来源与洞窟编号，核实「阶段差异」的具体表述。"
+  },
+  {
+    "id": "chunk_wei_018",
+    "source_id": "src_shanxi_wenwuju_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "evidence_yungang_architecture",
+      "heritage_yungang"
+    ],
+    "claim_ids": [
+      "claim_yungang_architecture_imitation"
+    ],
+    "title": "云冈窟形与建筑形象材料",
+    "text": "云冈石窟不仅是造像的集合，也保存了丰富的建筑形象材料：部分洞窟的窟形与壁面雕刻中，出现了摹拟木构建筑构件与毡帐形式的做法。文物主管部门的公开介绍中，通常会把窟形与造像特征一并说明。\n\n在本章的建筑类对照中，云冈一侧使用的正是这类材料。它可以支持的说法是：北魏时期的石窟营造中存在摹拟建筑形象的做法，是观察当时建筑观念与多元文化因素结合的材料之一。\n\n它不能支持的说法包括：由雕刻中的建筑形象直接推断当时实际木构建筑的尺寸与结构；由建筑形象推断营造者的族属；以及把某一种窟形直接对应某一种人群。\n\n本条的洞窟编号、具体术语与描述仍需内容组依据建筑史方向的正式学术来源核定，当前标为待核验状态，不进入 AI 检索。\n\n需要补充的是，建筑形象材料在石窟研究中常被用来讨论木构建筑的演变，但这类讨论需要严格的方法：先描述雕刻中的构件，再与已知建筑实例比较，最后才形成推断。本章在页面上只呈现第一步与第二步之间的边界。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需补充建筑史方向正式学术来源，核定窟号与「毡帐形式」「仿木构」等术语的规范表述。"
+  },
+  {
+    "id": "chunk_wei_019",
+    "source_id": "src_gmw_yungang_cave12",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "evidence_yungang_music",
+      "heritage_yungang"
+    ],
+    "claim_ids": [
+      "claim_yungang_music_cave12"
+    ],
+    "title": "云冈的伎乐与乐器雕刻",
+    "text": "云冈石窟保存有大量伎乐天与乐器雕刻。其中第12窟因集中雕刻伎乐与乐器形象，通常被称为「音乐窟」。公开报道在介绍这一洞窟时指出，窟内前室的壁面、门拱与窟顶雕刻有数量较多的伎乐天形象，手中所持乐器种类多样。\n\n从证据类型的角度，这些雕刻属于图像材料，可以用于研究北魏时期的乐器组合与音乐图像。它们可以支持「当时存在这样的乐器种类与组合方式」这一判断。\n\n它们不能支持的说法包括：由雕刻推断当时实际演奏的曲目与音响效果；由乐器组合直接判断演奏者的族属；以及把某一种乐器对应某一个民族。乐器在历史上的传播路径本身就是跨地域的，不能做一一对应。\n\n本条涉及的洞窟编号、伎乐天数量与乐器种类等具体数字，仍需内容组依据云冈研究院正式资料核定。\n\n在页面呈现上，这条证据属于音乐类对照的云冈一侧。用户可以把它与龙门北魏阶段的同类材料并置，观察两处遗产中都能看到的「在窟龛中雕刻伎乐与乐器」这一实践，而不必先掌握音乐史的专业术语。",
+    "source_level": "B",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需核定洞窟编号、伎乐天数量与乐器种类，并补充云冈研究院正式资料与音乐史学术来源。"
+  },
+  {
+    "id": "chunk_wei_020",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "event_capital_move_luoyang",
+      "person_emperor_xiaowen"
+    ],
+    "claim_ids": [
+      "claim_xiaowen_capital_move",
+      "claim_move_destination_luoyang"
+    ],
+    "title": "迁都洛阳的基本情况",
+    "text": "迁都洛阳是北魏将都城由平城迁往洛阳的历史过程。本章把它作为独立事件节点，与孝文帝这一人物节点之间建立「主持／关联」关系，而不是把它当作解释全部文化变化的单一原因。\n\n在资料层面，迁都与北魏孝文帝时期的决策和推行过程相关，这一点在中国国家博物馆元羽墓志相关内容与世界遗产资料关于龙门的说明中都可以找到支撑：龙门石窟的北魏晚期营造与洛阳成为北魏后期都城的背景相关。\n\n需要特别说明的是，本章对迁都的表述是「过程」而不是「一天」。平台在默认显示「493—494年前后，北魏完成从平城向洛阳的迁都过程」，并提供来源差异说明入口。迁都的动因涉及政治、军事与制度等多方面背景，本章不做单一归因，也不虚构具体人物的私人心理活动与宫廷对白。\n\n迁都在资料中还有一个容易被忽略的特点：它是可以被多种材料同时印证的少数事件之一。制度相关的文字、墓志中的个人记录、以及洛阳成为都城之后出现的大规模营造，都指向同一个变化，尽管它们的记录角度并不相同。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_021",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "place_luoyang",
+      "heritage_longmen",
+      "event_northern_wei_luoyang_period"
+    ],
+    "claim_ids": [
+      "claim_luoyang_wei_late_capital",
+      "claim_longmen_has_wei_phase"
+    ],
+    "title": "迁都之后：洛阳成为北魏后期都城",
+    "text": "迁都之后，洛阳成为北魏后期的政治与文化中心，这一阶段通常称为北魏洛阳时期。龙门石窟的北魏晚期营造与这一阶段的都城环境相关：UNESCO世界遗产资料在介绍龙门时，提到其保存大量北魏晚期与唐代的佛教石刻艺术，并把洛阳作为北魏后期都城的背景。\n\n本章使用「北魏洛阳时期」这一说法时，始终指特定阶段的材料，不用它指代整个龙门石窟。龙门石窟的营造延续多个时期，北魏只是其中一部分，这一点在页面文案中反复出现。\n\n同时，洛阳时期的艺术材料也不宜全部归因于迁都这一单一事件。营造活动有自身的工期、赞助人与地方条件，艺术特征的变化需要结合具体洞窟分别说明。\n\n关于该阶段的具体起讫年份与分期方案，本平台当前不做细化表述，待内容组依据正式来源核定。\n\n在页面上，这一阶段对应时间轴上的「洛阳时期」区段，用户可以从这里进入龙门一侧的证据。需要再次强调的是，龙门中的唐代材料同样重要，只是不属于本章的讨论范围，本章在界面上会明确标出这一限定。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_022",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "event_capital_move_luoyang",
+      "concept_institutional_change"
+    ],
+    "claim_ids": [
+      "claim_move_not_single_cause",
+      "claim_move_supports_institution"
+    ],
+    "title": "迁都是不是单一原因造成的",
+    "text": "关于迁都的原因，本章不做单一归因。迁都涉及政治、军事、经济与制度等多方面背景，把这些背景压缩成「为了某一个目的而迁都」，会让用户以为历史决定只有一条理由，也会掩盖当时不同群体的不同处境。\n\n同样需要避免的是替历史人物编造心理活动。规格文档明确要求：不得虚构孝文帝与臣子的私人对白和心理活动。数字历史角色可以使用第一人称复述有史料支持的事件，但不能添加感受、天气、对白与秘密动机。\n\n在回答「为什么要从平城迁到洛阳」这类问题时，平台的做法是先说明资料可以确认什么（迁都确实发生，并与孝文帝时期的决策和推行过程相关），再说明研究者从哪些角度进行解释，最后说明哪些内容属于推测、不宜作为确定结论。这样用户看到的是证据的组织方式，而不是一个包装过的故事。\n\n规格文档还要求 AI 在处理这类问题时区分叙事模式与史实模式：叙事模式可以用第一人称复述有史料依据的事件，但不能添加感受与对白；史实模式使用第三人称，并清楚区分事实与解释。两种模式都不允许编造动机。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_023",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_institutional_change",
+      "policy_costume_reform",
+      "policy_surname_reform"
+    ],
+    "claim_ids": [
+      "claim_reform_not_single_cause",
+      "claim_reform_not_overnight"
+    ],
+    "title": "迁都与制度调整之间的关系",
+    "text": "迁都与姓氏、服饰、朝堂语言等方面的制度调整在时间上相邻，本章把它们放在同一条时间脉络中观察，但不把它们写成「因为迁都，所以一切都变了」的因果链。\n\n在知识图谱中，这一处理方式体现为：平台不创建「导致全部文化变化」的边，也不建立「孝文帝改革」这样一个统摄一切的巨大节点。迁都、姓氏改革、服饰制度调整、朝堂语言相关规定分别作为独立节点存在，各自绑定自己的 Claim 与来源，用户点开任意一条边都可以查看「为什么有这条关系」。\n\n这样设计的目的，是让「不同政策与实物证据分别展示」成为默认状态。当用户问「改革具体包括什么」时，AI 的回答结构是先列具体制度变化，再列实物与文献证据，然后说明不同传统仍有延续、改造与并存，最后解释「汉化」只是一个概括词，不能替代具体史实。\n\n在页面的图谱视图中，用户可以打开「显示研究解释」与「显示策展对照」两个开关，分别查看虚线表示的学术解释与点划线表示的策展关系。事实边与解释边在视觉上可区分，是本章图谱设计的基本要求。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_024",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "event_capital_move_luoyang",
+      "place_luoyang"
+    ],
+    "claim_ids": [
+      "claim_move_capital_process",
+      "claim_move_capital_493"
+    ],
+    "title": "迁都是493年还是494年",
+    "text": "关于迁都的时间，公开资料中存在两种不同的表述：中国国家博物馆元羽墓志相关内容采用493年的表述；部分资料依传统纪年，以「太和十八年」，即494年作为表述。\n\n本平台的处理方式是**保留来源差异**，不随便选择一个、删除另一个。页面默认显示「493—494年前后，北魏完成从平城向洛阳的迁都过程」，同时提供「为什么资料中有493和494两种写法？」的入口。\n\n说明文案为：不同资料可能依据迁都决策、迁移过程或传统纪年节点采用不同年份。平台保留原始来源表述，并在内容审核后对具体阶段进一步细分。\n\n在 AI 回答层面，这一年属于被标记为「存在不同表述」的事实。当用户提问时，系统会触发来源差异检查，回答中分别说明两种表述及其来源，不擅自给出一个「最终唯一时间」。使用 494 年表述的来源目前仍为占位来源，正式上线前需替换为权威来源。\n\n在技术实现上，这两种表述分别作为独立的日期主张存储，各自绑定来源与 Claim。前端默认读取聚合结果用于展示，但当用户点开「为什么资料中有493和494两种写法」时，系统会显示原始来源，而不是一个合并后的数字。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_025",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "event_capital_move_luoyang"
+    ],
+    "claim_ids": [
+      "claim_move_capital_493",
+      "claim_move_capital_494",
+      "claim_move_capital_process"
+    ],
+    "title": "平台为什么保留493与494两种写法",
+    "text": "平台保留两种写法，不是为了制造模糊，而是因为这两种表述确实来自不同性质的资料与不同的记录角度。493年一侧来自中国国家博物馆元羽墓志相关内容；494年一侧依传统纪年，属于部分资料的表述方式。\n\n在技术上，这一差异由 event_date_claims 结构承载：同一事件下可以有多个日期主张，每条主张分别记录日期文本、精度、对应的 Claim 与来源。前端默认读取聚合展示（「493—494年前后」），但证据页会显示原始来源，用户可以直接看到「哪个来源说了什么」。\n\n在回答层面，系统设有 SOURCE_DATE_VARIANT 状态。命中时前端显示提示：「不同资料对该时间节点存在不同表述，回答将分别说明来源。」核验器也会检查回答是否错误抹平了这一差异。\n\n需要补充的是，494年一侧当前仅有普通网络材料作为占位来源，内容组需在正式上线前替换为文物主管部门或权威学术来源。\n\n此外，平台不把「493—494年前后」写成新的唯一精确答案，而是明确它是一个范围表述，用于容纳资料差异。任何试图把两种来源合并成一个精确日期的做法，都与本章的来源处理原则相冲突。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "494年一侧的来源需替换为权威来源；并确认 event_date_claims 中各条日期主张的精度与表述。"
+  },
+  {
+    "id": "chunk_wei_026",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_longmen",
+      "place_luoyang"
+    ],
+    "claim_ids": [
+      "claim_longmen_unesco_2000",
+      "claim_longmen_wei_late_and_tang"
+    ],
+    "title": "龙门石窟的基本情况",
+    "text": "龙门石窟位于今河南省洛阳市，2000年列入联合国教科文组织《世界遗产名录》。UNESCO世界遗产资料在介绍龙门时指出，龙门石窟保存大量北魏晚期与唐代的佛教石刻艺术。\n\n这一表述包含两个重要信息。第一，龙门的营造跨越多个历史时期，北魏晚期是其中重要的一段，唐代同样留下了大量作品。第二，正因为如此，本章在使用「龙门」这个词时必须限定范围：当页面说「龙门北魏阶段」时，指的是北魏晚期这一特定阶段的材料，不包括唐代及其后的内容，也不代表整个龙门石窟。\n\n本章在龙门一侧设置的首批证据热点包括古阳洞造像与龛饰、北魏阶段造像题记、服饰相关材料与伎乐雕刻。这些热点同样采用预先标注坐标的方式实现，不做景区全景导览，也不做整窟数据库。\n\n在入口设计上，用户从章节首页选择「开始证据对照」后即进入双场景，龙门一侧默认展示北魏阶段的证据热点；如果某个热点属于唐代或其他时期，界面会明确标注年代范围，避免用户误读为北魏材料。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_027",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_longmen",
+      "event_northern_wei_luoyang_period"
+    ],
+    "claim_ids": [
+      "claim_longmen_not_all_wei",
+      "claim_longmen_wei_late_and_tang"
+    ],
+    "title": "龙门石窟不等于北魏石窟",
+    "text": "龙门石窟的营造延续了很长的时间。UNESCO世界遗产资料指出，龙门石窟保存大量北魏晚期与唐代的佛教石刻艺术，这意味着北魏只是这座遗产的多个时期之一。\n\n因此本章明确不做以下表述：把整个龙门石窟说成「孝文帝时期」的产物；把整个龙门石窟归入北魏；或把龙门遗产的整体价值归到某一位皇帝个人名下。这些说法都会抹掉后续多个时期的营造事实。\n\n在 AI 回答层面，规格文档把「龙门石窟是不是全部属于北魏」列为重点测试问题之一。命中该类问题时，回答必须先说明龙门的长期营造事实，再说明北魏晚期只是重要阶段之一，最后才进入具体的北魏阶段材料。核验器也会检查回答是否错误地把整个龙门都说成北魏。\n\n在回答结构上，这类问题属于「范围确认型」：先确认遗产的整体年代跨度，再确认本章讨论的具体阶段，最后才进入具体材料。规格文档把这一问题列为重点测试项，用于检验 AI 是否会为追求简洁而扩大材料的适用范围。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_028",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_longmen",
+      "evidence_longmen_inscriptions"
+    ],
+    "claim_ids": [
+      "claim_longmen_has_wei_phase",
+      "claim_longmen_inscriptions_20pin"
+    ],
+    "title": "龙门北魏阶段的造像与题记材料",
+    "text": "龙门石窟的北魏阶段留下了大量造像与龛饰，以及数量可观的造像题记。题记通常刻于龛像一侧，记录造像者的身份、发愿内容与纪年信息，是文字类的第一手材料。\n\n对本章而言，这类材料有两个用途。第一，它提供了文字类对照的龙门一侧证据，可与元羽墓志等墓志材料并置，说明北魏时期文字材料的多样性。第二，它让用户看到造像活动背后的参与者：不同身份的人在不同时间发愿造像，说明营造并非单一主体的行为。\n\n需要保持的边界是：不能由题记的数量推断当时社会的识字率或语言使用情况；不能把题记中的身份表述等同于整个社会结构；也不能把书法风格的评鉴直接当作历史事实。\n\n「龙门二十品」中出自古阳洞的具体数量，以及代表性题记的编号与释文，仍需内容组依据正式资料核定。\n\n题记材料的另一个特点是它带有明确的时间与人物信息，因此可以被用来讨论造像活动的参与者构成。但参与者的身份表述属于个案记录，不能直接推及整个社会结构，这一点在证据卡的边界栏中有明确说明。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需核定「龙门二十品」出自古阳洞的具体数量、代表题记编号与释文，并补充龙门石窟研究院等正式来源。"
+  },
+  {
+    "id": "chunk_wei_029",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "evidence_longmen_guyang",
+      "heritage_longmen"
+    ],
+    "claim_ids": [
+      "claim_longmen_architecture_kan"
+    ],
+    "title": "龙门的仿木构龛与建筑形象",
+    "text": "龙门石窟北魏阶段的窟龛中，出现了一批模仿木构建筑的屋形龛，以及柱、斗栱等建筑构件的形象。这类材料与云冈的窟形、建筑雕刻一起，构成建筑类对照的两侧证据。\n\n它们可以支持的说法是：北魏时期的石窟营造中存在以石刻表现木构建筑形象的做法，是观察当时建筑观念的材料之一。研究者也会借助这类材料讨论木构构架的演变序列。\n\n不能直接推出的内容包括：由雕刻中的建筑形象推断实际木构建筑的尺寸与结构；由龛形推断营造者的族属；以及把某一种屋顶形式直接对应某一个地区或人群。雕刻是表现，实际建筑是另一回事，两者之间需要经过研究论证才能建立联系。\n\n本条的具体龛号、术语与建筑史来源仍需内容组补充核定。\n\n在双场景中，建筑类对照的两侧材料类型并不完全相同：云冈一侧是窟形与雕刻中的建筑形象，龙门一侧主要是龛形与龛饰。系统在对照卡上会说明这一差异，避免用户把不同性质的材料当作同类数据直接比较。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需补充建筑史方向正式学术来源，核定具体龛号与「屋形龛」「一斗三升」等术语的规范表述。"
+  },
+  {
+    "id": "chunk_wei_030",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "cave_longmen_guyang",
+      "heritage_longmen"
+    ],
+    "claim_ids": [
+      "claim_guyang_earliest",
+      "claim_evidence_longmen_guyang_observation"
+    ],
+    "title": "古阳洞的基本情况",
+    "text": "古阳洞是龙门石窟中开凿较早、内容较为丰富的洞窟之一，保存有北魏时期的造像、龛饰与题记，是本章龙门一侧的核心证据空间。\n\n本章选择古阳洞作为主要空间，是因为它同时具备多种类型的材料：造像与龛形可以用于艺术与建筑方面的观察；造像题记可以用于文字与身份方面的观察；窟内伎乐与乐器相关雕刻可以用于音乐方面的观察。这样，用户在一处空间内就能完成多组对照，而不必先掌握艺术史的专业知识。\n\n必须保持的边界是：古阳洞的营造与造像活动延续了一段时间，参与发愿造像的人物身份多样，不能把整洞内容归结为某一个人的意志或某一项政策的结果。「开凿最早」这类排序表述也需要依据龙门石窟研究院的正式资料核定后再定稿。\n\n本条当前标为待核验状态，不进入 AI 检索。\n\n在页面结构中，古阳洞同时承载艺术、题记、服饰与音乐四类证据，是龙门一侧最集中的证据空间。用户在这里完成的多组对照会进入本章的探索成果，显示为「访问过的历史空间」与「看过的证据类型」。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需核定开凿年代的起讫表述、代表性龛像编号与来源，并确认「开凿较早」的统一写法。"
+  },
+  {
+    "id": "chunk_wei_031",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "cave_longmen_guyang",
+      "evidence_longmen_guyang"
+    ],
+    "claim_ids": [
+      "claim_evidence_longmen_guyang_observation",
+      "claim_art_change_not_single_cause"
+    ],
+    "title": "古阳洞的造像与龛饰",
+    "text": "古阳洞窟内壁面分层布置有多列佛龛，龛形与龛饰多样，造像组合与背光装饰保留较多细节。这些内容可以在现场被观察到，是艺术类对照的龙门一侧材料。\n\n在证据卡上，这条材料按照固定四层显示：看到什么（分层列龛、龛形与龛饰多样）；可以确认什么（该洞保存北魏阶段的造像与龛饰，属于龙门北魏阶段的重要材料）；研究者如何解释（可用于观察龙门北魏阶段的艺术特征，并与云冈材料对照）；不能直接推出什么。\n\n最后一层尤其重要：不能由本洞材料代表整个龙门石窟；不能把本洞的艺术特征变化直接归因于迁都或某一条政令；不能把营造活动归功于单一人物。石窟营造是长期、多主体参与的过程，任何单因解释都会遗漏实际发生的事。\n\n需要提醒的是，石窟中的龛像往往经过多次增补与改建，同一壁面上的内容可能并非同一时期完成。因此本章在讨论具体龛像时，会尽量标明其所属阶段；资料不足以判断阶段的内容，则不作为对照材料使用。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_032",
+    "source_id": "src_cssn_longmen_music",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "evidence_longmen_music",
+      "cave_longmen_guyang"
+    ],
+    "claim_ids": [
+      "claim_longmen_music_guyang",
+      "claim_yungang_music_instruments_mix"
+    ],
+    "title": "古阳洞的伎乐与乐器雕刻",
+    "text": "龙门北魏阶段洞窟中保存有伎乐天与乐器雕刻，古阳洞是讨论这类材料时常被提到的一处。学术文章在讨论龙门石窟的音乐图像时指出，这些材料可以与云冈的同类雕刻进行比较研究，并注意到其中包含中原传统乐器的因素。\n\n本章把这条材料作为音乐类对照的龙门一侧证据。它的用途是让用户看到：同一种文化实践（在窟龛中雕刻伎乐与乐器）在两处遗产中都有留存，可以并置观察。\n\n不能直接推出的内容包括：由乐器图像推断实际演奏的曲目与音响；由乐器组合判断演奏者的族属；把两处乐器组合的差异直接归因于迁都。乐器与乐舞的传播本身就跨越地域，不能做简单的族属对应。\n\n本条的具体龛号、伎乐天数量与乐器种类仍需内容组核定后定稿。\n\n在对照卡上，音乐类材料的两侧会被放入同一个对照槽，显示相同点、差异点与不能直接得出的结论。三项内容均为审核配置，不由大模型即时生成，这是本章在演示版中的硬性要求。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需核定具体龛号、伎乐天数量与乐器种类，并补充正式学术论文来源与音乐史方向复核。"
+  },
+  {
+    "id": "chunk_wei_033",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_institutional_change",
+      "policy_costume_reform",
+      "policy_surname_reform",
+      "policy_language_court"
+    ],
+    "claim_ids": [
+      "claim_reform_not_single_cause"
+    ],
+    "title": "为什么把「孝文帝改革」拆成多个节点",
+    "text": "本章不在知识图谱中建立一个名为「孝文帝改革」的巨大节点，让所有关系都指向它。原因很实际：一旦这样做，页面与 AI 都会不可避免地滑向「一项改革导致全部变化」的表述，而这正是本章要避免的简化。\n\n替代方案是把各项政策分别建模：迁都洛阳、服饰制度调整、姓氏改革、朝堂语言相关规定各自成为独立节点，分别绑定自己的 Claim 与来源。这样，用户在图上看到的是几条并列的关系，而不是一个中心辐射到一切的结构。\n\n在实际展示中，这一设计带来的效果是：当用户问「孝文帝改革具体包括什么」时，系统先列具体制度变化，再列实物与文献证据，然后说明不同传统仍有延续、改造与并存，最后解释「汉化」是概括词而不能替代具体史实。用户还能点开任意一条关系，查看「为什么有这条关系」及其来源。\n\n这套拆分方式也方便用户理解历史研究的实际状态：不同制度的资料丰富程度并不一样，有的可以细说，有的只能说明大致方向。平台把这种差异如实呈现出来，比强行写成整齐的一套更有说服力。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_034",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "policy_costume_reform",
+      "policy_surname_reform",
+      "policy_language_court",
+      "event_capital_move_luoyang"
+    ],
+    "claim_ids": [
+      "claim_xiaowen_surname_reform_rel",
+      "claim_xiaowen_costume_reform_rel"
+    ],
+    "title": "迁都、姓氏、服饰、朝堂语言：四项分别说明",
+    "text": "本章涉及四项与北魏孝文帝时期相关的制度变化：迁都洛阳；姓氏方面的调整（相关公开资料记载496年皇族姓氏由拓跋改为元）；服饰制度调整；朝堂语言相关规定。它们在图谱中是四个并列的节点，不合并为一个总节点。\n\n需要说明各条的当前资料状态。迁都与姓氏、服饰三项有可用的公开来源支撑，可以进行展示；朝堂语言相关规定在规格文档中只给出了节点 ID，没有条文、年份与适用范围，因此当前只保留结构位置，不展示具体内容，也不进入 AI 检索。\n\n这样处理的一个好处是：用户能直接看到「哪些内容已经有依据、哪些还没有」。这比把所有内容都写成一个完整故事更接近研究工作的真实状态，也符合本章「让依据可见」的产品目标。\n\n在 AI 回答层面，这种拆分带来的直接效果是：当用户要求「讲讲孝文帝改革」时，系统不会输出一段笼统的综述，而是按照迁都、姓氏、服饰、朝堂语言分项说明，并标明每一项当前的资料状态。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "朝堂语言相关政策内容缺失，需内容组依据《魏书》等史料补充条文、年份与适用范围后方可展示。"
+  },
+  {
+    "id": "chunk_wei_035",
+    "source_id": "src_chnmuseum_attendant_figurine",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_institutional_change",
+      "concept_costume_transformation"
+    ],
+    "claim_ids": [
+      "claim_costume_policy_vs_practice",
+      "claim_reform_not_overnight"
+    ],
+    "title": "制度规定与实际生活并不同步",
+    "text": "本章在讲制度变化时，反复区分三件事：制度层面的规定、图像与实物中看到的实际形态、以及两者之间的关系。这三件事经常被混在一起讲，结果就变成了「下令之后，所有人立刻换了衣服」。\n\n制度规定的推行需要时间，也会受到地区、阶层与场合的影响；不同群体对新规定的接受程度并不一致；旧有的着装方式可能在很长时间内继续存在，甚至重新流行。因此「制度变化」与「日常生活变化」之间不是同步的。\n\n本章因此在页面与回答中都坚持：不同政策与实物证据分别展示；不建立「导致全部文化变化」的边；不用一件文物代表所有社会群体。当用户追问「当时是不是所有人都马上穿汉服」时，回答应当说明制度文本与实际穿着需要分别讨论，并给出具体的材料范围，而不是给出一个是或否的简单答案。\n\n在证据卡的设计上，这一原则体现为固定四层中的第二层与第四层：可以确认什么、不能直接推出什么。前者说明材料的直接支持范围，后者说明超出范围的推论，两层合起来界定了这条证据的有效边界。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_036",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "policy_language_court",
+      "person_emperor_xiaowen"
+    ],
+    "claim_ids": [
+      "claim_language_court_content"
+    ],
+    "title": "朝堂语言相关规定：当前资料状态",
+    "text": "朝堂语言相关规定是本章实体清单中列出的政策节点之一，与北魏孝文帝时期的制度调整相关。但需要如实说明：规格文档只给出了该节点的 ID，没有提供任何可直接使用的内容，包括诏令条文、具体年份与适用范围。\n\n因此本平台当前的处理方式是：保留该节点在图谱中的结构位置，用于说明「制度调整不止一项」；但不展示具体条文细节，也不让该条进入 AI 检索。任何涉及具体内容的问题，系统都应回答「该条内容尚未完成审核」，而不是依据常识补充。\n\n待内容组依据史料补充条文、年份与适用范围，并为每条陈述绑定 Claim 与来源后，方可开放展示。同时提醒：语言政策的相关内容不得写成「语言—文字—族群」的一一对应，也不得据此推断当时所有人的日常用语情况。\n\n平台在界面上的处理是保留节点但显示状态标记：用户在图谱中可以看到这个节点的存在与其连接关系，但打开详情时会看到「该条内容尚未完成审核」的说明，而不是一段凭常识补写的内容。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "政策内容缺失，需内容组补充史料依据后再上线；当前禁止展示具体条文。"
+  },
+  {
+    "id": "chunk_wei_037",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "policy_surname_reform",
+      "artifact_yuanyu_epitaph"
+    ],
+    "claim_ids": [
+      "claim_surname_reform_496",
+      "claim_yuanyu_epitaph_surname_496"
+    ],
+    "title": "496年改姓：资料能确认什么",
+    "text": "关于北魏姓氏改革，中国国家博物馆元羽墓志相关内容涉及496年改姓，即皇族姓氏由拓跋改为元。这是本章在姓氏问题上最主要的来源支撑。\n\n可以确认的内容有两层。第一层是时间与事实：相关公开资料记载了496年的姓氏改写，并涉及皇族姓氏由拓跋改为元。第二层是实物对应：元羽墓志作为一方具体墓志，其墓主姓名本身就体现了这一变化，同时墓志还涉及籍贯书写的变化。\n\n不能由此推出的内容包括：不能说496年之后所有相关人群都同步完成了改姓；不能由一方墓志推断整个社会的姓氏使用情况；也不能据此判断当时不同地区、不同阶层的执行差异。这些都需要更多材料分别说明。\n\n关于姓氏改革的适用范围、推行过程与各地执行情况，本平台当前描述有限，待内容组补充正式来源后细化。\n\n在史料证据页上，这条内容以「中国国家博物馆元羽墓志资料支持了什么」的形式展示，用户可以展开查看它支持的全部 Claim，包括迁都时间表述、496年改姓与籍贯变化，并看到每一条 Claim 对应的是资料原文的哪个层面。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_038",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "policy_surname_reform",
+      "person_yuanyu",
+      "artifact_yuanyu_epitaph"
+    ],
+    "claim_ids": [
+      "claim_surname_reform_496",
+      "claim_epitaph_associated_yuanyu"
+    ],
+    "title": "拓跋为什么改为元",
+    "text": "关于拓跋氏改为元氏，平台可以依据的资料是中国国家博物馆元羽墓志相关内容所涉及的496年改姓记载。这一记载说明了改姓发生的时间与其中一支皇族姓氏的具体变化，墓主元羽的姓氏本身即为这一变化的实例。\n\n需要明确的是，本平台当前不提供关于改姓动机的确定解释。规格文档明确要求：不得虚构孝文帝与臣子的私人对白和心理活动；也不得把现代概念直接写成古人的原始动机。因此当用户问「为什么要改姓」时，回答应当先说明资料可以确认什么，再说明研究者从哪些角度进行解释，并标明后者属于研究观点。\n\n同时需要提示边界：姓氏变化是一项具体的制度调整，不能由它直接推出一部「所有人都改变了身份认同」的整体叙事。改姓的实际执行情况、不同群体的反应与延续至今的影响，都需要更多材料分别讨论。\n\n在回答结构上，「为什么改姓」属于需要区分事实与解释的问题：资料记载了什么、研究者如何理解、哪些说法属于推测，三者需要分层呈现。这也是本章核验器重点检查的项目之一。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_039",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "policy_surname_reform",
+      "evidence_yuanyu_epitaph"
+    ],
+    "claim_ids": [
+      "claim_surname_reform_scope",
+      "claim_epitaph_cannot_represent_all"
+    ],
+    "title": "改姓能推出什么、不能推出什么",
+    "text": "姓氏改革是一个很适合用来练习「证据边界」的题目，因为它同时涉及制度与个人两个层面。\n\n能推出什么：496年存在一项涉及皇族姓氏的改写，皇族姓氏由拓跋改为元；这一变化在一方具体墓志（元羽墓志）上留下了可见的痕迹；可与迁都、籍贯书写等其他变化放在同一时间脉络中观察。\n\n不能推出什么：不能由一方墓志推断「当时所有鲜卑人都改成了汉姓」；不能推断所有群体在同一时间完成了一致改变；不能由姓氏变化直接推断身份认同、语言使用或日常生活的实际状况；也不能把改姓写成「原有传统从此消失」。\n\n平台在回答这类问题时，会触发过度概括检查。凡是出现「所有鲜卑人都……」「改革之后完全消失……」这类表述，系统会要求重写，并说明具体能确认的范围。\n\n平台还设置了专门针对过度概括的回答状态。当检测到「所有鲜卑人都……」「改革之后完全消失……」这类表述时，系统会要求重写回答，并在结果中标记需要人工复核，而不是照原样输出给用户。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_040",
+    "source_id": "src_chnmuseum_attendant_figurine",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_costume_transformation",
+      "evidence_attendant_costume",
+      "evidence_longmen_costume"
+    ],
+    "claim_ids": [
+      "claim_costume_not_ethnic_identity",
+      "claim_evidence_longmen_costume_observation"
+    ],
+    "title": "北魏后期的服饰证据有哪些类型",
+    "text": "本章用于观察北魏后期服饰的证据分三类。第一类是制度层面的服饰相关规定，说明的是制度要求；第二类是墓葬出土陶俑等实物，可以具体观察冠式、衣襟方向与上衣下裤等组合；第三类是石窟造像与供养人形象中的服饰图像，例如龙门北魏阶段窟龛中的相关材料。\n\n三类的证据强度并不相同：实物可以测量、可以多角度观察；图像受雕刻工艺与表现传统影响；制度文本说明的是规定而不是实际穿着。把它们混为一谈，就会产生「制度一颁布，全社会就换了装」的错误印象。\n\n本章把这三类材料分别建条、分别标注证据类型，并在对照槽中并置展示。用户看到的不是一句结论，而是三种材料各自能说什么、不能说什么。\n\n服饰类证据卡的「不能直接推出什么」一栏固定包含：不能由服饰直接推断民族身份。\n\n在对照展示上，服饰类对照是本章首批三到四组对照之一。左侧通常是博物馆实物或云冈材料，右侧是龙门北魏阶段的服饰形象，两侧证据类型不同这一事实本身，就是对照卡需要说明的重点之一。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_041",
+    "source_id": "src_chnmuseum_attendant_figurine",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "artifact_attendant_figurine_yuanshao",
+      "evidence_attendant_costume"
+    ],
+    "claim_ids": [
+      "claim_figurine_yuanshao_528",
+      "claim_figurine_costume_features"
+    ],
+    "title": "侍从陶俑与北魏后期服饰",
+    "text": "中国国家博物馆藏侍从陶俑与洛阳元邵墓相关，属于北魏后期的墓葬材料。在本章中，它承担的是服饰类证据的功能：陶俑是立体的服饰图像材料，可以具体观察冠式与衣着的组合方式。\n\n它的价值还在于类型上的互补。墓葬出土陶俑与石窟造像中的服饰形象属于不同来源的材料，两者可以相互参照；如果两类材料指向相近的形制特征，那么相关判断会比只依赖单一材料更稳一些。\n\n需要写明的边界是：陶俑是随葬品，反映的是特定场合与特定身份的着装形象，不能等同于当时居民日常生活中的普遍穿着；也不能由陶俑的服饰直接推断人物的民族身份；更不能由一件俑代表全部北魏社会。\n\n本条涉及的出土地点、墓葬年代、器物尺寸与服饰部位描述，仍需内容组依据馆方资料核定。\n\n在实体卡上，这件陶俑会显示其收藏机构、年代范围与本章用途，并固定显示证据边界：「一件陶俑不能代表所有社会群体」。这条边界不是免责声明，而是材料解释范围的如实说明。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需依据国博藏品页核定出土地点、墓葬年代、器物尺寸与服饰部位描述，并补充服饰史方向的学术来源。"
+  },
+  {
+    "id": "chunk_wei_042",
+    "source_id": "src_chnmuseum_attendant_figurine",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_costume_transformation",
+      "policy_costume_reform"
+    ],
+    "claim_ids": [
+      "claim_costume_not_ethnic_identity"
+    ],
+    "title": "服饰证据不能直接推断民族身份",
+    "text": "服饰是本章最容易产生误读的一类证据，因此需要把边界写在最前面。\n\n服饰形制可以反映的东西包括：穿着的场合、穿着者的身份与等级、当时的工艺条件、以及一定时期内的时尚选择。它可以被用来研究形制的变化过程，也可以与制度文本对照，观察规定与实际的差距。\n\n服饰形制不能直接反映的东西是：某一个人的民族身份。原因是服饰可以被采用、改造、借用与混合。历史上长期存在不同来源的服饰因素相互吸收的情况，一种服饰元素出现在某个人群中，并不意味着这个人群的族属可以用该元素来定义。\n\n因此本章不使用「改革前穿胡服、改革后穿汉服」这样的句式，也不做「看服饰判断族属」的互动。所有服饰类证据卡的边界栏固定写明：不能由服饰直接推断单一民族身份。\n\n规格文档把「当时是不是所有人都马上穿汉服」列为重点测试问题之一。回答时需要同时说明制度推行的过程性与材料证据的有限性，并给出具体的证据类型，而不是用一句「文化融合需要时间」代替论证。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_043",
+    "source_id": "src_chnmuseum_xianbei_costume",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_costume_transformation",
+      "concept_cultural_continuity"
+    ],
+    "claim_ids": [
+      "claim_xianbei_costume_tradition",
+      "claim_continuity_not_disappear"
+    ],
+    "title": "鲜卑服饰传统的延续与再变化",
+    "text": "在讨论北魏服饰时，一个常见的误解是：制度调整之后，原有的服饰传统就消失了。中国国家博物馆关于「源于鲜卑的汉服」的研究文章提供了一个不同的观察角度：鲜卑服饰传统中的部分形制在后世仍有沿用与变化，服饰因素之间存在长期的相互采用。\n\n这一观察对本平台很重要，因为它说明「变化」与「延续」可以同时存在，而不是一场替代。制度层面的调整可能改变了某些场合的着装规范，但服饰系统本身仍在流动、吸收与再组合。\n\n因此本章不建立「孝文帝取代鲜卑文化」这类关系，也不把改革与「所有鲜卑人改变生活方式」写成因果。平台在讲服饰时，把制度、实物与图像三类材料分开呈现，让用户看到变化与延续各自的证据基础。\n\n在概念层面，这一观察支持的是「文化延续」与「文化变化」并存，而不是二者相争。平台在界面上不设「传统 vs 改革」的对立选项，也不把服饰的延续写成对制度调整的抵抗，这些都属于没有材料支持的叙事。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_044",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "artifact_yuanyu_epitaph",
+      "person_yuanyu"
+    ],
+    "claim_ids": [
+      "claim_epitaph_associated_yuanyu",
+      "claim_epitaph_dated_to_wei"
+    ],
+    "title": "元羽墓志的基本情况",
+    "text": "元羽墓志是中国国家博物馆藏的北魏墓志，墓主为元羽。墓志是随葬于墓葬中的石刻文字材料，通常记录墓主的姓名、身份、籍贯、卒葬时间与部分生平信息，因此同时具备实物与文献两种属性。\n\n在双场景页面中，元羽墓志属于博物馆辅助证据。用户从云冈与龙门的热点出发，可以进一步打开这方墓志，观察它作为「实物／文献交叉证据」的特点：它既可以看（石刻实物），也可以读（志文内容）。\n\n需要说明的是，本平台当前关于该墓志的描述主要依据中国国家博物馆公开资料的概括性说明，涉及的卒年、官职、籍贯书写等具体信息仍需内容组回到藏品页与墓志研究核定后定稿。未完成核验的细节不会作为确定事实回答。\n\n在实体卡上，元羽墓志同时显示文物属性与文献属性：它既是一件石刻文物，也是一份文字记录。这两种属性决定了它在本章中承担「实物与文献交叉证据」的角色，也决定了它在证据卡上需要同时写出观察与阅读两个层面的边界。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_045",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "evidence_yuanyu_epitaph",
+      "event_capital_move_luoyang",
+      "policy_surname_reform"
+    ],
+    "claim_ids": [
+      "claim_yuanyu_epitaph_records_move",
+      "claim_yuanyu_epitaph_surname_496"
+    ],
+    "title": "元羽墓志与迁都、改姓",
+    "text": "中国国家博物馆元羽墓志相关内容涉及两项与本章直接相关的信息：迁都洛阳，采用493年的时间表述；以及496年改姓，即皇族姓氏由拓跋改为元。\n\n正是这两项信息，让元羽墓志在本章中具有特殊位置。第一，它把迁都与姓氏改革这两个看似抽象的制度话题，落到了一方具体的石刻上，用户可以「看见」制度变化的痕迹。第二，它的时间表述与另一类资料并不一致（494年一侧依传统纪年），因此成为本章处理「来源差异」的示例：平台同时保留两种表述，并在证据页显示各自来源。\n\n需要保持的边界是：这方墓志反映的是墓主个人的身份与制度背景，不能据此推断当时所有社会群体发生了同步、一致的变化。它是一条重要材料，但不是一张覆盖全社会的成绩单。\n\n在双场景中，元羽墓志通过「加入对照」按钮可以进入对照槽，与龙门造像题记等文字材料并置。对照卡会说明两者的类型差异：一方墓志与石窟题记的记录目的、书写场合与保存环境都不同，比较需要限定维度。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_046",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "evidence_yuanyu_epitaph",
+      "concept_institutional_change"
+    ],
+    "claim_ids": [
+      "claim_epitaph_native_place_change",
+      "claim_epitaph_supports_institution"
+    ],
+    "title": "元羽墓志与籍贯书写的变化",
+    "text": "中国国家博物馆元羽墓志相关内容还涉及籍贯书写的变化。墓志中的籍贯信息通常用于标明墓主的家族来源与身份归属，因此当它与迁都等变化放在一起时，可以用于观察北魏后期的身份书写方式。\n\n在证据卡上，这一条被放在「可以确认什么」与「研究者如何解释」之间，并且必须标明边界：本平台当前描述的是「相关内容涉及籍贯书写变化」这一层面，具体的籍贯表述内容、书写方式的变化过程与制度依据，仍需内容组依据墓志释文与相关研究核定。\n\n同时需要提醒一个常见错误：不能用现代行政区划概念替代当时的籍贯表述。古代籍贯书写有自身的制度与习惯，把「郡望」「籍贯」直接换算成今天的省市县，会掩盖当时的实际含义。\n\n本条当前标为待核验状态，不进入 AI 检索。\n\n此外，籍贯书写的变化与姓氏变化常常被一起讨论，但两者的证据来源与判断方式并不相同。姓氏变化有相对明确的时间记载，籍贯书写则更多依赖墓志文本本身的比较，因此平台把它们分别建条、分别标注状态。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需依据墓志释文核定「籍贯变化」的具体内容与规范表述，避免用现代行政区划概念替代当时的籍贯表述。"
+  },
+  {
+    "id": "chunk_wei_047",
+    "source_id": "src_chnmuseum_yuanyu_epitaph",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "evidence_yuanyu_epitaph",
+      "concept_institutional_change"
+    ],
+    "claim_ids": [
+      "claim_epitaph_cannot_represent_all"
+    ],
+    "title": "一方墓志能说明什么",
+    "text": "这是本章被列为重点测试的问题之一：一方墓志能不能代表所有鲜卑人？答案是不能，而且原因值得说清楚。\n\n墓志是个人材料。它记录的是某一个人的姓名、身份、籍贯与卒葬信息，反映的是这个人所处的制度环境与家族背景。它可以说明「这样的制度变化确实存在，并且影响到了具体的个人」，但它不能说明这种影响覆盖了多少人、在多大范围内同步发生、在不同地区是否一致。\n\n要把「个人材料」变成「社会判断」，需要更多类型的证据：不同地区、不同阶层的墓葬材料；制度文本；图像材料；以及其他文字记录。单一材料无论多么清晰，都无法单独承担整体判断的任务。\n\n因此本章规定：任何由单一文物出发的回答，都必须先说明该材料的范围，再说明它支持的判断，最后写出不能推出的内容。当用户直接问「这是不是说明当时所有鲜卑人都改成汉人了」时，系统会明确说明这一推论不成立。\n\n这条内容在界面上以固定知识卡的形式呈现，用户可以从证据卡直接打开。知识卡的作用不是给出结论，而是说明本章为什么采用这样的证据方法，以及如果忽略方法会导致什么样的错误判断。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_048",
+    "source_id": "src_chnmuseum_attendant_figurine",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "artifact_attendant_figurine_yuanshao",
+      "evidence_attendant_costume"
+    ],
+    "claim_ids": [
+      "claim_figurine_yuanshao_528",
+      "claim_figurine_supports_costume_change"
+    ],
+    "title": "侍从陶俑的基本情况",
+    "text": "侍从陶俑是中国国家博物馆藏的北魏文物，与洛阳元邵墓相关。在规格文档中，它被列为本章的博物馆辅助证据之一，主要用于观察北魏后期的服饰。\n\n它在证据结构中的位置是：北魏后期墓葬材料，属于实物类证据，可以与元羽墓志（文字材料）和龙门造像中的服饰形象（图像材料）形成三种类型的互证。这种「三种材料看同一件事」的结构，正是本章希望用户掌握的观察方法。\n\n需要如实说明的是，本平台当前对该陶俑的出土地点、墓葬年代、器物尺寸等具体信息描述有限。相关内容需内容组依据中国国家博物馆藏品页核定后补充。在与墓主身份相关的表述上，平台保持谨慎，不使用未经核验的推断。\n\n在对照结构中，这件陶俑位于服饰类对照的博物馆一侧，与龙门北魏阶段的服饰材料并置。两个对照槽各自显示自己的观察、可确认内容、解释与边界，底部则显示审核配置过的相同点、差异点与不能直接得出的结论。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "需依据国博藏品页核定出土地点、墓葬年代、器物尺寸等具体信息；涉及墓主身份的表述应保持谨慎。"
+  },
+  {
+    "id": "chunk_wei_049",
+    "source_id": "src_chnmuseum_attendant_figurine",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "evidence_attendant_costume",
+      "concept_costume_transformation"
+    ],
+    "claim_ids": [
+      "claim_figurine_costume_features",
+      "claim_figurine_supports_costume_change"
+    ],
+    "title": "陶俑的服饰应该怎么读",
+    "text": "读一件陶俑的服饰，第一步是描述，不是解释。描述的内容包括：冠式是什么样的，衣襟向哪一侧掩，上衣与下装是什么组合，是否有带、靴或其他配件。这些是可以直接观察到的形制特征。\n\n第二步是把它放进类型序列。同一时期、同一地区的其他陶俑是否也有类似特征？石窟造像中的服饰形象是否接近？如果多种材料指向相近的形制特征，相关观察就更可靠。\n\n第三步才是解释，而且必须标明这是解释：这类形制可能与服制调整有关，也可能是场合、身份或时尚选择的结果。解释可以有多个候选，不能只保留一个。\n\n第四步是写出边界：随葬俑不等于日常穿着；一件俑不等于整个社会；服饰形制不能用来推断民族身份。本章要求所有服饰类证据卡都必须写清这四步，尤其是最后一步。\n\n在页面交互上，用户可以在证据卡上点击「查看来源」，展开中国国家博物馆藏品资料的说明，看到这条证据具体支持了哪些 Claim。这一设计的目的，是让用户随时能从「结论」回到「依据」。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_050",
+    "source_id": "src_chnmuseum_attendant_figurine",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "evidence_attendant_costume",
+      "concept_costume_transformation"
+    ],
+    "claim_ids": [
+      "claim_costume_policy_vs_practice",
+      "claim_costume_not_ethnic_identity"
+    ],
+    "title": "随葬陶俑的证据边界",
+    "text": "随葬陶俑是墓葬材料，这一点决定了它的证据边界。陶俑被放置于墓葬中，承担的是随葬与礼仪功能，其服饰形象反映的是当时人们认为「应该出现在这个场合」的着装，而不必然是日常生活中的实际穿着。\n\n因此在使用陶俑讨论服饰变化时，需要注意三点。第一，场合限定：墓葬场合的着装可能比日常生活更正式或更保守。第二，身份限定：不同身份的墓主随葬的俑群构成不同，不能一概而论。第三，数量限定：一件或一组俑可以提供形制实例，但不足以支撑关于全社会的判断。\n\n本章因此把陶俑与石窟造像中的服饰形象、墓志中的身份书写放在一起使用，让三类材料互相约束。这样得到的结论会比单一材料更稳，也更容易向用户解释「我们为什么这么说」。\n\n在方法层面，这类边界说明并非本章独有，而是适用于所有以单件文物为起点的讨论。用户掌握这种方法后，再看其他章节的实物材料时，也能自行判断哪些推论在材料范围内、哪些已经超出。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_051",
+    "source_id": "src_chnmuseum_xianbei_costume",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_costume_transformation",
+      "concept_cultural_continuity"
+    ],
+    "claim_ids": [
+      "claim_xianbei_costume_tradition"
+    ],
+    "title": "鲜卑帽与服饰传统的跨文化流动",
+    "text": "中国国家博物馆关于「源于鲜卑的汉服」的研究文章，讨论的是服饰因素在不同传统之间的流动。文章关注的例证之一是鲜卑帽等服饰形制，指出这类因素在后世仍有沿用与演变，说明服饰系统之间存在长期的相互采用。\n\n这个标题本身就很值得注意：「源于鲜卑的汉服」把来源与归属分开处理——一件服饰形制的来源可以是某一个传统，而它在后世的归属与使用则可以完全不同。这正是本章希望传达的观察方式。\n\n因此本章不使用「汉式服饰」与「鲜卑服饰」作为两个互斥的类别，也不主张某一方「取代」另一方。服饰因素在历史上的流动是双向且长期的，把它写成阵营对抗，会掩盖实际的交流过程。\n\n本条的具体形制描述需内容组依据该研究文章的原文核定后补充。\n\n在实体卡上，这一研究文章对应的是「鲜卑服饰传统」相关的内容块，用户可以看到它与北魏服饰制度、服饰变化两个概念节点之间的关系。关系类型以虚线显示，表示这属于研究解释层面的关联。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_052",
+    "source_id": "src_chnmuseum_xianbei_costume",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_costume_transformation",
+      "concept_institutional_change"
+    ],
+    "claim_ids": [
+      "claim_costume_policy_vs_practice",
+      "claim_xianbei_costume_tradition"
+    ],
+    "title": "服饰系统中的相互采用",
+    "text": "服饰史研究通常不把服饰看成单一来源的封闭系统。形制、配件与穿着方式会在不同人群之间流动，被采用、改造、再组合。这种流动有时与制度推动有关，有时则来自实际生活中的便利与审美选择。\n\n本章在呈现服饰证据时，因此把「制度」与「实践」两条线分开：制度线说明有哪些相关规定；实践线说明在出土实物与图像中能看到什么样的形制。两条线之间的关系用解释性语言说明，并明确写出不能直接推出的内容。\n\n这种处理方式也影响了 AI 的回答结构。当用户问「袴褶服到底属于谁」这类问题时，回答不会给出一个归属结论，而是说明这类服饰在材料中出现的情况、不同研究者的讨论角度，以及为什么用单一归属来概括服饰形制会丢失信息。\n\n这类问题在演示中常被用来检验平台是否会给服饰「认领归属」。正确做法是说明形制在材料中的出现情况、研究者讨论的角度，以及为什么单一归属会丢失信息，而不是给出一个简洁但错误的答案。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_053",
+    "source_id": "src_chnmuseum_xianbei_costume",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "artifact_xianbei_style_figurine",
+      "artifact_attendant_figurine_yuanshao"
+    ],
+    "claim_ids": [
+      "claim_curatorial_costume_pair"
+    ],
+    "title": "北朝比较材料的使用规则",
+    "text": "本章的博物馆辅助证据中包含一类「比较材料」，用于与北魏后期服饰证据形成对照。使用这类材料时，规格文档规定了一条硬性规则：若某件比较材料的年代超出北魏，必须明确标注为「北朝比较材料」。\n\n这条规则的意义在于避免年代错位。北朝包含北魏之后的若干政权，时间上从5世纪延续到6世纪后期，不同时期的服饰材料放在一起比较时，如果不标注年代范围，用户会误以为它们都属于北魏。\n\n在当前版本中，相关比较材料的具体藏品尚未确定，因此该条不展示具体内容，也不进入 AI 检索。内容组需要先确定对应藏品与收藏机构、核定年代范围并判断是否需要标注为北朝比较材料，再补充来源与图片权利。\n\n在数据结构上，比较材料的年代范围与标注方式是必填项：一旦年代超出北魏，界面会自动加上「北朝比较材料」的标识。这一标识同时出现在场景热点、实体卡与证据卡上，保证用户在任何入口都能看到限定。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "review",
+    "content_team_todo": "比较材料的藏品、年代范围与图片来源均未确定，需内容组补充后再上线。"
+  },
+  {
+    "id": "chunk_wei_054",
+    "source_id": "src_unesco_yungang",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_cultural_interaction",
+      "concept_institutional_change"
+    ],
+    "claim_ids": [
+      "claim_reform_not_single_cause",
+      "claim_modern_concept_not_goal"
+    ],
+    "title": "「汉化」为什么不能当作万能结论",
+    "text": "「汉化」是一个概括词，用起来方便，但作为结论会出问题。它把制度、艺术、服饰与日常生活混成一个概念，把不同步的变化说成同一步调，也容易把长期过程写成一次性事件。\n\n本章的处理方式是：遇到「北魏是不是完全汉化了」这类问题时，不给出「是」或「不是」的二选一答案，而是按照固定结构回答。先列出具体的制度变化；再列出实物与文献证据，说明各自能确认什么；然后说明不同传统仍有延续、改造与并存，并给出具体例子（例如服饰因素在后世的沿用与再变化）；最后解释「汉化」作为概括词，不能替代具体史实。\n\n规格文档还把「所有鲜卑人都……」「改革之后鲜卑文化完全消失」这类表述列为需要检测的过度概括。命中后，系统要求回答重写，而不是照原样输出。\n\n在演示脚本中，这条内容是「可信 AI」环节的核心：用户提问后，系统不采用绝对结论，而是给出具体的制度变化、实物证据与来源引用，并说明不同传统仍有延续。这一环节同时展示 RAG 检索与来源机制。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_055",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "heritage_yungang",
+      "heritage_longmen",
+      "concept_artistic_exchange"
+    ],
+    "claim_ids": [
+      "claim_yungang_longmen_not_before_after",
+      "claim_art_change_not_single_cause"
+    ],
+    "title": "云冈与龙门不是简单的「前后对比」",
+    "text": "本章最重要的表达边界之一，是不能把云冈与龙门做成「改革前」与「改革后」的对比。错误的做法是写成：云冈等于鲜卑，龙门等于汉化。\n\n更严谨的表述需要分别说明两边的实际情况。云冈一侧：受到南亚和中亚佛教石窟艺术影响，同时由北魏皇室营造，并形成了与中国文化传统和地方特色结合的表达，其自身在不同阶段也持续变化。龙门一侧：北魏迁都洛阳后出现重要营造，包含北魏晚期的艺术变化，与洛阳的政治文化环境相关，并且在北魏之后仍经历多个时期的营造。\n\n因此本章只选择龙门中的北魏阶段证据进行对照，并且在图谱中使用点划线表示这是策展对照关系，不是历史因果。当用户问「云冈是不是直接变成了龙门」时，回答应当说明两者是不同的遗产、不同的时段与不同的营造背景，并置是平台为了比较而做的安排。\n\n在视觉上，策展对照关系使用点划线，与事实关系的实线、研究解释的虚线形成区分。用户打开「显示策展对照」开关时，可以看到云冈与龙门之间的这条边，并在关系证据面板中读到「此关系为产品策展关系」的说明。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_wei_056",
+    "source_id": "src_unesco_longmen",
+    "chapter_ids": [
+      "northern_wei_integration"
+    ],
+    "entity_ids": [
+      "concept_cultural_interaction",
+      "person_emperor_xiaowen"
+    ],
+    "claim_ids": [
+      "claim_modern_concept_not_goal",
+      "claim_cultural_interaction_analytical"
+    ],
+    "title": "现代概念不能写成古人的目标",
+    "text": "本章有一条必须遵守的表述边界：不得把今天的「中华民族共同体意识」说成北魏孝文帝本人使用的概念，也不得把它写成当时的自觉政治目标。\n\n原因是时间与概念层面的双重错位。这个说法是现代的概念表述，形成于当代；把它直接放进一千五百多年前的历史人物口中，会让用户误以为古人已经在使用今天的分析框架，也会掩盖当时具体的历史条件与动机。\n\n平台允许的表述方式是：可以从今天的历史研究视角，讨论北魏时期不同人群长期交往和文化互动留下的历史基础；也可以说明这些历史过程对后世的意义。但这类讨论必须标明是今天的视角，而不是历史人物的自述。\n\n同样地，「文化互动」这一概念在界面上首次出现时，也会说明它是今天研究者与策展使用的分析用语。\n\n当用户以「你当时就是为了中华民族共同体意识改革的吗」这类方式提问时，回答需要说明概念的时间错位，并转而提供可以从史料讨论的内容，例如迁都与相关制度调整的具体材料。这属于本章的越界测试项之一。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  }
+]

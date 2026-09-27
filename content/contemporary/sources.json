@@ -1,0 +1,139 @@
+[
+  {
+    "id": "src_ihchina_qiang_embroidery",
+    "title": "羌族刺绣",
+    "author": null,
+    "institution": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆",
+    "source_type": "official",
+    "source_level": "S",
+    "source_level_basis": "按元代章 §17.3 来源等级定义：文物主管部门、博物馆、权威公共文化机构 = S。中国非物质文化遗产网为国家级非遗官方公共文化机构。",
+    "publication_year": null,
+    "public_url": "https://www.ihchina.cn/project_details/14181.html",
+    "bibliography": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆「羌族刺绣」国家级非物质文化遗产代表性项目页面",
+    "ui_level_label": "官方资料",
+    "supported_points": [
+      "羌族刺绣为国家级非物质文化遗产代表性项目",
+      "项目序号 852",
+      "项目编号 Ⅶ-76",
+      "2008 年公布，属第二批国家级非物质文化遗产代表性项目",
+      "类别为传统美术",
+      "申报地区或单位为四川省汶川县",
+      "保护单位为汶川县文化馆",
+      "官方资料列出的常见针法：架花（挑花）、织字（提花）、纳花（扎花）、撇花（平绣花）、勾花（链子扣）",
+      "官方资料列出的常见题材类型：花草蔬果、飞禽走兽、人物",
+      "羌族刺绣流行于四川等地羌族聚居区",
+      "官方非遗资料介绍明清时期羌族挑花刺绣已较为盛行"
+    ],
+    "license_note": "该页面仅可作为文化事实核验来源。页面公开可访问本身不构成对其中任何图片、纹样素材的网页展示授权、AI 生成使用授权或模型训练授权。",
+    "review_status": "approved",
+    "content_team_todo": null
+  },
+  {
+    "id": "src_ihchina_li_xingxiu",
+    "title": "李兴秀（国家级非物质文化遗产代表性项目羌族刺绣代表性传承人）",
+    "author": null,
+    "institution": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆",
+    "source_type": "official",
+    "source_level": "S",
+    "source_level_basis": "按元代章 §17.3 来源等级定义：权威公共文化机构 = S。",
+    "publication_year": null,
+    "public_url": "https://www.ihchina.cn/ccr_detail/2940/",
+    "bibliography": "中国非物质文化遗产网·中国非物质文化遗产数字博物馆「李兴秀」国家级非物质文化遗产代表性项目代表性传承人页面",
+    "ui_level_label": "官方资料",
+    "supported_points": [
+      "李兴秀为国家级非物质文化遗产代表性项目「羌族刺绣」的代表性传承人之一",
+      "其公开身份与公开经历可由该官方页面核验"
+    ],
+    "license_note": "该来源支持的是「公开身份与经历」这一事实层面。它不构成对本平台模拟其人格、口吻、声音、形象或个人创作风格的任何授权；也不构成对其任何作品图片的生成或训练授权。",
+    "review_status": "approved",
+    "content_team_todo": null
+  },
+  {
+    "id": "src_wenchuan_qiang_2024",
+    "title": "汶川县羌绣保护传承实践",
+    "author": null,
+    "institution": "汶川县人民政府门户网站",
+    "source_type": "official",
+    "source_level": "S",
+    "source_level_basis": "按元代章 §17.3 来源等级定义：政府主管部门公开信息 = S。",
+    "publication_year": 2024,
+    "public_url": "https://www.wenchuan.gov.cn/wcxrmzf/c100193/202406/389ac9c39d4d4557985dc493879833dd.shtml",
+    "bibliography": "汶川县人民政府门户网站公开信息（2024 年 6 月）羌绣保护传承实践相关内容",
+    "ui_level_label": "官方资料",
+    "supported_points": [
+      "汶川县当地已开展羌绣数字化建档实践",
+      "已开展羌绣线上展示实践",
+      "已开展非遗工坊相关实践",
+      "已开展学校课程相关实践",
+      "已开展羌绣文创开发相关实践"
+    ],
+    "license_note": "该来源支持的是保护实践的存在性事实。页面中的任何图片、图表不因此自动获得展示、生成或训练授权。",
+    "review_status": "approved",
+    "content_team_todo": "公开 URL 取自实施规格附录 A.3。正式上线前请复核链接可访问性、页面标题与发布时间；若页面迁移需更新 public_url。"
+  },
+  {
+    "id": "src_samr_qiang_standard_project",
+    "title": "《羌族刺绣》国家标准制定项目公开信息",
+    "author": null,
+    "institution": "全国标准信息公共服务平台",
+    "source_type": "official",
+    "source_level": "A",
+    "source_level_basis": "按元代章 §17.3 来源等级定义，标准项目公开信息按「专业著作／学术机构类材料」处理，定级 A。若内容组认为该平台应比照政府主管部门定级 S，可在复核时上调。",
+    "publication_year": null,
+    "public_url": null,
+    "bibliography": "全国标准信息公共服务平台公开的《羌族刺绣》国家标准制定项目页面（实施规格 §2.1、§17.2、附录 A.4 引用，未给出可直接抄录的公开 URL）",
+    "ui_level_label": "学术研究",
+    "supported_points": [
+      "截至实施规格编写时，《羌族刺绣》处于推荐性国家标准制定项目阶段",
+      "该项目公开范围涉及羌族刺绣的运用范围、种类与纹样类型、针法工艺等",
+      "该项目公开页面还提到对常见针法进行系统分类，并计划提供相关针法、纹样等数字化表达内容"
+    ],
+    "license_note": "本来源只能表述为「国家标准制定项目公开信息」。在正式标准发布生效之前，任何内容都不得表述为「已生效的国家标准正文」，也不得引用为强制或推荐性技术要求的依据。",
+    "review_status": "review",
+    "content_team_todo": "待补：公开 URL（实施规格未提供，需从全国标准信息公共服务平台检索该项目后抄录）。待核：项目计划号、下达日期、起草单位、当前状态（制定中／征求意见／已发布）。待确认：source_level 定 A 还是 S。相关 chunk 在本项完成前应使用「截至本规格编写时仍处于制定项目阶段」的时效限定语。"
+  },
+  {
+    "id": "src_wenchuan_qiang_copyright_2026",
+    "title": "汶川县羌绣版权保护实践",
+    "author": null,
+    "institution": "汶川县人民政府门户网站",
+    "source_type": "official",
+    "source_level": "S",
+    "source_level_basis": "按元代章 §17.3 来源等级定义：政府主管部门公开信息 = S。",
+    "publication_year": 2026,
+    "public_url": null,
+    "bibliography": "汶川县人民政府门户网站公开的羌绣版权保护实践相关内容（实施规格 §17.2、附录 A.5 引用，未给出可直接抄录的公开 URL）",
+    "ui_level_label": "官方资料",
+    "supported_points": [
+      "当地已开展羌绣数字化保存实践",
+      "当地已开展羌绣版权登记实践",
+      "当地已开展羌绣授权合作实践",
+      "当地已开展羌绣知识产权保护实践"
+    ],
+    "license_note": "该来源支持的是版权保护实践的存在性事实，不构成对任何具体纹样、作品的授权结论。个别素材能否用于展示、生成、训练，仍以该素材自身的 rights_record 为准。",
+    "review_status": "review",
+    "content_team_todo": "待补：公开 URL 与页面标题（实施规格附录 A.5 未提供链接，仅给了内部 ID 与用途说明）。待核：该实践的具体年份是否确为 2026；若实际公开时间不同，需同步修改 source id 中的年份或另建来源。待核：是否与 src_wenchuan_qiang_2024 实为同一批公开信息，如是则应合并为一个来源。"
+  },
+  {
+    "id": "src_mct_traditional_crafts_2022",
+    "title": "关于推动传统工艺高质量传承发展的通知",
+    "author": null,
+    "institution": "文化和旅游部等（国务院部门政务公开平台发布）",
+    "source_type": "official",
+    "source_level": "S",
+    "source_level_basis": "按元代章 §17.3 来源等级定义：政府主管部门公开文件 = S。",
+    "publication_year": 2022,
+    "public_url": "https://zwgk.mct.gov.cn/zfxxgkml/zcfg/gfxwj/202206/t20220628_934244.html",
+    "bibliography": "文化和旅游部等《关于推动传统工艺高质量传承发展的通知》，2022 年 6 月发布于文化和旅游部政务公开平台",
+    "ui_level_label": "官方资料",
+    "supported_points": [
+      "国家层面推动传统工艺高质量传承发展的政策背景",
+      "传统工艺保护与创新的政策导向",
+      "传统工艺领域知识产权保护的政策导向",
+      "传统工艺进入现代生活的应用导向"
+    ],
+    "license_note": "该来源用于政策背景，不用于论证任何具体纹样、作品的权利归属。",
+    "review_status": "approved",
+    "content_team_todo": "待核：文号与联合发文单位全称（实施规格 §17.2 与附录 A.6 只写了「文化和旅游部等」）。公开 URL 取自实施规格附录 A.6。"
+  }
+]

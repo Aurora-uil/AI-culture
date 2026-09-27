@@ -1,0 +1,410 @@
+{
+  "chapter_id": "northern_wei_integration",
+  "comparison_groups": [
+    {
+      "id": "sculpture",
+      "chapter_id": "northern_wei_integration",
+      "name": "雕塑（造像与龛饰）",
+      "category": "art",
+      "sort_order": 1,
+      "description": "以云冈早期大型洞窟造像与龙门古阳洞北魏阶段造像、龛饰为两侧材料，观察不同时期与空间中造像类证据的呈现方式。",
+      "left_evidence_id": "evidence_yungang_tanyao",
+      "right_evidence_id": "evidence_longmen_guyang",
+      "shared_points": [
+        "两侧都属于北魏佛教石窟艺术研究的重要材料",
+        "两侧都可以观察到窟龛形制与造像组合的具体处理方式"
+      ],
+      "difference_points": [
+        "两者所处时期与都城文化环境不同：一处在平城时期，一处在迁都洛阳之后的北魏晚期",
+        "两侧材料的证据类型侧重不同：一处以大型洞窟造像为主，一处以分层列龛与龛饰为主"
+      ],
+      "forbidden_conclusions": [
+        "不能简单写成云冈等于鲜卑、龙门等于汉族",
+        "不能认为所有变化只由迁都这一单一事件造成",
+        "不能由一处材料代表整个北魏艺术"
+      ],
+      "claim_ids": ["claim_curatorial_art_pair", "claim_yungang_longmen_not_before_after"],
+      "review_status": "approved"
+    },
+    {
+      "id": "costume",
+      "chapter_id": "northern_wei_integration",
+      "name": "服饰",
+      "category": "costume",
+      "sort_order": 2,
+      "description": "以中国国家博物馆藏北魏后期陶俑（博物馆辅助证据，置于左侧对照槽）与龙门北魏阶段窟龛中的服饰形象为两侧材料，说明服饰证据的类型差异与解释边界。",
+      "left_evidence_id": "evidence_attendant_costume",
+      "right_evidence_id": "evidence_longmen_costume",
+      "shared_points": [
+        "两侧都是可用于观察北魏后期服饰形制的材料",
+        "两侧都需要区分「形制观察」与「身份推断」两个层面"
+      ],
+      "difference_points": [
+        "材料类型不同：一侧是墓葬出土实物，一侧是石窟造像中的图像",
+        "保存与使用场合不同：随葬品承担墓葬礼仪功能，造像服饰与宗教表达相关"
+      ],
+      "forbidden_conclusions": [
+        "不能由服饰直接推断单一民族身份",
+        "不能说「孝文帝下令后所有人立刻换了衣服」",
+        "不能由一件俑或一处造像代表全部北魏社会"
+      ],
+      "claim_ids": ["claim_curatorial_costume_pair", "claim_costume_not_ethnic_identity"],
+      "review_status": "approved"
+    },
+    {
+      "id": "music",
+      "chapter_id": "northern_wei_integration",
+      "name": "音乐（伎乐与乐器）",
+      "category": "art",
+      "sort_order": 3,
+      "description": "以云冈与龙门的伎乐天、乐器雕刻为两侧材料，观察同一类文化实践在两处遗产中的呈现。比较维度需音乐史方向研究者确认。",
+      "left_evidence_id": "evidence_yungang_music",
+      "right_evidence_id": "evidence_longmen_music",
+      "shared_points": [
+        "两侧都保存有伎乐天与乐器雕刻，属于可比较的图像材料"
+      ],
+      "difference_points": [
+        "两侧洞窟编号、伎乐天数量与乐器种类尚未完成核定，暂不做数量比较",
+        "两侧的研究基础不同：云冈的相关公开报道较多，龙门的相关研究仍在整理中"
+      ],
+      "forbidden_conclusions": [
+        "不能由乐器图像推断实际演奏的曲目与音响效果",
+        "不能由乐器组合判断演奏者的族属",
+        "不能把两处的差异直接归因于迁都"
+      ],
+      "claim_ids": ["claim_curatorial_music_pair", "claim_yungang_music_instruments_mix"],
+      "review_status": "review",
+      "content_team_todo": "该对照组的比较维度需音乐史方向研究者确认；两侧的具体龛号与乐器清单待核定。"
+    },
+    {
+      "id": "architecture",
+      "chapter_id": "northern_wei_integration",
+      "name": "建筑（窟形与仿木构形象）",
+      "category": "art",
+      "sort_order": 4,
+      "description": "以云冈窟形与雕刻中的建筑形象与龙门北魏阶段的龛形、龛饰为两侧材料。两侧材料性质并不完全相同，对照卡会明确说明这一差异。",
+      "left_evidence_id": "evidence_yungang_architecture",
+      "right_evidence_id": "evidence_longmen_guyang",
+      "shared_points": [
+        "两侧都保存有以石刻表现建筑形象的材料",
+        "两侧材料都被研究者用于讨论北朝木构建筑形象的演变"
+      ],
+      "difference_points": [
+        "云冈一侧主要是窟形与雕刻中的建筑构件形象，龙门一侧主要是屋形龛与龛饰",
+        "两侧材料在建筑史研究中的使用方式不同，需要分别说明"
+      ],
+      "forbidden_conclusions": [
+        "不能由雕刻中的建筑形象直接推断实际木构建筑的尺寸与结构",
+        "不能由建筑形象推断营造者的族属",
+        "不能把某一种龛形直接对应某一个人群或地区"
+      ],
+      "claim_ids": ["claim_curatorial_architecture_pair", "claim_yungang_architecture_imitation", "claim_longmen_architecture_kan"],
+      "review_status": "review",
+      "content_team_todo": "龙门一侧沿用古阳洞证据（因建筑类证据未单独建条）；两侧的建筑史来源与术语均待核定。"
+    },
+    {
+      "id": "religious_art",
+      "chapter_id": "northern_wei_integration",
+      "name": "宗教艺术（多来源艺术因素）",
+      "category": "art",
+      "sort_order": 5,
+      "description": "以云冈的多来源艺术因素与龙门北魏阶段的造像材料为两侧，讨论佛教石窟艺术中的影响来源与本地表达。该组不判定单件造像的来源。",
+      "left_evidence_id": "evidence_yungang_art_exchange",
+      "right_evidence_id": "evidence_longmen_guyang",
+      "shared_points": [
+        "两侧都属于佛教石窟艺术的遗存，具有共同的讨论框架",
+        "两侧的艺术面貌都不能用单一来源概括"
+      ],
+      "difference_points": [
+        "云冈一侧有UNESCO资料明确提到南亚和中亚佛教石窟艺术影响；龙门一侧的相应表述需依据其自身来源",
+        "两侧所处时期与营造背景不同"
+      ],
+      "forbidden_conclusions": [
+        "不能判定某一件具体造像的国别来源",
+        "不能编造某位具体工匠的身份与经历",
+        "不能把某一处造像的样式直接对应某一个民族"
+      ],
+      "claim_ids": ["claim_yungang_art_exchange_unesco", "claim_south_central_asian_art_concept", "claim_art_change_not_single_cause"],
+      "review_status": "approved"
+    },
+    {
+      "id": "inscription",
+      "chapter_id": "northern_wei_integration",
+      "name": "文字与墓志",
+      "category": "inscription",
+      "sort_order": 6,
+      "description": "以中国国家博物馆藏元羽墓志与龙门北魏阶段造像题记为两侧材料。两者类型不同（墓志与石窟题记），并置用于观察文字证据的多样性。",
+      "left_evidence_id": "evidence_yuanyu_epitaph",
+      "right_evidence_id": "evidence_longmen_inscriptions",
+      "shared_points": [
+        "两侧都是北魏时期带有文字的材料，可用于观察身份与时间信息",
+        "两侧都可以与制度层面的资料对照使用"
+      ],
+      "difference_points": [
+        "记录目的与场合不同：墓志属于墓葬文字，题记属于造像发愿文字",
+        "保存环境不同：一方为墓葬石刻，一方为石窟壁面刻写"
+      ],
+      "forbidden_conclusions": [
+        "不能由一方墓志推断所有社会群体的同步变化",
+        "不能由题记数量推断当时社会的识字率与语言使用情况",
+        "不能把书法风格的评鉴直接当作历史事实"
+      ],
+      "claim_ids": ["claim_curatorial_inscription_pair", "claim_epitaph_cannot_represent_all"],
+      "review_status": "review",
+      "content_team_todo": "该对照组的比较维度需内容组确认；题记数量与代表性释文待核定。"
+    }
+  ],
+  "evidence_items": [
+    {
+      "id": "evidence_yungang_tanyao",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_yungang_tanyao",
+      "group_key": "sculpture",
+      "site_key": "yungang",
+      "category": "art",
+      "title": "昙曜五窟",
+      "observed": "云冈早期的一组大型洞窟及其中体量较大的造像，窟形与造像组合具有整体设计。",
+      "described_by_source": "UNESCO世界遗产资料把云冈放在5至6世纪中国佛教石窟艺术的脉络中，并提到由昙曜主持开凿的一组早期洞窟；文物主管部门与公开报道进一步说明其开凿背景。",
+      "supports": "可支持「云冈重要开凿活动开始于5世纪中叶的北魏时期」，并可用于观察佛教石窟艺术在北魏时期的传播、吸收和本土表达。",
+      "does_not_support": "不能仅凭这一组洞窟代表整个北魏艺术；不能把所有造像特征直接对应某一个民族；不能把「五窟对应五帝」当作洞窟自证的史实。",
+      "caveat": "洞窟编号、开凿年份与营造次序仍在核验中，回答时须说明资料来源状态。",
+      "image_url": null,
+      "claim_ids": ["claim_evidence_yungang_tanyao_observation", "claim_yungang_has_tanyao"],
+      "source_ids": ["src_unesco_yungang", "src_shanxi_wenwuju_yungang", "src_people_daily_hwb_yungang"],
+      "review_status": "approved"
+    },
+    {
+      "id": "evidence_yungang_style_exchange",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_yungang_style_exchange",
+      "group_key": "sculpture",
+      "site_key": "yungang",
+      "category": "art",
+      "title": "云冈不同阶段的样式变化",
+      "observed": "云冈不同洞窟、不同阶段在造像比例、面相处理与衣纹表现上并不一致，存在可见的阶段差异。",
+      "described_by_source": "UNESCO资料在说明云冈时既提到南亚和中亚佛教石窟艺术影响，也提到其形成了具有中国文化传统和地方特色的表达，说明其艺术面貌并非单一来源。",
+      "supports": "可支持「云冈石窟不宜被概括为单一风格，其内部存在阶段变化」这一判断。",
+      "does_not_support": "不能把阶段差异直接写成「外来因素减少、本地因素增加」的线性过程；不能把某一阶段的变化归因于某一条政令。",
+      "caveat": "分期方案与洞窟编号需内容组依据正式学术来源核定。",
+      "image_url": null,
+      "claim_ids": ["claim_yungang_not_single_style"],
+      "source_ids": ["src_unesco_yungang", "src_shanxi_wenwuju_yungang"],
+      "review_status": "review",
+      "content_team_todo": "需补充正式分期方案与洞窟编号来源。"
+    },
+    {
+      "id": "evidence_yungang_art_exchange",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_yungang_art_exchange",
+      "group_key": "religious_art",
+      "site_key": "yungang",
+      "category": "art",
+      "title": "云冈艺术中的多来源因素",
+      "observed": "云冈不同洞窟、不同阶段的造像在面相、衣纹、窟形等方面呈现出不同的处理方式，并在同一空间中组合出现。",
+      "described_by_source": "UNESCO资料指出，云冈石窟艺术受到南亚和中亚佛教石窟艺术的影响，同时形成了具有中国文化传统和地方特色的表达。",
+      "supports": "可支持「云冈艺术中存在来自南亚与中亚方向的佛教石窟艺术因素，并与本地文化传统结合」这一判断。",
+      "does_not_support": "不能判定单件造像的国别来源；不能编造某位具体中亚工匠在某窟工作的故事；不能把云冈整体概括为「外国风格」或「鲜卑风格」。",
+      "caveat": "影响方向的表述以UNESCO资料为限，不扩展到具体作品与人物。",
+      "image_url": null,
+      "claim_ids": ["claim_evidence_yungang_art_exchange_observation", "claim_yungang_art_exchange_unesco", "claim_yungang_local_tradition"],
+      "source_ids": ["src_unesco_yungang"],
+      "review_status": "approved"
+    },
+    {
+      "id": "evidence_yungang_architecture",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_yungang_architecture",
+      "group_key": "architecture",
+      "site_key": "yungang",
+      "category": "art",
+      "title": "云冈窟形与建筑形象",
+      "observed": "部分洞窟的窟形与壁面雕刻中出现摹拟木构建筑构件与毡帐形式的形象。",
+      "described_by_source": "文物主管部门公开资料在介绍云冈石窟时，提及窟形与造像特征中包含多元的建筑与造像因素。",
+      "supports": "可用于观察北魏时期建筑形象与外来因素结合的情况，是建筑类对照的证据来源之一。",
+      "does_not_support": "不能由雕刻中的建筑形象直接推断当时实际木构建筑的尺寸与结构；不能据此判断营造者的族属。",
+      "caveat": "洞窟编号与术语表述仍在核验中。",
+      "image_url": null,
+      "claim_ids": ["claim_yungang_architecture_imitation"],
+      "source_ids": ["src_shanxi_wenwuju_yungang"],
+      "review_status": "review",
+      "content_team_todo": "需补充建筑史方向的正式学术来源，核定窟号与术语。"
+    },
+    {
+      "id": "evidence_yungang_music",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_yungang_music",
+      "group_key": "music",
+      "site_key": "yungang",
+      "category": "art",
+      "title": "云冈伎乐与乐器雕刻",
+      "observed": "洞窟壁面、窟顶与门拱等处雕刻有手持乐器的伎乐天形象，部分洞窟中此类形象数量集中。",
+      "described_by_source": "公开报道与文物主管部门资料提到，云冈第12窟因集中雕刻伎乐天与乐器形象而被称为「音乐窟」，其中乐器包含中原传统乐器与经丝路传入的乐器。",
+      "supports": "可支持「云冈乐舞雕刻保存了当时乐器组合的实物图像材料，可用于研究北魏音乐」这一判断。",
+      "does_not_support": "不能由雕刻中的乐器直接推断当时实际演奏的曲目与音响效果；不能据此判断演奏者的族属；具体数量需以正式资料为准。",
+      "caveat": "洞窟编号、伎乐天数量与乐器种类待核定。",
+      "image_url": null,
+      "claim_ids": ["claim_yungang_music_cave12", "claim_yungang_music_instruments_mix"],
+      "source_ids": ["src_gmw_yungang_cave12", "src_shanxi_wenwuju_yungang"],
+      "review_status": "review",
+      "content_team_todo": "需核定洞窟编号、伎乐天数量与乐器种类，并补充云冈研究院正式资料。"
+    },
+    {
+      "id": "evidence_longmen_guyang",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_longmen_guyang",
+      "group_key": "sculpture",
+      "site_key": "longmen",
+      "category": "art",
+      "title": "古阳洞造像与龛饰",
+      "observed": "洞窟壁面分层布置多列佛龛，龛形与龛饰多样，造像组合与背光装饰保留较多细节。",
+      "described_by_source": "UNESCO资料指出龙门石窟保存大量北魏晚期与唐代的佛教石刻艺术；本洞材料属于其中的北魏阶段。窟内仿木构屋形龛与柱、斗栱形象的描述仍需补充正式学术来源。",
+      "supports": "可用于观察龙门北魏阶段造像与龛饰的艺术特征，并与云冈材料对照；同时用于建筑类对照的龙门一侧。",
+      "does_not_support": "不能由本洞材料代表整个龙门石窟；不能把艺术特征变化直接归因于迁都或某一条政令；不能把营造活动归功于单一人物。",
+      "caveat": "具体龛号与建筑术语待核定。",
+      "image_url": null,
+      "claim_ids": ["claim_evidence_longmen_guyang_observation", "claim_longmen_architecture_kan"],
+      "source_ids": ["src_unesco_longmen"],
+      "review_status": "approved"
+    },
+    {
+      "id": "evidence_longmen_inscriptions",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_longmen_inscriptions",
+      "group_key": "inscription",
+      "site_key": "longmen",
+      "category": "inscription",
+      "title": "龙门北魏阶段造像题记",
+      "observed": "窟龛壁面保存刻写的造像题记，记录造像者身份、发愿内容与纪年等信息。",
+      "described_by_source": "UNESCO资料指出龙门保存大量北魏晚期与唐代佛教石刻艺术；研究著作通常把「龙门二十品」作为北朝书法与造像背景的重要材料，其中多数出自古阳洞（具体数量待核定）。",
+      "supports": "可用于观察北魏时期造像参与者的身份、发愿方式与文字书写，是文字类对照的龙门一侧证据。",
+      "does_not_support": "不能由题记推断当时所有人群的识字率与语言使用情况；不能把题记中的身份表述等同于整个社会结构；不能把书法风格评鉴当作历史事实。",
+      "caveat": "题记数量与代表性释文待核定。",
+      "image_url": null,
+      "claim_ids": ["claim_longmen_inscriptions_20pin"],
+      "source_ids": ["src_unesco_longmen"],
+      "review_status": "review",
+      "content_team_todo": "需核定「龙门二十品」出自古阳洞的具体数量、代表题记编号与释文。"
+    },
+    {
+      "id": "evidence_longmen_costume",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_longmen_costume",
+      "group_key": "costume",
+      "site_key": "longmen",
+      "category": "costume",
+      "title": "龙门北魏阶段服饰形象",
+      "observed": "窟龛中出现供养人形象与造像衣饰，其冠式、衣襟与衣纹组合可以被观察到。",
+      "described_by_source": "UNESCO资料指出龙门保存大量北魏晚期佛教石刻艺术；服饰史研究通常把石窟造像与供养人形象作为观察当时服饰形制的图像材料之一，具体结论仍需补充学术来源。",
+      "supports": "可用于观察北魏晚期石窟材料中的服饰形制，并与墓葬出土陶俑等实物进行类型对照。",
+      "does_not_support": "不能由造像服饰直接推断真实生活中的普遍着装；不能由服饰形制推断人物的民族身份；不能把供养人像服饰等同于所有阶层的穿着。",
+      "caveat": "具体龛位与服饰部位描述待核定。",
+      "image_url": null,
+      "claim_ids": ["claim_evidence_longmen_costume_observation"],
+      "source_ids": ["src_unesco_longmen"],
+      "review_status": "review",
+      "content_team_todo": "需核定具体龛位与服饰部位描述，并补充服饰史方向的学术来源。"
+    },
+    {
+      "id": "evidence_longmen_music",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_longmen_music",
+      "group_key": "music",
+      "site_key": "longmen",
+      "category": "art",
+      "title": "龙门北魏阶段伎乐与乐器雕刻",
+      "observed": "部分北魏阶段龛像的背光、龛楣或窟顶位置雕刻有伎乐天形象，手中持有可辨识的乐器。",
+      "described_by_source": "学术文章在讨论龙门石窟的音乐图像时指出，北魏阶段洞窟中的伎乐天与乐器雕刻可与云冈材料进行比较研究，并注意到其中包含中原传统乐器因素。",
+      "supports": "可用于观察北魏洛阳时期音乐图像的面貌，并与云冈的同类材料形成对照。",
+      "does_not_support": "不能由乐器图像直接推断实际演奏的曲目与音响；不能据此判断演奏者的族属；不能把两处遗产的乐器组合差异直接归因于迁都。",
+      "caveat": "具体龛号、伎乐天数量与乐器种类待核定。",
+      "image_url": null,
+      "claim_ids": ["claim_longmen_music_guyang"],
+      "source_ids": ["src_cssn_longmen_music"],
+      "review_status": "review",
+      "content_team_todo": "需核定具体龛号、伎乐天数量与乐器种类；补充正式学术论文来源。"
+    },
+    {
+      "id": "evidence_yuanyu_epitaph",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_yuanyu_epitaph",
+      "group_key": "inscription",
+      "site_key": "longmen",
+      "category": "institution",
+      "title": "元羽墓志",
+      "observed": "一方刻有文字的北魏墓志，记录墓主的姓名、身份、籍贯与时间信息。",
+      "described_by_source": "中国国家博物馆相关资料涉及迁都、496年改姓与籍贯变化，其中迁都采用493年的表述。",
+      "supports": "可与迁都、姓氏变化等资料对照，用于观察北魏后期的身份书写与制度背景；同时是平台「来源差异」的示例。",
+      "does_not_support": "一方墓志不能代表整个社会同步变化；不能推断所有人群在同一时间完成一致的姓氏与籍贯改写；不能把墓志文字当作可直接解释所有人生活的证据。",
+      "caveat": "卒年（文档提到501年）与籍贯变化的表述待核定。",
+      "image_url": null,
+      "claim_ids": ["claim_yuanyu_epitaph_records_move", "claim_yuanyu_epitaph_surname_496", "claim_epitaph_cannot_represent_all"],
+      "source_ids": ["src_chnmuseum_yuanyu_epitaph"],
+      "review_status": "review",
+      "content_team_todo": "需依据国博藏品页与墓志研究核定卒年、籍贯变化表述与来源定位。"
+    },
+    {
+      "id": "evidence_attendant_costume",
+      "chapter_id": "northern_wei_integration",
+      "entity_id": "evidence_attendant_costume",
+      "group_key": "costume",
+      "site_key": "longmen",
+      "category": "costume",
+      "title": "侍从陶俑服饰",
+      "observed": "一件北魏墓葬出土的侍从陶俑，其冠式与衣着组合可以被具体观察。",
+      "described_by_source": "中国国家博物馆藏品资料将其与洛阳元邵墓相联系，并把它用于说明北魏后期服饰与服制改革相关的内容。",
+      "supports": "可用于观察北魏后期服饰形制的具体形态，并与石窟造像中的服饰形象、墓志中的身份书写相互参照。",
+      "does_not_support": "随葬俑反映的是特定场合的着装形象，不能等同于当时居民日常生活中的普遍穿着；不能由服饰推断人物的民族身份；一件俑不能代表全部北魏社会。",
+      "caveat": "出土地点、墓葬年代、器物尺寸与服饰部位描述待核定。",
+      "image_url": null,
+      "claim_ids": ["claim_figurine_costume_features", "claim_costume_not_ethnic_identity"],
+      "source_ids": ["src_chnmuseum_attendant_figurine"],
+      "review_status": "approved"
+    }
+  ],
+  "forbidden_relations": [
+    {
+      "source": "person_emperor_xiaowen",
+      "relation_type": "CAUSED",
+      "target": "全部北魏文化交融",
+      "reason": "把长期、多来源的社会文化变化归因于单一人物，属于单一原因解释，与本章 §2.2 的表达边界冲突。"
+    },
+    {
+      "source": "person_emperor_xiaowen",
+      "relation_type": "REPLACED",
+      "target": "鲜卑文化",
+      "reason": "文化传统并未被一次性替代，服饰等文化因素在后世仍有延续与再变化（见 src_chnmuseum_xianbei_costume）。"
+    },
+    {
+      "source": "event_capital_move_luoyang",
+      "relation_type": "CAUSED",
+      "target": "所有龙门艺术变化",
+      "reason": "石窟艺术变化涉及营造阶段、赞助人、地方条件等多重因素，不能由迁都单一事件解释。"
+    },
+    {
+      "source": "heritage_yungang",
+      "relation_type": "IS",
+      "target": "鲜卑艺术",
+      "reason": "UNESCO资料指出云冈艺术受到南亚和中亚佛教石窟艺术影响，同时形成具有中国文化传统和地方特色的表达，不能用单一民族风格概括。"
+    },
+    {
+      "source": "heritage_longmen",
+      "relation_type": "IS",
+      "target": "汉族艺术",
+      "reason": "龙门保存北魏晚期与唐代等不同时期的佛教石刻艺术，且艺术风格不能与民族标签直接对应。"
+    },
+    {
+      "source": "policy_costume_reform",
+      "relation_type": "CAUSED",
+      "target": "所有鲜卑人改变生活方式",
+      "reason": "制度规定与实际生活并不同步，不能由政策推断全体人群的行为变化。"
+    }
+  ],
+  "notes": {
+    "scene_note": "本章采用云冈、龙门双场景。场景热点坐标全部由内容人员预先标注，不使用视觉识别、OCR 或自动风格分类。",
+    "hotspot_scope": "云冈与龙门各 5 个首批证据热点，符合规格 §8.2「每侧 3–5 个热点」的要求；两处均不做完整景区导览与全洞窟数据库。",
+    "museum_auxiliary_evidence_ids": ["evidence_yuanyu_epitaph", "evidence_attendant_costume"],
+    "pending_evidence_ids": ["artifact_xianbei_style_figurine"],
+    "pending_evidence_note": "artifact_xianbei_style_figurine 的藏品、年代与图片来源尚未确定；若年代超出北魏，使用时必须标注为「北朝比较材料」。",
+    "evidence_category_mapping_note": "规格 §9.5 的证据类别为 ART / COSTUME / INSCRIPTION / INSTITUTION；本文件的 group_key（sculpture / costume / music / architecture / religious_art / inscription）是用于左右对照高亮的对照组键。两者并存：evidence_items.category 对应 §9.5，group_key 对应 §9 对照透镜的分组。"
+  }
+}

@@ -1,0 +1,1008 @@
+[
+  {
+    "id": "rel_ubashi_member_of_torghut",
+    "source_entity_id": "person_ubashi",
+    "target_entity_id": "group_torghut",
+    "relation_type": "MEMBER_OF",
+    "display_label": "属于",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_ubashi_member_of_torghut"
+    ],
+    "time_scope": "18世纪",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_ubashi_led_return",
+    "source_entity_id": "person_ubashi",
+    "target_entity_id": "event_torghut_return_1771",
+    "relation_type": "LED",
+    "display_label": "率领",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_ubashi_led_return"
+    ],
+    "time_scope": "1771年",
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "confirmed_area",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_returning_group_participated_return",
+    "source_entity_id": "group_returning_torghut_1771",
+    "target_entity_id": "event_torghut_return_1771",
+    "relation_type": "PARTICIPATED_IN",
+    "display_label": "参与",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_returning_group_participated"
+    ],
+    "time_scope": "1771年",
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "confirmed_area",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_return_departed_volga",
+    "source_entity_id": "event_torghut_return_1771",
+    "target_entity_id": "region_volga_lower",
+    "relation_type": "DEPARTED_FROM_REGION",
+    "display_label": "从…出发",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_return_departed_volga"
+    ],
+    "time_scope": "1771年初",
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "confirmed_region",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_return_arrived_ili",
+    "source_entity_id": "event_torghut_return_1771",
+    "target_entity_id": "region_ili",
+    "relation_type": "ARRIVED_IN_REGION",
+    "display_label": "抵达",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_return_arrived_ili"
+    ],
+    "time_scope": "1771年夏季",
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "confirmed_region",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_qing_court_associated_torghut",
+    "source_entity_id": "institution_qing_court",
+    "target_entity_id": "group_torghut",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "与…存在长期往来",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_qing_court_associated_torghut",
+      "claim_torghut_maintained_contact"
+    ],
+    "time_scope": "清代前期",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_qing_court_relief_returning",
+    "source_entity_id": "institution_qing_court",
+    "target_entity_id": "group_returning_torghut_1771",
+    "relation_type": "PROVIDED_RELIEF_TO",
+    "display_label": "赈济",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_relief_jade",
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_qing_court_relief"
+    ],
+    "time_scope": "1771年后续",
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "confirmed_area",
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_qing_court_settled_returning",
+    "source_entity_id": "institution_qing_court",
+    "target_entity_id": "group_returning_torghut_1771",
+    "relation_type": "SETTLED",
+    "display_label": "安置",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021",
+      "src_dpm_torghut_relief_jade"
+    ],
+    "claim_ids": [
+      "claim_qing_court_settled"
+    ],
+    "time_scope": "1771年及以后",
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "approximate_corridor",
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_ubashi_travelled_chengde",
+    "source_entity_id": "person_ubashi",
+    "target_entity_id": "place_chengde",
+    "relation_type": "TRAVELLED_TO",
+    "display_label": "前往",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_wanfa_guiyi",
+      "src_dpm_torghut_relief_jade"
+    ],
+    "claim_ids": [
+      "claim_ubashi_travelled_chengde",
+      "claim_route_scope_separated"
+    ],
+    "time_scope": "1771年秋季前后",
+    "route_scope": "LEADER_AUDIENCE_JOURNEY",
+    "certainty": "curatorial_connector",
+    "source_perspective": "museum_curatorial",
+    "ui_note": "本部首领行程的 route_scope 为 LEADER_AUDIENCE_JOURNEY，不得与大部众迁徙路线（MASS_MIGRATION）合并。"
+  },
+  {
+    "id": "rel_ubashi_participated_audience",
+    "source_entity_id": "person_ubashi",
+    "target_entity_id": "event_ubashi_audience_chengde",
+    "relation_type": "PARTICIPATED_IN",
+    "display_label": "参与",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_wanfa_guiyi",
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_ubashi_participated_audience"
+    ],
+    "time_scope": "1771年秋季前后",
+    "route_scope": "LEADER_AUDIENCE_JOURNEY",
+    "certainty": "curatorial_connector",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_qianlong_participated_audience",
+    "source_entity_id": "person_emperor_qianlong",
+    "target_entity_id": "event_ubashi_audience_chengde",
+    "relation_type": "PARTICIPATED_IN",
+    "display_label": "接见",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_wanfa_guiyi"
+    ],
+    "claim_ids": [
+      "claim_qianlong_participated_audience"
+    ],
+    "time_scope": "1771年秋季前后",
+    "route_scope": "LEADER_AUDIENCE_JOURNEY",
+    "certainty": "curatorial_connector",
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_audience_took_place_chengde",
+    "source_entity_id": "event_ubashi_audience_chengde",
+    "target_entity_id": "place_chengde",
+    "relation_type": "TOOK_PLACE_AT",
+    "display_label": "发生于",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_wanfa_guiyi"
+    ],
+    "claim_ids": [
+      "claim_audience_at_chengde",
+      "claim_no_all_went_chengde"
+    ],
+    "time_scope": "1771年秋季前后",
+    "route_scope": "LEADER_AUDIENCE_JOURNEY",
+    "certainty": "confirmed_region",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_qianlong_authored_return_record",
+    "source_entity_id": "person_emperor_qianlong",
+    "target_entity_id": "text_torghut_return_record",
+    "relation_type": "AUTHORED",
+    "display_label": "御制",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021",
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_qianlong_authored_return_record"
+    ],
+    "time_scope": "1771年",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "qing_court",
+    "ui_note": "本边固定 source_perspective = qing_court：说明的是清廷如何记录这一事件，不是所有参与者的自述。"
+  },
+  {
+    "id": "rel_qianlong_authored_relief_record",
+    "source_entity_id": "person_emperor_qianlong",
+    "target_entity_id": "text_torghut_relief_record",
+    "relation_type": "AUTHORED",
+    "display_label": "御制",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_torghut_relief_jade",
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_qianlong_authored_relief_record"
+    ],
+    "time_scope": "1771年",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "qing_court",
+    "ui_note": "本边固定 source_perspective = qing_court。"
+  },
+  {
+    "id": "rel_return_record_records_event",
+    "source_entity_id": "text_torghut_return_record",
+    "target_entity_id": "event_torghut_return_1771",
+    "relation_type": "RECORDS",
+    "display_label": "记述",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021",
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_return_record_records_event"
+    ],
+    "time_scope": "1771年",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_relief_record_records_relief",
+    "source_entity_id": "text_torghut_relief_record",
+    "target_entity_id": "concept_relief_and_settlement",
+    "relation_type": "RECORDS",
+    "display_label": "记述",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_torghut_relief_jade",
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_relief_record_records_relief"
+    ],
+    "time_scope": "1771年后续",
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "confirmed_area",
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_wanfa_guiyi_associated_ubashi",
+    "source_entity_id": "artifact_wanfa_guiyi_screen",
+    "target_entity_id": "person_ubashi",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "与…相关",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_wanfa_guiyi"
+    ],
+    "claim_ids": [
+      "claim_wanfa_guiyi_associated_ubashi"
+    ],
+    "time_scope": "18世纪",
+    "route_scope": "LEADER_AUDIENCE_JOURNEY",
+    "certainty": "curatorial_connector",
+    "source_perspective": "archaeological_object"
+  },
+  {
+    "id": "rel_silver_seal_associated_ennoblement",
+    "source_entity_id": "artifact_torghut_silver_seal",
+    "target_entity_id": "event_torghut_ennoblement",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "见证",
+    "claim_type": "fact",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_torghut_seal"
+    ],
+    "claim_ids": [
+      "claim_silver_seal_associated_ennoblement"
+    ],
+    "time_scope": "1771年及以后",
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "confirmed_area",
+    "source_perspective": "archaeological_object",
+    "content_team_todo": "□ 须补录银印官方定名、印文与颁赐信息后，方可从 review 升为 approved。"
+  },
+  {
+    "id": "rel_torghut_maintained_contact_qing",
+    "source_entity_id": "group_torghut",
+    "target_entity_id": "institution_qing_court",
+    "relation_type": "MAINTAINED_CONTACT_WITH",
+    "display_label": "保持联系",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_torghut_maintained_contact"
+    ],
+    "time_scope": "清代前期",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_tulishen_mission_sent_to_torghut",
+    "source_entity_id": "event_tulishen_mission_1712",
+    "target_entity_id": "group_torghut",
+    "relation_type": "SENT_MISSION_TO",
+    "display_label": "出使",
+    "claim_type": "fact",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_tulishen_mission"
+    ],
+    "time_scope": "1712年前后",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "qing_court",
+    "content_team_todo": "□ 须核对使团年份、往返时间与规范名称后方可升为 approved。"
+  },
+  {
+    "id": "rel_return_supports_study_migration",
+    "source_entity_id": "event_torghut_return_1771",
+    "target_entity_id": "concept_migration",
+    "relation_type": "SUPPORTS_STUDY_OF",
+    "display_label": "可用于研究",
+    "claim_type": "interpretation",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_return_supports_migration_study"
+    ],
+    "time_scope": null,
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "curatorial_connector",
+    "source_perspective": "modern_scholarship"
+  },
+  {
+    "id": "rel_return_supports_study_homeland_memory",
+    "source_entity_id": "event_torghut_return_1771",
+    "target_entity_id": "concept_homeland_memory",
+    "relation_type": "SUPPORTS_STUDY_OF",
+    "display_label": "可用于研究",
+    "claim_type": "interpretation",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_cssn_torghut_250",
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_return_supports_homeland_memory"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": "curatorial_connector",
+    "source_perspective": "modern_scholarship"
+  },
+  {
+    "id": "rel_relief_settlement_supports_study_frontier",
+    "source_entity_id": "event_qing_relief_torghut",
+    "target_entity_id": "concept_frontier_governance",
+    "relation_type": "SUPPORTS_STUDY_OF",
+    "display_label": "可用于研究",
+    "claim_type": "interpretation",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_relief_settlement_supports_frontier"
+    ],
+    "time_scope": null,
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "curatorial_connector",
+    "source_perspective": "modern_scholarship",
+    "content_team_todo": "□ 目标实体 concept_frontier_governance 为实现者补写节点（§26 未列出），须确认保留或改写。"
+  },
+  {
+    "id": "rel_qing_texts_supports_study_official_historiography",
+    "source_entity_id": "text_torghut_return_record",
+    "target_entity_id": "concept_historical_memory",
+    "relation_type": "SUPPORTS_STUDY_OF",
+    "display_label": "可用于研究",
+    "claim_type": "interpretation",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_qing_texts_supports_official_historiography"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": "curatorial_connector",
+    "source_perspective": "modern_scholarship"
+  },
+  {
+    "id": "rel_return_curatorial_belonging",
+    "source_entity_id": "event_torghut_return_1771",
+    "target_entity_id": "concept_belonging_curatorial",
+    "relation_type": "CURATORIAL_LINK",
+    "display_label": "策展主题",
+    "claim_type": "curatorial",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_return_curatorial_belonging"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_belonging_curatorial_footprint",
+    "source_entity_id": "concept_belonging_curatorial",
+    "target_entity_id": "concept_personal_cultural_footprint",
+    "relation_type": "CURATORIAL_LINK",
+    "display_label": "策展关联",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_belonging_curatorial_footprint"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "museum_curatorial",
+    "content_team_todo": "□ 目标实体 concept_personal_cultural_footprint 为实现者补写节点（§26 未列出），须确认是否作为图谱节点保留。"
+  },
+  {
+    "id": "rel_ubashi_inherited_khanate",
+    "source_entity_id": "person_ubashi",
+    "target_entity_id": "event_ubashi_inherits_1761",
+    "relation_type": "PARTICIPATED_IN",
+    "display_label": "继承汗位",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_ubashi_inherits_1761"
+    ],
+    "time_scope": "1761年",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_departure_event_associated_return",
+    "source_entity_id": "event_torghut_return_departure_1771",
+    "target_entity_id": "event_torghut_return_1771",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "属于（起始阶段）",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_departure_event_part_of_return"
+    ],
+    "time_scope": "1771年初",
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "approximate_corridor",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_arrival_event_associated_return",
+    "source_entity_id": "event_arrival_ili_1771",
+    "target_entity_id": "event_torghut_return_1771",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "属于（抵达阶段）",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_arrival_event_part_of_return"
+    ],
+    "time_scope": "1771年夏季",
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "confirmed_region",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_westward_migration_arrived_volga",
+    "source_entity_id": "event_torghut_westward_migration_17c",
+    "target_entity_id": "region_volga_lower",
+    "relation_type": "ARRIVED_IN_REGION",
+    "display_label": "迁至",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_westward_migration_arrived_volga"
+    ],
+    "time_scope": "17世纪前期",
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "confirmed_region",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_tulishen_mission_associated_contacts",
+    "source_entity_id": "event_tulishen_mission_1712",
+    "target_entity_id": "event_qing_torghut_contacts",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "属于（长期联系的一部分）",
+    "claim_type": "fact",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_tulishen_mission_part_of_contacts"
+    ],
+    "time_scope": "1712年前后",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "qing_court",
+    "content_team_todo": "□ 须核对使团信息后方可升为 approved。"
+  },
+  {
+    "id": "rel_returning_group_departed_volga",
+    "source_entity_id": "group_returning_torghut_1771",
+    "target_entity_id": "region_volga_lower",
+    "relation_type": "DEPARTED_FROM_REGION",
+    "display_label": "从…出发",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_return_group_departed_volga_region"
+    ],
+    "time_scope": "1771年初",
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "confirmed_region",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_returning_group_arrived_ili",
+    "source_entity_id": "group_returning_torghut_1771",
+    "target_entity_id": "region_ili",
+    "relation_type": "ARRIVED_IN_REGION",
+    "display_label": "抵达",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_return_group_arrived_ili_region"
+    ],
+    "time_scope": "1771年夏季",
+    "route_scope": "MASS_MIGRATION",
+    "certainty": "confirmed_region",
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_returning_group_settled_xinjiang",
+    "source_entity_id": "group_returning_torghut_1771",
+    "target_entity_id": "region_xinjiang_settlement",
+    "relation_type": "SETTLED",
+    "display_label": "被安置于",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021",
+      "src_dpm_torghut_relief_jade"
+    ],
+    "claim_ids": [
+      "claim_return_group_settled_xinjiang"
+    ],
+    "time_scope": "1771年及以后",
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "approximate_corridor",
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_returning_group_received_by_qing",
+    "source_entity_id": "group_returning_torghut_1771",
+    "target_entity_id": "institution_qing_court",
+    "relation_type": "RECEIVED_BY",
+    "display_label": "受接应于",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_returning_received_by_qing"
+    ],
+    "time_scope": "1771年后续",
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "confirmed_area",
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_ili_governance_associated_settlement",
+    "source_entity_id": "institution_ili_governance",
+    "target_entity_id": "event_qing_settlement_torghut",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "参与安置事务",
+    "claim_type": "fact",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_ili_governance_associated_settlement"
+    ],
+    "time_scope": "1771年及以后",
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "approximate_corridor",
+    "source_perspective": "modern_scholarship",
+    "content_team_todo": "□ 须核实该机构规范名称与具体职能后方可升为 approved。"
+  },
+  {
+    "id": "rel_qing_court_bestowed_silver_seal",
+    "source_entity_id": "institution_qing_court",
+    "target_entity_id": "artifact_torghut_silver_seal",
+    "relation_type": "BESTOWED",
+    "display_label": "颁赐",
+    "claim_type": "fact",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_torghut_seal"
+    ],
+    "claim_ids": [
+      "claim_qing_court_bestowed_silver_seal"
+    ],
+    "time_scope": "1771年及以后",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "archaeological_object",
+    "content_team_todo": "□ 须核实颁赐对象与时间后方可升为 approved。"
+  },
+  {
+    "id": "rel_relief_jade_book_bears_relief_record",
+    "source_entity_id": "artifact_torghut_relief_jade_book",
+    "target_entity_id": "text_torghut_relief_record",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "载录",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_torghut_relief_jade"
+    ],
+    "claim_ids": [
+      "claim_relief_jade_book_bears_text"
+    ],
+    "time_scope": "18世纪",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "archaeological_object",
+    "content_team_todo": "□ 须补录该册官方定名与著录信息后方可升为 approved。"
+  },
+  {
+    "id": "rel_putuo_zongcheng_holds_return_stele",
+    "source_entity_id": "place_putuo_zongcheng_temple",
+    "target_entity_id": "text_torghut_return_record",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "保存或曾保存相关碑刻",
+    "claim_type": "fact",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_putuo_zongcheng_holds_stele"
+    ],
+    "time_scope": "18世纪",
+    "route_scope": null,
+    "certainty": "uncertain_segment",
+    "source_perspective": "qing_court",
+    "content_team_todo": "□ 须核实碑刻名称、文字种类与现状（「保存/曾保存」的准确表述）后方可升为 approved。"
+  },
+  {
+    "id": "rel_putuo_zongcheng_located_chengde",
+    "source_entity_id": "place_putuo_zongcheng_temple",
+    "target_entity_id": "place_chengde",
+    "relation_type": "LOCATED_IN",
+    "display_label": "位于",
+    "claim_type": "fact",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_putuo_zongcheng_located_chengde"
+    ],
+    "time_scope": "18世纪",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "qing_court",
+    "content_team_todo": "□ 须补充来源原文定位后方可升为 approved。"
+  },
+  {
+    "id": "rel_tribute_quiver_studies_long_term_contact",
+    "source_entity_id": "artifact_torghut_tribute_quiver",
+    "target_entity_id": "concept_long_term_contact",
+    "relation_type": "SUPPORTS_STUDY_OF",
+    "display_label": "可用于研究",
+    "claim_type": "interpretation",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_torghut_knife"
+    ],
+    "claim_ids": [
+      "claim_tribute_quiver_studies_contact"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "museum_curatorial"
+  },
+  {
+    "id": "rel_wanfa_guiyi_studies_historical_memory",
+    "source_entity_id": "artifact_wanfa_guiyi_screen",
+    "target_entity_id": "concept_historical_memory",
+    "relation_type": "SUPPORTS_STUDY_OF",
+    "display_label": "可用于研究",
+    "claim_type": "interpretation",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_wanfa_guiyi"
+    ],
+    "claim_ids": [
+      "claim_wanfa_guiyi_studies_memory"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "archaeological_object"
+  },
+  {
+    "id": "rel_relief_jade_book_studies_relief_settlement",
+    "source_entity_id": "artifact_torghut_relief_jade_book",
+    "target_entity_id": "concept_relief_and_settlement",
+    "relation_type": "SUPPORTS_STUDY_OF",
+    "display_label": "可用于研究",
+    "claim_type": "interpretation",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_torghut_relief_jade"
+    ],
+    "claim_ids": [
+      "claim_relief_jade_book_studies_relief"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "modern_scholarship",
+    "content_team_todo": "□ 须补录该册著录信息后方可升为 approved。"
+  },
+  {
+    "id": "rel_silver_seal_studies_settlement",
+    "source_entity_id": "artifact_torghut_silver_seal",
+    "target_entity_id": "concept_relief_and_settlement",
+    "relation_type": "SUPPORTS_STUDY_OF",
+    "display_label": "可用于研究",
+    "claim_type": "interpretation",
+    "review_status": "review",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_torghut_seal"
+    ],
+    "claim_ids": [
+      "claim_silver_seal_studies_settlement"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "archaeological_object",
+    "content_team_todo": "□ 须补录银印著录信息后方可升为 approved。"
+  },
+  {
+    "id": "rel_qing_imperial_texts_associated_return",
+    "source_entity_id": "event_qing_imperial_texts_1771",
+    "target_entity_id": "event_torghut_return_1771",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "记述与纪念",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021",
+      "src_chnmuseum_return_homeland"
+    ],
+    "claim_ids": [
+      "claim_qing_imperial_texts_formed_1771"
+    ],
+    "time_scope": "1771年",
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_relief_event_associated_return",
+    "source_entity_id": "event_qing_relief_torghut",
+    "target_entity_id": "event_torghut_return_1771",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "属于（抵达后处置）",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_journal_torghut_2021"
+    ],
+    "claim_ids": [
+      "claim_relief_event_associated_return"
+    ],
+    "time_scope": "1771年后续",
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "confirmed_area",
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_settlement_event_associated_return",
+    "source_entity_id": "event_qing_settlement_torghut",
+    "target_entity_id": "event_torghut_return_1771",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "属于（抵达后处置）",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021",
+      "src_dpm_torghut_relief_jade"
+    ],
+    "claim_ids": [
+      "claim_settlement_event_associated_return"
+    ],
+    "time_scope": "1771年及以后",
+    "route_scope": "SETTLEMENT_DISTRIBUTION",
+    "certainty": "approximate_corridor",
+    "source_perspective": "qing_court"
+  },
+  {
+    "id": "rel_audience_event_associated_return",
+    "source_entity_id": "event_ubashi_audience_chengde",
+    "target_entity_id": "event_torghut_return_1771",
+    "relation_type": "ASSOCIATED_WITH",
+    "display_label": "属于（抵达后首领活动）",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "chapter_id": "qing_return",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_wanfa_guiyi"
+    ],
+    "claim_ids": [
+      "claim_audience_event_associated_return",
+      "claim_route_scope_separated"
+    ],
+    "time_scope": "1771年秋季前后",
+    "route_scope": "LEADER_AUDIENCE_JOURNEY",
+    "certainty": "curatorial_connector",
+    "source_perspective": "museum_curatorial",
+    "ui_note": "本条边的 route_scope 必须为 LEADER_AUDIENCE_JOURNEY。"
+  }
+]

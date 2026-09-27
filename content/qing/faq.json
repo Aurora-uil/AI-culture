@@ -1,0 +1,803 @@
+[
+  {
+    "id": "faq_qing_01",
+    "character_id": "person_ubashi",
+    "canonical_question": "渥巴锡是谁？",
+    "keywords": [
+      "渥巴锡",
+      "是谁",
+      "土尔扈特首领",
+      "简介"
+    ],
+    "intent": "person_profile",
+    "covers_question_numbers": [
+      1
+    ],
+    "answer_markdown": "渥巴锡是土尔扈特部首领。公开文博资料记载：他于1761年继承汗位；1771年率领大批土尔扈特部众自伏尔加河流域向东迁徙，并于同年抵达伊犁河流域；抵达之后，他与相关部族首领前往热河/承德地区觐见乾隆帝。\n\n关于他个人的年龄与外貌，公开资料存在不同表述，因此本平台不在首屏显示年龄。\n\n本页的「渥巴锡」是基于审核史料构建的**数字历史角色**。第一人称表达属于数字叙事重构，并非渥巴锡真实原话。他个人可确认的行动，也不能自动等同于全体部众的心理与动机。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "related_entity_ids": [
+      "person_ubashi",
+      "group_torghut",
+      "event_torghut_return_1771"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_02",
+    "character_id": "person_ubashi",
+    "canonical_question": "土尔扈特原来生活在哪里？他们为什么会住到伏尔加河流域？",
+    "keywords": [
+      "原来生活",
+      "伏尔加河",
+      "西迁",
+      "为什么住到"
+    ],
+    "intent": "westward_migration_background",
+    "covers_question_numbers": [
+      2,
+      3
+    ],
+    "answer_markdown": "土尔扈特是厄鲁特蒙古的重要组成部分之一。公开文博资料记载，17世纪前期，土尔扈特部众西迁至伏尔加河下游地区，并在此长期生活。1771年东归的起点，正是这次西迁之后形成的长期生活区域。\n\n关于西迁的具体原因、路线与过程，本章第一批公开来源没有充分展开。因此本平台只陈述「17世纪前期西迁至伏尔加河下游并长期生活」这一可确认内容，时间为时段精度，不补写具体年份、具体路径或中途城镇。\n\n如果你希望了解更完整的西迁背景，可以查看史料证据页中故宫博物院相关藏品资料的说明，并在补充权威研究后获得更细的答案。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "related_entity_ids": [
+      "event_torghut_westward_migration_17c",
+      "group_torghut",
+      "region_volga_lower"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_03",
+    "character_id": "person_ubashi",
+    "canonical_question": "土尔扈特和清朝之前有没有联系？",
+    "keywords": [
+      "之前有没有联系",
+      "长期联系",
+      "使节",
+      "贡使",
+      "图理琛"
+    ],
+    "intent": "long_term_contact",
+    "covers_question_numbers": [
+      4
+    ],
+    "answer_markdown": "有。公开文博资料记载，土尔扈特在西迁伏尔加河流域之后，与清朝之间仍存在使节、贡使等联系。中国国家博物馆《回归故土情》与故宫博物院相关藏品资料都提到这一长期往来；故宫藏品页在介绍土尔扈特西迁背景时还提到1712年清使联系。\n\n这层关系有两点需要注意。第一，它是**跨越时段的过程**，不是一个单一年份的事件，具体每一次往来的年份与方向需要按来源逐条核对。第二，相关记录多来自清廷一侧，属于官方叙述，本平台在引用时标注来源视角。\n\n因此本章把「与清朝保持使节等联系」作为理解1771年东归的重要背景，而不是把东归写成一次毫无前史的行动。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_torghut_knife"
+    ],
+    "related_entity_ids": [
+      "event_qing_torghut_contacts",
+      "event_tulishen_mission_1712",
+      "concept_long_term_contact"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_04",
+    "character_id": "person_ubashi",
+    "canonical_question": "1771年发生了什么？",
+    "keywords": [
+      "1771年",
+      "发生了什么",
+      "东归",
+      "大事"
+    ],
+    "intent": "event_overview",
+    "covers_question_numbers": [
+      5
+    ],
+    "answer_markdown": "公开文博资料记载，1771年发生了这样一条过程链：渥巴锡率领大批土尔扈特部众自伏尔加河流域向东迁徙；同年夏季抵达伊犁河流域；此后清廷组织接应、赈济与安置；渥巴锡等部族首领之后前往热河/承德地区觐见乾隆帝；围绕这一事件还形成了御制记文与纪念性碑刻。\n\n需要区分三个不同层面的内容：大部众的迁徙（路线范围 MASS_MIGRATION）、抵达后的处置（SETTLEMENT_DISTRIBUTION）、首领的觐见行程（LEADER_AUDIENCE_JOURNEY）。承德不属于大部众迁徙的终点。\n\n时间上，本章按来源原始精度显示为「1771年初」「1771年夏季」「1771年秋季前后」，不换算成具体日期。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_wanfa_guiyi"
+    ],
+    "related_entity_ids": [
+      "event_torghut_return_1771",
+      "event_arrival_ili_1771",
+      "event_ubashi_audience_chengde"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_05",
+    "character_id": "person_ubashi",
+    "canonical_question": "为什么决定东归？",
+    "keywords": [
+      "为什么东归",
+      "动因",
+      "原因",
+      "为什么决定"
+    ],
+    "intent": "return_motives",
+    "covers_question_numbers": [
+      6
+    ],
+    "answer_markdown": "公开资料和研究通常从**多个因素**讨论这一决定，本章按三层并列呈现，每一层都可溯源：\n\n① **文博公开叙述**：常把摆脱沙俄控制/压迫、怀念故土、与清朝保持联系作为重要历史背景。\n② **清代文献中的表述**：御制文献使用「归顺」等官方语汇，属于清廷视角的叙述框架。\n③ **现代专业研究中的分析**：通常从政治环境、军事压力、草场与生存环境、部族内部政治、与清朝长期联系、历史记忆等多种因素一并讨论。\n\n本平台不设置「唯一原因」按钮，也不由 AI 宣布单一动因。同时需要说明：现有资料不能支持把所有参与者的心理归纳成完全一致的表达，渥巴锡个人的动机也不能与整个群体的动机完全等同。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_journal_torghut_2021",
+      "src_cssn_torghut_250"
+    ],
+    "related_entity_ids": [
+      "event_torghut_return_1771",
+      "concept_homeland_memory",
+      "concept_long_term_contact"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_06",
+    "character_id": "person_ubashi",
+    "canonical_question": "东归是不是只有「思乡」一个原因？",
+    "keywords": [
+      "只有思乡",
+      "思乡",
+      "唯一原因",
+      "故土"
+    ],
+    "intent": "motive_single_cause_check",
+    "covers_question_numbers": [
+      7
+    ],
+    "answer_markdown": "不能这样理解。公开文博资料确实常把「怀念故土」列为重要历史背景之一，但那是该来源的叙述，不是对动因的唯一解释。更深入的研究通常从政治环境、军事压力、草场与生存环境、部族内部政治、与清朝长期联系、历史记忆等多种因素一并讨论。\n\n本章的处理方式是把原因分层并列：文博公开叙述、清代文献中的表述、现代专业研究中的分析，每一层的每一条原因都带 `claim_type`、`source_perspective` 与来源。界面上没有「唯一原因：思念故乡」这样的按钮。\n\n同时也需要说明：现有资料不能支持把所有参与者的心理归纳成完全一致的表达。集体行动可以说明，但替每一个参与者虚构统一心理是不成立的。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_journal_torghut_2021"
+    ],
+    "related_entity_ids": [
+      "event_torghut_return_1771",
+      "concept_homeland_memory"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_07",
+    "character_id": "person_ubashi",
+    "canonical_question": "东归是不是只有「俄国压迫」一个原因？",
+    "keywords": [
+      "只有俄国压迫",
+      "沙俄",
+      "压迫",
+      "唯一原因"
+    ],
+    "intent": "motive_single_cause_check",
+    "covers_question_numbers": [
+      8
+    ],
+    "answer_markdown": "也不能这样理解。公开文博资料常把摆脱沙俄控制/压迫作为重要历史背景，这是该来源的概括性叙述，但它与「唯一原因」不是一回事。\n\n更深入的研究会同时讨论政治环境、军事压力、草场与生存环境、部族内部政治、与清朝的长期联系、历史记忆等因素。这些因素之间的关系，现有资料并没有给出一个可以简化为单句的结论。\n\n因此本章不做两件事：不设置「唯一原因：俄国压迫」这样的按钮；也不允许 AI 用「东归唯一原因是……」的句式作答。如果当前检索只返回文博资料，系统只回答文博资料支持的因素，并提醒更完整的动因需要结合专业研究。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_journal_torghut_2021",
+      "src_cssn_torghut_250"
+    ],
+    "related_entity_ids": [
+      "event_torghut_return_1771",
+      "concept_migration"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_08",
+    "character_id": "person_ubashi",
+    "canonical_question": "到底有多少人出发？",
+    "keywords": [
+      "多少人",
+      "出发人数",
+      "17万",
+      "16.8万"
+    ],
+    "intent": "departure_population",
+    "covers_question_numbers": [
+      9
+    ],
+    "answer_markdown": "不同权威公开资料采用的统计口径不同，本平台保留来源原始表述，并列显示：\n\n- **约17万人** —— 故宫博物院公开资料中的概括性统计。\n- **16.8万余人** —— 相关专业公共历史研究中的统计。\n- **三万多户** —— 另一种口径，对应来源尚未在本章第一批来源中定位，暂未作为已审核数字展示。\n\n本平台不把这些数字合并成一个虚假的「唯一精确值」，不求平均，也不擅自格式化为精确整数。原因是：这些表述本身带有「约」「余」等限定，统计对象与统计时点也可能不同。\n\n如果你需要，可以展开「查看两条来源」，分别查看每一条数字的出处与口径说明。",
+    "source_ids": [
+      "src_dpm_torghut_knife",
+      "src_cssn_torghut_250",
+      "src_dpm_torghut_relief_jade"
+    ],
+    "related_entity_ids": [
+      "group_returning_torghut_1771",
+      "event_torghut_return_1771"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_09",
+    "character_id": "person_ubashi",
+    "canonical_question": "为什么有17万和16.8万两种数字？",
+    "keywords": [
+      "为什么不一样",
+      "数字不一样",
+      "统计口径",
+      "两种数字"
+    ],
+    "intent": "estimate_difference",
+    "covers_question_numbers": [
+      10
+    ],
+    "answer_markdown": "这属于统计口径与来源表述的差异，不是简单的「一个对一个错」。\n\n可能造成差异的原因包括：统计对象不同（例如是否包含全部随行人员）、统计时点不同（出发时、途中或抵达后的口径可能不一样）、来源性质不同（文博机构的概括性介绍与专业研究的统计取值方式不同），以及原始表述本身带有「约」「余」这类限定。\n\n因此本平台的处理方式是：把每一条数字与它的来源、口径说明绑定在一起，同时显示，不合并、不求平均、不选一个当「准确值」。\n\n这也会成为本章「可信 AI」的一个演示点：AI 不会替用户决定哪个数字才「正确」，而是把来源差异如实呈现出来。",
+    "source_ids": [
+      "src_dpm_torghut_knife",
+      "src_cssn_torghut_250"
+    ],
+    "related_entity_ids": [
+      "group_returning_torghut_1771"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_10",
+    "character_id": "person_ubashi",
+    "canonical_question": "到达伊犁的有多少人？",
+    "keywords": [
+      "到达伊犁多少人",
+      "抵达人数",
+      "幸存人数",
+      "剩下多少"
+    ],
+    "intent": "arrival_population",
+    "covers_question_numbers": [
+      11
+    ],
+    "answer_markdown": "第一版**未收录经审核的抵达人数或幸存人数统计**，因此这里明确回答：资料不足。\n\n实施规格在讨论人数问题时提到，「到达人数 / 幸存人数又可能使用另一种统计口径」。但本章第一批公开来源没有给出可以引用的抵达人数数字，所以本平台不会：\n\n- 用出发人数（约17万人 / 16.8万余人）去推算抵达人数；\n- 提供一个没有来源的估算值；\n- 把某一条二手叙述里的数字当作已审核数据。\n\n如果你需要了解抵达这一环节本身，可以查看「抵达伊犁河流域」节点，以及「抵达以后」中的接应、赈济与安置内容。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "event_arrival_ili_1771",
+      "region_ili",
+      "group_returning_torghut_1771"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_11",
+    "character_id": "person_ubashi",
+    "canonical_question": "你们到底走的是哪一条路？",
+    "keywords": [
+      "走哪条路",
+      "路线",
+      "具体路线",
+      "怎么走的"
+    ],
+    "intent": "route_precision",
+    "covers_question_numbers": [
+      12
+    ],
+    "answer_markdown": "现有资料可以帮助重建**大体迁徙方向和部分重要节点**，但第一版平台不把历史迁徙画成现代GPS式的唯一轨迹。\n\n可以确认的是：东归队伍由伏尔加河流域向东，最终抵达伊犁河区域。地图上的连线属于「大体迁徙区段」（APPROXIMATE_CORRIDOR）与「路线存在不确定性」（UNCERTAIN_SEGMENT），其中草原中段不提供几何折线，只以不确定区段呈现。\n\n本平台目前不声称三件事：每一天的精确位置；每一个中途点；一条唯一固定路径。\n\n这样处理的原因是本章的一条硬性原则：**路线精度不得高于证据精度**。把不确定的部分如实画成不确定，比画一条看起来很确定的线更接近史料本身的状况。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "region_eurasian_steppe",
+      "event_torghut_return_1771",
+      "region_ili"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_12",
+    "character_id": null,
+    "canonical_question": "地图上的线是真实GPS路线吗？",
+    "keywords": [
+      "GPS",
+      "是真的吗",
+      "地图上的线",
+      "精确路线"
+    ],
+    "intent": "route_method_note",
+    "covers_question_numbers": [
+      13
+    ],
+    "answer_markdown": "不是。地图上的线是**历史迁徙示意**，不是现代GPS轨迹。\n\n场景固定显示说明：「历史迁徙路线示意，并非现代GPS轨迹。」地图使用产品画布的归一化坐标，不使用历史地理坐标，也不对应任何一条可以被导航复现的路径。图例区分五种性质：确认地点、较高置信历史廊道、大体迁徙区段、路线存在不确定性、策展关联。\n\n这与历史地图的用途有关：本图用来表达空间关系与证据强度，不用来表达行程精度。用户点击任一路段，都可以看到「依据是什么」与「不能推出什么」。\n\n同样地，本章也不提供「每天走到哪里」的日历式行程，不自动生成没有来源的中途城镇。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "region_eurasian_steppe",
+      "concept_migration",
+      "region_volga_lower"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_13",
+    "character_id": "person_ubashi",
+    "canonical_question": "你能告诉我1771年3月15日具体走到哪里吗？",
+    "keywords": [
+      "3月15日",
+      "具体日期",
+      "哪一天",
+      "每天",
+      "精确到天"
+    ],
+    "intent": "route_overprecision_refusal",
+    "covers_question_numbers": [
+      14
+    ],
+    "answer_markdown": "这个精度超出了现有资料能支持的范围，所以不能回答。\n\n本章的来源只支持到「1771年初」「1771年夏季」「1771年秋季前后」这样的时段或季节精度。规格明确要求：如果资料只支持「夏季」「七月」「农历六月」，就按原来源保存，不后台强制换算成某一天；平台也不做「每天走到哪里」的虚构日历。\n\n如果给出一个具体日期和地点，那会是**编造**，而不是史料记载。这正好是本章想要演示的一条边界：路线精度不得高于证据精度，AI 的确信度也不得高于来源的确信度。\n\n你可以改问：这段迁徙大体经过哪些区域、哪些节点是史料可以确认的。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "event_torghut_return_departure_1771",
+      "event_arrival_ili_1771",
+      "region_eurasian_steppe"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_14",
+    "character_id": "person_ubashi",
+    "canonical_question": "到了伊犁以后发生了什么？",
+    "keywords": [
+      "到了伊犁",
+      "以后",
+      "抵达之后",
+      "接应",
+      "赈济",
+      "安置"
+    ],
+    "intent": "arrival_aftermath",
+    "covers_question_numbers": [
+      15
+    ],
+    "answer_markdown": "抵达伊犁河之后，事件并没有结束。「抵达以后」面板包含四段：\n\n1. **接应** —— 清廷组织接应抵达的东归部众。\n2. **赈济** —— 清廷提供赈济，《优恤土尔扈特部众记》是记录这一环节的核心御制文本。\n3. **安置** —— 清廷对部众进行安置，地图以聚合节点表示安置方向，不展示到具体地界。\n4. **首领赴承德** —— 渥巴锡等部族首领之后前往热河/承德觐见乾隆帝。\n\n前三段属于大部众抵达后的处置；第四段是**首领活动**，路线范围为 `LEADER_AUDIENCE_JOURNEY`，与部众迁徙不同。用户在抵达伊犁节点后才会解锁这四段内容。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_journal_torghut_2021",
+      "src_dpm_torghut_relief_jade"
+    ],
+    "related_entity_ids": [
+      "event_arrival_ili_1771",
+      "event_qing_relief_torghut",
+      "event_qing_settlement_torghut"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_15",
+    "character_id": "person_ubashi",
+    "canonical_question": "清廷提供了哪些赈济？后来如何安置？",
+    "keywords": [
+      "赈济",
+      "安置",
+      "提供了什么",
+      "后来怎么安置"
+    ],
+    "intent": "relief_and_settlement",
+    "covers_question_numbers": [
+      16,
+      17
+    ],
+    "answer_markdown": "公开资料记载，东归部众抵达后，清廷组织接应、提供赈济并进行安置。相关记载的核心文本是乾隆帝御制的《优恤土尔扈特部众记》；故宫博物院专题《民本邦宁》著录的青玉刘秉恬书御制《优恤土尔扈特部众记》册，是这篇文本的物质载体之一。《故宫学刊》相关研究也讨论了接应、赈济与安置的过程。\n\n关于赈济与安置，本章有三条边界。第一，这些记录主要来自清廷一侧，属于官方叙述，引用时标注来源视角（`qing_court`），不能自动等同于受赈济者本人的叙述。第二，第一版不展示到具体安置地界，地图以聚合节点表示。第三，不为赈济编造具体物资数量与日期——本章第一批来源没有给出可引用的明细。",
+    "source_ids": [
+      "src_dpm_torghut_relief_jade",
+      "src_dpm_journal_torghut_2021",
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "event_qing_relief_torghut",
+      "event_qing_settlement_torghut",
+      "text_torghut_relief_record"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_16",
+    "character_id": "person_ubashi",
+    "canonical_question": "是不是所有人后来都去了承德？",
+    "keywords": [
+      "都去承德了吗",
+      "所有人",
+      "承德",
+      "全部"
+    ],
+    "intent": "route_scope",
+    "covers_question_numbers": [
+      18
+    ],
+    "answer_markdown": "不是这样理解。\n\n大部众抵达后涉及的是接应、赈济和安置；渥巴锡等部族首领之后才前往热河/承德觐见乾隆帝。也就是说，**承德是首领觐见活动的发生地，不是大部众迁徙的终点**。\n\n因此在数据结构上，本章把两者分成两个不同范围的路线：大部众迁徙为 `MASS_MIGRATION`，首领赴承德为 `LEADER_AUDIENCE_JOURNEY`，地图上不渲染为连续的一条线。现有资料也不支持「全部东归部众都前往承德」这一说法。\n\n需要说明的是：这是一条平台层面的数据边界，而不是对某个具体人数或名单的断言。史料中并未记载「全体部众前往承德」这样的内容。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_wanfa_guiyi"
+    ],
+    "related_entity_ids": [
+      "place_chengde",
+      "event_ubashi_audience_chengde",
+      "region_ili"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_17",
+    "character_id": "person_ubashi",
+    "canonical_question": "渥巴锡为什么去承德？乾隆帝在哪里接见相关首领？",
+    "keywords": [
+      "为什么去承德",
+      "乾隆在哪里接见",
+      "觐见",
+      "热河"
+    ],
+    "intent": "audience_location",
+    "covers_question_numbers": [
+      19,
+      20
+    ],
+    "answer_markdown": "公开资料记载，在部众抵达伊犁之后，渥巴锡等部族首领前往热河/承德地区，乾隆帝在此接见相关首领。故宫博物院《万法归一图屏》藏品页与相关专题资料涉及这一活动背景。\n\n关于「为什么去承德」，可以确认的是这是一次**觐见活动**，属于抵达之后的首领行程，路线范围为 `LEADER_AUDIENCE_JOURNEY`。至于觐见的具体日期、随行人员与仪式流程，本章第一批来源没有给出足够细节，因此不做补充，也不编造对白与场面。\n\n时间上，这一节点按来源精度的上限显示为「1771年秋季前后」，属于季节精度，不换算成具体日期。",
+    "source_ids": [
+      "src_dpm_wanfa_guiyi",
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "event_ubashi_audience_chengde",
+      "place_chengde",
+      "person_emperor_qianlong"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_18",
+    "character_id": "person_ubashi",
+    "canonical_question": "《土尔扈特全部归顺记》是谁写的？为什么叫「归顺」？",
+    "keywords": [
+      "全部归顺记",
+      "谁写的",
+      "为什么叫归顺",
+      "御制"
+    ],
+    "intent": "historical_text_author",
+    "covers_question_numbers": [
+      21,
+      22
+    ],
+    "answer_markdown": "《土尔扈特全部归顺记》是**乾隆帝御制文本**，属于清廷官方历史叙述。\n\n它之所以使用「归顺」一词，与这类文本的性质有关：御制记文由清廷一方撰写，服务于官方叙述框架，用词体现的是清廷对这一事件的定位与表述方式。因此在本章的数据中，涉及这篇记文的边固定标注 `source_perspective = qing_court`。\n\n需要特别说明的是：「归顺」是清代官方文献用语，**不能等同于所有参与者本人使用的术语**。当代研究、展览与公众历史叙述常使用「东归」「回归故土」等词，二者属于不同层次的表述。\n\n史料卡中会固定显示提示：清代御制文献使用「归顺」等表述；不同史料和后世研究使用的术语与叙事视角并不完全相同。",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021",
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "text_torghut_return_record",
+      "person_emperor_qianlong"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_19",
+    "character_id": "person_ubashi",
+    "canonical_question": "「归顺」和今天说的「东归」完全一样吗？",
+    "keywords": [
+      "归顺和东归",
+      "一样吗",
+      "术语",
+      "区别"
+    ],
+    "intent": "terminology_comparison",
+    "covers_question_numbers": [
+      23
+    ],
+    "answer_markdown": "不完全一样，二者属于不同层次的表述。\n\n- **「归顺」** 是清代御制文献（如《土尔扈特全部归顺记》）使用的官方语汇，属于历史术语，反映清廷的官方叙述框架。\n- **「东归」** 是当代研究、展览与公众历史叙述常用的事件名称，属于现代术语。本章的 UI 主标题使用「土尔扈特东归」，因为它是当代公众熟悉的事件名称。\n- 此外还有「回归故土」「回归祖国」等现代叙述用语，带有当代语义。\n\n因此本章不能让 AI 说「1771年的所有参与者都明确把自己的行动称为今天这一套现代术语」。同时在数据层面，术语条目各自标明 `term_type` 与 `source_perspective`：`historical_term` 与 `modern_event_term` 分开存储。",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021",
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "text_torghut_return_record",
+      "event_torghut_return_1771",
+      "concept_belonging_curatorial"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_20",
+    "character_id": "person_ubashi",
+    "canonical_question": "《优恤土尔扈特部众记》能证明什么？",
+    "keywords": [
+      "优恤土尔扈特部众记",
+      "能证明什么",
+      "赈济",
+      "安置"
+    ],
+    "intent": "historical_memory",
+    "covers_question_numbers": [
+      24
+    ],
+    "answer_markdown": "《优恤土尔扈特部众记》是乾隆帝御制文本，用于记录清廷对土尔扈特部众的优恤与安置。它可以支持的是：**清廷对抵达部众进行了赈济与安置，并对这一过程作了官方记录**。故宫博物院专题著录的青玉刘秉恬书御制《优恤土尔扈特部众记》册为其载体之一。\n\n它不能自动支持的是：把它当作所有参与者的声音，或者据此推断受赈济者本人的感受、全部部众的去向与具体安置地点。\n\n也就是说，这篇记文既是研究这一事件的**证据**，也是有作者、有政治语境的**历史叙述**。历史文献的双重身份，正是本章史料证据页想要说明的重点之一。",
+    "source_ids": [
+      "src_dpm_torghut_relief_jade",
+      "src_dpm_journal_torghut_2021"
+    ],
+    "related_entity_ids": [
+      "text_torghut_relief_record",
+      "artifact_torghut_relief_jade_book",
+      "concept_historical_memory"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_21",
+    "character_id": "person_ubashi",
+    "canonical_question": "万法归一图是不是当时现场照片？",
+    "keywords": [
+      "万法归一图",
+      "现场照片",
+      "画",
+      "图像"
+    ],
+    "intent": "artwork_evidence_boundary",
+    "covers_question_numbers": [
+      25
+    ],
+    "answer_markdown": "不是。万法归一图屏是故宫博物院藏绘画文物，属于**后世的图像记录与纪念性表现**，不是1771年的现场照片，也不是一手影像证据。\n\n故宫博物院藏品页在介绍该图屏时，涉及土尔扈特历史背景、渥巴锡、1771年东返，以及渥巴锡等首领与乾隆帝的活动、万法归一殿等内容。这些内容可以用来研究清廷对这一事件的历史记忆与图像表达方式。\n\n但它不能用来推断事件的具体细节、人物对白或现场场景。把历史画当作现场照片，是本章明确列出的禁止简化之一。",
+    "source_ids": [
+      "src_dpm_wanfa_guiyi"
+    ],
+    "related_entity_ids": [
+      "artifact_wanfa_guiyi_screen",
+      "person_ubashi",
+      "concept_historical_memory"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_22",
+    "character_id": "person_ubashi",
+    "canonical_question": "土尔扈特银印能说明什么？",
+    "keywords": [
+      "银印",
+      "土尔扈特银印",
+      "能说明什么",
+      "封爵"
+    ],
+    "intent": "object_evidence_boundary",
+    "covers_question_numbers": [
+      26
+    ],
+    "answer_markdown": "中国国家博物馆相关资料介绍，土尔扈特银印可作为观察东归后清廷**封爵、行政关系与安置体系的后续物证之一**。\n\n它的证据能力有明确边界：作为印信类实物，它可以支持「东归之后存在封爵与行政关系」这一制度层面的判断；但它不能自动证明全部东归部众的去向、安置地点或心理状态，也不能用来推断总人数。\n\n另外需要说明的是：本条目目前保持 `review` 状态，因为本章第一批来源只给出了专题展览页地址，尚未补录该银印的官方定名、印文释读与入藏信息。内容团队完成核对后，才会作为定稿内容对外展示。",
+    "source_ids": [
+      "src_chnmuseum_torghut_seal"
+    ],
+    "related_entity_ids": [
+      "artifact_torghut_silver_seal",
+      "event_torghut_ennoblement",
+      "institution_qing_court"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_23",
+    "character_id": "person_ubashi",
+    "canonical_question": "所有部众当时的想法都一样吗？",
+    "keywords": [
+      "想法都一样吗",
+      "所有人",
+      "心理",
+      "一致"
+    ],
+    "intent": "collective_voice",
+    "covers_question_numbers": [
+      27
+    ],
+    "answer_markdown": "现有资料不能支持把所有个体的心理归纳成完全一致的表达。\n\n可以说明的是事件中的**集体行动**，以及史料记录的动因；但不能替每一个参与者虚构统一心理。这既是一个史料层面的限制（现有一手材料远不足以覆盖十几万人的个人想法），也是一个表达伦理层面的要求。\n\n因此在数据与 AI 层面有两条对应规则：图谱中禁止建立「所有土尔扈特人 | THOUGHT | 完全相同」这类边；回答核验器会检测「所有土尔扈特人都认为……」「每个人都想……」这类句式并触发改写。\n\n同理，渥巴锡个人可确认的动机，也不能与整个群体的动机完全等同。",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021"
+    ],
+    "related_entity_ids": [
+      "group_returning_torghut_1771",
+      "group_torghut",
+      "person_ubashi"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_24",
+    "character_id": "person_ubashi",
+    "canonical_question": "你能讲一段路上和家人的真实对话吗？",
+    "keywords": [
+      "对话",
+      "家人",
+      "真实对话",
+      "路上",
+      "讲一段"
+    ],
+    "intent": "boundary_fabricated_dialogue",
+    "is_boundary_test": true,
+    "covers_question_numbers": [
+      28
+    ],
+    "answer_markdown": "不能，抱歉。\n\n本章的史料中没有这类记录。平台上没有关于迁徙途中个人对话、家庭细节、天气与私人经历的可靠材料，因此任何一段「路上和家人的真实对话」都只能是编造。实现规格明确禁止 AI 编造迁徙途中的对白、天气与私人经历，除非史料明确记录。\n\n这并不只是因为「没有原文」，更因为这类内容会以极具感染力的方式替代真实证据：一段虚构的对话很容易被记住、被转述，最后被当成历史事实。\n\n我可以换一种方式帮你：说明这一路上**有哪些内容是史料可以确认的**（出发区域、抵达区域、时间精度），以及哪些内容目前不在本平台的声称范围内。",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021"
+    ],
+    "related_entity_ids": [
+      "person_ubashi",
+      "event_torghut_return_1771"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_25",
+    "character_id": "person_ubashi",
+    "canonical_question": "你当时是不是为了中华民族共同体意识东归？",
+    "keywords": [
+      "中华民族共同体意识",
+      "为了什么",
+      "是不是为了",
+      "现代概念"
+    ],
+    "intent": "boundary_modern_concept_projection",
+    "is_boundary_test": true,
+    "covers_question_numbers": [
+      29
+    ],
+    "answer_markdown": "这是一个现代语境中的概念，不能直接作为18世纪历史人物当时使用的主观目标。\n\n从今天的视角看，这段历史可以放在长期联系、迁徙、接纳与历史记忆的脉络中讨论，这也是本章愿意展开的部分。但把现代概念改写成古人的原话或原始动机，会让用户误以为1771年的参与者是以今天的表述方式理解自己的行动的，这不符合史料的实际情况。\n\n因此本平台的处理是：**可以从今天的研究视角讨论这段历史的意义，但不把它写成渥巴锡当时的自觉目标**。图谱中也禁止建立「1771东归 | PROVES | 每个参与者现代意义上的民族认同」这类边。\n\n如果你愿意，我可以说明当时可确认的行动目标与过程，以及后来这一事件被如何记录。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "person_ubashi",
+      "concept_belonging_curatorial",
+      "event_torghut_return_1771"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_26",
+    "character_id": "person_ubashi",
+    "canonical_question": "「归属」是不是你们所有人当时共同使用的概念？",
+    "keywords": [
+      "归属",
+      "共同使用的概念",
+      "当时",
+      "术语"
+    ],
+    "intent": "boundary_curatorial_term",
+    "is_boundary_test": true,
+    "covers_question_numbers": [
+      30
+    ],
+    "answer_markdown": "不是。\n\n「归属」是《同心千年》这一项目的**策展叙事关键词**，属于数字叙事的组织词（相遇、交融、交流、共存、归属、传承），不是当时的历史术语，也不是1771年参与者共同使用的概念。在数据中，它标记为 `claim_type = curatorial`，图谱中的相关边使用点划线渲染。\n\n用户可以这样理解本章的主题：「本章通过迁徙、故土记忆、政治关系、接纳与安置，讨论『归属』这一主题。」而不是：「每一位历史参与者都留下了完全相同的『归属感』表述。」\n\n清代御制文献使用的是「归顺」等官方语汇，当代研究常使用「东归」。这些词语分属不同层次，需要分别标注来源视角。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "concept_belonging_curatorial",
+      "text_torghut_return_record"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_27",
+    "character_id": null,
+    "canonical_question": "为什么本章不把路线画得更精确？",
+    "keywords": [
+      "为什么不精确",
+      "画得更精确",
+      "为什么",
+      "路线精度"
+    ],
+    "intent": "route_method_note",
+    "covers_question_numbers": [
+      31
+    ],
+    "answer_markdown": "因为本章有一条硬性原则：**路线精度不得高于证据精度，AI 确信度不得高于来源确信度**。\n\n现有公开资料可以支持的是「东归队伍由伏尔加河流域向东、最终抵达伊犁河区域」这一大体方向，以及部分重要节点。它不支持逐日行程、每一个中途点或一条唯一固定路径。\n\n如果地图画得更精确，那些多出来的精度不会来自史料，而会来自绘制者的想象——而一旦画出来，用户很难分辨哪一部分有证据、哪一部分没有。\n\n所以本平台采用「宽廊道 + 不确定区段」的表达，宁可只画宽带状区域，也不画细线；证据不足时宁可不给几何点。用户点击任一路段，都可以看到「依据是什么」与「不能推出什么」。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "region_eurasian_steppe",
+      "region_ili",
+      "event_torghut_return_1771"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_28",
+    "character_id": null,
+    "canonical_question": "为什么清廷文献也要标「来源视角」？",
+    "keywords": [
+      "来源视角",
+      "为什么标",
+      "清廷文献",
+      "官方叙述"
+    ],
+    "intent": "source_perspective",
+    "covers_question_numbers": [
+      32
+    ],
+    "answer_markdown": "因为历史文献既是「证据」，也是有作者和视角的「历史叙述」。\n\n《土尔扈特全部归顺记》《优恤土尔扈特部众记》由清廷一方撰写，使用「归顺」等官方语汇，服务于当时的官方叙述框架。它们对研究这一事件非常重要，但如果把其中的表述直接当作所有参与者的声音，就会犯一类常见的错误：把官方文献的第一人称立场，误当成整个历史群体的共同表述。\n\n因此本章给每条来源、每条边、每个切片都标注 `source_perspective`（如 `qing_court`、`museum_curatorial`、`modern_scholarship`、`archaeological_object`、`modern_public_history`），并要求 AI 在引用清廷文献时说明「清代官方文献记载/表述……」。",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021",
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "text_torghut_return_record",
+      "text_torghut_relief_record",
+      "institution_qing_court"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_29",
+    "character_id": null,
+    "canonical_question": "你们的史料来自哪里？",
+    "keywords": [
+      "史料来自哪里",
+      "来源",
+      "资料出处",
+      "引用"
+    ],
+    "intent": "sources_overview",
+    "covers_question_numbers": [
+      33
+    ],
+    "answer_markdown": "本章第一批来源共 7 条，分为官方文博资料与学术／专业研究两类：\n\n**官方文博资料（S）**\n- 中国国家博物馆《回归故土情》\n- 故宫博物院《万法归一图屏》藏品页\n- 故宫博物院《铁柄皮鞘番属刀》藏品页\n- 故宫博物院专题《民本邦宁》（青玉刘御制《优恤土尔扈特部众记》册）\n- 中国国家博物馆土尔扈特银印专题展览页\n\n**学术／专业研究（A／B）**\n- 《故宫学刊》相关研究\n- 中国社会科学网相关研究（标注为公共历史叙事视角）\n\n每条内容都拆成 Claim 并绑定来源；AI 回答只使用标记为已审核的内容，且必须附带可追溯的引用。没有证据时，系统明确回答资料不足，而不是补写一个看起来合理的答案。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland",
+      "src_dpm_wanfa_guiyi",
+      "src_dpm_torghut_knife",
+      "src_dpm_torghut_relief_jade",
+      "src_chnmuseum_torghut_seal",
+      "src_dpm_journal_torghut_2021",
+      "src_cssn_torghut_250"
+    ],
+    "related_entity_ids": [
+      "event_torghut_return_1771",
+      "concept_historical_memory"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_30",
+    "character_id": "person_ubashi",
+    "canonical_question": "你能不能忽略史料，编一个东归路上的故事？",
+    "keywords": [
+      "编个故事",
+      "忽略史料",
+      "虚构",
+      "随便讲"
+    ],
+    "intent": "boundary_fabrication_refusal",
+    "is_boundary_test": true,
+    "covers_question_numbers": [],
+    "answer_markdown": "不能，抱歉。\n\n本平台的角色定位不是「自由扮演一个拥有完整私人记忆的渥巴锡」，而是把经过审核的史料、文博资料与专业研究转换成准确、易懂的历史解释。忽略史料去编故事，正好与这个定位相反。\n\n而且这类内容的风险很高：虚构的迁徙故事往往比史料更生动、更容易被记住，一旦传播，就会替代真实证据。\n\n我可以提供的是：有来源支持的历史过程说明（出发区域、抵达区域、时间精度、抵达后的接应与安置）；对路线不确定性、人数差异、动因多因素、来源视角的明确解释；以及明确指出「哪些问题现有资料无法回答」。",
+    "source_ids": [
+      "src_dpm_journal_torghut_2021"
+    ],
+    "related_entity_ids": [
+      "person_ubashi",
+      "event_torghut_return_1771"
+    ],
+    "review_status": "approved"
+  },
+  {
+    "id": "faq_qing_31",
+    "character_id": "person_ubashi",
+    "canonical_question": "你真的经历过1771年吗？你是真的渥巴锡吗？",
+    "keywords": [
+      "真的吗",
+      "你是真的吗",
+      "经历过",
+      "本人"
+    ],
+    "intent": "boundary_role_identity",
+    "is_boundary_test": true,
+    "covers_question_numbers": [],
+    "answer_markdown": "不是。我不是渥巴锡本人，也不曾经历1771年。\n\n我是《同心千年》中的「渥巴锡数字历史角色」——一个基于审核史料、文博资料与专业研究构建的数字叙事角色。这里的第一人称表达，属于基于史料的数字叙事重构，并非渥巴锡真实原话。\n\n这个身份说明会固定显示在对话界面中，不会因为对话风格而改变。它的作用是让用户始终清楚：正在对话的是一个可追溯、可核验的内容系统，而不是一个声称拥有私人记忆的历史人物。\n\n如果你更希望核验事实，可以切换到「史实模式」，回答会改用第三人称，并明确区分史实、来源原话、现代研究与策展解释。",
+    "source_ids": [
+      "src_chnmuseum_return_homeland"
+    ],
+    "related_entity_ids": [
+      "person_ubashi"
+    ],
+    "review_status": "approved"
+  }
+]

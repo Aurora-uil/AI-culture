@@ -1,0 +1,752 @@
+[
+  {
+    "id": "chunk_yuan_001",
+    "source_id": "src_bjww_yuntai_chronology",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai",
+      "place_juyong_pass"
+    ],
+    "claim_ids": [
+      "claim_yuntai_yuan",
+      "claim_yuntai_is_pagoda_base",
+      "claim_yuntai_located_juyong"
+    ],
+    "title": "居庸关云台是什么：位置与性质",
+    "text": "居庸关云台位于北京市昌平区居庸关关城内，是元代留存至今的一处石砌建筑遗存，也是元代过街塔的塔基。所谓过街塔，是跨在道路之上、行人从塔下通过的塔；云台台体正中开有券洞，券洞贯穿台体，原有道路从券洞下穿过。\n\n云台今天最受关注的部分在券洞内部。券洞内保存有佛教题材的石雕，同时在洞壁与洞顶上保存有多种书写系统的文字题刻。北京市文物局公开资料记载，云台始建于元至正二年至五年，即1342—1345年。\n\n这里有两点需要区分。第一，云台今天只剩下塔基部分，台体之上的塔身已不存，因此不宜说它是一座完整的塔。第二，云台是元代遗存，今天在居庸关看到的关城建筑与它并非同一时期的同一组建筑。本章介绍的云台，指的就是这处元代塔基以及券洞内的石雕与题刻。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_002",
+    "source_id": "src_bjgov_juyongguan",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai",
+      "place_juyong_pass",
+      "place_beijing_changping"
+    ],
+    "claim_ids": [
+      "claim_yuntai_located_juyong",
+      "claim_juyong_located_changping"
+    ],
+    "title": "居庸关的位置与云台所在的关城",
+    "text": "居庸关是长城沿线的重要关隘，位于今北京市昌平区境内。它所在的关沟通道穿越军都山，是连接华北平原与塞外的重要孔道，历来为南北往来的必经之地。云台就建在居庸关关城之内。\n\n把云台放在这条通道上理解，它的位置关系会更清楚：作为过街塔的塔基，它跨在路上，行人从塔下的券洞中通过，而不是建在远离道路的独立院落里。这一空间关系是本章主场景「券洞内壁」得以成立的前提——观众看到的正是行人与石刻同处一条通道的画面。\n\n需要使用「今属北京市昌平区」这样的表述来定位，是因为元代并没有与现代完全对应的行政区划。平台把元代遗存与今天的行政区划相连，目的是便于寻访与理解位置，而不是描述元代的行政建制。\n\n场景与图谱中的位置标注均为示意，用于理解相对关系，不等同于测绘坐标或考古测绘图。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_003",
+    "source_id": "src_bjww_yuntai_chronology",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai"
+    ],
+    "claim_ids": [
+      "claim_yuntai_is_pagoda_base",
+      "claim_yuntai_located_juyong"
+    ],
+    "title": "台体与券洞：云台的基本形制",
+    "text": "云台的主体是一座石砌台体，台体正中开有券洞，券洞贯穿台体，形成一条可以通过的通道。它的功能来自「过街塔」这一建筑类型：塔跨在道路之上，行人从塔下经过。\n\n这种形制决定了今天观众看到的画面。进入券洞之后，左右洞壁与洞顶构成一个相对封闭的空间；佛教石雕与多种文字题刻就分布在这个空间里，题刻之间彼此相邻，处于同一处空间、大致相近的时间里。本章的主要互动——点击六种文字的发光区域、打开文字卡、查看关系——都发生在券洞内部。\n\n需要说明的是，本平台不提供三维自由漫游，也不做摄像头识别或古文字识别。场景中的文字区域全部采用预先标注的热点坐标实现，坐标以 0—1 归一化，以适配不同屏幕尺寸。\n\n六体文字透镜中的六个热点，就是在这个券洞空间内预先标注的六个可点击区域；它们的位置以最终高清图为准，当前坐标为初值。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_004",
+    "source_id": "src_bjww_yuntai_chronology",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai"
+    ],
+    "claim_ids": [
+      "claim_yuntai_pagoda_destroyed",
+      "claim_yuntai_pagoda_destruction_disputed"
+    ],
+    "title": "今天看到的云台：只剩塔基",
+    "text": "云台原本是过街塔的塔基。今天站在居庸关关城内，看到的只是这座塔基部分：台体与贯穿台体的券洞仍然保存，但台体之上的塔身已经不存。因此，回答「云台原来就是现在这个样子吗」这个问题时，答案是：不是。\n\n塔身毁弃的具体时间与原因，公开材料与研究中存在不同说法。有的表述把它与后世的历史变动联系在一起，有的表述更侧重建筑本身的损毁过程；这些说法并不完全一致，本章不作确定结论。按本平台的处理方式，凡是来源之间不一致的内容，回答时都会明确说明「存在不同说法」，而不是挑选其中一种说法讲成唯一答案。\n\n对观众来说，更重要的区分是：券洞内的石雕与题刻是元代遗存的一部分，至今仍保存在原处；而塔身的缺失，是这处遗存在后世经历变化的结果。两者不宜混为一谈。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_005",
+    "source_id": "src_bjww_yuntai_chronology",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_yuntai_yuan",
+      "claim_yuntai_built_1342_1345",
+      "claim_yuntai_six_scripts"
+    ],
+    "title": "云台基本信息速览",
+    "text": "名称：居庸关云台。位置：北京市昌平区居庸关关城内。性质：元代过街塔的塔基，台体开有贯穿的券洞。年代：北京市文物局公开资料记载其始建于元至正二年至五年，即1342—1345年。现状：塔身已不存，现存台体与券洞；券洞内保存有佛教石雕与多种书写系统的文字题刻。\n\n本章采用的六种书写系统为：梵文书写系统、藏文、八思巴文、回鹘文、汉文、西夏文。官方公开介绍把这些石刻视为研究元代宗教、文字及多民族文化交流的重要材料。\n\n需要强调的一点是：这处遗存保存的是六种书写系统的题刻，不能把这个说法改写成「六个民族的六种语言写在一起」。文字、语言与人群之间不是一一对应的关系，这一点在本章的每一个文字条目中都会重复说明，也是 AI 回答核验时的固定检查项。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_006",
+    "source_id": "src_bjww_yuntai_chronology",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai",
+      "period_yuan"
+    ],
+    "claim_ids": [
+      "claim_yuntai_built_1342_1345",
+      "claim_yuntai_yuan"
+    ],
+    "title": "修建年代：元至正二年至五年（1342—1345）",
+    "text": "居庸关云台的建造年代，按北京市文物局公开资料的记载，始建于元至正二年至五年，即公元1342年至1345年。这是本章关于年代的核心表述，回答「它是什么时候修建的」时应以此为准。\n\n有几点需要注意。第一，「始建于」表示的是工程的开始时间，本平台不据此推断更精确的动工日或完工日，也不给出具体月份。第二，把年代换算成公元纪年时使用1342—1345年这一区间表述，不简化为单一数字。第三，如果其他公开材料在年代上有不同表述，应按「来源之间的差异」处理，而不是把两个说法混成一个。\n\n云台的建造时间落在元代后期。它的年代之所以重要，是因为券洞内的石雕与多种文字题刻属于同一处遗存：年代确定了，这些文字材料才有了明确的时间坐标。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_007",
+    "source_id": "src_bjww_yuntai_chronology",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai",
+      "period_yuan"
+    ],
+    "claim_ids": [
+      "claim_yuntai_yuan",
+      "claim_yuntai_built_1342_1345"
+    ],
+    "title": "元代的时间范围与云台在其中的位置",
+    "text": "元代是本章所属的历史时期，本项目统一标注为1271—1368年。居庸关云台是这一时期的遗存：按公开资料，它始建于元至正二年至五年，即1342—1345年，属于元代后期。\n\n在知识图谱中，云台与元代之间是「建造于」的关系。这条关系的含义是：云台的建造时间落在元代的时间范围内。它不表示元代这一整个时期都参与了建造，也不表示云台的每一处石刻都由同一批人在同一年完成。\n\n把时间节点单独建为一个实体，还有一个产品上的作用：用户从云台出发，可以沿着时间这条线回到总时间轴，把这一章放回汉代、北魏、唐代、清代、当代的整体脉络中。历史时期的分期方式不止一种，本项目采用统一的时间轴标注，以保证各章之间可以比较；涉及具体事件的年代，仍以各章自身来源为准。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_008",
+    "source_id": "src_bjww_yuntai_chronology",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai",
+      "place_juyong_pass"
+    ],
+    "claim_ids": [
+      "claim_yuntai_is_pagoda_base"
+    ],
+    "title": "什么是过街塔",
+    "text": "过街塔是塔的一种建造方式：塔不建在院落或塔院中，而是跨在道路之上，下面留出可以通过的空间，行人从塔下经过。云台就是这种塔的塔基部分。\n\n理解「过街塔」这个类型，有助于解释一个常见疑问：为什么这处遗存的主体是一条可以走人的券洞，而不是一座可以登临的塔身。因为它的设计前提就是让人从下面通过——通道本身就是建筑的一部分，券洞既是结构，也是使用场景。\n\n需要说明的是，不同的过街塔在形制上并不完全相同，塔下通道的数量与形式也各有差异。本章对云台的介绍只涉及这一处遗存，不把它当作所有过街塔的通用样本；涉及过街塔这一建筑类型的整体情况，应以建筑史专业资料为准。同样地，本平台也不由「它是一座过街塔」这一点，推断云台的建造者或建造目的。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_009",
+    "source_id": "src_bjww_yuntai_chronology",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai",
+      "place_juyong_pass"
+    ],
+    "claim_ids": [
+      "claim_yuntai_is_pagoda_base",
+      "claim_yuntai_located_juyong"
+    ],
+    "title": "券洞与道路：行人从塔下通过",
+    "text": "云台建在居庸关关城内的通道上。作为过街塔的塔基，它的券洞贯穿台体，原有道路从券洞下穿过，行人由此往来。这一空间关系，是理解券洞内石雕与题刻的一个基本前提。\n\n把石刻放在通道里，意味着它们处在人来人往的位置上，而不是封闭在殿堂内部。观众在场景中看到的「文字分布在券洞壁上」这一布局，正是这种空间关系的直接体现。本章的六体文字透镜，就是把这条通道内壁上预先标注的文字区域逐个呈现出来，让用户在同一处空间里比较不同书写系统的分布。\n\n要提醒的是，我们不应由「位置在通道上」直接推断建造者的动机或使用者的身份。位置关系是可以通过遗存观察到的；动机与身份属于需要来源支持的历史问题，平台不作无据推断。\n\n券洞内文字区域的具体位置，以最终高清图标定的热点为准，当前坐标为实现方拟定的初值。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_010",
+    "source_id": "src_bjww_yuntai_chronology",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai"
+    ],
+    "claim_ids": [
+      "claim_yuntai_pagoda_destroyed",
+      "claim_yuntai_pagoda_destruction_disputed"
+    ],
+    "title": "塔身不存：遗存现状与不确定之处",
+    "text": "云台原为过街塔的塔基，塔身今天已不存。这一点在回答「它原来就是现在的样子吗」时是关键：不是。今天看到的云台是塔基与券洞，而不是完整的塔。\n\n至于塔身毁弃的时间与原因，公开材料与研究中存在不同说法，本平台不作确定结论。按本章的溯源规则，凡是来源之间不一致或缺乏可靠材料的问题，回答时应明确说明存在不同说法，或者直接说明资料不足，而不是用推测填补空白。\n\n这类「不确定」并不削弱云台的价值，反而说明了史料使用的边界：券洞内的石雕与题刻至今保存在原处，是可以直接研究的材料；而塔身上部在何时、因何消失，则需要更多材料才能讨论。把可确定的部分与不确定的部分分开说明，是本章对所有历史问题的一致处理方式。\n\n本平台不使用未经来源支持的推测来填补这类空白，这一处理方式同样适用于其他存在不同说法的问题。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_011",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "inscription_six_scripts",
+      "artifact_yuntai"
+    ],
+    "claim_ids": [
+      "claim_yuntai_six_scripts",
+      "claim_yuntai_research_material"
+    ],
+    "title": "券洞内为什么会有多种文字：官方表述",
+    "text": "居庸关云台券洞内保存有六种不同文字的石刻。官方公开介绍把券洞内的佛教造像与多种文字石刻，视为研究元代宗教、文字及多民族文化交流的重要材料。这是本章回答「为什么这里会出现多种文字」时可以直接引用的定位表述。\n\n需要区分两类说法。第一类是可直接陈述的事实：券洞内保存有六种书写系统的题刻，这一点有官方公开资料支持。第二类是研究视角的说明：这些材料可以用来研究元代的宗教、文字与文化交往——这是「可以用来研究什么」，而不是「当时的人为什么这样做」。本章把第二类内容标为解释性关系，在知识图谱中用虚线显示，与事实边区分开。\n\n因此，当用户追问「为什么要刻这么多文字」时，平台可以说明官方与研究界的定位，但不会给出未经来源支持的建造动机。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_012",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "inscription_six_scripts",
+      "script_sanskrit_lantsa",
+      "script_tibetan",
+      "script_phagspa",
+      "script_old_uyghur",
+      "script_chinese",
+      "script_tangut"
+    ],
+    "claim_ids": [
+      "claim_yuntai_six_scripts_list",
+      "claim_yuntai_six_scripts"
+    ],
+    "title": "六种书写系统的名称与本章互动范围",
+    "text": "本章采用的六种书写系统是：梵文书写系统、藏文、八思巴文、回鹘文、汉文、西夏文。这六种文字在券洞内同一处空间中保存，本章以它们作为核心互动对象，用户可以在六体文字透镜中逐个打开。\n\n这是一份「互动范围」清单，不是对券洞内全部题刻的完整清点。本章的实体建模把四个层次分开登记：书写系统（如藏文）、语言（如藏语）、文本（如某部咒语的文本）、具体题刻（券洞中某一处实际刻石）。同一种书写系统可以书写不同语言，同一段文本也可能以多种文字刻写，因此四者不能互相替代。\n\n清单中「梵文书写系统」使用的是说明性名称，用来避免「梵文」一词在语言与文字两个层面之间含混；该节点的内部 ID 为项目临时编号，最终中文显示名由内容组统一规范。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_013",
+    "source_id": "src_academic_scripts_overview",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "inscription_six_scripts",
+      "concept_multiscript_inscription"
+    ],
+    "claim_ids": [
+      "claim_script_not_language",
+      "claim_six_scripts_not_six_ethnic_groups"
+    ],
+    "title": "文字、语言、文本、题刻：四个层次不能混",
+    "text": "讨论居庸关云台的六体文字时，必须把四个概念分开：Script 指文字书写系统，如藏文、八思巴文；Language 指语言，如藏语、蒙古语；Text 指文本内容，如某部咒语或某篇记录；Inscription 指某一处具体题刻，也就是券洞中实际存在的那一块刻石。\n\n四者相关，但不能互相替代。同一种文字可以被用来书写不同语言：八思巴文就是一个典型例子，它被用来拼写蒙古语、汉语等多种语言。反过来，同一种语言也可以用不同文字书写。至于文本与题刻，同一段文本可能以多种文字分别刻写，一处题刻也可能包含多种文字。\n\n因此，本章的界面表述统一使用「云台券洞内保存有六种书写系统的题刻」，而不会写成「六个民族的六种语言写在一起」。后一种表达把文字、语言、人群直接对应起来，与实际的文字使用情况不符。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_014",
+    "source_id": "src_academic_scripts_overview",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "inscription_six_scripts",
+      "concept_multiscript_inscription"
+    ],
+    "claim_ids": [
+      "claim_six_scripts_not_six_ethnic_groups",
+      "claim_script_not_language"
+    ],
+    "title": "为什么不能说「六种文字代表六个民族」",
+    "text": "「六种文字代表元代六个民族」是一个常见的简化说法，但它不成立，原因有三。\n\n第一，文字不等于民族。同一套文字可以被不同人群使用，也可以被用来书写不同语言；一个民族在历史上也可能使用过不止一种文字。文字的使用范围，与人群的身份边界并不是同一条线。\n\n第二，六这个数字来自本章的互动清单，是产品为了便于探索而确定的六种书写系统，不是对元代人群构成的统计。元代实际使用过的文字不止这六种，券洞内的题刻也未必能被完整地按「一种文字对应一群人」来分类。\n\n第三，即便一处题刻以某种文字刻写，我们也无法由文字直接推断书写者是谁。因此，平台在回答中不会给任何文字绑定单一民族标签，也不会由多种文字并存直接推出关于人群的结论。需要讨论人群问题时，应当使用有来源支持的材料，而不是从文字反推。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_015",
+    "source_id": "src_academic_scripts_overview",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "inscription_six_scripts",
+      "concept_multiscript_inscription"
+    ],
+    "claim_ids": [
+      "claim_six_scripts_not_six_ethnic_groups",
+      "claim_script_not_language"
+    ],
+    "title": "常见误解与本章的表述规范",
+    "text": "围绕居庸关云台的六体文字，有几个反复出现的误解。第一个是「六种文字就是六种语言」——不成立，因为文字是书写系统，语言是另一层概念，两者并非一一对应。第二个是「六种文字代表六个民族」——同样不成立，文字不构成人群身份的证明。第三个是「碑文上写了什么，AI 可以直接翻译出来」——平台不做实时古文字翻译，具体释读需要专业研究。\n\n与这些误解对应，本章的表述规范是：使用「六种书写系统的题刻」这一说法；在介绍任何一种文字时，都把书写系统、语言与人群三层分开说明；不给没有来源支持的文字绑定民族标签；不输出未经审核的碑文释读。\n\n这些规范不只是措辞问题，它们直接影响 AI 的回答方式：回答核验环节会逐项检查是否出现文字、语言、族群的错误对应，以及是否出现了证据之外的人物、事件或因果关系。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_016",
+    "source_id": "src_academic_scripts_overview",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_sanskrit_lantsa",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_sanskrit_lantsa_nature",
+      "claim_script_not_language"
+    ],
+    "title": "梵文书写系统（一）：名称与含义",
+    "text": "云台券洞题刻中保存有以梵文书写的内容。「梵文」这个说法在日常使用中容易含混：它既可能指古代印度的一种语言，也常被用来指称书写这种语言的文字。本章登记的是书写系统这一层面。\n\n用于石刻的梵文，一般被称为兰札体一类的书体；这类书体在藏传佛教的经咒题刻中较为常见。也就是说，讨论云台题刻中的梵文时，我们谈的是「用哪种文字刻写」，而不是直接谈「刻写者讲哪种语言」或「刻写者属于哪一群人」。\n\n本章因此把这一节点的界面名定为「梵文书写系统」，以显示名的方式把文字层面的含义固定下来，避免在问答中与语言层面的「梵文」混用。该节点的内部 ID 为项目临时编号，最终中文显示名由内容组统一规范。\n\n如果用户问的是「梵文写了什么」，回答会转向资料边界说明，而不是提供释读；这一处理与本章其他五种文字一致。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_017",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_sanskrit_lantsa",
+      "inscription_six_scripts",
+      "artifact_yuntai"
+    ],
+    "claim_ids": [
+      "claim_yuntai_six_scripts_list",
+      "claim_script_not_language"
+    ],
+    "title": "梵文书写系统（二）：在云台题刻中的位置与阅读边界",
+    "text": "在云台券洞中，梵文书写系统的题刻与其他五种书写系统的题刻分布在同一处空间里。这是本章六体文字透镜的第一个热点，用户点击后可以看到这一文字的说明卡与史料来源。\n\n关于它的位置，需要说明两点。第一，场景中的文字区域采用预先标注的热点坐标实现，坐标是实现方拟定的初值，待按最终高清图重新标注，用户看到的框选范围是示意性的。第二，本章不提供实时的碑文释读或古文字翻译：券洞内题刻的具体内容与不同文字之间的对勘关系，需要依据权威释读成果，平台不输出未经审核的释读结论。\n\n可以确定的是文字层面的信息：梵文书写系统是券洞内保存的六种书写系统之一，这一点有官方公开资料支持。回答涉及具体文字内容的追问时，平台会说明资料边界，而不是给出猜测。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_018",
+    "source_id": "src_academic_scripts_overview",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_tibetan",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_tibetan_script_nature",
+      "claim_script_not_language"
+    ],
+    "title": "藏文（一）：书写系统与语言",
+    "text": "藏文是云台券洞内保存的书写系统之一。它是一种用于书写藏语的文字，在元代随藏传佛教的传播而在多地使用，也是元代题刻与经卷中较为常见的书写系统。\n\n这里需要把文字与语言分开：藏文是书写系统，藏语是语言。二者相关，但不是同一件事。藏文历史上曾被用来书写藏语之外的其他语言；藏语也可以用不同的文字书写。因此，看到券洞内保存有藏文题刻，能说明的是这种书写系统在当时的题刻活动中被使用，不能直接等同于某一族群的身份标签，也不能由一种文字推出一位具体的书写者。\n\n本章对藏文节点的介绍只涉及书写系统层面的基本信息与它在云台题刻中的存在，不涉及任何具体题刻的释读内容。\n\n藏文节点在六体文字透镜中排序第二，使用规格文档给定的坐标作为初始标注，该坐标是六个热点中唯一有明确来源的。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_019",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_tibetan",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_yuntai_six_scripts_list",
+      "claim_yuntai_six_scripts"
+    ],
+    "title": "藏文（二）：在云台题刻中的使用",
+    "text": "在云台券洞中，保存有以藏文书写的题刻，它与其他书写系统的题刻位于同一处空间内。在六体文字透镜中，藏文热点使用规格文档给定的坐标作为初始标注值，是六个热点中唯一一个坐标已有明确来源的。\n\n从产品角度，藏文是理解「同一空间内多种文字并存」的一个直接入口：用户在券洞场景中点开它，看到的不是一条孤立的文字知识，而是一个位置明确、可与其他五个热点比较的节点。\n\n关于内容边界：本平台不提供具体题刻的释读与译文，也不由藏文题刻推断书写者或使用者的族群身份。如果用户希望了解某处题刻的具体内容，正确的做法是查阅文物部门的正式说明与权威研究，而不是依赖平台生成的释义。这一边界适用于券洞内的全部六种文字。\n\n平台不因某处题刻使用了某一文字，就为使用它的人群附加身份标签。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_020",
+    "source_id": "src_academic_phagspa",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_phagspa",
+      "period_yuan"
+    ],
+    "claim_ids": [
+      "claim_phagspa_nature",
+      "claim_phagspa_creation"
+    ],
+    "title": "八思巴文（一）：元代创制的文字",
+    "text": "八思巴文是云台券洞内保存的书写系统之一，也是元代创制的一套文字。它的创制与颁行与元世祖时期有关，时间在13世纪；元亡之后，八思巴文逐渐不再通行。\n\n八思巴文常被误认为「元代的蒙古文」或「蒙古语」。这是不准确的：它是一种文字，而不是一种语言，更不是某个民族的代称。在元代的多种文字并用环境中，八思巴文属于官方层面被创制与推行的书写系统之一，这一点使它在文字史上具有特别的位置。\n\n本章对八思巴文的介绍只包括创制背景、可拼写的语言范围，以及它在云台题刻中的存在。平台不给出未经来源支持的具体年份，也不对推行效果、使用范围作超出材料的判断。\n\n八思巴文与后来通行的蒙古文字并不是同一套文字，两者不应混为一谈；涉及具体推行制度与使用范围的问题，需以专门研究为准。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_021",
+    "source_id": "src_academic_phagspa",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_phagspa",
+      "inscription_six_scripts",
+      "concept_multiscript_inscription"
+    ],
+    "claim_ids": [
+      "claim_phagspa_nature",
+      "claim_script_not_language"
+    ],
+    "title": "八思巴文（二）：一套文字拼写多种语言",
+    "text": "八思巴文最适合用来说明本章的一条内容红线：文字与语言不是一一对应的。用同一套八思巴文，既可以拼写蒙古语，也可以拼写汉语等其他语言。因此，看到八思巴文，并不能直接判断它所记录的是哪一种语言；更不能由它直接判断书写者属于哪一群人。\n\n反过来理解这一点，也能解释为什么「六体文字」不能被说成「六种语言」：券洞内的六种书写系统，记录的语言未必恰好是六种，文字与语言之间也不存在整齐的对应表。\n\n在云台券洞中，八思巴文题刻与其他五种书写系统的题刻保存在同一处空间里。这一现象本身是文字使用的材料证据；至于当时为什么选择用这些文字刻写、由谁组织、由谁书写，需要以有来源支持的研究为准，平台不作推断。\n\n这一区分适用于券洞内全部六种文字，也是平台回答核验的固定检查项。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_022",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_phagspa",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_yuntai_six_scripts_list",
+      "claim_six_scripts_not_six_ethnic_groups"
+    ],
+    "title": "八思巴文（三）：在云台题刻中的使用与常见误解",
+    "text": "在云台券洞中，保存有以八思巴文书写的题刻，它与其他五种书写系统的题刻分布于同一空间。八思巴文是本章演示路径中被重点点击的文字之一，也是回答「六种文字是不是六种语言」时最直接的例证。\n\n围绕八思巴文，最常见的三种误解是：把八思巴文等同于蒙古语；把八思巴文对应到单一民族；认为既然它由官方推行，券洞内出现八思巴文就一定体现了某项具体政策。前两种误解来自文字与语言、文字的混同，第三种则是从材料的「存在」直接跳到「原因」——这两种推理方式本章都不采用。\n\n可以明确回答的是：八思巴文是元代创制的书写系统，可用于拼写多种语言；券洞内保存有以它书写的题刻。这两点都有公开资料支持，也是平台回答相关问题时给出的内容范围。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_023",
+    "source_id": "src_academic_scripts_overview",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_old_uyghur",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_old_uyghur_nature",
+      "claim_script_not_language"
+    ],
+    "title": "回鹘文（一）：来源与使用",
+    "text": "回鹘文是云台券洞内保存的书写系统之一。它用于书写回鹘语，在元代仍被使用；在文字传播史上，回鹘文与后来蒙古文字的形成之间有过关联，这一点常被文字史研究提到。\n\n文字史之所以关注回鹘文，是因为它提供了一个文字被借用、改造并继续传播的例子：一套文字并不总是停留在最初书写的那种语言上，它可能被新的使用者接受，用来书写新的语言。正是这种跨语言的使用，使得「看到某种文字就推断某个人群」的做法站不住脚。\n\n在云台券洞中，回鹘文题刻与其他五种书写系统的题刻保存在同一处空间中。对本章而言，它的意义在于与其他文字共同构成「同一空间内多种文字并存」这一可观察的现象，而具体每一处题刻的释读与文本对勘，属于专业研究范围，平台不提供未经审核的释读。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_024",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_old_uyghur",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_yuntai_six_scripts_list",
+      "claim_old_uyghur_nature"
+    ],
+    "title": "回鹘文（二）：在云台题刻中的使用",
+    "text": "在云台券洞中，保存有以回鹘文书写的题刻，与其他五种书写系统的题刻分布于同一空间。官方公开介绍把券洞内的多种文字石刻与佛教造像一并视为研究元代宗教、文字及多民族文化交流的重要材料。\n\n需要区分「材料」与「结论」。说这批材料可以用于研究元代文字与人群往来，与研究结论本身不是一回事：前者说明材料的可用性，后者需要具体的研究论证。本章在图谱中把前者标为解释性关系，用虚线显示，正是为了不让用户把研究视角误读成事实判定。\n\n同时要守住另一条边界：回鹘文是书写系统，回鹘语是语言，书写者的身份不能由文字直接推出。因此，平台不会说「券洞内的回鹘文题刻是某某人群留下的」，只会说明这种书写系统在当时的题刻活动中被使用。\n\n平台在回答中也会避免由文字的使用直接推断书写者身份。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_025",
+    "source_id": "src_academic_scripts_overview",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_chinese",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_chinese_script_nature",
+      "claim_script_not_language"
+    ],
+    "title": "汉文（一）：元代通行范围较广的书写系统",
+    "text": "汉文是云台券洞内保存的书写系统之一，用于书写汉语。在元代的多种文字并用环境中，汉文是通行范围较广的书写系统之一，也是今天公众与研究者最容易直接对照阅读的部分。\n\n把汉文放在六体文字中一起介绍，本身就是一个有意义的对照：它提示我们，券洞内并存的是多种书写系统，而不是同一套文字的多种字体。同时它也提醒我们不要走另一个极端——不能因为「今天的人读得懂汉文」，就把汉文部分当作可以随意解释的文本。释读仍然需要依据权威成果。\n\n与本章其他文字节点一样，汉文是书写系统，汉语是语言；汉字在历史上也曾被用于书写汉语之外的语言，因此不能由书写系统直接推断语言或人群。「六种书写系统」也不能被说成「六个民族」。\n\n这一区分同样适用于其他五种文字节点，是本章统一的表述方式。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_026",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_chinese",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_yuntai_six_scripts_list",
+      "claim_six_scripts_not_six_ethnic_groups"
+    ],
+    "title": "汉文（二）：在云台题刻中的使用与「看得懂」的边界",
+    "text": "在云台券洞中，保存有以汉文书写的题刻，与其他五种书写系统的题刻分布于同一空间。对普通观众来说，汉文部分往往是最先能读懂的入口：通过它，可以大致了解题刻内容的性质，再去理解其他文字在同一空间中的位置。\n\n但「看得懂」不等于「可以随意解释」。券洞内题刻的完整释读、不同文字之间的对勘关系，需要依据权威释读成果。本平台不做实时古文字翻译，也不逐句输出碑文释文；用户可以查看的是题刻的文字种类、在券洞中的位置、以及经过审核的基础说明与史料来源。\n\n需要再次强调的是：汉文题刻不代表书写者必然属于某一族群，六种书写系统也不代表六个民族。这两条边界在本章的六个文字条目中表述一致，AI 回答时会按同一标准核验。\n\n关于汉文部分的更细内容，建议查阅文物部门的正式说明与权威研究。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_027",
+    "source_id": "src_academic_tangut_in_yuan",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_tangut",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_tangut_script_nature",
+      "claim_script_not_language"
+    ],
+    "title": "西夏文（一）：创制与在西夏时期的使用",
+    "text": "西夏文是云台券洞内保存的书写系统之一。它创制并通行于西夏时期，用于书写西夏语，是这一时期创制并使用的文字系统。\n\n西夏文在外观上常被观众描述为「看起来像汉字但读不懂」，这种印象来自它的字形构造方式，但它的性质与汉字不同：它是一套独立的文字系统，用于书写西夏语。本章介绍这一节点时，只涉及它的创制与使用范围这一层面。\n\n同样需要区分文字、语言与人群：西夏文是书写系统，西夏语是语言，二者相关但不是同一件事。券洞内出现西夏文题刻，说明的是这种书写系统在当时的题刻活动中被使用，不能直接等同于某一族群的身份标签，也不能由一种文字推出一位具体的书写者。\n\n西夏文在云台题刻中的存在，也是本章演示路径中被重点点击的内容之一，用来回答「它为什么会出现在元代遗存上」。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_028",
+    "source_id": "src_academic_tangut_in_yuan",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_tangut",
+      "period_yuan"
+    ],
+    "claim_ids": [
+      "claim_tangut_in_yuan"
+    ],
+    "title": "西夏文（二）：西夏政权结束后的继续使用",
+    "text": "西夏文并不随着西夏政权的结束而立即消失。西夏政权结束后，西夏文仍在一定范围内被继续使用；元代遗存中出现西夏文题刻，是相关研究关注并讨论的现象之一。\n\n理解这一点，有助于回答一个常见的疑问：一种看起来「属于更早时期」的文字，为什么会出现在元代的建筑上。答案的关键在于时间：文字的使用年限与政权的存续年限并不重合，一套文字在政权更替之后仍可能被继续使用一段时间，使用的范围与场合也可能发生变化。\n\n本章不进一步推断云台西夏文题刻的具体使用者与使用场合。这类问题需要专门研究支持，公开材料没有可以简单概括的统一结论；平台只说明「西夏文在元代仍有使用」这一层面的信息，并标注来源。\n\n平台在回答时会说明这一层面的信息，并明确标注资料边界与来源，不把「仍在使用」扩展为对具体人群活动的判断。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_029",
+    "source_id": "src_academic_tangut_in_yuan",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "script_tangut",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_tangut_background_discussed",
+      "claim_tangut_in_yuan",
+      "claim_six_scripts_not_six_ethnic_groups"
+    ],
+    "title": "西夏文（三）：为什么会出现在元代遗存上",
+    "text": "「西夏文为什么会出现在元代遗存上」是本章最常被问到的问题之一。可以说明的部分是：西夏文在西夏政权结束后仍在一定范围内被继续使用，因此元代遗存中出现西夏文题刻，属于可以理解的现象，并非孤例。\n\n不能简单回答的部分是：云台这一处西夏文题刻具体由谁书写、为什么出现在这里、与其他五种文字之间的关系如何。这些问题涉及具体题刻的释读与历史背景，公开材料没有可以简单概括的统一结论，研究中存在讨论。按本章规则，回答时必须说明「存在不同研究观点」，不得给出单一原因。\n\n同时要避免一种推理：由西夏文的存在直接推断某一人群在云台留下了痕迹，或推断元代存在某项针对特定人群的政策。文字的使用与人群的身份、制度的安排之间，需要各自的证据，不能互相替代。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_030",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "concept_buddhist_stone_carving",
+      "artifact_yuntai"
+    ],
+    "claim_ids": [
+      "claim_yuntai_has_buddhist_carving",
+      "claim_yuntai_carving_naming_scope"
+    ],
+    "title": "券洞内的佛教石雕：可以确定什么",
+    "text": "云台券洞内除文字题刻之外，还保存有佛教题材的石雕。官方公开介绍将券洞内的佛教造像与多种文字石刻并列，视为研究元代宗教、文字及多民族文化交流的重要材料。这一条是可以直接陈述的事实层面信息。\n\n可以确定的是「券洞内有佛教造像」；需要谨慎处理的是「这些造像具体是什么」。造像题材的定名、组合布局与图像含义，属于专业研究范围，公开材料在细节上的表述也不完全一致。因此，本平台不给出未经核验的尊像定名，参观与引用时应以文物部门的正式说明与权威研究为准。\n\n在 Y02 主场景中，佛教石雕对应布局中的「石雕」热点。该热点坐标为实现方拟定的初值，待按最终高清图重新标注；本平台也不把任何数字影像或示意图当作现场实拍。\n\n用户可以在史料证据页查看这一说明所依据的来源；若某条内容缺少来源支持，平台会显示空状态而不是给出推测。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_031",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "concept_buddhist_stone_carving"
+    ],
+    "claim_ids": [
+      "claim_yuntai_carving_naming_scope"
+    ],
+    "title": "造像定名为什么要谨慎",
+    "text": "在介绍券洞内的佛教石雕时，平台会说明「券洞内有佛教造像」，但不会给出具体的尊像名号与图像解释。这不是回避，而是内容准确性的要求。\n\n原因在于：造像题材的判定依赖专业的图像学与宗教史研究，涉及尊像身份、组合关系、图像来源等一系列问题。公开材料在这些细节上的表述并不完全一致，如果平台自行选择其中一种说法，甚至由模型生成看起来通顺的解释，就会出现「读起来合理、实际无据」的内容——这正是《同心千年》要避免的情况。\n\n因此，本章的处理方式是：把可确定的事实与需要专业判断的内容分开说明；对后者明确标注资料边界，并引导用户查阅文物部门的正式说明与权威研究。回答中出现未经核验的造像定名时，答案核验环节会将其判为超出证据范围并要求改写。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_032",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "concept_buddhist_stone_carving",
+      "inscription_six_scripts",
+      "artifact_yuntai"
+    ],
+    "claim_ids": [
+      "claim_yuntai_has_buddhist_carving",
+      "claim_yuntai_research_material"
+    ],
+    "title": "佛教造像与多种文字题刻构成同一处空间",
+    "text": "券洞内既有佛教题材的石雕，又有以多种文字刻写的题刻。两者处在同一处空间中，这一点是理解云台与佛教关系的基本线索：这处遗存与佛教信仰活动有直接关系。\n\n官方公开介绍把券洞内的佛教造像与多种文字石刻视为研究元代宗教、文字及多民族文化交流的重要材料。这是研究视角的定位，说明的是「这批材料可以用来研究什么」，而不是对当时宗教活动或人群活动的具体判断。\n\n还有一个容易被忽略的区分：本章的主要互动对象是文字题刻，佛教石雕在场景中作为非文字热点呈现。用户点击石雕热点时，看到的是关于造像的基本说明与资料边界，而不是把造像当作文字题刻的一部分。两类内容在图谱中也分别连接到不同的节点。\n\n六个文字热点的坐标以最终高清图为准，当前为实现方拟定的初值；两类热点的标签与排序由场景配置统一管理。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_033",
+    "source_id": "src_bjww_yuntai_inscriptions",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai",
+      "concept_yuan_religion_study",
+      "concept_ancient_script_study",
+      "concept_ethnic_cultural_exchange"
+    ],
+    "claim_ids": [
+      "claim_yuntai_research_material",
+      "claim_yuntai_supports_yuan_religion",
+      "claim_yuntai_supports_script_study",
+      "claim_yuntai_supports_ethnic_exchange"
+    ],
+    "title": "官方如何说明云台的研究价值",
+    "text": "居庸关云台为什么有研究价值？官方公开介绍给出的定位是：把券洞内的佛教造像与多种文字石刻，视为研究元代宗教、文字及多民族文化交流的重要材料。\n\n把这句话拆开看，它包括三个方向：宗教史方向，券洞内的造像与题刻与佛教信仰活动有关；文字研究方向，六种书写系统同处一室，为文字研究提供了难得的对照材料；文化交往方向，这批材料可用于讨论元代不同人群之间的文化联系。\n\n需要强调三点。第一，这三条都是研究视角的表述，在图谱中以解释性关系（虚线）呈现，不伪装成硬史实。第二，引用时应当说明这是官方公开介绍的定位，而不是平台自有的历史结论。第三，「可用于研究」不等于「已经证明了什么」：涉及具体历史问题的判断，需要该问题自身有已审核的来源支持。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_034",
+    "source_id": "src_academic_scripts_overview",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "concept_multiscript_coexistence",
+      "inscription_six_scripts",
+      "concept_multiscript_inscription"
+    ],
+    "claim_ids": [
+      "claim_six_scripts_multiscript_coexistence",
+      "claim_six_scripts_not_six_ethnic_groups"
+    ],
+    "title": "多文字共存这一现象怎么理解",
+    "text": "「多文字共存」是对一种可观察现象的描述：在同一处空间、大致相近的时间里，多种书写系统被同时使用并留下痕迹。云台券洞内的六种书写系统题刻，就是这类现象的一个具体例子。\n\n理解这一现象时，有两条边界必须守住。第一，多种文字并存不等于多种语言并列，更不等于多个民族并列：文字可以被跨语言、跨人群使用，同一套文字可以服务于不同的语言，同一种语言也可以用不同文字书写。第二，现象本身是可观察的，但对它形成的具体背景与原因，研究者的解释并不完全相同；平台只说明现象与已有的公开表述，不替研究下结论。\n\n产品层面，这一概念在图谱中作为解释性节点存在：它与六体文字题刻之间用虚线相连，表示这是对现象的描述，而不是一条确定的历史因果。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_035",
+    "source_id": "src_academic_yuntai_inscription_reading",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "artifact_yuntai",
+      "inscription_six_scripts",
+      "script_tangut"
+    ],
+    "claim_ids": [
+      "claim_yuntai_built_1342_1345",
+      "claim_yuntai_pagoda_destruction_disputed",
+      "claim_tangut_background_discussed"
+    ],
+    "title": "哪些内容仍有讨论、哪些相对确定",
+    "text": "关于居庸关云台，本章把内容分成两类呈现。\n\n相对确定的部分：云台位于北京市昌平区居庸关关城内，是元代过街塔的塔基；按北京市文物局公开资料，始建于元至正二年至五年，即1342—1345年；券洞内保存有佛教造像与六种书写系统的文字题刻。这几条有官方公开资料支持，可以直接回答。\n\n仍有讨论或资料不足的部分：塔身毁弃的具体时间与原因，公开材料与研究中存在不同说法；云台西夏文题刻出现的具体背景，没有可以简单概括的统一结论；券洞内佛教造像的具体题材定名，需要以权威研究为准；券洞题刻的完整释读与多种文字之间的对勘，属于专业研究范围。\n\n按本章规则，第二类问题在回答时会明确说明「存在不同研究观点」或「资料不足」，不会为了回答得完整而给出确定结论。用户可以在史料证据页查看每一条回答所依据的来源。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_yuan_036",
+    "source_id": "src_academic_yuntai_inscription_reading",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "text_dharani_group",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_six_scripts_contain_dharani"
+    ],
+    "title": "题刻中的陀罗尼相关文本（待内容组审核）",
+    "text": "本条切片对应 §28.1 登记的「六体文字题刻 | CONTAINS_TEXT | 陀罗尼相关文本」这一关系，用于说明券洞题刻中包含佛教咒语（陀罗尼）类文本。\n\n本切片目前保持 review 状态，不进入 AI 检索。原因是 §28.1 明确要求：这两条关系在进入正式库之前，需要内容组按具体题刻和权威释读再做 claim-level 审核。待补的信息包括：对应券洞中的具体题刻位置、涉及哪几种书写系统、可以引用的权威释读出处（书目与页码）。\n\n审核通过后，本切片才可以补充具体内容并转为 approved。在那之前，如果用户询问券洞题刻主要写了什么，平台只回答有官方公开资料支持的部分，并说明具体释读需要依据权威研究成果，不输出未经审核的内容。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_yuan_037",
+    "source_id": "src_academic_yuntai_inscription_reading",
+    "chapter_ids": [
+      "yuan_yuntai"
+    ],
+    "entity_ids": [
+      "text_pagoda_merit_record",
+      "inscription_six_scripts"
+    ],
+    "claim_ids": [
+      "claim_six_scripts_contain_merit_record"
+    ],
+    "title": "题刻中的造塔功德相关记录（待内容组审核）",
+    "text": "本条切片对应 §28.1 登记的「六体文字题刻 | CONTAINS_TEXT | 造塔功德相关记录」这一关系，用于说明券洞题刻中包含与建塔功德相关的记录性内容。\n\n与陀罗尼文本一条相同，本切片保持 review 状态，不进入 AI 检索。§28.1 要求内容组按具体题刻和权威释读完成 claim-level 审核后，这两条关系才可进入正式库。待补：对应题刻位置、刻写所用书写系统、权威释读出处（书目、页码、释文），以及是否需要拆分为多条 claim。\n\n需要避免的一种做法是：用「佛教石刻中常见造塔功德记」这类一般性知识，替代对云台具体情况的确证。一般性知识可以解释背景，但不能当作这一处遗存的具体证据，这也是本切片在审核完成前不对外输出的原因。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "review"
+  }
+]

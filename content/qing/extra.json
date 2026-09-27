@@ -1,0 +1,559 @@
+{
+  "chapter_id": "qing_return",
+  "chapter_theme": "归属",
+  "theme_claim_type": "curatorial",
+
+  "timeline_events": [
+    {
+      "id": "tl_qing_westward_17c",
+      "chapter_id": "qing_return",
+      "entity_id": "event_torghut_westward_migration_17c",
+      "display_date": "17世纪前期",
+      "date_precision": "period",
+      "sort_value": 1600,
+      "title": "土尔扈特西迁伏尔加河流域",
+      "summary": "公开文博资料记载，17世纪前期土尔扈特部众西迁至伏尔加河下游地区并长期生活。原始来源只支持到「时段」精度，本平台不做年份换算。",
+      "entity_ids": ["event_torghut_westward_migration_17c", "group_torghut", "region_volga_lower"],
+      "claim_ids": ["claim_westward_migration_arrived_volga"],
+      "source_ids": ["src_chnmuseum_return_homeland", "src_dpm_torghut_knife"],
+      "date_display_style": "approx",
+      "sort_order": 1,
+      "review_status": "approved"
+    },
+    {
+      "id": "tl_qing_contacts",
+      "chapter_id": "qing_return",
+      "entity_id": "event_qing_torghut_contacts",
+      "display_date": "清代前期",
+      "date_precision": "period",
+      "sort_value": 1650,
+      "title": "与清朝保持使节等联系",
+      "summary": "公开资料记载，土尔扈特在西迁之后与清朝之间仍存在使节、贡使等联系。具体每一次往来的年份与方向需按来源逐条核对，本平台不补写。",
+      "entity_ids": ["event_qing_torghut_contacts", "group_torghut", "institution_qing_court", "event_tulishen_mission_1712"],
+      "claim_ids": ["claim_torghut_maintained_contact", "claim_tulishen_mission"],
+      "source_ids": ["src_chnmuseum_return_homeland", "src_dpm_torghut_knife"],
+      "date_display_style": "approx",
+      "sort_order": 2,
+      "review_status": "approved"
+    },
+    {
+      "id": "tl_qing_ubashi_1761",
+      "chapter_id": "qing_return",
+      "entity_id": "event_ubashi_inherits_1761",
+      "display_date": "1761",
+      "date_precision": "year",
+      "sort_value": 1761,
+      "title": "渥巴锡继承汗位",
+      "summary": "公开资料记载，渥巴锡于1761年继承汗位。原始来源未给出具体月份，本平台按年份原样保留，不换算成具体日期。",
+      "entity_ids": ["event_ubashi_inherits_1761", "person_ubashi", "group_torghut"],
+      "claim_ids": ["claim_ubashi_inherits_1761"],
+      "source_ids": ["src_chnmuseum_return_homeland", "src_dpm_torghut_knife"],
+      "date_display_style": "year",
+      "sort_order": 3,
+      "review_status": "approved"
+    },
+    {
+      "id": "tl_qing_departure_1771",
+      "chapter_id": "qing_return",
+      "entity_id": "event_torghut_return_departure_1771",
+      "display_date": "1771年初",
+      "date_precision": "month_or_period",
+      "sort_value": 1771.01,
+      "title": "开始东归",
+      "summary": "公开文博资料记载，1771年渥巴锡率领大批土尔扈特部众开始东归。原始来源只支持到「年初」这一时段，本平台不换算成具体月日。",
+      "entity_ids": ["event_torghut_return_departure_1771", "person_ubashi", "group_returning_torghut_1771", "region_volga_lower"],
+      "claim_ids": ["claim_ubashi_led_return", "claim_return_departed_volga", "claim_departure_event_part_of_return"],
+      "source_ids": ["src_chnmuseum_return_homeland", "src_dpm_torghut_knife"],
+      "date_display_style": "approx",
+      "sort_order": 4,
+      "review_status": "approved"
+    },
+    {
+      "id": "tl_qing_arrival_1771",
+      "chapter_id": "qing_return",
+      "entity_id": "event_arrival_ili_1771",
+      "display_date": "1771年夏季",
+      "date_precision": "season",
+      "sort_value": 1771.5,
+      "title": "抵达伊犁河流域",
+      "summary": "公开资料记载，东归部众于1771年夏季到达伊犁河流域。这是「大部众迁徙」与「抵达之后」的分界点，到达后解锁接应、赈济、安置与首领赴承德内容。",
+      "entity_ids": ["event_arrival_ili_1771", "group_returning_torghut_1771", "region_ili"],
+      "claim_ids": ["claim_return_arrived_ili", "claim_arrival_event_part_of_return"],
+      "source_ids": ["src_chnmuseum_return_homeland"],
+      "date_display_style": "season",
+      "sort_order": 5,
+      "review_status": "approved"
+    },
+    {
+      "id": "tl_qing_aftermath_1771",
+      "chapter_id": "qing_return",
+      "entity_id": "event_qing_relief_torghut",
+      "display_date": "1771年后续",
+      "date_precision": "month_or_period",
+      "sort_value": 1771.7,
+      "title": "接应 / 赈济 / 安置",
+      "summary": "东归部众抵达之后，清廷组织接应、赈济与安置。相关记载主要来自清廷一侧与后世研究，本平台在引用时标注来源视角，不补写具体物资数量与日期。",
+      "entity_ids": ["event_qing_relief_torghut", "event_qing_settlement_torghut", "institution_qing_court", "group_returning_torghut_1771", "region_xinjiang_settlement"],
+      "claim_ids": ["claim_qing_court_relief", "claim_qing_court_settled", "claim_returning_received_by_qing"],
+      "source_ids": ["src_chnmuseum_return_homeland", "src_dpm_torghut_relief_jade", "src_dpm_journal_torghut_2021"],
+      "date_display_style": "approx",
+      "sort_order": 6,
+      "review_status": "approved"
+    },
+    {
+      "id": "tl_qing_chengde_1771",
+      "chapter_id": "qing_return",
+      "entity_id": "event_ubashi_audience_chengde",
+      "display_date": "1771年秋季前后",
+      "date_precision": "season",
+      "sort_value": 1771.8,
+      "title": "渥巴锡等首领赴热河 / 承德觐见",
+      "summary": "部众抵达之后，渥巴锡等部族首领前往热河/承德地区觐见乾隆帝。该节点 route_scope 为 LEADER_AUDIENCE_JOURNEY，不属于大部众迁徙终点。",
+      "entity_ids": ["event_ubashi_audience_chengde", "person_ubashi", "person_emperor_qianlong", "place_chengde"],
+      "claim_ids": ["claim_ubashi_travelled_chengde", "claim_audience_at_chengde", "claim_route_scope_separated", "claim_no_all_went_chengde"],
+      "source_ids": ["src_chnmuseum_return_homeland", "src_dpm_wanfa_guiyi"],
+      "date_display_style": "season",
+      "route_scope": "LEADER_AUDIENCE_JOURNEY",
+      "sort_order": 7,
+      "review_status": "approved"
+    },
+    {
+      "id": "tl_qing_texts_1771",
+      "chapter_id": "qing_return",
+      "entity_id": "event_qing_imperial_texts_1771",
+      "display_date": "1771年",
+      "date_precision": "year",
+      "sort_value": 1771.9,
+      "title": "御制记文 / 纪念性碑刻",
+      "summary": "围绕东归事件形成《土尔扈特全部归顺记》《优恤土尔扈特部众记》等御制记文与相关碑刻、玉册。这类文本属于清廷官方历史叙述，引用时标注 source_perspective = qing_court。",
+      "entity_ids": ["event_qing_imperial_texts_1771", "text_torghut_return_record", "text_torghut_relief_record", "person_emperor_qianlong", "place_putuo_zongcheng_temple"],
+      "claim_ids": ["claim_qianlong_authored_return_record", "claim_qianlong_authored_relief_record", "claim_qing_imperial_texts_formed_1771", "claim_term_guishun_qing_court"],
+      "source_ids": ["src_dpm_journal_torghut_2021", "src_dpm_torghut_relief_jade", "src_chnmuseum_return_homeland"],
+      "date_display_style": "year",
+      "source_perspective": "qing_court",
+      "sort_order": 8,
+      "review_status": "approved"
+    },
+    {
+      "id": "tl_qing_seal_1775",
+      "chapter_id": "qing_return",
+      "entity_id": "event_torghut_ennoblement",
+      "display_date": "1775",
+      "date_precision": "year",
+      "sort_value": 1775,
+      "title": "相关土尔扈特银印等后续物证",
+      "summary": "公开资料以土尔扈特银印作为观察东归后清廷封爵、行政关系与安置体系的后续物证之一。该节点的具体对应物证与年份尚待内容团队核验。",
+      "entity_ids": ["event_torghut_ennoblement", "artifact_torghut_silver_seal", "institution_qing_court"],
+      "claim_ids": ["claim_silver_seal_associated_ennoblement", "claim_qing_court_bestowed_silver_seal"],
+      "source_ids": ["src_chnmuseum_torghut_seal"],
+      "date_display_style": "year",
+      "review_status": "review",
+      "content_team_todo": "□ §9.1 只写「1775 相关土尔扈特银印等后续物证」，须核实该年份对应的具体物证与来源后方可升为 approved。"
+    }
+  ],
+
+  "historical_estimates": [
+    {
+      "id": "estimate_departure_dpm_170k",
+      "chapter_id": "qing_return",
+      "entity_id": "group_returning_torghut_1771",
+      "metric": "departure_population",
+      "display_name": "东归出发人数",
+      "value_text": "约17万人",
+      "numeric_value": null,
+      "numeric_min": null,
+      "numeric_max": null,
+      "unit": "人",
+      "source_id": "src_dpm_torghut_knife",
+      "claim_id": "claim_estimate_departure_170k",
+      "scope_note": "故宫博物院公开资料中的概括性统计，用于描述1771年东归部众的出发规模。该表述为「约」，属于概括性口径，不是精确计数。",
+      "estimate_type": "source_reported",
+      "display_policy": "show_all_approved",
+      "review_status": "approved",
+      "source_perspective": "museum_curatorial"
+    },
+    {
+      "id": "estimate_departure_cssn_168k",
+      "chapter_id": "qing_return",
+      "entity_id": "group_returning_torghut_1771",
+      "metric": "departure_population",
+      "display_name": "东归出发人数",
+      "value_text": "16.8万余人",
+      "numeric_value": null,
+      "numeric_min": null,
+      "numeric_max": null,
+      "unit": "人",
+      "source_id": "src_cssn_torghut_250",
+      "claim_id": "claim_estimate_departure_168k",
+      "scope_note": "相关专业公共历史研究中的统计，用于描述东归队伍的规模。该来源带有纪念性与公共历史叙事色彩，其文学化细节不得自动当作一手档案事实。",
+      "estimate_type": "source_reported",
+      "display_policy": "show_all_approved",
+      "review_status": "approved",
+      "source_perspective": "modern_public_history"
+    },
+    {
+      "id": "estimate_departure_households_30k",
+      "chapter_id": "qing_return",
+      "entity_id": "group_returning_torghut_1771",
+      "metric": "departure_population",
+      "display_name": "东归出发人数",
+      "value_text": "三万多户",
+      "numeric_value": null,
+      "numeric_min": null,
+      "numeric_max": null,
+      "unit": "户",
+      "source_id": null,
+      "claim_id": "claim_estimate_departure_households",
+      "scope_note": "实施规格 §2.2 列出「三万多户」为不同权威公开资料采用的统计口径之一。该口径的对应来源尚未在本章第一批来源中定位，因此本条保持 review 状态，暂不进入 AI 检索，也不对外作为已审核数字展示。",
+      "estimate_type": "source_reported",
+      "display_policy": "show_all_approved",
+      "review_status": "review",
+      "source_perspective": "modern_public_history",
+      "content_team_todo": "□ 「三万多户」在 §2.2 中被列为口径之一，但未给出对应来源；须定位权威来源原文后方可升为 approved。"
+    }
+  ],
+
+  "estimate_group_policies": [
+    {
+      "metric": "departure_population",
+      "display_name": "东归出发人数",
+      "display_policy": "show_all_approved",
+      "approved_estimate_ids": ["estimate_departure_dpm_170k", "estimate_departure_cssn_168k"],
+      "pending_estimate_ids": ["estimate_departure_households_30k"],
+      "user_facing_note": "不同资料采用的统计口径存在差异，平台保留来源原始表述，不将估算数字合并为一个虚假的「唯一精确值」。",
+      "forbidden_operations": ["average", "merge", "pick_one_as_exact", "format_as_precise_integer"]
+    },
+    {
+      "metric": "arrival_population",
+      "display_name": "抵达人数 / 幸存人数",
+      "display_policy": "no_approved_estimate",
+      "approved_estimate_ids": [],
+      "pending_estimate_ids": [],
+      "user_facing_note": "第一版未收录经审核的抵达人数或幸存人数统计。用户询问时，平台明确回答资料不足，不提供估算数字，也不由现有出发人数推算。",
+      "forbidden_operations": ["derive_from_departure_population", "estimate_without_source"]
+    }
+  ],
+
+  "aftermath_sections": [
+    {
+      "id": "aftermath_reception",
+      "title": "接应",
+      "route_scope": "SETTLEMENT_DISTRIBUTION",
+      "summary": "东归部众抵达伊犁河流域后，清廷组织接应。相关信息主要来自清廷一侧记载与后世研究。",
+      "display_order": 1,
+      "unlock_condition": "visited:map_node_ili_region",
+      "entity_ids": ["group_returning_torghut_1771", "institution_qing_court", "region_ili", "event_qing_relief_torghut"],
+      "claim_ids": ["claim_returning_received_by_qing", "claim_arrival_event_part_of_return"],
+      "source_ids": ["src_chnmuseum_return_homeland", "src_dpm_journal_torghut_2021"],
+      "source_perspective": "qing_court",
+      "forbidden_simplification": "禁止：为接应编造具体地点、日期、人员与物资数量。",
+      "review_status": "approved"
+    },
+    {
+      "id": "aftermath_relief",
+      "title": "赈济",
+      "route_scope": "SETTLEMENT_DISTRIBUTION",
+      "summary": "清廷对东归部众提供赈济。《优恤土尔扈特部众记》为记录这一环节的核心御制文本，故宫博物院专题著录的青玉册为其载体之一。",
+      "display_order": 2,
+      "unlock_condition": "visited:map_node_ili_region",
+      "entity_ids": ["event_qing_relief_torghut", "text_torghut_relief_record", "artifact_torghut_relief_jade_book", "institution_qing_court"],
+      "claim_ids": ["claim_qing_court_relief", "claim_relief_record_records_relief", "claim_relief_event_associated_return"],
+      "source_ids": ["src_dpm_torghut_relief_jade", "src_dpm_journal_torghut_2021", "src_chnmuseum_return_homeland"],
+      "source_perspective": "qing_court",
+      "forbidden_simplification": "禁止：把清廷一侧的赈济记载直接当作受赈济者本人的叙述；禁止：为赈济编造具体物资清单与日期。",
+      "review_status": "approved"
+    },
+    {
+      "id": "aftermath_settlement",
+      "title": "安置",
+      "route_scope": "SETTLEMENT_DISTRIBUTION",
+      "summary": "东归部众抵达后被安置。第一版地图以聚合节点表示安置地区，不展示到具体游牧地界，也不标注没有来源的具体地名。",
+      "display_order": 3,
+      "unlock_condition": "visited:map_node_ili_region",
+      "entity_ids": ["event_qing_settlement_torghut", "group_returning_torghut_1771", "region_xinjiang_settlement", "institution_ili_governance"],
+      "claim_ids": ["claim_qing_court_settled", "claim_return_group_settled_xinjiang", "claim_settlement_event_associated_return"],
+      "source_ids": ["src_dpm_journal_torghut_2021", "src_dpm_torghut_relief_jade"],
+      "source_perspective": "qing_court",
+      "forbidden_simplification": "禁止：为安置地区指定没有来源的具体地点名称；禁止：把安置分布画成一次行进路线。",
+      "review_status": "approved"
+    },
+    {
+      "id": "aftermath_chengde",
+      "title": "首领赴承德",
+      "route_scope": "LEADER_AUDIENCE_JOURNEY",
+      "summary": "渥巴锡等部族首领在部众抵达之后前往热河/承德地区觐见乾隆帝。本段与前三段属于不同范围：前三段是大部众抵达后的处置，本段是首领活动。",
+      "display_order": 4,
+      "unlock_condition": "visited:map_node_ili_region",
+      "entity_ids": ["person_ubashi", "place_chengde", "event_ubashi_audience_chengde", "person_emperor_qianlong", "artifact_wanfa_guiyi_screen"],
+      "claim_ids": ["claim_ubashi_travelled_chengde", "claim_audience_at_chengde", "claim_route_scope_separated", "claim_no_all_went_chengde"],
+      "source_ids": ["src_chnmuseum_return_homeland", "src_dpm_wanfa_guiyi", "src_dpm_torghut_relief_jade"],
+      "source_perspective": "museum_curatorial",
+      "forbidden_simplification": "禁止：把首领赴承德路线与部众迁徙路线混为一条；禁止：声称全部东归部众都前往承德；禁止：把「17万人全部去了承德」写成事实。",
+      "review_status": "approved"
+    }
+  ],
+
+  "motive_factors": {
+    "question": "为什么东归？",
+    "structure_note": "本节按实施规格 §2.5 建立三层并列结构：① 文博公开叙述 ② 清代文献中的表述 ③ 现代专业研究中的分析。每一层都可独立溯源，且**任何一条都不是唯一原因**。平台上不设置「唯一原因」按钮。",
+    "ai_answer_template": "公开资料和研究通常从多个因素讨论这一决定……",
+    "single_cause_forbidden": true,
+    "layers": [
+      {
+        "key": "museum_public_narrative",
+        "layer_index": 1,
+        "title": "文博公开叙述",
+        "source_perspective": "museum_curatorial",
+        "claim_type": "interpretation",
+        "note": "公开文博资料常将以下因素作为重要历史背景。它们是该来源的叙述，不是对动因的唯一解释。",
+        "factors": [
+          {
+            "id": "motive_museum_pressure",
+            "label": "摆脱沙俄控制 / 压迫",
+            "claim_ids": ["claim_motive_museum_pressure"],
+            "source_ids": ["src_chnmuseum_return_homeland", "src_dpm_torghut_knife"],
+            "is_sole_cause": false
+          },
+          {
+            "id": "motive_museum_homeland",
+            "label": "怀念故土",
+            "claim_ids": ["claim_motive_museum_homeland"],
+            "source_ids": ["src_chnmuseum_return_homeland", "src_cssn_torghut_250"],
+            "is_sole_cause": false
+          },
+          {
+            "id": "motive_museum_qing_contact",
+            "label": "与清朝保持联系",
+            "claim_ids": ["claim_motive_museum_qing_contact"],
+            "source_ids": ["src_chnmuseum_return_homeland"],
+            "is_sole_cause": false
+          }
+        ]
+      },
+      {
+        "key": "qing_court_texts",
+        "layer_index": 2,
+        "title": "清代文献中的表述",
+        "source_perspective": "qing_court",
+        "claim_type": "interpretation",
+        "note": "清代御制文献在记述这一事件时使用「归顺」等官方语汇。这类表述属于清廷视角，反映的是官方叙述框架，不能等同于所有参与者自己的说法。",
+        "factors": [
+          {
+            "id": "motive_qing_court_wording",
+            "label": "御制文献中的「归顺」等官方表述",
+            "claim_ids": ["claim_motive_qing_court_wording", "claim_term_guishun_qing_court"],
+            "source_ids": ["src_dpm_journal_torghut_2021", "src_chnmuseum_return_homeland"],
+            "is_sole_cause": false,
+            "source_perspective_note": "本条必须标注 source_perspective = qing_court；不得把「归顺」写成所有参与者本人使用的术语。"
+          }
+        ]
+      },
+      {
+        "key": "modern_research",
+        "layer_index": 3,
+        "title": "现代专业研究中的分析",
+        "source_perspective": "modern_scholarship",
+        "claim_type": "interpretation",
+        "note": "更深入的研究通常从多种因素一并讨论，而不是归结为单一原因。",
+        "factors": [
+          {
+            "id": "motive_research_political",
+            "label": "政治环境",
+            "claim_ids": ["claim_motive_research_multi"],
+            "source_ids": ["src_dpm_journal_torghut_2021"],
+            "is_sole_cause": false
+          },
+          {
+            "id": "motive_research_military",
+            "label": "军事压力",
+            "claim_ids": ["claim_motive_research_multi"],
+            "source_ids": ["src_dpm_journal_torghut_2021"],
+            "is_sole_cause": false
+          },
+          {
+            "id": "motive_research_pasture",
+            "label": "草场与生存环境",
+            "claim_ids": ["claim_motive_research_multi"],
+            "source_ids": ["src_dpm_journal_torghut_2021"],
+            "is_sole_cause": false
+          },
+          {
+            "id": "motive_research_internal_politics",
+            "label": "部族内部政治",
+            "claim_ids": ["claim_motive_research_multi"],
+            "source_ids": ["src_dpm_journal_torghut_2021"],
+            "is_sole_cause": false
+          },
+          {
+            "id": "motive_research_long_term_contact",
+            "label": "与清朝长期联系",
+            "claim_ids": ["claim_motive_research_multi"],
+            "source_ids": ["src_dpm_journal_torghut_2021", "src_chnmuseum_return_homeland"],
+            "is_sole_cause": false
+          },
+          {
+            "id": "motive_research_historical_memory",
+            "label": "历史记忆",
+            "claim_ids": ["claim_motive_research_multi", "claim_return_supports_homeland_memory"],
+            "source_ids": ["src_dpm_journal_torghut_2021", "src_cssn_torghut_250"],
+            "is_sole_cause": false
+          }
+        ]
+      }
+    ],
+    "shared_rules": {
+      "no_single_cause_button": true,
+      "no_collective_voice": "不得替所有土尔扈特部众宣告统一心理。",
+      "no_individual_group_conflation": "不得把渥巴锡个人动机与整个群体动机完全等同。",
+      "no_modern_concept_projection": "不得把现代「中华民族共同体意识」说成渥巴锡当时的自觉目标。",
+      "fallback_rule": "若当前检索只返回文博资料，只回答文博资料支持的因素，并提醒「更完整动因需结合专业研究」。"
+    }
+  },
+
+  "terminology_claims": [
+    {
+      "id": "term_guishun",
+      "term": "归顺",
+      "term_type": "historical_term",
+      "historical_context": "清代乾隆帝御制文献（如《土尔扈特全部归顺记》）使用的官方语汇。",
+      "entity_id": "text_torghut_return_record",
+      "source_id": "src_dpm_journal_torghut_2021",
+      "claim_id": "claim_term_guishun_qing_court",
+      "source_perspective": "qing_court",
+      "note": "清代官方文献用语，服务于清廷的官方叙述框架。不得写成所有参与者本人使用的唯一术语。",
+      "review_status": "approved"
+    },
+    {
+      "id": "term_guifu",
+      "term": "归附",
+      "term_type": "historical_term",
+      "historical_context": "实施规格 §2.6 指出，「归顺」「归附」「东归」「回归故土」不是完全相同的词。该词的具体使用语境与出处尚待内容团队核验。",
+      "entity_id": "text_torghut_return_record",
+      "source_id": null,
+      "claim_id": null,
+      "source_perspective": "qing_court",
+      "note": "【待核验】本章第一批来源未给出「归附」的具体出处与语境。核实前不得在回答中使用该词作为已确认的历史术语。",
+      "review_status": "review",
+      "content_team_todo": "□ 须核对「归附」在清代文献中的具体出处、使用语境与与「归顺」的差异。"
+    },
+    {
+      "id": "term_donggui",
+      "term": "东归",
+      "term_type": "modern_event_term",
+      "historical_context": "当代研究、展览与公众历史叙述常用的事件名称。本章 UI 主标题即使用「土尔扈特东归」。",
+      "entity_id": "event_torghut_return_1771",
+      "source_id": "src_chnmuseum_return_homeland",
+      "claim_id": "claim_term_donggui_modern",
+      "source_perspective": "modern_public_history",
+      "note": "现代术语。回答中使用该词时应说明它是当代常用的事件名称，而不是清代文献用语。",
+      "review_status": "approved"
+    },
+    {
+      "id": "term_huigui_gutu",
+      "term": "回归故土 / 回归祖国",
+      "term_type": "modern_narrative_term",
+      "historical_context": "现代博物馆与公众历史叙述中的表述。",
+      "entity_id": "event_torghut_return_1771",
+      "source_id": "src_chnmuseum_return_homeland",
+      "claim_id": "claim_term_huigui_gutu_modern",
+      "source_perspective": "modern_public_history",
+      "note": "现代叙述用语，带有当代情感与政治语义，不得直接当作18世纪参与者的自述。",
+      "review_status": "approved"
+    },
+    {
+      "id": "term_belonging",
+      "term": "归属",
+      "term_type": "curatorial_theme_term",
+      "historical_context": "《同心千年》六章数字叙事组织词之一（相遇、交融、交流、共存、归属、传承）。",
+      "entity_id": "concept_belonging_curatorial",
+      "source_id": "src_chnmuseum_return_homeland",
+      "claim_id": "claim_term_belonging_curatorial",
+      "source_perspective": "museum_curatorial",
+      "note": "本项目的策展叙事关键词（claim_type = curatorial），**不是当时的历史术语**，也不是东归事件的唯一历史学定论属性。用户不应理解为「每一位历史参与者都留下了完全相同的归属感表述」。",
+      "review_status": "approved"
+    }
+  ],
+
+  "forbidden_simplification": [
+    "路线精度不得高于证据精度：不得绘制现代GPS式精确路线，不得提供「每天走到哪里」的日历式行程，不得自动生成没有来源的具体中途城镇、山口、湖泊或营地。",
+    "人数不得合并：不得输出单一的「准确人数」，必须多来源并列（「约17万人」「16.8万余人」「三万多户」等），不求平均、不合并、不擅自格式化为精确整数。",
+    "不得把首领赴承德路线（LEADER_AUDIENCE_JOURNEY）与部众迁徙路线（MASS_MIGRATION）混为一条，也不得把两者渲染为连续的一条线。",
+    "不得替所有土尔扈特部众声称一致心理：禁止「所有土尔扈特人都认为……」「每个人都想……」等替整个群体发言的表述。",
+    "东归动因不得单一化：不得出现「唯一原因就是思乡」或「唯一原因就是沙俄压迫」，也不得把渥巴锡个人动机与整个群体动机完全等同。",
+    "清代御制文献中的「归顺」不等于所有参与者自己使用的术语，必须标注来源视角（source_perspective = qing_court）。",
+    "不得把「17万人全部去了承德」写成事实；不得把承德写成整个大部众迁徙的终点。",
+    "不得把现代「中华民族共同体意识」说成渥巴锡当时的自觉目标或原话。",
+    "「归属」是本项目的策展叙事关键词，不是当时的历史术语，不能作为东归事件的唯一历史学定论属性。",
+    "不得编造迁徙途中的对白、天气、私人经历与家庭细节；不得把后世纪念叙事自动当成1771年的一手证词。",
+    "不得声称全部土尔扈特成员都参与了1771年东归；不得替图理琛使团、策伯克多尔济等未充分核验的条目补写事迹。",
+    "不得将伤亡做成娱乐化数值，不得设置「民族忠诚度」「归属感评分」「认同分数」等评分机制。",
+    "不得把历史画（如万法归一图屏）当作现场照片或一手影像证据。",
+    "不得由出发人数推算抵达人数或幸存人数；第一版未收录经审核的抵达人数统计，应明确回答资料不足。"
+  ],
+
+  "forbidden_relations": [
+    {
+      "triple_text": "所有土尔扈特人 | THOUGHT | 完全相同",
+      "reason": "替整个历史群体宣告统一心理，违反 collective voice 边界。",
+      "detection": "COLLECTIVE_VOICE_OVERCLAIM"
+    },
+    {
+      "triple_text": "东归 | MOTIVATED_ONLY_BY | 思乡",
+      "reason": "把动因单一化。MOTIVATED_BY 系列在第一版不作为核心事实边。",
+      "detection": "MOTIVE_SINGLE_CAUSE_OVERCLAIM"
+    },
+    {
+      "triple_text": "东归 | MOTIVATED_ONLY_BY | 沙俄压迫",
+      "reason": "把动因单一化。MOTIVATED_BY 系列在第一版不作为核心事实边。",
+      "detection": "MOTIVE_SINGLE_CAUSE_OVERCLAIM"
+    },
+    {
+      "triple_text": "所有东归部众 | TRAVELLED_TO | 承德",
+      "reason": "混淆路线范围，把首领活动当成全体部众的行动。",
+      "detection": "ROUTE_SCOPE_CONFUSION"
+    },
+    {
+      "triple_text": "渥巴锡 | SPOKE | 某句无来源台词",
+      "reason": "编造无来源对白，属于虚构一手材料。",
+      "detection": "UNSUPPORTED_CLAIM"
+    },
+    {
+      "triple_text": "1771东归 | PROVES | 每个参与者现代意义上的民族认同",
+      "reason": "以现代概念投射到18世纪历史人物，且替群体宣告认同。",
+      "detection": "MODERN_CONCEPT_PROJECTION"
+    },
+    {
+      "triple_text": "17万人 | EXACT_COUNT_OF | 东归全部人口",
+      "reason": "把多来源估算合并为虚假的唯一精确值。",
+      "detection": "NUMBER_CONFLICT"
+    },
+    {
+      "triple_text": "现代「归属」 | WAS_GOAL_OF | 渥巴锡",
+      "reason": "把策展关键词写成历史人物的主观目标。",
+      "detection": "MODERN_CONCEPT_PROJECTION"
+    }
+  ],
+
+  "method_notes": {
+    "route_precision_rule": "路线精度不得高于证据精度，AI确信度不得高于来源确信度。",
+    "fixed_legend": [
+      "● 确认地点",
+      "━ 较高置信历史廊道",
+      "≈ 大体迁徙区段",
+      "? 路线存在不确定性",
+      "┄ 策展关联"
+    ],
+    "route_lens_template": "这段路线属于：APPROXIMATE_CORRIDOR。我们可以确认：东归队伍由伏尔加河流域向东，最终抵达伊犁河区域。目前不在本平台声称：每一天的精确位置；每一个中途点；一条唯一固定路径。",
+    "source_perspective_note": "清代御制文献使用「归顺」等表述；不同史料和后世研究使用的术语与叙事视角并不完全相同。",
+    "validator_error_codes": [
+      "NUMBER_CONFLICT",
+      "ROUTE_OVERPRECISION",
+      "COLLECTIVE_VOICE_OVERCLAIM",
+      "MOTIVE_SINGLE_CAUSE_OVERCLAIM",
+      "ROUTE_SCOPE_CONFUSION",
+      "SOURCE_PERSPECTIVE_COLLAPSE",
+      "MODERN_CONCEPT_PROJECTION"
+    ],
+    "offline_fallback_note": "当前启用演示保障模式，以下内容来自已审核的预设问答库。"
+  }
+}

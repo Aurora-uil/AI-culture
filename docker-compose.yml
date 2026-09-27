@@ -1,0 +1,56 @@
+# 《同心千年》基础设施
+#
+# 注意：本机 5432 / 6379 / 8001 / 9000-9001 已被另一个项目（breathguard）占用，
+# 因此 PostgreSQL 使用 5433，Neo4j 使用默认的 7474 / 7687。
+# 项目名固定为 tongxin，避免与其它 compose 项目互相干扰。
+name: tongxin
+
+services:
+  postgres:
+    # 使用本机已有镜像，避免拉取（Docker Hub 在部分网络下不可达）
+    image: pgvector/pgvector:pg16
+    pull_policy: missing
+    container_name: tongxin-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tongxin
+      POSTGRES_PASSWORD: tongxin_dev
+      POSTGRES_DB: tongxin
+    ports:
+      - "5433:5432"
+    volumes:
+      - tongxin_pgdata:/var/lib/postgresql/data
+      - ./backend/app/db/schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tongxin -d tongxin"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  neo4j:
+    image: neo4j:5.20
+    pull_policy: missing
+    container_name: tongxin-neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/tongxin_dev
+      NEO4J_server_memory_heap_initial__size: 512m
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_memory_pagecache_size: 512m
+    ports:
+      - "7474:7474"   # HTTP / Neo4j Browser
+      - "7687:7687"   # Bolt
+    volumes:
+      - tongxin_neo4jdata:/data
+      - tongxin_neo4jlogs:/logs
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:7474 >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+
+volumes:
+  tongxin_pgdata:
+  tongxin_neo4jdata:
+  tongxin_neo4jlogs:

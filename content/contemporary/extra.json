@@ -1,0 +1,1654 @@
+{
+  "chapter_id": "contemporary_qiang_embroidery",
+  "forbidden_simplification": [
+    {
+      "id": "fs_ich_not_pattern_library",
+      "rule": "非遗不是纹样素材库。",
+      "detail": "不得把羌族刺绣压缩成「下载一批纹样 → 交给图像模型 → 无限生成羌绣风」的产品逻辑；不得把这项活态技艺表述为一种视觉风格、一套纹样素材集合或一种滤镜。数据库必须区分 ICHProject、Technique、PatternElement、MotifCategory、ObjectType、ApplicationContext、Work、Inheritor、Institution、Region、Source、RightsRecord，而不是只存 pattern_image / pattern_name / prompt_keyword。",
+      "applies_to": [
+        "ich_qiang_embroidery",
+        "concept_living_heritage",
+        "concept_active_inheritance"
+      ]
+    },
+    {
+      "id": "fs_no_fabricated_meaning",
+      "rule": "不给没有来源的纹样编寓意。",
+      "detail": "只有 meaning_status = DOCUMENTED 的元素才能展示具体文化含义。其余情况（GENERAL_CATEGORY_ONLY / UNKNOWN / RESEARCH_DISPUTED）界面固定显示：「当前审核资料没有提供足够依据解释这一具体纹样的固定文化寓意。」禁止模型看图猜测寓意，禁止把几何纹样解释为太阳、星辰、祖先、山河、爱情等具体含义，禁止声称「所有羌绣纹样都有固定象征意义」。",
+      "applies_to": [
+        "motif_geometric",
+        "pattern_qiang_013",
+        "pattern_qiang_014",
+        "pattern_qiang_015",
+        "concept_cultural_context"
+      ]
+    },
+    {
+      "id": "fs_technique_not_filter",
+      "rule": "针法不是滤镜。",
+      "detail": "挑花、纳花、勾花等是具体手工技艺，不是 image_style。不得把针法名称用作风格关键词或滤镜预设；AI 生成的平面图案不得标注为「这就是挑花作品」「AI 完成了挑花针法」。正确表述：该图像在构图上参考了经过审核的羌绣元素，用于数字文化创意示意；它并不等于由传统针法实际绣制的羌族刺绣作品。数字示意不等于实际手工技艺。",
+      "applies_to": [
+        "technique_tiaohua",
+        "technique_zhizi",
+        "technique_nahua",
+        "technique_piehua",
+        "technique_gouhua",
+        "concept_ai_cocreation"
+      ]
+    },
+    {
+      "id": "fs_three_work_categories",
+      "rule": "传统作品 / 当代人工创新 / AI 作品必须分开。",
+      "detail": "数据层必须区分 TRADITIONAL_REFERENCE、CONTEMPORARY_HUMAN_CREATION、AI_ASSISTED_CREATION、AI_SCENE_ILLUSTRATION。AI 结果永远标注「AI辅助文化创意作品 · 非传统羌绣原作」，导出图与分享图保留该标识，不提供去除选项。非遗工坊中产生的作品属于当代人工创新作品，不得与 AI 输出混为一类。",
+      "applies_to": [
+        "concept_ai_cocreation",
+        "practice_ich_workshop",
+        "practice_contemporary_design"
+      ]
+    },
+    {
+      "id": "fs_no_living_persona",
+      "rule": "不模拟在世传承人的人格、口吻、声音或个人风格。",
+      "detail": "第一版 AI 角色统一为「羌绣数字工坊讲述者」，不使用真实在世传承人身份。living_person = true 且 persona_use_allowed = false 的人物，不得进入 roleplay、voice_clone、style_imitation。不得生成「我是某某，你来问我」式对白；不得允许用户选择「模仿某位在世传承人风格」。代表性传承人关系边必须附注：「该事实关系不授权本平台模拟其人格、声音或个人风格。」",
+      "applies_to": [
+        "person_li_xingxiu"
+      ]
+    },
+    {
+      "id": "fs_ai_not_restoration",
+      "rule": "AIGC 不是「复原传统」。",
+      "detail": "生成结果不得写「AI复原羌族传统纹样」「AI还原正宗羌绣」「100%传统羌绣」「正宗羌绣」「非遗作品原作」。应表述为「AI辅助文化创意」「基于已审核元素进行数字组合」。不做「传统度百分比」「民族风格纯度」评分。",
+      "applies_to": [
+        "concept_ai_cocreation",
+        "concept_digital_preservation"
+      ]
+    },
+    {
+      "id": "fs_knowledge_vs_generation",
+      "rule": "知识可展示 ≠ 素材可用于生成。",
+      "detail": "知识库准入和生成素材准入是两套彼此独立的权限。公开可访问、可网页展示、可用于 AI 生成、可用于模型训练是四件不同的事。没有明确授权的素材默认 can_display=false、can_crop=false、can_transform=false、can_use_for_generation=false、can_use_for_training=false、can_download_original=false、commercial_use=false。权利状态未知时不得默认放行；权利接口失败时默认不生成。",
+      "applies_to": [
+        "concept_rights_traceability",
+        "practice_copyright_protection"
+      ]
+    },
+    {
+      "id": "fs_no_identity_inference",
+      "rule": "不做民族身份识别与身份推断。",
+      "detail": "不得通过纹样、针法、绣品推断用户或创作者的民族身份、所属支系或社会角色；不做自动民族身份识别；不做「民族风格纯度」判断；不得把文字、语言、族群、纹样一一对应。",
+      "applies_to": [
+        "concept_cultural_context",
+        "motif_people",
+        "motif_birds_animals"
+      ]
+    },
+    {
+      "id": "fs_no_fabricated_names",
+      "rule": "不自动生成没有来源支持的纹样名称。",
+      "detail": "实施规格与第一批来源未提供具体传统纹样名称。本平台对尚无确定传统名称的元素，只使用明确标注为实现方临时编号名的占位名称（如「花草题材纹样元素 Q-001」），该名称不是传统纹样名称，不得对外作为传统纹样定名使用。禁止模型看图自动命名。",
+      "applies_to": [
+        "pattern_qiang_001",
+        "pattern_qiang_002",
+        "pattern_qiang_003",
+        "pattern_qiang_004",
+        "pattern_qiang_005",
+        "pattern_qiang_006",
+        "pattern_qiang_007",
+        "pattern_qiang_008",
+        "pattern_qiang_009",
+        "pattern_qiang_010",
+        "pattern_qiang_011",
+        "pattern_qiang_012",
+        "pattern_qiang_013",
+        "pattern_qiang_014",
+        "pattern_qiang_015"
+      ]
+    },
+    {
+      "id": "fs_standard_project_wording",
+      "rule": "国家标准制定项目不得表述为已生效标准。",
+      "detail": "《羌族刺绣》目前处于推荐性国家标准制定项目阶段。在正式标准发布生效之前，只能表述为「国家标准制定项目公开信息」，不得表述为已经生效的国家标准正文，也不得引用为技术要求依据。相关表述必须带时效限定语（如「截至相关规格编写时」）。",
+      "applies_to": [
+        "ich_qiang_embroidery"
+      ]
+    }
+  ],
+  "forbidden_relations": [
+    {
+      "id": "fr_symbolizes_without_claim",
+      "triple": "任意纹样 | SYMBOLIZES | 任意含义",
+      "reason": "在没有任何 approved 含义 claim 的情况下，纹样与含义之间不得建立 SYMBOLIZES 关系。当前第一批 15 个纹样元素的含义状态为 GENERAL_CATEGORY_ONLY 或 UNKNOWN，因此本条禁止适用于全部纹样元素。",
+      "status": "NOT_CREATED"
+    },
+    {
+      "id": "fr_ai_is_authentic",
+      "triple": "AI生成图 | IS_AUTHENTIC | 羌族刺绣",
+      "reason": "AI 生成图像是数字文化创意作品，不是羌族刺绣原作，不得建立真实性归属关系。",
+      "status": "NOT_CREATED"
+    },
+    {
+      "id": "fr_ai_made_by_technique",
+      "triple": "AI生成图 | MADE_BY_TECHNIQUE | 挑花",
+      "reason": "数字生成不构成对任何手工针法的执行，不得建立生成结果与针法之间的制作关系。",
+      "status": "NOT_CREATED"
+    },
+    {
+      "id": "fr_li_persona_of_workshop",
+      "triple": "李兴秀 | AI_PERSONA_OF | 数字工坊",
+      "reason": "本平台未获得模拟在世传承人人格的授权，不得建立人物与 AI 角色之间的人格映射关系。",
+      "status": "NOT_CREATED"
+    },
+    {
+      "id": "fr_pattern_represents_all_qiang",
+      "triple": "某纹样 | REPRESENTS_ALL_QIANG | 羌族文化",
+      "reason": "不得由单个纹样代表整体文化，也不得由纹样进行族群代表性推断。",
+      "status": "NOT_CREATED"
+    },
+    {
+      "id": "fr_public_image_can_train",
+      "triple": "公开图片 | CAN_TRAIN_MODEL | true",
+      "reason": "没有授权时，公开可访问的图片不得建立可用于模型训练的关系。平台不抓取网络图片训练模型。",
+      "status": "NOT_CREATED"
+    }
+  ],
+  "rights_records": [
+    {
+      "id": "rights_pattern_qiang_001",
+      "asset_id": "asset_pattern_qiang_001",
+      "entity_id": "pattern_qiang_001",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_002",
+      "asset_id": "asset_pattern_qiang_002",
+      "entity_id": "pattern_qiang_002",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_003",
+      "asset_id": "asset_pattern_qiang_003",
+      "entity_id": "pattern_qiang_003",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_004",
+      "asset_id": "asset_pattern_qiang_004",
+      "entity_id": "pattern_qiang_004",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_005",
+      "asset_id": "asset_pattern_qiang_005",
+      "entity_id": "pattern_qiang_005",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。所属类别 motif_fruit 为平台拆分类别。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_006",
+      "asset_id": "asset_pattern_qiang_006",
+      "entity_id": "pattern_qiang_006",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_007",
+      "asset_id": "asset_pattern_qiang_007",
+      "entity_id": "pattern_qiang_007",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_008",
+      "asset_id": "asset_pattern_qiang_008",
+      "entity_id": "pattern_qiang_008",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_009",
+      "asset_id": "asset_pattern_qiang_009",
+      "entity_id": "pattern_qiang_009",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。动物题材需逐案人工审核。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_010",
+      "asset_id": "asset_pattern_qiang_010",
+      "entity_id": "pattern_qiang_010",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_011",
+      "asset_id": "asset_pattern_qiang_011",
+      "entity_id": "pattern_qiang_011",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。人物题材默认不进入 AI 生成。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案；人物题材需单独文化内容审核。"
+    },
+    {
+      "id": "rights_pattern_qiang_012",
+      "asset_id": "asset_pattern_qiang_012",
+      "entity_id": "pattern_qiang_012",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。人物题材默认不进入 AI 生成。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案；人物题材需单独文化内容审核。"
+    },
+    {
+      "id": "rights_pattern_qiang_013",
+      "asset_id": "asset_pattern_qiang_013",
+      "entity_id": "pattern_qiang_013",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。含义状态 UNKNOWN，即使获得展示授权也不得展示具体寓意。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_014",
+      "asset_id": "asset_pattern_qiang_014",
+      "entity_id": "pattern_qiang_014",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。含义状态 UNKNOWN。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_pattern_qiang_015",
+      "asset_id": "asset_pattern_qiang_015",
+      "entity_id": "pattern_qiang_015",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "尚未取得任何授权文件，所有权限按默认拒绝值建档。含义状态 UNKNOWN，演示用于「无证据不解释寓意」场景。",
+      "review_status": "draft",
+      "content_team_todo": "待补：权利人、授权依据、授权文件编号、授权起止时间、地域范围、署名文案。"
+    },
+    {
+      "id": "rights_asset_chapter_hero",
+      "asset_id": "asset_qiang_chapter_hero",
+      "entity_id": "ich_qiang_embroidery",
+      "rights_holder": null,
+      "rights_basis": "NO_LICENSE_OBTAINED",
+      "license_document_ref": null,
+      "can_display": false,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "章节首页主图。实施规格要求首页使用「授权羌绣作品 / 局部」，当前尚无任何已授权作品可用。如改用 AI 生成背景，须固定标注「AI辅助文化场景示意」。",
+      "review_status": "draft",
+      "content_team_todo": "待定：第一批使用哪些羌绣图片（§44 第 1 项）；待补：每张图片的权利来源（§44 第 2 项）。在该项确定前，章节首页不加载任何图片资产。"
+    },
+    {
+      "id": "rights_asset_technique_diagram_set",
+      "asset_id": "asset_qiang_technique_diagram_set",
+      "entity_id": "technique_tiaohua",
+      "rights_holder": "《同心千年》项目（拟自制示意资产）",
+      "rights_basis": "PROJECT_OWNED_PENDING_CREATION",
+      "license_document_ref": null,
+      "can_display": true,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": false,
+      "attribution_text": null,
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "五种针法的结构示意图 / 动画，拟由项目自行制作，因此不涉及第三方授权。但该资产目前尚未制作；且作为示意图，它不能被用作生成参考，也不得被表述为真实针法演示。是否制作全部五种针法的动画，待开发会议决定（§44 第 8 项）。",
+      "review_status": "draft",
+      "content_team_todo": "待定：五种针法是否都做动画（§44 第 8 项）。资产完成后需回来补 valid_from 与署名信息。"
+    },
+    {
+      "id": "rights_asset_fallback_samples",
+      "asset_id": "asset_qiang_fallback_samples",
+      "entity_id": "concept_ai_cocreation",
+      "rights_holder": "《同心千年》项目（预审共创样例）",
+      "rights_basis": "PROJECT_OWNED_AI_OUTPUT",
+      "license_document_ref": null,
+      "can_display": true,
+      "can_crop": false,
+      "can_transform": false,
+      "can_use_for_generation": false,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": "AI辅助文化创意作品 · 非传统羌绣原作（演示保障样例 · 非本次实时生成）",
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "演示保障用的 3–5 张预审共创样例。必须固定标注「演示保障样例 · 非本次实时生成」，并同时保留「AI辅助文化创意作品 · 非传统羌绣原作」标签。样例数量与内容待定（§44 第 11 项）。",
+      "review_status": "draft",
+      "content_team_todo": "待定：比赛现场生成失败时采用哪 3–5 张预审 Fallback（§44 第 11 项）。"
+    },
+    {
+      "id": "rights_pattern_demo_flora_01",
+      "asset_id": "asset_pattern_demo_flora_01",
+      "entity_id": "pattern_demo_flora_01",
+      "rights_holder": "《同心千年》项目组",
+      "rights_basis": "项目自行绘制的数字示意图，未使用任何第三方素材",
+      "license_document_ref": null,
+      "can_display": true,
+      "can_crop": true,
+      "can_transform": true,
+      "can_use_for_generation": true,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": "数字示意图由《同心千年》项目组绘制",
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "演示用元素：由《同心千年》项目组自行绘制的数字示意图，用于保证共创流程可演示。正式上线前应替换为已获授权的传世纹样素材，或经相关传承实践方确认后使用。",
+      "review_status": "review"
+    },
+    {
+      "id": "rights_pattern_demo_bird_01",
+      "asset_id": "asset_pattern_demo_bird_01",
+      "entity_id": "pattern_demo_bird_01",
+      "rights_holder": "《同心千年》项目组",
+      "rights_basis": "项目自行绘制的数字示意图，未使用任何第三方素材",
+      "license_document_ref": null,
+      "can_display": true,
+      "can_crop": true,
+      "can_transform": true,
+      "can_use_for_generation": true,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": "数字示意图由《同心千年》项目组绘制",
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "演示用元素：由《同心千年》项目组自行绘制的数字示意图，用于保证共创流程可演示。正式上线前应替换为已获授权的传世纹样素材，或经相关传承实践方确认后使用。",
+      "review_status": "review"
+    },
+    {
+      "id": "rights_pattern_demo_geometric_01",
+      "asset_id": "asset_pattern_demo_geometric_01",
+      "entity_id": "pattern_demo_geometric_01",
+      "rights_holder": "《同心千年》项目组",
+      "rights_basis": "项目自行绘制的数字示意图，未使用任何第三方素材",
+      "license_document_ref": null,
+      "can_display": true,
+      "can_crop": true,
+      "can_transform": true,
+      "can_use_for_generation": true,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": "数字示意图由《同心千年》项目组绘制",
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "演示用元素：由《同心千年》项目组自行绘制的数字示意图，用于保证共创流程可演示。正式上线前应替换为已获授权的传世纹样素材，或经相关传承实践方确认后使用。",
+      "review_status": "review"
+    },
+    {
+      "id": "rights_pattern_demo_composite_01",
+      "asset_id": "asset_pattern_demo_composite_01",
+      "entity_id": "pattern_demo_composite_01",
+      "rights_holder": "《同心千年》项目组",
+      "rights_basis": "项目自行绘制的数字示意图，未使用任何第三方素材",
+      "license_document_ref": null,
+      "can_display": true,
+      "can_crop": true,
+      "can_transform": true,
+      "can_use_for_generation": true,
+      "can_use_for_training": false,
+      "can_download_original": false,
+      "commercial_use": false,
+      "attribution_required": true,
+      "attribution_text": "数字示意图由《同心千年》项目组绘制",
+      "valid_from": null,
+      "valid_until": null,
+      "territory": null,
+      "notes": "演示用元素：由《同心千年》项目组自行绘制的数字示意图，用于保证共创流程可演示。正式上线前应替换为已获授权的传世纹样素材，或经相关传承实践方确认后使用。",
+      "review_status": "review"
+    }
+  ],
+  "generation_policy_enum": [
+    {
+      "value": "ALLOW_COMBINATION",
+      "label": "可组合",
+      "allowed_operations": [
+        "combine_with_other_allowed_elements",
+        "reposition",
+        "rearrange",
+        "scale",
+        "recolor",
+        "set_on_modern_composition"
+      ],
+      "blocked_operations": [
+        "use_as_training_data",
+        "claim_traditional_authorship",
+        "commercial_use_without_separate_license"
+      ],
+      "description": "元素可与其他已允许元素组合，可调整位置、排列、大小与色彩。"
+    },
+    {
+      "value": "ALLOW_COLOR_VARIATION",
+      "label": "可改色",
+      "allowed_operations": [
+        "combine_with_other_allowed_elements",
+        "reposition",
+        "rearrange",
+        "scale",
+        "recolor"
+      ],
+      "blocked_operations": [
+        "alter_pattern_structure",
+        "use_as_training_data",
+        "claim_traditional_authorship",
+        "commercial_use_without_separate_license"
+      ],
+      "description": "允许调整颜色，但不允许改变纹样结构。"
+    },
+    {
+      "value": "ALLOW_SCALE_ONLY",
+      "label": "仅可缩放",
+      "allowed_operations": [
+        "scale",
+        "reposition"
+      ],
+      "blocked_operations": [
+        "recolor",
+        "combine_with_other_elements",
+        "alter_pattern_structure",
+        "use_as_training_data",
+        "claim_traditional_authorship",
+        "commercial_use_without_separate_license"
+      ],
+      "description": "只允许缩放与摆放，不允许改色、组合或改变结构。"
+    },
+    {
+      "value": "DISPLAY_ONLY",
+      "label": "仅展示",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "description": "仅可在知识页面展示，不得裁切、变换、生成、训练、下载原图或商用。"
+    },
+    {
+      "value": "REVIEW_REQUIRED",
+      "label": "需审核",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "description": "在完成人工审核之前，不具备任何生成相关权限。审核通过后由后台改为其它取值。"
+    },
+    {
+      "value": "BLOCKED",
+      "label": "禁止使用",
+      "allowed_operations": [],
+      "blocked_operations": [
+        "display",
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "description": "任何用途均不允许，也不进入知识展示。"
+    }
+  ],
+  "generation_policies": [
+    {
+      "id": "policy_ich_qiang_embroidery",
+      "entity_id": "ich_qiang_embroidery",
+      "policy_type": "DISPLAY_ONLY",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "commercial_use"
+      ],
+      "review_note": "项目本身不是视觉素材，仅作为知识节点存在。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_person_li_xingxiu",
+      "entity_id": "person_li_xingxiu",
+      "policy_type": "BLOCKED",
+      "allowed_operations": [
+        "display_public_profile_facts"
+      ],
+      "blocked_operations": [
+        "roleplay",
+        "voice_clone",
+        "style_imitation",
+        "image_generation",
+        "use_as_training_data"
+      ],
+      "review_note": "在世传承人，persona_use_allowed=false，voice_use_allowed=false，style_imitation_allowed=false。公开资料仅支持事实展示。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_technique_tiaohua",
+      "entity_id": "technique_tiaohua",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "free_prompt_style_keyword"
+      ],
+      "review_note": "针法仅可作为视觉结构参考，且需先完成权利与内容审核。is_generation_reference_allowed 当前为 false。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_technique_zhizi",
+      "entity_id": "technique_zhizi",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "free_prompt_style_keyword"
+      ],
+      "review_note": "同上。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_technique_nahua",
+      "entity_id": "technique_nahua",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "free_prompt_style_keyword"
+      ],
+      "review_note": "同上。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_technique_piehua",
+      "entity_id": "technique_piehua",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "free_prompt_style_keyword"
+      ],
+      "review_note": "同上。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_technique_gouhua",
+      "entity_id": "technique_gouhua",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "free_prompt_style_keyword"
+      ],
+      "review_note": "同上。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_motif_flora",
+      "entity_id": "motif_flora",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data"
+      ],
+      "review_note": "题材类别本身不是素材，单个元素的可用性由其自身策略决定。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_motif_fruit",
+      "entity_id": "motif_fruit",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data"
+      ],
+      "review_note": "该类别为平台拆分类别，除策略审核外还需先确认类别是否保留。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_motif_birds_animals",
+      "entity_id": "motif_birds_animals",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data"
+      ],
+      "review_note": "动物题材易于与图腾、族群象征关联，任何生成许可均需逐案人工审核。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_motif_people",
+      "entity_id": "motif_people",
+      "policy_type": "BLOCKED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "generate_real_person_likeness"
+      ],
+      "review_note": "人物题材涉及具体人物形象时默认不进入 AI 生成。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_motif_geometric",
+      "entity_id": "motif_geometric",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data"
+      ],
+      "review_note": "类别本身缺少官方资料来源，含义状态一律不高于 UNKNOWN。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_object_apron",
+      "entity_id": "object_apron",
+      "policy_type": "DISPLAY_ONLY",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "commercial_use"
+      ],
+      "review_note": "绣品条目尚无来源与视觉资产，仅作为知识条目呈现。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_object_embroidery_shoes",
+      "entity_id": "object_embroidery_shoes",
+      "policy_type": "DISPLAY_ONLY",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "commercial_use"
+      ],
+      "review_note": "同上。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_object_sleeve_cover",
+      "entity_id": "object_sleeve_cover",
+      "policy_type": "DISPLAY_ONLY",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "commercial_use"
+      ],
+      "review_note": "同上。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_object_headscarf",
+      "entity_id": "object_headscarf",
+      "policy_type": "DISPLAY_ONLY",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "commercial_use"
+      ],
+      "review_note": "同上。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_object_sachet",
+      "entity_id": "object_sachet",
+      "policy_type": "DISPLAY_ONLY",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "commercial_use"
+      ],
+      "review_note": "同上。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_object_insole",
+      "entity_id": "object_insole",
+      "policy_type": "DISPLAY_ONLY",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "use_for_generation",
+        "use_as_training_data",
+        "commercial_use"
+      ],
+      "review_note": "同上；该条目在实施规格中存在 §8.4 与 US-04 的不一致，待内容组确认。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_001",
+      "entity_id": "pattern_qiang_001",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权，显示权限亦为否。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_002",
+      "entity_id": "pattern_qiang_002",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_003",
+      "entity_id": "pattern_qiang_003",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_004",
+      "entity_id": "pattern_qiang_004",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_005",
+      "entity_id": "pattern_qiang_005",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权；所属类别 motif_fruit 亦待确认。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_006",
+      "entity_id": "pattern_qiang_006",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_007",
+      "entity_id": "pattern_qiang_007",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_008",
+      "entity_id": "pattern_qiang_008",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_009",
+      "entity_id": "pattern_qiang_009",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权；动物题材需逐案人工审核。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_010",
+      "entity_id": "pattern_qiang_010",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_011",
+      "entity_id": "pattern_qiang_011",
+      "policy_type": "BLOCKED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use",
+        "generate_real_person_likeness"
+      ],
+      "review_note": "人物题材默认不进入 AI 生成，需单独文化内容审核。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_012",
+      "entity_id": "pattern_qiang_012",
+      "policy_type": "BLOCKED",
+      "allowed_operations": [
+        "display_in_knowledge_view"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use",
+        "generate_real_person_likeness"
+      ],
+      "review_note": "人物题材默认不进入 AI 生成。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_013",
+      "entity_id": "pattern_qiang_013",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权；含义状态 UNKNOWN，任何情况下不得解释寓意。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_014",
+      "entity_id": "pattern_qiang_014",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权；含义状态 UNKNOWN。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_qiang_015",
+      "entity_id": "pattern_qiang_015",
+      "policy_type": "REVIEW_REQUIRED",
+      "allowed_operations": [
+        "display_in_knowledge_view",
+        "submit_for_review"
+      ],
+      "blocked_operations": [
+        "crop",
+        "transform",
+        "use_for_generation",
+        "use_as_training_data",
+        "download_original",
+        "commercial_use"
+      ],
+      "review_note": "视觉资产未获授权；含义状态 UNKNOWN；演示用于无证据不解释寓意场景。",
+      "approved_by": null,
+      "review_status": "draft"
+    },
+    {
+      "id": "policy_pattern_demo_flora_01",
+      "entity_id": "pattern_demo_flora_01",
+      "policy_type": "ALLOW_COMBINATION",
+      "allowed_operations": [
+        "combine",
+        "recolor",
+        "rescale",
+        "recompose"
+      ],
+      "blocked_operations": [
+        "claim_as_traditional",
+        "claim_as_authentic",
+        "commercial_use"
+      ],
+      "review_note": "演示用元素：由《同心千年》项目组自行绘制的数字示意图，用于保证共创流程可演示。正式上线前应替换为已获授权的传世纹样素材，或经相关传承实践方确认后使用。",
+      "approved_by": null,
+      "review_status": "review"
+    },
+    {
+      "id": "policy_pattern_demo_bird_01",
+      "entity_id": "pattern_demo_bird_01",
+      "policy_type": "ALLOW_COMBINATION",
+      "allowed_operations": [
+        "combine",
+        "recolor",
+        "rescale",
+        "recompose"
+      ],
+      "blocked_operations": [
+        "claim_as_traditional",
+        "claim_as_authentic",
+        "commercial_use"
+      ],
+      "review_note": "演示用元素：由《同心千年》项目组自行绘制的数字示意图，用于保证共创流程可演示。正式上线前应替换为已获授权的传世纹样素材，或经相关传承实践方确认后使用。",
+      "approved_by": null,
+      "review_status": "review"
+    },
+    {
+      "id": "policy_pattern_demo_geometric_01",
+      "entity_id": "pattern_demo_geometric_01",
+      "policy_type": "ALLOW_COMBINATION",
+      "allowed_operations": [
+        "combine",
+        "recolor",
+        "rescale",
+        "recompose"
+      ],
+      "blocked_operations": [
+        "claim_as_traditional",
+        "claim_as_authentic",
+        "commercial_use"
+      ],
+      "review_note": "演示用元素：由《同心千年》项目组自行绘制的数字示意图，用于保证共创流程可演示。正式上线前应替换为已获授权的传世纹样素材，或经相关传承实践方确认后使用。",
+      "approved_by": null,
+      "review_status": "review"
+    },
+    {
+      "id": "policy_pattern_demo_composite_01",
+      "entity_id": "pattern_demo_composite_01",
+      "policy_type": "ALLOW_COMBINATION",
+      "allowed_operations": [
+        "combine",
+        "recolor",
+        "rescale",
+        "recompose"
+      ],
+      "blocked_operations": [
+        "claim_as_traditional",
+        "claim_as_authentic",
+        "commercial_use"
+      ],
+      "review_note": "演示用元素：由《同心千年》项目组自行绘制的数字示意图，用于保证共创流程可演示。正式上线前应替换为已获授权的传世纹样素材，或经相关传承实践方确认后使用。",
+      "approved_by": null,
+      "review_status": "review"
+    }
+  ],
+  "cocreation_config": {
+    "principle": "先选元素 → 选择用途 → 确定构图 → 查看来源/权利 → 生成。不提供自由 Prompt 直接进模型的入口。",
+    "steps": [
+      {
+        "step": 1,
+        "key": "elements",
+        "label": "文化元素",
+        "required": true,
+        "min_selection": 1,
+        "rule": "只显示可生成元素。元素须同时通过文化内容审核、权利审核与生成策略审核。",
+        "empty_state": "当前没有已通过审核的可共创元素。你可以先浏览针法、纹样题材、绣品与传承实践，或查看某个元素的来源与权利说明了解原因。",
+        "ui_note": "选单中的每个元素显示 RightsBadge 与 GenerationPolicyBadge。"
+      },
+      {
+        "step": 2,
+        "key": "application",
+        "label": "用途",
+        "required": true,
+        "options": [
+          {
+            "value": "bookmark",
+            "label": "书签",
+            "description": "窄长构图，适合垂直排列。"
+          },
+          {
+            "value": "poster",
+            "label": "海报",
+            "description": "大画面构图，适合主体居中或对称。"
+          },
+          {
+            "value": "phone_wallpaper",
+            "label": "手机壁纸",
+            "description": "竖屏比例，需考虑状态栏区域留白。"
+          },
+          {
+            "value": "packaging_concept",
+            "label": "包装概念",
+            "description": "概念示意，非可用于印刷生产的成品稿。"
+          },
+          {
+            "value": "pattern_tile",
+            "label": "连续纹样",
+            "description": "适合重复排列，用于形成连续纹样单元。"
+          }
+        ],
+        "rule": "用途选择不改变结果标签。包装概念一项须在结果页说明其为概念示意，不构成可生产稿。"
+      },
+      {
+        "step": 3,
+        "key": "composition",
+        "label": "构图",
+        "required": true,
+        "options": [
+          {
+            "value": "CENTERED",
+            "label": "居中",
+            "description": "主体居中，四周留白。"
+          },
+          {
+            "value": "BORDER",
+            "label": "边框",
+            "description": "元素沿边缘排布，中部留空。"
+          },
+          {
+            "value": "REPEAT",
+            "label": "重复",
+            "description": "元素等距重复排列。"
+          },
+          {
+            "value": "SYMMETRIC",
+            "label": "对称",
+            "description": "左右或中心对称布局。"
+          },
+          {
+            "value": "FREE_MODERN",
+            "label": "现代自由",
+            "description": "现代构图，元素可自由安排。"
+          }
+        ],
+        "rule": "若所选元素的生成策略不允许改色（例如 ALLOW_SCALE_ONLY），色彩变化选项将被禁用并在界面上说明原因。"
+      },
+      {
+        "step": 4,
+        "key": "rights_confirmation",
+        "label": "来源确认",
+        "required": true,
+        "displays_per_element": [
+          "name",
+          "source",
+          "culture_note",
+          "usage_permission"
+        ],
+        "confirmation_text": "我知道生成结果是AI辅助文化创意，不等同于传统羌绣原作。",
+        "rule": "未完成确认不得进入下一步。此步须可跳转至 C06 的版权/授权 Tab 与 AI 使用范围 Tab。"
+      },
+      {
+        "step": 5,
+        "key": "generate",
+        "label": "生成",
+        "required": true,
+        "states": [
+          "VALIDATING_RIGHTS",
+          "COMPILING_PROMPT",
+          "GENERATING",
+          "POST_VALIDATING",
+          "DONE"
+        ],
+        "error_codes": {
+          "RIGHTS_BLOCKED": "你选择的一个元素目前仅允许展示，暂不能用于AI共创。",
+          "GENERATION_TIMEOUT": "生成暂时没有完成。你可以重试，或查看演示保障作品。",
+          "CONTENT_VALIDATION_FAILED": "本次结果没有通过内容校验，系统不会展示该结果。"
+        },
+        "compiler_rules": [
+          "只能使用已选择、已审核、拥有生成权限的元素。",
+          "不得增加未选择、未审核的传统羌绣纹样。",
+          "不得自行发明传统纹样名称或象征意义。",
+          "用户要求模仿具体在世传承人时，删除该要求并返回 warning。",
+          "生成策略为仅展示或禁止使用的元素不能进入 Prompt。",
+          "针法只能作为视觉结构参考，不得输出「这是真实手工挑花作品」等表述。",
+          "生成目标是 AI 辅助文化创意图像，不是传统原作。",
+          "不自动加入任何未经授权的品牌标识。"
+        ]
+      }
+    ],
+    "result": {
+      "label": "AI辅助文化创意作品 · 非传统羌绣原作",
+      "must_show": [
+        "使用元素",
+        "AI新增内容说明",
+        "查看生成依据入口",
+        "查看文化来源入口"
+      ],
+      "provenance_fields": [
+        "generation_id",
+        "generated_at",
+        "model_name",
+        "model_version",
+        "prompt_template_version",
+        "used_element_ids",
+        "technique_reference_ids",
+        "source_ids",
+        "rights_record_ids",
+        "validation_status"
+      ],
+      "ai_added_description_default": "AI 新增：构图排列 / 数字背景 / 色彩组合"
+    },
+    "content_team_todo": "待确认：五项用途与五种构图的中文标签文案需与前端一致。待定：包装概念用途是否保留（涉及「不构成可生产稿」的说明义务）。"
+  },
+  "progress_weights": {
+    "review_status": "draft",
+    "basis": "本表由实现方参照元代章 §20.2 的进度权重结构拟定，依据当代章 §40 Definition of Done 与 §42 演示路径设计。实施规格当代章原文未给出最低完成条件与进度权重。",
+    "min_completion_conditions": [
+      "已进入羌绣数字工坊（C01 章节首页）",
+      "至少打开 3 个知识节点（针法 / 纹样题材 / 绣品 / 传承实践中任意类别合计）",
+      "完成 1 次 AI 问答，或打开过 1 个来源与权利说明（C06）",
+      "打开过知识图谱（C07）"
+    ],
+    "min_completion_note": "满足以上 4 项即可出现「完成本章」。100% 完成度另算。共创相关项不计入最低完成条件，原因是第一批纹样元素与针法尚未完成权利审核，可共创元素库可能为空；若第一批共创元素通过审核，可在内容组确认后把「完成 1 次 AI 共创」加入最低完成条件。",
+    "weights": [
+      {
+        "key": "enter_workbench",
+        "label": "进入羌绣数字工坊",
+        "weight": 8
+      },
+      {
+        "key": "browse_three_techniques",
+        "label": "浏览至少 3 个针法节点",
+        "weight": 12
+      },
+      {
+        "key": "explore_three_groups",
+        "label": "四类入口（针法 / 纹样题材 / 绣品 / 传承实践）中至少进入三类",
+        "weight": 8
+      },
+      {
+        "key": "check_source_and_rights",
+        "label": "打开任意一个元素的来源与权利说明",
+        "weight": 12
+      },
+      {
+        "key": "complete_ai_chat",
+        "label": "完成至少 1 次 AI 问答",
+        "weight": 15
+      },
+      {
+        "key": "view_graph",
+        "label": "查看当代非遗知识图谱",
+        "weight": 8
+      },
+      {
+        "key": "expand_relation_evidence",
+        "label": "展开至少一条关系并查看关系证据",
+        "weight": 8
+      },
+      {
+        "key": "add_to_basket",
+        "label": "把一个可用于共创的元素加入共创篮",
+        "weight": 9
+      },
+      {
+        "key": "complete_cocreation",
+        "label": "完成一次 AI 共创并生成结果",
+        "weight": 15
+      },
+      {
+        "key": "view_provenance",
+        "label": "查看生成依据（Provenance）",
+        "weight": 5
+      }
+    ],
+    "total": 100,
+    "content_team_todo": "本表由实现方依 §40 Definition of Done 拟定，待内容组确认。待确认事项：一、是否把「完成一次 AI 共创」纳入最低完成条件；二、在可共创元素库为空的情况下，第 8、9、10 项权重（合计 29）应如何回补；三、四类入口的「三类」口径是否按针法、纹样题材、绣品、传承实践计算。"
+  },
+  "content_team_todo": [
+    "核验项目编号 Ⅶ-76、项目序号 852、公布年份 2008、批次「第二批」、类别「传统美术」、申报地区「四川省汶川县」、保护单位「汶川县文化馆」。",
+    "补全 src_samr_qiang_standard_project 的公开 URL、项目计划号、下达日期、起草单位与当前状态；确认其 source_level 应为 A 还是 S。",
+    "补全 src_wenchuan_qiang_copyright_2026 的公开 URL 与页面标题；确认其与 src_wenchuan_qiang_2024 是否为同一批公开信息。",
+    "确定第一批纹样元素的传统名称、命名依据与审核人；在此之前一律使用实现方临时编号名。",
+    "逐个确定 15 个纹样元素的 meaning_status，并为任何拟标为 DOCUMENTED 的元素补充 approved 含义 Claim 与来源。",
+    "为 15 个纹样元素与图片资产取得授权文件，填写 rights_records 中的权利人、rights_basis、license_document_ref、valid_from、valid_until、territory、attribution_text。",
+    "确认是否保留 motif_fruit 这一平台拆分类别，以及 motif_geometric 的类别依据。",
+    "确认 object_insole 是否保留（§8.4 与 US-04 不一致）。",
+    "确认五种针法是否都制作结构示意动画（§44 第 8 项）。",
+    "确认是否把 person_li_xingxiu 作为知识图谱节点保留但不做 AI 角色（§44 第 9 项）。",
+    "确定比赛现场生成失败时使用的 3–5 张预审 Fallback 样例（§44 第 11 项）。",
+    "确定最终 Rights Gate 与文化内容审核负责人（§44 第 12 项）。",
+    "确认 progress_weights 表的最终版本与最低完成条件。",
+    "本目录内的 sources.json 为当代章章节级来源表；如全项目采用 content/sources.json 全局来源表，需要在 seed 脚本中合并去重。"
+  ]
+}

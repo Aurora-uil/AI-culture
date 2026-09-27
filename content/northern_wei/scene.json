@@ -1,0 +1,154 @@
+[
+  {
+    "scene": {
+      "id": "wei_yungang_compare",
+      "name": "云冈石窟 · 平城时期",
+      "scene_kind": "image",
+      "background_asset_id": "/assets/wei/yungang-cave20-original.jpg",
+      "width": 1920,
+      "height": 1440,
+      "chapter_id": "northern_wei_integration",
+      "time_scope": "5世纪—6世纪（北魏）",
+      "place_entity_id": "place_pingcheng",
+      "side": "left",
+      "disclaimer": "历史遗址实拍图。热点坐标为内容人员预先标注，不使用视觉识别或自动分类；框选范围仍需按最终图片复核。",
+      "asset_source": "historical_site_photo",
+      "asset_source_url": "https://commons.wikimedia.org/wiki/File:Cave_20,_Yungang_Grottoes.jpg",
+      "asset_license": "CC0"
+    },
+    "hotspots": [
+      {
+        "id": "hs_yungang_tanyao",
+        "entity_id": "evidence_yungang_tanyao",
+        "evidence_id": "evidence_yungang_tanyao",
+        "shape": "polygon",
+        "normalized_points": [[0.21, 0.23], [0.39, 0.20], [0.41, 0.60], [0.20, 0.62]],
+        "label": "昙曜五窟",
+        "evidence_category": "art",
+        "group_key": "sculpture",
+        "sort_order": 1
+      },
+      {
+        "id": "hs_yungang_style",
+        "entity_id": "evidence_yungang_style_exchange",
+        "evidence_id": "evidence_yungang_style_exchange",
+        "shape": "polygon",
+        "normalized_points": [[0.44, 0.26], [0.62, 0.24], [0.63, 0.58], [0.43, 0.60]],
+        "label": "不同阶段的样式变化",
+        "evidence_category": "art",
+        "group_key": "sculpture",
+        "sort_order": 2
+      },
+      {
+        "id": "hs_yungang_art_exchange",
+        "entity_id": "evidence_yungang_art_exchange",
+        "evidence_id": "evidence_yungang_art_exchange",
+        "shape": "polygon",
+        "normalized_points": [[0.66, 0.28], [0.83, 0.26], [0.84, 0.55], [0.65, 0.57]],
+        "label": "多来源艺术因素",
+        "evidence_category": "art",
+        "group_key": "religious_art",
+        "sort_order": 3
+      },
+      {
+        "id": "hs_yungang_architecture",
+        "entity_id": "evidence_yungang_architecture",
+        "evidence_id": "evidence_yungang_architecture",
+        "shape": "polygon",
+        "normalized_points": [[0.24, 0.66], [0.46, 0.64], [0.47, 0.86], [0.23, 0.88]],
+        "label": "窟形与建筑形象",
+        "evidence_category": "art",
+        "group_key": "architecture",
+        "sort_order": 4
+      },
+      {
+        "id": "hs_yungang_music",
+        "entity_id": "evidence_yungang_music",
+        "evidence_id": "evidence_yungang_music",
+        "shape": "polygon",
+        "normalized_points": [[0.55, 0.66], [0.79, 0.64], [0.80, 0.85], [0.54, 0.87]],
+        "label": "伎乐与乐器雕刻",
+        "evidence_category": "art",
+        "group_key": "music",
+        "sort_order": 5
+      }
+    ],
+    "auxiliary_evidence_ids": []
+  },
+  {
+    "scene": {
+      "id": "wei_longmen_compare",
+      "name": "龙门石窟 · 洛阳时期（北魏阶段）",
+      "scene_kind": "image",
+      "background_asset_id": "/assets/wei/longmen-guyang-original.jpg",
+      "width": 1920,
+      "height": 1280,
+      "chapter_id": "northern_wei_integration",
+      "time_scope": "北魏晚期",
+      "place_entity_id": "place_luoyang",
+      "side": "right",
+      "disclaimer": "历史遗址实拍图。本场景只呈现龙门石窟古阳洞相关视觉材料，龙门整体营造延续至唐代等时期；热点坐标仍需复核。",
+      "asset_source": "historical_site_photo",
+      "asset_source_url": "https://commons.wikimedia.org/wiki/File:Ancient_Buddhist_Grottoes_at_Longmen-_Guyang_Grotto_Main_Buddha.jpg",
+      "asset_license": "CC0"
+    },
+    "hotspots": [
+      {
+        "id": "hs_longmen_guyang",
+        "entity_id": "evidence_longmen_guyang",
+        "evidence_id": "evidence_longmen_guyang",
+        "shape": "polygon",
+        "normalized_points": [[0.22, 0.24], [0.41, 0.22], [0.42, 0.58], [0.21, 0.60]],
+        "label": "古阳洞造像与龛饰",
+        "evidence_category": "art",
+        "group_key": "sculpture",
+        "sort_order": 1
+      },
+      {
+        "id": "hs_longmen_architecture_kan",
+        "entity_id": "evidence_longmen_guyang",
+        "evidence_id": "evidence_longmen_guyang",
+        "shape": "polygon",
+        "normalized_points": [[0.46, 0.25], [0.63, 0.23], [0.64, 0.55], [0.45, 0.57]],
+        "label": "仿木构屋形龛",
+        "evidence_category": "art",
+        "group_key": "architecture",
+        "sort_order": 2
+      },
+      {
+        "id": "hs_longmen_inscriptions",
+        "entity_id": "evidence_longmen_inscriptions",
+        "evidence_id": "evidence_longmen_inscriptions",
+        "shape": "polygon",
+        "normalized_points": [[0.67, 0.27], [0.84, 0.25], [0.85, 0.54], [0.66, 0.56]],
+        "label": "造像题记",
+        "evidence_category": "inscription",
+        "group_key": "inscription",
+        "sort_order": 3
+      },
+      {
+        "id": "hs_longmen_costume",
+        "entity_id": "evidence_longmen_costume",
+        "evidence_id": "evidence_longmen_costume",
+        "shape": "polygon",
+        "normalized_points": [[0.25, 0.65], [0.47, 0.63], [0.48, 0.86], [0.24, 0.88]],
+        "label": "供养人服饰形象",
+        "evidence_category": "costume",
+        "group_key": "costume",
+        "sort_order": 4
+      },
+      {
+        "id": "hs_longmen_music",
+        "entity_id": "evidence_longmen_music",
+        "evidence_id": "evidence_longmen_music",
+        "shape": "polygon",
+        "normalized_points": [[0.56, 0.65], [0.80, 0.63], [0.81, 0.85], [0.55, 0.87]],
+        "label": "伎乐与乐器雕刻",
+        "evidence_category": "art",
+        "group_key": "music",
+        "sort_order": 5
+      }
+    ],
+    "auxiliary_evidence_ids": ["evidence_yuanyu_epitaph", "evidence_attendant_costume"]
+  }
+]

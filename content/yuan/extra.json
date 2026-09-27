@@ -1,0 +1,135 @@
+{
+  "chapter_id": "yuan_yuntai",
+  "progress_weights": [
+    {
+      "key": "enter_scene",
+      "label": "进入场景",
+      "weight": 10,
+      "note": "首次进入 Y02 云台主场景时计入。"
+    },
+    {
+      "key": "open_any_three_scripts",
+      "label": "打开任意3个文字",
+      "weight": 15,
+      "note": "在六体文字中打开任意 3 个文字节点详情即计入。"
+    },
+    {
+      "key": "open_all_six_scripts",
+      "label": "六个文字全部打开",
+      "weight": 15,
+      "note": "六个文字节点全部打开后计入。"
+    },
+    {
+      "key": "view_yuntai_sources",
+      "label": "查看云台史料来源",
+      "weight": 10,
+      "note": "打开 Y06 史料证据页并查看与云台相关的来源即计入。"
+    },
+    {
+      "key": "complete_ai_qa",
+      "label": "完成AI问答",
+      "weight": 20,
+      "note": "完成 1 次 AI 问答（获得完整回答）后计入。"
+    },
+    {
+      "key": "view_graph",
+      "label": "查看图谱",
+      "weight": 10,
+      "note": "打开 Y07 关系图谱后计入。"
+    },
+    {
+      "key": "expand_one_relation",
+      "label": "展开至少一条关系",
+      "weight": 10,
+      "note": "在图谱中主动展开至少一层关系后计入。"
+    },
+    {
+      "key": "view_relation_evidence",
+      "label": "查看关系证据",
+      "weight": 10,
+      "note": "使用「为什么有这条关系？」展开关系证据后计入。"
+    }
+  ],
+  "progress_total": 100,
+  "progress_rule_note": "进度权重按 §20.2 原样登记，八项相加为 100。进度上报失败不得阻断内容浏览；前端可先本地乐观更新，再异步持久化。",
+  "completion_criteria": [
+    {
+      "key": "entered_main_scene",
+      "label": "已进入主场景",
+      "note": "进入 Y02 云台主场景。"
+    },
+    {
+      "key": "opened_three_scripts",
+      "label": "至少打开 3 个六体文字节点",
+      "note": "打开过至少 3 个文字节点的详情。"
+    },
+    {
+      "key": "completed_ai_qa_or_knowledge_card",
+      "label": "完成 1 次 AI 问答或阅读 1 个预设深度知识卡",
+      "note": "二者满足其一即可。"
+    },
+    {
+      "key": "opened_graph",
+      "label": "打开过知识图谱",
+      "note": "打开过 Y07 关系图谱。"
+    }
+  ],
+  "completion_criteria_note": "满足以上 4 项最低完成条件后，出现「完成本章」入口；100% 完成度按 progress_weights 另算。",
+  "recommended_questions": [
+    {
+      "id": "q_yuntai_01",
+      "text": "为什么这里会出现多种文字？",
+      "intent": "multiscript_background"
+    },
+    {
+      "id": "q_yuntai_02",
+      "text": "云台原来就是现在这个样子吗？",
+      "intent": "architecture_history"
+    },
+    {
+      "id": "q_yuntai_03",
+      "text": "六体文字分别是什么？",
+      "intent": "six_scripts"
+    },
+    {
+      "id": "q_yuntai_04",
+      "text": "这些石刻为什么有研究价值？",
+      "intent": "research_value"
+    }
+  ],
+  "script_order": [
+    "script_sanskrit_lantsa",
+    "script_tibetan",
+    "script_phagspa",
+    "script_old_uyghur",
+    "script_chinese",
+    "script_tangut"
+  ],
+  "script_order_labels": ["梵文书写系统", "藏文", "八思巴文", "回鹘文", "汉文", "西夏文"],
+  "script_order_note": "六体文字的显示顺序按 §9.1 确定为上表次序，与实体 sort_order 1–6 一致。「下一个文字」按钮（BTN-Y04-05）按此顺序循环。script_sanskrit_lantsa 为项目内部临时 ID，显示名待内容组统一规范。",
+  "ai_character": {
+    "id": "artifact_yuntai",
+    "name": "居庸关云台",
+    "character_type": "artifact",
+    "base_entity_id": "artifact_yuntai",
+    "disclaimer": "AI数字叙事角色。第一人称表达为基于史料的叙事重构，并非文物真实发言。",
+    "answer_modes": ["narrative", "factual"],
+    "mode_note": "narrative 模式只允许把已知事实改写为第一人称，不得虚构感受、情绪、对白、声音、天气或具体现场行为；factual 模式使用第三人称直接说明史实。",
+    "no_evidence_text": "当前资料库中没有足够可靠的材料支持确定回答这个问题。你可以换个问法，或查看与云台相关的已核验资料。",
+    "timeout_text": "AI讲述暂时没有完成。你可以重试，或先查看相关史料。",
+    "offline_demo_text": "当前启用演示保障模式，以下内容来自已审核的预设问答库。"
+  },
+  "content_red_lines": [
+    "禁止把「六体文字」偷换成「六种语言」。产品必须把 Script（文字书写系统）/ Language（语言）/ Text（文本）/ Inscription（具体题刻）四个概念分开，不得合并。",
+    "禁止「六种文字代表元代六个民族」或任何形式的文字—语言—族群一一对应。",
+    "界面与回答统一表述为「云台券洞内保存有六种书写系统的题刻」，不得写成「六个民族的六种语言写在一起」。",
+    "不得给没有来源支持的文字绑定单一民族标签。",
+    "不得让 AI 编造碑文释读、译文或逐句对照；平台不做实时古文字翻译。",
+    "不得虚构「我亲眼看到」的情节、人物对白、心理活动、声音、天气或现场细节。",
+    "不得把研究视角的表述（如「可用于研究元代多民族文化交流」）说成已证明的历史结论或古人的主观动机。",
+    "来源之间不一致的内容，回答时必须说明存在不同研究观点；资料不足时必须直接说明资料不足。",
+    "不得把「塔身已不存」的云台说成一座完整的塔，也不得把元代云台与今日居庸关关城建筑混为一谈。"
+  ],
+  "scene_note": "主场景 id 统一使用 yuntai_inner。§8.2 的示例中写为 scene_yuntai_inner_wall、§7.1 与 §24.2 的接口示例写为 yuntai_inner，本文件按统一约定采用 yuntai_inner。",
+  "content_team_todo": "本文件由实现方依据实施规格 §9.1、§11.1、§13、§16、§20.1、§20.2、§2.2、§2.3 补写；除上述章节已明确给出的内容外，其余字段（如 key 命名、note 文案）为实现方拟定，待内容组与前端确认。"
+}

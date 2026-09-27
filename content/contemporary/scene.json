@@ -1,0 +1,152 @@
+{
+  "scene": {
+    "id": "qiang_workbench",
+    "name": "羌绣数字工坊",
+    "scene_kind": "workbench",
+    "background_asset_id": null,
+    "width": null,
+    "height": null,
+    "disclaimer": "本章没有空间场景，也没有热点坐标。所有元素均以知识卡与关系图的形式呈现，不使用视觉识别或 OCR 生成任何标注。",
+    "chapter_id": "contemporary_qiang_embroidery",
+    "primary_interaction": "knowledge_cocreation",
+    "ai_character_id": "qiang_workshop_narrator",
+    "ai_character_note": "AI 讲解角色为「羌绣数字工坊讲述者」，一个基于已审核非遗资料构建的知识讲述角色，不是任何具体传承人的数字分身。"
+  },
+  "workbench": {
+    "technique_ids": [
+      "technique_tiaohua",
+      "technique_zhizi",
+      "technique_nahua",
+      "technique_piehua",
+      "technique_gouhua"
+    ],
+    "motif_category_ids": [
+      "motif_flora",
+      "motif_fruit",
+      "motif_birds_animals",
+      "motif_people",
+      "motif_geometric"
+    ],
+    "object_ids": [
+      "object_apron",
+      "object_embroidery_shoes",
+      "object_sleeve_cover",
+      "object_headscarf",
+      "object_sachet",
+      "object_insole"
+    ],
+    "practice_ids": [
+      "practice_digital_archiving",
+      "practice_ich_workshop",
+      "practice_school_education",
+      "practice_contemporary_design",
+      "practice_copyright_protection"
+    ],
+    "pattern_element_ids": [
+      "pattern_qiang_001",
+      "pattern_qiang_002",
+      "pattern_qiang_003",
+      "pattern_qiang_004",
+      "pattern_qiang_005",
+      "pattern_qiang_006",
+      "pattern_qiang_007",
+      "pattern_qiang_008",
+      "pattern_qiang_009",
+      "pattern_qiang_010",
+      "pattern_qiang_011",
+      "pattern_qiang_012",
+      "pattern_qiang_013",
+      "pattern_qiang_014",
+      "pattern_qiang_015"
+    ],
+    "concept_ids": [
+      "concept_living_heritage",
+      "concept_digital_preservation",
+      "concept_active_inheritance",
+      "concept_ai_cocreation",
+      "concept_rights_traceability",
+      "concept_cultural_context"
+    ],
+    "entry_groups": [
+      {
+        "key": "technique",
+        "label": "针法",
+        "entity_ids": ["technique_tiaohua", "technique_zhizi", "technique_nahua", "technique_piehua", "technique_gouhua"],
+        "default_selected": true,
+        "sort_order": 1
+      },
+      {
+        "key": "motif",
+        "label": "纹样 / 题材",
+        "entity_ids": ["motif_flora", "motif_fruit", "motif_birds_animals", "motif_people", "motif_geometric"],
+        "default_selected": false,
+        "sort_order": 2
+      },
+      {
+        "key": "object",
+        "label": "绣品 / 用途",
+        "entity_ids": ["object_apron", "object_embroidery_shoes", "object_sleeve_cover", "object_headscarf", "object_sachet", "object_insole"],
+        "default_selected": false,
+        "sort_order": 3
+      },
+      {
+        "key": "practice",
+        "label": "传承实践",
+        "entity_ids": ["practice_digital_archiving", "practice_ich_workshop", "practice_school_education", "practice_contemporary_design", "practice_copyright_protection"],
+        "default_selected": false,
+        "sort_order": 4
+      }
+    ],
+    "card_states": [
+      "UNSEEN",
+      "VIEWED",
+      "SOURCE_CHECKED",
+      "ELIGIBLE_FOR_CREATION",
+      "IN_CREATION_BASKET",
+      "DISPLAY_ONLY"
+    ],
+    "cocreation": {
+      "applications": [
+        "bookmark",
+        "poster",
+        "phone_wallpaper",
+        "packaging_concept",
+        "pattern_tile"
+      ],
+      "compositions": [
+        "CENTERED",
+        "BORDER",
+        "REPEAT",
+        "SYMMETRIC",
+        "FREE_MODERN"
+      ],
+      "confirmation_text": "我知道生成结果是AI辅助文化创意，不等同于传统羌绣原作。",
+      "result_label": "AI辅助文化创意作品 · 非传统羌绣原作",
+      "steps": [
+        { "step": 1, "key": "elements", "label": "文化元素", "rule": "只显示可生成元素。元素须同时通过文化审核、权利审核与生成策略审核。" },
+        { "step": 2, "key": "application", "label": "用途", "rule": "从五个用途中选择一个。用途不改变结果标签。" },
+        { "step": 3, "key": "composition", "label": "构图", "rule": "从五个构图选项中选择一个。若所选元素的生成策略不允许改色，色彩变化选项将被禁用。" },
+        { "step": 4, "key": "rights_confirmation", "label": "来源确认", "rule": "逐一显示每个元素的名称、来源、文化说明与使用权限；用户须确认使用边界文案后才能进入下一步。" },
+        { "step": 5, "key": "generate", "label": "生成", "rule": "状态依次为 VALIDATING_RIGHTS、COMPILING_PROMPT、GENERATING、POST_VALIDATING、DONE。权利校验失败时默认不生成。" }
+      ],
+      "generation_states": [
+        "IDLE",
+        "VALIDATING_RIGHTS",
+        "COMPILING_PROMPT",
+        "GENERATING",
+        "POST_VALIDATING",
+        "DONE",
+        "FAILED"
+      ],
+      "error_messages": {
+        "RIGHTS_BLOCKED": "你选择的一个元素目前仅允许展示，暂不能用于AI共创。",
+        "GENERATION_TIMEOUT": "生成暂时没有完成。你可以重试，或查看演示保障作品。",
+        "CONTENT_VALIDATION_FAILED": "本次结果没有通过内容校验，系统不会展示该结果。"
+      },
+      "fallback_note": "图片生成失败时显示预审共创样例，并固定标注「演示保障样例 · 非本次实时生成」。权利接口失败时默认不生成。"
+    },
+    "hotspots": [],
+    "map": null,
+    "content_team_todo": "本场景不含空间坐标，因此不填 normalized_points，也不使用任何视觉识别或 OCR 生成标注。第一批纹样元素与绣品条目因缺少授权与来源支持，其 card_states 目前只能落在 DISPLAY_ONLY 或 UNVIEWED，Eligible 与 In-Basket 状态需待权利审核完成后才可产生。"
+  }
+}

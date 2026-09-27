@@ -1,0 +1,1095 @@
+[
+  {
+    "id": "chunk_tang_001",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_collection_dpm",
+      "claim_bunian_catalogued_as_yanliben"
+    ],
+    "title": "《步辇图》是什么、现藏何处",
+    "text": "《步辇图》是一幅唐代绢本设色人物画，现藏故宫博物院。故宫博物院藏品页以「《步辇图》卷，唐，阎立本作」著录该作品，把它编入唐代绘画；故宫名画记平台也为该作建立了独立作品页。据故宫博物院藏品页说明，画面表现的是唐太宗李世民在宫内接见松赞干布派来的吐蕃使臣禄东赞的历史场景。《步辇图》属于横向手卷形态的历史人物画，是本章的核心文物，也是本章唯一的AI数字文物角色。一幅画本身不讲述完整历史，但它可以成为进入人物、事件与长期关系网络的入口。需要说明两点：作品的图像与文字权利归故宫博物院所有，本章使用该作品图像前须完成授权登记；作品被编目的时代（唐）与画面所表现事件的年代（据故宫资料系于641年前后）是两个不同问题，应分别表述，不能混为一谈。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_002",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_dimensions_record",
+      "claim_bunian_related_period_tang"
+    ],
+    "title": "《步辇图》的材质、尺寸与著录情况",
+    "text": "据故宫博物院藏品页著录，《步辇图》为绢本、设色，纵38.5厘米，横129厘米。同一作品在故宫名画记平台的页面上，横向尺寸记为139厘米，与藏品页的129厘米不一致。也就是说，目前两处官方页面在横向尺寸上存在出入。本平台的处理方式是：在著录尚未核对统一之前，不向用户给出单一的确定尺寸；如被问到，应说明该作品是绢本设色的横向手卷，尺寸著录在两处故宫公开页面中存在不同记录，须以院方最新著录为准。不得由一个数字出发，去推论文物实际装裱、裁切或递藏情况。材质「绢本、设色」在两处页面中一致，可正常引用；尺寸数据则标记为待核验，属于需要在正式上线前向馆方确认的著录问题。读者如果在其他资料里看到不同的尺寸数字，不必感到意外：文物著录在测绘、重新装裱与出版过程中可能更新，不同页面与出版物的著录时间也不一致。平台的原则是只呈现可核对的著录来源，并在数字冲突时如实说明，而不是自行挑选一个看起来更合理的值。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_003",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "artifact_bunian_tu",
+      "person_emperor_taizong",
+      "person_ludongzan"
+    ],
+    "claim_ids": [
+      "claim_bunian_associated_reception",
+      "claim_bunian_depicts_taizong",
+      "claim_bunian_depicts_ludongzan"
+    ],
+    "title": "画面内容总述：唐太宗接见禄东赞",
+    "text": "据故宫博物院藏品页描述，《步辇图》画面表现的是唐太宗李世民在宫内接见松赞干布派来的吐蕃使臣禄东赞的历史场景。李世民坐在由六名宫女抬着的坐榻（即步辇）上，另有三位宫女分别掌扇、持华盖；太宗面前站立三人，最右侧穿大红袍者是引见官员，中间拱手而立者为禄东赞，最左侧白袍者为内官。全画用细劲多变的线条塑造人物，设色浓重鲜艳，属工笔重彩人物画，图中人物带有肖像画特征。以上是博物馆对画面的描述，属于「这幅画画了什么」这一层面的信息。它可以支持回答「画面里谁是唐太宗」「画面里谁是禄东赞」这类问题。但它描述的是画面，不等于记录了历史现场的站位、人数与全部细节，两类信息在回答中必须分开表述。换句话说，本节回答的是「博物馆如何描述这幅画」，属于可核对的著录信息；至于画面中人物的真实身份、现场情况与谈话内容，则属于另外的问题，需要别的材料支持。平台在回答时会明确区分这两个层面。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_004",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "artifact_bunian_tu",
+      "concept_tang_figure_painting"
+    ],
+    "claim_ids": [
+      "claim_bunian_supports_tang_figure_painting"
+    ],
+    "title": "画科与风格：工笔重彩人物画",
+    "text": "故宫博物院藏品页对《步辇图》的画面风格有如下说明：全画用细劲多变的线条塑造人物，设色浓重鲜艳，属工笔重彩人物画；图中人物应带有肖像画特征。这些描述属于博物馆对作品画科与表现手法的说明，可用于回答「这是一幅什么样的画」。在本章的图谱中，作品通过 SUPPORTS_STUDY_OF 关联到「唐代历史人物画」这一概念节点：这表示该作品可以作为研究唐代历史人物画的材料，而不是说它证明了唐代人物画的某种结论。使用风格描述时需要注意边界：风格与画科是描述性的类别，不能反过来当作鉴定作者归属的充分证据，也不能用一幅作品代表整个唐代人物画的全貌。若要讨论作者归属，应当回到「本幅无画家款印」「北宋题识」与研究史讨论这几项具体材料。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_005",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "artifact_bunian_tu",
+      "attribution_bunian_yanliben_catalogue"
+    ],
+    "claim_ids": [
+      "claim_bunian_catalogued_as_yanliben"
+    ],
+    "title": "故宫现行编目：「唐，阎立本作」是什么意思",
+    "text": "故宫博物院藏品页以「《步辇图》卷，唐，阎立本作」的方式著录该作品。这是一条目录记录事实（catalogue_fact）：它表示博物馆在现行编目中把该作的时代定为唐、作者定为阎立本。它表达的是编目状态，不是「该作已被证明为阎立本亲笔真迹」。在界面与回答中，这一信息应显示为「作者：阎立本（故宫现行编目）」，并提供查看归属说明的入口。与之相关的图谱边是「《步辇图》 CATALOGUED_AS 阎立本作」，其 claim_type 为 catalogue_fact，而不是绝对作者定论。平台既不把现行编目升级为无争议的最终结论，也不反过来擅自宣布该作并非阎立本作品——这两种做法都超出了现有材料能支持的范围。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_006",
+    "source_id": "src_dpm_minghuaji_bunian",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_theme_wencheng_marriage"
+    ],
+    "title": "故宫名画记对作品的著录与主题说明",
+    "text": "故宫博物院「故宫名画记」平台为《步辇图卷》建立了独立作品页，著录为唐代、绢本设色，作者列为阎立本，并说明该作描绘的是唐贞观十五年（641）唐太宗将文成公主许配吐蕃赞普松赞干布一事，画面表现太宗接见前来求亲的吐蕃使臣禄东赞的场景；页面形容其线条遒劲坚实、设色沉着，在主题分类中把该作归入人物类。页面同时明确记载「本幅无画家款印」，并说明归属依据来自北宋章伯益的篆书题识。作品的高清影像与相关权利由故宫博物院负责。名画记页面与藏品页在作品主题上的说明彼此呼应，可共同支持「这幅画画的是唐太宗接见禄东赞」这一核心事实；在尺寸等著录细节上两处存在出入，须另行核对。把两处故宫页面放在一起看，可以得到一个比较稳妥的回答：这幅画的主题是唐太宗接见吐蕃使臣禄东赞，它与641年前后唐蕃之间的婚姻事件相关。至于作者归属，则要分开说明——编目为阎立本作，同时存在关于作者归属的研究讨论。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_007",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_emperor_taizong",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_taizong_identity",
+      "claim_bunian_depicts_taizong"
+    ],
+    "title": "画中的唐太宗是谁",
+    "text": "唐太宗即李世民（599—649），唐高祖李渊次子，627年至649年在位。故宫博物院藏品页在说明《步辇图》时指出，画面表现的是唐太宗在宫内接见吐蕃使臣禄东赞的场景，太宗坐于由宫女抬行的步辇之上。因此唐太宗在本章中同时具有两重身份：他是历史人物，也是画中被描绘的人物之一。回答「画面里谁是唐太宗」时，依据的是博物馆对画面的描述。但需要同时说明：画面中他的坐姿、神态与服饰属于艺术表现，不能直接当作历史现场的真实细节，也不能据此推断他当时的心情或说过的话。本章在图谱中为「《步辇图》 DEPICTS 唐太宗」建立了一条事实边，其含义只是「这幅画描绘了唐太宗」，不包含任何现场细节。回答这类问题时，可以先讲画面这一层，再补一句边界：画面是图像材料，不等于现场记录。这样既回答了用户的问题，也不会让人把画中的形象当作现场细节的替代。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_008",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_ludongzan",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_depicts_ludongzan",
+      "claim_ludongzan_reception_641_spring"
+    ],
+    "title": "画中的禄东赞：为什么他在画面里",
+    "text": "故宫博物院藏品页把《步辇图》画面中唐太宗面前拱手而立的人物识别为吐蕃使臣禄东赞，并描述其发型和服饰与中原不同。同页还记载，禄东赞是松赞干布派出的相国，于贞观十五年（641年）春到长安迎接文成公主。把这两条信息放在一起，就能回答用户最常见的追问「他为什么在这里」：画面所表现的正是他作为吐蕃使臣出现在唐朝宫廷的场景。禄东赞是本画中唯一同时具备「画中可见」与「直接连接画外人物」双重身份的核心节点，因此本章把他设为从画内走向画外的枢纽。回答时须注意：画面中他的姿态与外貌是绘画表现，不能据此推断其真实心理；也不能把他与松赞干布混为一人。这也解释了本章为什么把他设为核心：用户点击他之后，可以继续展开到松赞干布、唐蕃使节活动与641年前后的婚姻事件，从而走出画面。整条路径中，画面只提供起点，不提供结论。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_009",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "figure_introductory_official",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_depicts_introductory_official"
+    ],
+    "title": "画面中的引见官员",
+    "text": "据故宫博物院藏品页对《步辇图》画面的描述，唐太宗面前站立三人，其中最右侧穿大红袍者为引见官员。这个人物在画面中承担的是「引见」这一场景职能，属于画面角色。本平台不为他指派真实姓名，也不把他等同于文献中某一具体人物。同样重要的是，不能用他的服色去推断官阶品级或民族身份：画面描述提到「大红袍」，这只是对画面外观的说明，服色与身份、服色与民族之间的关系在研究中本身存在讨论，不能由画面直接推出结论。此外，他是不是历史现场真实存在的一位引见官员、当时由谁担任此职，现有材料并未记载，平台不作推测。规格文档尚未最终决定该角色是做独立实体还是仅做画面标注，此处按实体先行建立。最后一层边界是：画面人物的身份识别来自博物馆的画面描述，平台据此转述并标注来源；若将来有研究对人物识别提出不同意见，应作为新的研究观点单独录入，而不是悄悄替换原有表述。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_010",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "figure_inner_attendant",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_depicts_inner_attendant"
+    ],
+    "title": "画面中的内官",
+    "text": "据故宫博物院藏品页对《步辇图》画面的描述，唐太宗面前站立三人，其中最左侧白袍者为内官。这个人物与引见官员一样，是画面中的角色身份，而不是可以被确证的历史人物。平台不为其指派真实姓名，不据其白袍的服色推断身份等级，也不据服饰推断其民族身份。画面描述中的「白袍」只是对画面上可见外观的说明。需要提醒的是，「内官」在唐代职官语境中的具体所指与职能范围，需要专门核对制度史料后才能展开说明；现有本批来源并未涉及，因此本章不展开，也不在AI回答中补充。若用户追问这个人物是谁，正确回答是：故宫资料将其描述为内官，属于画面人物，其真实身份不在现有审核资料范围内。用户如果继续追问「内官是什么官」，回答应说明：这是故宫资料对画面人物的称呼，属于画面描述层面的信息；它在唐代制度中的具体含义需要专门核对制度史料，不在本章现有审核资料范围内，平台不作展开。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_011",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "group_palace_women",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_depicts_palace_women"
+    ],
+    "title": "画面中的宫女群体：为什么不做个人身份",
+    "text": "据故宫博物院藏品页描述，唐太宗坐于由六名宫女抬着的坐榻（即步辇）上，另有三位宫女分别掌扇、持华盖。这些人物在画面中以群体形式出现，平台以群体实体处理：不拆分、不命名、不为其成员虚构真实身份。原因是现有审核资料只提供了画面描述，没有任何一位宫女的姓名或生平记载；为她们编造身份，就是编造史实。特别需要强调的一点是：不得把其中任何一位指认为文成公主。文成公主与这幅画的关系经由历史事件建立，而不是通过画面；把她安插在宫女之中，是本章明确禁止的表达。此外，画面中有几位宫女也只是本幅画的呈现方式，不等于历史现场参与人数的记录；画面中的人物也不等于当日现场所有参与者。在本章的关系结构中，宫女群体只有一条边：由《步辇图》DEPICTS 指向该群体。它不是任何画外关系链的起点，也不通向文成公主——把两者连起来，是本章明确禁止的做法。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_012",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_artwork_historical_evidence",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_artwork_not_all_participants",
+      "claim_bunian_depicts_palace_women"
+    ],
+    "title": "画中人物不等于当日现场所有参与者",
+    "text": "《步辇图》画面中出现了唐太宗、禄东赞，以及引见官员、内官与宫女群体。这些是画面中被描绘的人物。但不能由此推出「当日现场只有这些人」。一幅历史画在选择画什么、画多少人、如何安排位置时，受到画幅形制、构图需要与表现意图的影响。因此，画中人物名单不等于现场全部参与者名单，画面人数也不等于现场人数。这个区分对回答很重要：当用户问「当时还有谁在场」时，正确的回答是现有审核资料只描述了画面中的人物，没有提供现场全部在场者的名单，平台不作补充。把画面当作现场记录的替代品，正是本章要避免的错误。这个区分也解释了本章为什么不给宫女群体中的任何一位指派身份：既然画中人物名单本身不等于现场名单，那么为其中某一位补一个身份就更没有依据。用户可以注意到画面中的人，但平台不会替他们编出姓名与来历。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_013",
+    "source_id": "src_dpm_ludongzan",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_ludongzan"
+    ],
+    "claim_ids": [
+      "claim_ludongzan_identity_dalun",
+      "claim_ludongzan_served_songtsen"
+    ],
+    "title": "禄东赞的身份与官职",
+    "text": "据故宫博物院人物词条「吐蕃大相禄东赞」记载，禄东赞是吐蕃赞普松赞干布的重臣，汉文史籍中另有东赞域宋、噶尔东赞等称法；他担任的官职为大伦，即丞相。词条说明他与松赞干布同属噶氏家族，在松赞干布即位之初被任命为大伦，辅佐赞普治理朝政、开拓疆土。西藏历代雕塑与绘画中也常出现他的形象。词条未提供他的生卒年与去世时间，因此本平台不补充无来源的推测；若用户询问他生于何年、卒于何年，应当说明现有审核资料未记载。这是本章使用博物馆人物词条时的基本做法：只讲词条载明的内容，不替史料补空白。如果用户问「禄东赞在吐蕃是什么地位」，可以回答：他是大伦，即丞相，是松赞干布即位之初就被任命的重臣，属噶氏家族。至于他历任多久、何时去世，这些内容不在本批审核资料中，平台不补充。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_014",
+    "source_id": "src_dpm_ludongzan",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_ludongzan",
+      "person_songtsen_gampo"
+    ],
+    "claim_ids": [
+      "claim_ludongzan_mission_changan",
+      "claim_ludongzan_not_songtsen"
+    ],
+    "title": "禄东赞与松赞干布是什么关系",
+    "text": "据故宫博物院人物词条，禄东赞与松赞干布同属噶氏家族，在松赞干布即位之初被任命为大伦（丞相），辅佐赞普治理朝政、开拓疆土。这层关系决定了他在本章图谱中的位置：图谱用「禄东赞 REPRESENTED 松赞干布」这条边来表达「奉命／代表」，而不是用「是」或「等于」一类关系。这一点在回答中必须讲清楚：禄东赞是松赞干布的使臣与重臣，不是松赞干布本人。用户常问「禄东赞是松赞干布吗」，正确答案是否定的。画面中拱手而立的使臣是禄东赞，松赞干布本人不在画面中，他是通过禄东赞这条画外关系被追溯出来的。这两层信息需要分开表述，不能混为一谈。从关系设计的角度看，这条边之所以用 REPRESENTED 而不是等同类关系，是因为使臣与君主之间的代表性并不等于身份等同。同样的原则也适用于画面中的其他人物：画面人物与历史人物的关系需要逐一说明，不能靠外观推断。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_015",
+    "source_id": "src_dpm_ludongzan",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_ludongzan",
+      "place_changan",
+      "event_tang_tubo_marriage_641"
+    ],
+    "claim_ids": [
+      "claim_ludongzan_mission_changan",
+      "claim_envoy_activity_related_changan"
+    ],
+    "title": "禄东赞为什么来长安",
+    "text": "据故宫博物院人物词条记载，禄东赞曾亲自前往长安，目的是替松赞干布求婚；求婚成功后，他迎接文成公主入藏。故宫博物院藏品页则记载，他于贞观十五年（641年）春到长安迎接文成公主。把两条记载合并起来，可以回答本章最常见的追问之一「禄东赞为什么来长安」：他受松赞干布派遣，为使节活动而来，具体包括求婚与迎亲。需要说明的是，本平台不补充这两条记载之外的细节，例如他在长安停留多久、住在何处、随行多少人、会见中说了什么，这些内容现有审核资料并未记载。若被问及，正确回答是资料未载，而不是由画面或想象去填充。还有一点值得说明：本章把「求婚」与「迎亲」都归于使节活动，而不是把它们写成婚姻事件的原因。使节活动是一个包含多项往来的关系节点，图谱以 SUPPORTS_STUDY_OF 把它连接到政治交往研究，避免任何单向因果表述。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_016",
+    "source_id": "src_dpm_ludongzan",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_ludongzan"
+    ],
+    "claim_ids": [
+      "claim_ludongzan_lifetime_unknown",
+      "claim_ludongzan_not_songtsen"
+    ],
+    "title": "关于禄东赞，哪些信息现有资料没有记载",
+    "text": "故宫博物院人物词条对禄东赞的记载集中在他的官职、家族关系、辅政经历与出使活动上，未提供生卒年与去世时间。这一点在回答中应当如实说明，而不是用其他来源的记忆去补。本章对禄东赞的表述边界包括：不编造他在会见中的对白；不据画面服饰推断其民族身份或官阶细节；不把他与松赞干布混为一人；不补充词条未载的具体行程、随行人员与停留时间。同时也要说明，他虽然只在这幅画中作为一个拱手而立的使臣出现，但他是本章最重要的画外关系入口——从《步辇图》出发，正是经由他才能连接到松赞干布、唐蕃使节活动与641年前后的相关事件。总结来说，关于禄东赞，可以确定的是他的官职、家族关系、辅政与出使活动，以及他在《步辇图》画面中的位置；不确定的是他的生卒年、出使期间的具体经历与谈话内容。把这两类信息分清楚，回答才既准确又有用。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_017",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_emperor_taizong",
+      "period_tang"
+    ],
+    "claim_ids": [
+      "claim_taizong_identity"
+    ],
+    "title": "唐太宗其人：在位时间与身份",
+    "text": "故宫博物院藏品页在说明《步辇图》人物时介绍：唐太宗即李世民（599—649年），是唐高祖李渊次子，封秦王、任尚书令，发动玄武门之变后即位，627至649年在位；在位期间推行均田制、租庸调法、府兵制，开创「贞观之治」。本章使用这段介绍时，只把它用于回答「唐太宗是谁」这一类身份问题。需要说明的是，这一段是博物馆人物词条式的背景介绍，属于人物基本情况，不是对画面内容的描述，也不是对会见细节的记录。本章不把唐太宗的施政内容与《步辇图》画面直接绑在一起讲——两者是不同层面的材料，前者是历史背景，后者是图像表现，回答时应保持区分。这样的区分对本章尤其重要：用户容易把画中的人物形象与历史人物的全部生平混在一起。平台的做法是先给身份与基本背景，再说明画面能提供什么、不能提供什么，让用户知道两者不是同一回事。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_018",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_emperor_taizong",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_depicts_taizong",
+      "claim_artwork_not_all_participants"
+    ],
+    "title": "故宫资料如何描述画中的唐太宗",
+    "text": "故宫博物院藏品页描述《步辇图》时指出，李世民坐在由六名宫女抬着的坐榻（即步辇）上，另有三位宫女分别掌扇、持华盖；太宗面前站立三人。这是博物馆对画面形象的描述。回答「画面里谁是唐太宗」可以据此说明：画中坐于步辇之上的人物被识别为唐太宗。但必须同时说明边界：画面中的坐姿、神态、服饰与周围人物的安排属于艺术表现，不能直接当作历史现场的真实细节。尤其不能从画中的神态推断他当时的心情，也不能据此编造他对使臣说过的话。若用户问「唐太宗当时是不是很高兴」这类问题，正确的回答是：画面是图像材料，无法用来证明人物的真实心理。如果用户希望了解唐太宗的历史评价或施政内容，可以说明这属于唐代史的背景知识；本章只提供博物馆资料中对作品人物的简要介绍，不展开为唐太宗个人传记，也不把其施政内容与这幅画的表现意图直接挂钩。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_019",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_emperor_taizong",
+      "event_taizong_receives_ludongzan",
+      "event_tang_tubo_marriage_641"
+    ],
+    "claim_ids": [
+      "claim_taizong_participated_reception",
+      "claim_wencheng_participated_641"
+    ],
+    "title": "唐太宗在这次唐蕃交往中的角色",
+    "text": "在《步辇图》所表现的历史场景中，唐太宗是接见一方的核心人物；在图谱中体现为「唐太宗 PARTICIPATED_IN 唐太宗接见禄东赞」。在与641年相关的婚姻事件中，故宫博物院藏品页记载贞观十四年（640年）松赞干布遣使求婚、唐太宗应允，641年文成公主赴吐蕃完婚。因此，唐太宗在两条线索上都出现：一条是画面所表现的接见场景，一条是文献所记载的允婚与出嫁过程。这两条线索的关系是相关，而不是因果证明。平台不使用「因为接见，所以和平」一类表述，也不把唐太宗写成641年之后唐蕃关系的决定者。回答涉及他的问题时，应把画面层面的内容与文献层面的内容分别交代清楚。最后需要注意用词的精确：可以说唐太宗与641年的事件相关，可以说他在画面所表现的场景中是接见一方；但不应说他促成了此后长期的和平，那同样是超出材料范围的推断。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_020",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_songtsen_gampo",
+      "region_tubo"
+    ],
+    "claim_ids": [
+      "claim_songtsen_identity"
+    ],
+    "title": "松赞干布其人",
+    "text": "故宫博物院藏品页介绍：松赞干布（617—650年）是吐蕃第三十三代藏王，629年即赞普位后兼并诸部、统一吐蕃，定都拉萨，发展生产、创制文字、制定法律；641年与唐朝联姻迎娶文成公主，佛教也于此时开始传入西藏。这是博物馆人物词条式的背景介绍，可用于回答「松赞干布是谁」这类身份问题。平台使用这段材料时只作身份层面的说明，不用它去补充画面内容，也不据此推演他的心理或言辞。另外需要注意表述方式：这段文字中的「藏王」「赞普」等称谓来自博物馆的表述，平台在转述时保留其来源归属，不把政权称谓与今天的行政区划或民族作一一对应。在回答「松赞干布是谁」时，可以按这段博物馆介绍来讲，但不宜把它扩展成吐蕃通史。吐蕃政权的制度、疆域与其他赞普的情况需要另外的材料支持，本章不涉及，也不由AI推测补充。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_021",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_songtsen_gampo",
+      "artifact_bunian_tu",
+      "person_ludongzan"
+    ],
+    "claim_ids": [
+      "claim_songtsen_not_depicted",
+      "claim_ludongzan_mission_changan"
+    ],
+    "title": "松赞干布在画里吗",
+    "text": "松赞干布不在《步辇图》画面中，他不是这幅画中被描绘的人物。这一点必须回答得非常明确。画面表现的是唐太宗接见吐蕃使臣禄东赞，而禄东赞是松赞干布派出的使臣，他代表松赞干布来到长安，但画面中站立的并不是松赞干布本人。如果用户问「松赞干布在画里吗」「画面中间那个人是不是松赞干布」，正确回答是：不是，画面中拱手而立者是禄东赞。松赞干布在本章中通过画外关系出现，具体路径是「禄东赞 → 松赞干布」与「641年相关婚姻事件 → 松赞干布」。他也没有画卷热点——本章不会给任何不在画中的人物设置可点击的画面位置。这一点也解释了本章的关系设计：如果把他设成画卷热点，用户就会以为他出现在会见现场。正确的做法是让他只通过画外关系出现——用户点开禄东赞，再沿着使臣关系走到松赞干布，这个顺序本身就是对历史关系的准确表达。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_022",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_songtsen_gampo",
+      "event_tang_tubo_marriage_641"
+    ],
+    "claim_ids": [
+      "claim_songtsen_participated_641",
+      "claim_641_prior_stage_640"
+    ],
+    "title": "松赞干布与641年的联姻",
+    "text": "故宫博物院藏品页记载，贞观十四年（640年）松赞干布遣使求婚，唐太宗应允；641年文成公主赴吐蕃完婚，松赞干布与唐朝联姻迎娶文成公主。同一页面还提到，禄东赞是松赞干布派出的相国。因此在本章的关系结构中，松赞干布同时与两条线相连：一条是「禄东赞 → 松赞干布」，表示他派遣使臣；一条是「641年相关婚姻事件 → 松赞干布」，表示他是这一事件的当事人之一。表述时要注意：他是派遣一方与联姻一方，不应被写成被动接受的一方，也不应被写成整件事的唯一推动者。关于他本人的更多生平、施政与吐蕃内部情况，本批来源只提供了简要介绍，平台不展开推测。对用户而言，这两条边的意义在于：看到画面中那位使臣时，可以顺着关系链理解他背后站着的是谁。这不改变画面内容，但改变了用户对画面的理解方式——一幅画可以是一个关系网络的入口。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_023",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_princess_wencheng",
+      "event_tang_tubo_marriage_641"
+    ],
+    "claim_ids": [
+      "claim_wencheng_identity",
+      "claim_wencheng_participated_641"
+    ],
+    "title": "文成公主的身份与641年事件",
+    "text": "故宫博物院藏品页介绍：文成公主是唐朝宗室女；贞观十四年（640年）松赞干布遣使求婚，太宗应允；641年公主赴藏完婚。这是本章关于文成公主的基础事实。需要准确使用的措辞是「唐朝宗室女」——故宫资料并未给出她的具体名讳与家世细节，平台不作补充。她与《步辇图》的关系是本章的关键问题：她与这幅画有关，但这个关系不是通过画面建立的，而是通过历史事件建立的。因此在图谱中，她参与的边是「文成公主 PARTICIPATED_IN 641年相关婚姻事件」，而不是任何以《步辇图》为起点的 DEPICTS 边。这两者的区别，正是本章要向用户讲清楚的核心。回答「文成公主是谁」时，可以按故宫资料说明她是唐朝宗室女、641年赴吐蕃完婚；回答「她在画里吗」时，则要明确说明她不在画面中。两个问题的答案方向不同，不能混在一起回答。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_024",
+    "source_id": "src_dpm_minghuaji_bunian",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_princess_wencheng",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_wencheng_not_depicted"
+    ],
+    "title": "文成公主为什么不在画里",
+    "text": "《步辇图》描绘的核心场景是唐太宗接见吐蕃使臣禄东赞。文成公主是与这次唐蕃婚姻事件相关的重要历史人物，但不是画面中被描绘的核心人物。因此平台通过「禄东赞 → 历史事件 → 文成公主」展开她，而不是在画中人为增加一个并不存在的热点。这不是为了省事，而是内容准确性的要求：如果把文成公主设为画中可点击人物，用户就会接收到「她出现在这次会见现场」这一错误信息。故宫资料对画面的描述中，唐太宗面前站立的是禄东赞、引见官员与内官，宫女群体负责抬辇、掌扇与持华盖，没有任何一位被指认为文成公主，也没有任何一处可以支持把她放进画面的解读。如果用户追问「那她为什么与这幅画有关」，可以这样说明：这幅画所表现的那次使节会见，正是最终导向641年婚姻事件的环节之一；她虽然不在画中，却处在这条历史线索的另一端。这是历史关系问题，不是画面识别问题。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_025",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_princess_wencheng",
+      "event_princess_wencheng_journey",
+      "concept_cultural_exchange"
+    ],
+    "claim_ids": [
+      "claim_wencheng_journey_items",
+      "claim_641_supports_cultural_exchange"
+    ],
+    "title": "故宫资料关于文成公主入藏的记载",
+    "text": "故宫博物院藏品页在介绍文成公主时称：她知书识礼、博学多才，入藏时带去乐队、工匠、家具、绸缎、经籍和谷物种子等，促进了中原与吐蕃在政治、经济、文化、宗教方面的交流，深受藏族人民崇敬。这段内容可用于回答「文成公主入藏带了什么」这类问题，但引用时必须保留来源归属，说明这是故宫博物院藏品页的表述。同时要控制表述边界：其一，这段文字是一般性概述，未给出物品清单的详细考订，平台不补充具体数量与名目；其二，不应把入藏携带物写成此后一切文化交流的唯一来源，也不应把交流写成单向的输出。关于行程路线、里程与随行规模，本批来源未提供，平台一律不作补充。还有一点需要留意：这段表述出现在博物馆的人物介绍中，属于概括性说明；平台在引用时要保留其来源，不把它包装成本平台的独立结论，也不补充具体的物品清单与数量。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_026",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_princess_wencheng",
+      "person_ludongzan",
+      "concept_diplomatic_mission",
+      "event_tang_tubo_marriage_641"
+    ],
+    "claim_ids": [
+      "claim_wencheng_not_depicted",
+      "claim_ludongzan_participated_envoy_activity"
+    ],
+    "title": "怎样从画中人物追溯到文成公主",
+    "text": "在本章中，追溯到文成公主需要经过三步。第一步，从画面中识别出禄东赞：故宫博物院藏品页把太宗面前拱手而立者识别为吐蕃使臣禄东赞。第二步，从禄东赞走到画外：他受松赞干布派遣赴长安求婚并迎接文成公主入藏，因此连接到松赞干布与唐蕃使节活动。第三步，由使节活动连接到641年前后的婚姻事件，再连接到事件的当事人文成公主与松赞干布。这条链路的意义在于：用户不是被告知「文成公主也在画里」，而是自己走完了一条从画中人物通往画外历史的路径，从而理解一幅画能连接出多少画外的人物与事件。这也正是本章的产品目标。用户在界面上可以一步步看到这条链路：点击禄东赞，打开画外关系，看到松赞干布与唐蕃使节活动，再点开641年相关事件，最后到达文成公主。每一步都可查看来源，这样得到的认识比直接被告知结论更牢固。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_027",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "event_tang_tubo_envoy_634",
+      "concept_diplomatic_mission"
+    ],
+    "claim_ids": [
+      "claim_tang_tubo_envoy_634",
+      "claim_envoy_activity_includes_634"
+    ],
+    "title": "634年：吐蕃遣使至唐",
+    "text": "贞观八年（634年），吐蕃遣使至唐。这是本章事件线的起点，也是唐蕃使节往来的一次具体活动。平台对这一节点的表述只到「遣使至唐」这一层：不补充使者姓名、具体月份、行经路线、所携物品与交涉内容，因为这些细节不在本批审核资料中。回答时若用户追问，应说明现有资料只记载了遣使这一事实。把634年与641年两次遣使的关系讲清楚也很重要：它们是使节活动中的不同节点，不能合并成一次；把它们连起来的是「唐蕃使节活动」这一关系节点，而不是直接的时间因果。本章的事件线设定为634年至641年，用于说明一次会见之前还有更早的使节往来。在事件线的呈现上，634年是起点但不是重点：它的作用是说明在641年的会见之前，唐蕃之间已经有了使节往来，因此这次会见并非凭空发生的孤立事件，而是持续往来中的一个环节。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_028",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "event_tang_tubo_marriage_641",
+      "person_songtsen_gampo"
+    ],
+    "claim_ids": [
+      "claim_641_prior_stage_640",
+      "claim_tang_tubo_marriage_641"
+    ],
+    "title": "640年：遣使求婚与允婚",
+    "text": "故宫博物院藏品页记载，贞观十四年（640年）松赞干布遣使求婚，唐太宗应允。这是641年完婚的前期环节。把640年与641年分开表述，有助于用户理解这一事件不是单日发生的，而是包含遣使、求婚、允婚、迎亲、完婚等环节的过程。平台需要提醒的是：现有审核资料对这些环节的时间顺序提供了上述基本信息，但未提供各环节的具体月份、地点与交涉过程。因此本章不使用「641年的某一天」这类具体到日的时间表述，也不描述谈判的经过。事件在图谱中的位置是：它是唐蕃使节活动的组成部分，并与松赞干布、文成公主、禄东赞以及长安、吐蕃等地点相连。把640年与641年放在一起看，可以说明唐蕃之间的这一次婚姻并不是一次性的接触，而是包含多次遣使与回应的往来过程。至于这些往来中每一批使者的名录与行程，现有资料并未提供。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_029",
+    "source_id": "src_dpm_ludongzan",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_diplomatic_mission",
+      "person_ludongzan",
+      "person_songtsen_gampo",
+      "place_changan"
+    ],
+    "claim_ids": [
+      "claim_envoy_activity_related_songtsen",
+      "claim_envoy_activity_related_changan",
+      "claim_envoy_activity_includes_641"
+    ],
+    "title": "唐蕃使节活动：本章的关键中介节点",
+    "text": "「唐蕃使节活动」是本章关系结构中的关键中介节点。它的一端连接画中人物禄东赞——禄东赞参与使节活动；另一端连接三个方向：松赞干布（派遣一方）、长安（发生地点）与641年前后的婚姻事件。有了这个节点，用户从《步辇图》出发的路径就有了一条不依赖画面想象的通路：作品 → 禄东赞 → 使节活动 → 事件 → 文成公主。在图谱中，该节点与「政治交往」之间使用 SUPPORTS_STUDY_OF 连接，而不是因果边，避免把使节往来写成某种结果的充分原因。回答时需要避免的表述包括：把使节活动等同于双方一直友好，或者用一次使节活动推断长期关系状态。在界面上，这个节点是「查看画外关系」面板的核心一环；在AI回答中，它用于解释「为什么一幅画能连出这么多人」。它也是本章使用 SUPPORTS_STUDY_OF 而非因果边的代表性位置。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_030",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "event_tang_tubo_marriage_641",
+      "person_princess_wencheng",
+      "person_songtsen_gampo"
+    ],
+    "claim_ids": [
+      "claim_tang_tubo_marriage_641",
+      "claim_wencheng_participated_641",
+      "claim_songtsen_participated_641"
+    ],
+    "title": "641年发生了什么",
+    "text": "贞观十五年（641年），与文成公主入吐蕃相关的历史事件发生。故宫博物院藏品页的具体记载是：贞观十四年（640年）松赞干布遣使求婚、唐太宗应允，641年文成公主赴吐蕃完婚；同页并称禄东赞是松赞干布派出的相国，于641年春到长安迎接文成公主。故宫名画记页面则把《步辇图》所画场景系于贞观十五年（641），与唐太宗将文成公主许配松赞干布一事相联系。综合这些博物馆资料可以回答「641年发生了什么」：这一年发生了与文成公主入吐蕃相关的婚姻事件，其前后包含遣使求婚、迎亲与完婚等环节。平台不补充这些环节之外的具体日期与细节。在回答的时间精度上，平台只使用「贞观十五年」这样的纪年表述，不使用具体到月日的日期。这不是回避，而是因为现有资料提供的就是这一精度；把精度人为提高，等于制造不存在的确定性。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_031",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_ludongzan",
+      "event_taizong_receives_ludongzan",
+      "place_changan"
+    ],
+    "claim_ids": [
+      "claim_ludongzan_reception_641_spring",
+      "claim_reception_took_place_changan"
+    ],
+    "title": "641年春：禄东赞到长安迎接文成公主",
+    "text": "故宫博物院藏品页明确记载，禄东赞于贞观十五年（641年）春到长安迎接文成公主。这条记载把三件事串在一起：时间（641年春）、地点（长安）、人物行为（迎接文成公主）。它也是回答「这幅画画的是哪一次会见」的关键材料之一——《步辇图》表现的正是唐太宗接见这位吐蕃使臣的场景。必须注意的边界是：画面所表现的会见与「641年春到长安迎接」之间的对应关系，是由博物馆资料建立的联系，平台据此说明，但不进一步推定会见的具体日期、持续时长、在场者名单与谈话内容。这些内容在现有审核资料中没有记载，任何补充都将是编造。这也说明《步辇图》所表现的会见场景与禄东赞到长安迎亲的记载之间存在对应关系，而这一对应是博物馆资料建立的。平台据此刻画关系，不会进一步补写会见的具体流程，也不会为画面安排一个先后顺序。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_032",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "person_princess_wencheng",
+      "event_princess_wencheng_journey",
+      "region_tubo"
+    ],
+    "claim_ids": [
+      "claim_wencheng_travelled_tubo",
+      "claim_wencheng_journey_related_641"
+    ],
+    "title": "文成公主赴吐蕃完婚",
+    "text": "故宫博物院藏品页记载，641年文成公主赴吐蕃完婚。在图谱中，这条信息体现为「文成公主 TRAVELLED_TO 吐蕃」与「文成公主 PARTICIPATED_IN 文成公主入吐蕃行程」两条边。关于这次行程，平台能够说明的只有出发年代（641年）、目的地（吐蕃）与目的（与松赞干布完婚），以及馆方提到她入藏时携带了乐队、工匠、家具、绸缎、经籍与谷物种子等。至于行经地点、里程、随行人数、历时多久、途中发生什么，本批审核资料均未提供，因此平台不写、不画、不推测。如果未来要在地图上呈现这条行程，必须先补充权威来源，否则宁可保持空白。最后需要提醒的是：不得用后世概括的交通路线去填充这次行程。如果将来要在地图上呈现路线，必须先补充可支持具体区段的权威来源，并要求地图数据带有明确的置信标注；在此之前，行程只作为一个不带几何信息的节点存在。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_033",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "event_tang_tubo_marriage_641",
+      "place_changan",
+      "region_tubo"
+    ],
+    "claim_ids": [
+      "claim_641_related_changan",
+      "claim_641_related_tubo"
+    ],
+    "title": "641年事件的关联地点：长安与吐蕃",
+    "text": "641年相关婚姻事件在关系结构上与两个地点相连：长安与吐蕃。与长安的连接依据是，故宫博物院人物词条记载禄东赞曾亲自前往长安求婚，藏品页记载他于641年春到长安迎接文成公主；与吐蕃的连接依据是，藏品页记载641年文成公主赴吐蕃完婚，松赞干布在吐蕃迎娶。这两条边在图谱中都用 RELATED_TO 表达「关联地点／关联地区」，而不是把事件简化成发生在某一个点。平台不说明会见发生在长安的哪一座宫殿，也不给出吐蕃方面举行仪式的具体地点，因为这些内容不在本批资料来源中；把《步辇图》画面空间直接等同于长安城某一处实测空间，同样是禁止的。把两个地点都保留在关系结构中，还可以避免一种常见误读：把整件事理解成长安一地的宫廷事件。实际上，婚姻事件的另一半发生在吐蕃，文成公主本人也因此前往吐蕃；两端的材料需要分别说明。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_034",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_long_term_tang_tubo_relations",
+      "event_tang_tubo_marriage_641"
+    ],
+    "claim_ids": [
+      "claim_641_not_all_relations",
+      "claim_641_related_long_term"
+    ],
+    "title": "641年事件不等于全部唐蕃历史",
+    "text": "641年相关婚姻事件是唐蕃长期交往中的一个节点，但它不能代表此后全部唐蕃关系。本章在图谱中为此设置了专门的范围说明节点「长期唐蕃关系」，641年事件通过 RELATED_TO 与之相连，而不是把两者等同。回答「641年之后唐蕃就一直和平了吗」这类问题时，必须说明：一次婚姻事件只是一个节点，此后双方关系存在不同阶段，也存在冲突与关系变化，不能用「从此一直和平」来概括。同样不能说「唐蕃交流只有文成公主这一件事」。本章从一个事件切入，不等于呈现了全部历史；界面上也会明确提示这一点。这是内容准确性的要求，不能为了叙事顺畅而省略。如果用户希望了解641年之后的唐蕃关系，正确的回答是：那超出了本章的材料范围，需要以更完整的唐蕃关系研究为依据；本章能做的是明确划出边界，标注这是一个节点而非终点，并提供继续追问的入口。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_035",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "attribution_bunian_yanliben_catalogue",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_catalogued_as_yanliben"
+    ],
+    "title": "这幅画是谁画的：先看博物馆现行编目",
+    "text": "回答「这幅画是谁画的」，第一步应说明故宫博物院的现行编目：藏品页以「《步辇图》卷，唐，阎立本作」著录该作品，也就是说，博物馆在现行编目中将作者列为阎立本。这是关于编目状态的事实，应以「作者：阎立本（故宫现行编目）」的形式呈现，并提供查看归属说明的入口。第二步，不能停留在这句话上：编目记录不等于作者归属争议的终结。故宫名画记同时指出本幅无画家款印，归属依据来自北宋章伯益的篆书题识；故宫相关研究也记录过学界关于作者归属的讨论。因此完整的回答应当同时包含编目状态与归属说明两部分，缺一不可。界面上的做法是：在作品信息区显示「作者：阎立本（故宫现行编目）」，并在旁边提供「查看归属说明」入口；归属说明中再展开本幅无画家款印、北宋题识与研究讨论三项内容。这样既不隐藏信息，也不把复杂的归属问题压成一句话。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_036",
+    "source_id": "src_dpm_minghuaji_bunian",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "attribution_bunian_song_inscription",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_no_artist_signature",
+      "claim_bunian_song_inscription"
+    ],
+    "title": "本幅无画家款印是什么意思",
+    "text": "「本幅无画家款印」是故宫名画记资料对该作的明确记载，意思是画面本身没有画家本人的题款与印章。这一点常被用户误解，因此需要解释清楚：一幅古画上有画家的款印，通常可以作为作者自署的直接依据；而《步辇图》本幅没有这样的款印。那么它为什么会被归于阎立本？故宫名画记说明，依据是北宋章伯益以篆书题写的「唐相阎立本笔」。这条题识是北宋人写的，属于后世题写，不是画家本人的自署。理解这一点，就能理解为什么博物馆既要著录作者，又要注明无款印——这两件事并不矛盾，它们分别说明了「现行怎么编目」与「依据是什么」。还要注意「无款印」这一信息的适用范围：它说的是画面本身没有画家款印，不涉及后人添加的题跋与鉴藏印，也不涉及装裱部分。回答时应把范围讲清楚，不要把「无款印」扩大成「这幅画上没有任何文字」。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_037",
+    "source_id": "src_dpm_minghuaji_bunian",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "attribution_bunian_song_inscription"
+    ],
+    "claim_ids": [
+      "claim_bunian_song_inscription"
+    ],
+    "title": "北宋章伯益的篆书题识",
+    "text": "故宫名画记资料说明，北宋章伯益以篆书题称该作为「唐相阎立本笔」，这是该作长期被归于阎立本名下的重要依据。这条题识提供的是北宋时期人们对这幅画作者的认识，属于流传与鉴藏层面的材料。使用它时要注意三点：第一，它是北宋人题写，不是唐代画家本人的款印；第二，它反映的是北宋时期的归属意见，不能自动等同于今日学术研究的最终结论；第三，题识的价值在于说明了归属意见的来源，而不是证明归属本身。在回答「为什么故宫说阎立本作」时，这条材料与「本幅无画家款印」应当同时出现，才能把问题讲完整。如果把归属问题画成一条链，那么这条链是：画面本身没有作者自署，北宋时期有人题写「唐相阎立本笔」，后世据此著录与流传，博物馆现行编目为阎立本作，研究史对这一归属仍有讨论。平台把每一环都保留下来，用户才能看到结论是怎么形成的。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_038",
+    "source_id": "src_dpm_yuankan_xie_2018",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "attribution_bunian_research_discussion",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_attribution_discussion"
+    ],
+    "title": "作者归属的研究讨论",
+    "text": "《步辇图》的作者归属在研究史中存在讨论，涉及阎立本真迹、宋人摹本以及作者归属等问题。规格文档 §2.3 因此要求数据库不能只保存一个作者字段，而应区分「博物馆现行编目」与「研究说明」两类信息。平台的处理方式是：展示故宫现行编目，同时通过归属说明告诉用户作品归属存在进一步研究空间；既不为了求稳而删除讨论，也不擅自宣布「这幅画已经证明不是阎立本作品」。回答这一问题时，必须同时保留四项信息：故宫现行编目为阎立本作、本幅无画家款印、北宋章伯益篆书题「唐相阎立本笔」、研究史存在相关讨论。缺少任何一项，都会造成对用户的误导。需要说明的是，本章不展开具体的真伪考证细节，也不比较各家观点的高下；现有来源只支持说明「存在研究讨论」这一事实。如果用户希望深入了解，正确的做法是查阅原文，而不是由平台代为概括学术争论的胜负。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_039",
+    "source_id": "src_dpm_minghuaji_bunian",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "attribution_bunian_research_discussion",
+      "attribution_bunian_yanliben_catalogue",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_bunian_attribution_discussion",
+      "claim_bunian_catalogued_as_yanliben",
+      "claim_bunian_no_artist_signature"
+    ],
+    "title": "怎样回答「一定是阎立本亲笔真迹吗」",
+    "text": "被问到「这幅画一定是阎立本亲笔真迹吗」时，正确的回答结构是：第一，说明故宫博物院的现行编目是「唐，阎立本作」，这是博物馆当前的编目状态；第二，说明本幅无画家款印，归属的重要依据是北宋章伯益的篆书题识「唐相阎立本笔」；第三，说明相关研究史对作者归属、是否为原作或后世摹本等问题存在讨论，学界并没有一个可以由平台代为宣布的最终结论。因此不能说「100%无争议的阎立本亲笔真迹」，也不能反过来说「已经证明不是阎立本画的」。平台的角色是呈现编目与依据，并把研究讨论如实告知用户，而不是替学界作裁定。如果用户继续追问「那你倾向于哪一种」，正确的回答是：平台不表达倾向。这不是回避，而是内容职责的界定——博物馆负责编目，研究者提出论证，平台负责如实转述两者并把边界讲清楚。用户可以据此自行查阅原始研究。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_040",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_artwork_historical_evidence",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_artwork_not_photograph"
+    ],
+    "title": "历史画不是历史现场照片",
+    "text": "历史画是理解历史的重要图像材料，但画面表现、艺术创作和历史现场之间不能简单画等号。具体历史事实需要与文献和其他材料互相核验。因此，《步辇图》不能被当作现代意义上的现场照片使用。产品不得默认以下几种等式：画中的人物站位等于历史现场的精确站位；人物表情等于真实心理；画面动作等于当时真实动作的全过程；画面颜色等于所有人当日真实的服装颜色；画中人物等于当日现场的所有参与者。这一提示在本章详情页中以固定文案出现。回答涉及画面细节的问题时，应主动说明这是图像材料，而不是现场记录，并提示用户史实需要靠文献与其他材料互证。这条固定提示在详情页、关系透镜与AI回答中保持一致，不因叙事模式而改变。即使用户使用叙事模式提问，回答也只能说「我的画面中可以看到什么」，不能说「我亲眼看到什么」，更不能把画面当作现场记录来讲述。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_041",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_artwork_historical_evidence"
+    ],
+    "claim_ids": [
+      "claim_artwork_not_photograph",
+      "claim_artwork_not_all_participants"
+    ],
+    "title": "这幅画能证明什么、不能证明什么（四步说明）",
+    "text": "本章把图像证据边界拆成四步呈现给用户。第一步，画面能直接观察什么：例如画中有一位坐于步辇之上的人物、一位拱手而立的使臣、抬辇与掌扇的宫女等，这些是可以直接从画面看到的。第二步，博物馆资料如何说明：故宫博物院藏品页把坐者识别为唐太宗、把拱手者识别为禄东赞，并描述了引见官员与内官。第三步，其他文献能确认什么：使节往来、求婚、迎亲与641年完婚等内容来自文献记载，与画面互为参照。第四步，画面不能直接证明什么：现场的对白、心理、动作顺序、全部在场者名单与每个人当日真实的服饰颜色。把四步分开，用户才能理解一幅画在历史认识中的位置。四步说明的作用，是把一个抽象的学术原则变成用户可操作的判断步骤。当用户遇到「画里的人是不是真的这么站」这类问题时，可以顺着这四步自己判断：哪些是看到的，哪些是资料说的，哪些是文献确认的，哪些是画面无法证明的。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_042",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_artwork_historical_evidence",
+      "group_palace_women"
+    ],
+    "claim_ids": [
+      "claim_artwork_not_all_participants"
+    ],
+    "title": "画面人数不等于现场人数",
+    "text": "《步辇图》画面中出现了唐太宗、禄东赞、引见官员、内官与若干宫女。这是一幅画的选择与安排，不是一份签到名单。绘画在表现一个场景时，会受画幅比例、构图重心与叙事重点的影响；有些人物会被合并、省略或调整位置。因此，画面人数不能作为现场人数的证据，画中人也不能被当作当日现场所有参与者。回答「当时现场还有谁」「有多少人在场」这类问题时，正确做法是说明现有资料只描述了画面中的人物，未提供现场全部在场者的信息。把画面清单当作现场清单，是把历史画当成现场照片的一种典型误用。同样的道理也适用于画面中的其他要素：画面里有几位宫女、太宗坐在哪里、人物的朝向如何，这些都是绘画在特定画幅中的安排。它们可以用来讨论画家如何组织一个场景，但不能用来复原现场的空间布局与人数。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_043",
+    "source_id": "src_dpm_yuankan_xie_2018",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_artwork_historical_evidence",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_artwork_not_photograph"
+    ],
+    "title": "图像与文献互证是必要的",
+    "text": "图像材料与文献材料各有其局限。图像能提供画面中可见的形象与安排，但不能记录对白、心理与动作先后；文献能记载事件的时间、人物与过程，但未必能对应到画面上的某一个人物、某一处细节。因此，讨论《步辇图》与641年前后历史的关系时，需要让两类材料互相核验，而不是用其中一类去覆盖另一类。《步辇图》的相关研究正是在这一层面上展开的：作品本身、文献记载与流传题识需要分别讨论。本章的AI角色在回答时也应遵循同样的方法——画面层面的描述与文献层面的记载分别交代，遇到两者不能对应的地方，如实说明资料不足。需要说明的是，本章以《步辇图》为主线，图像与文献互证的具体案例有限，主要围绕作品主题与相关使节活动的对应关系展开。这不是完整的学术综述，而是一个帮助用户建立方法意识的入口：看到一幅画时，先问它能支持什么，再问它不能支持什么。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_044",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_long_term_tang_tubo_relations",
+      "event_tang_tubo_marriage_641"
+    ],
+    "claim_ids": [
+      "claim_641_not_all_relations",
+      "claim_641_related_long_term"
+    ],
+    "title": "一次婚姻事件只是一个入口",
+    "text": "本章从641年前后的相关婚姻事件切入，但这不等于呈现了唐蕃关系的全部。这一事件在图谱中通过 RELATED_TO 连接到「长期唐蕃关系」这一范围说明节点，表示它属于这段长期关系中的一个节点，而不是它的全部内容。对用户而言，这意味着看完本章之后，正确的理解是「从这里可以继续追问下去」，而不是「唐蕃关系就是这件事」。界面上会明确提示「本章从一个事件切入，不等于全部历史」。AI在回答时也应避免把641年的事件概括为整个唐蕃关系，避免使用「这件事决定了此后一切」这类表述。在界面上，这一范围说明会在用户打开文成公主节点或提问「是不是一直和平」时出现。它的作用不是给出一段通史，而是提醒用户：这幅画、这次会见、这一事件，都只是进入历史的入口；真正的历史认识需要更多材料与更长的时间尺度。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_045",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_long_term_tang_tubo_relations"
+    ],
+    "claim_ids": [
+      "claim_641_not_all_relations",
+      "claim_long_term_relations_complex"
+    ],
+    "title": "为什么不能说「文成公主之后就一直和平」",
+    "text": "唐与吐蕃的关系具有长期性与复杂性。使节往来、婚姻关系、人员流动与文化联系是其中的一部分；同时，双方关系在不同阶段存在变化，也包含冲突与紧张。一次婚姻事件不能推出此后长期和平，这是本章明确的内容红线。平台不使用的表述包括：「641年之后唐蕃一直和平」「一次和亲换来了长久的安定」「唐蕃关系从此进入和平时期」。当用户直接问「是不是一直和平」时，正确的回答是：641年的事件是长期关系中的一个节点，此后双方关系经历了不同阶段，既不能概括为一直和平，也不能简单概括为只有冲突。这一判断需要以更完整的唐蕃关系材料为依据，本章只负责把范围讲清楚，不代替通史叙述。还有一点需要说明：平台不给出任何形式的「关系评分」或「友好度指数」，也不用现代国际关系术语去套唐代的政权往来。这类量化与类比会掩盖材料本身的复杂程度。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_046",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_political_marriage",
+      "concept_long_term_tang_tubo_relations"
+    ],
+    "claim_ids": [
+      "claim_tang_tubo_not_only_marriage"
+    ],
+    "title": "和亲不是唐蕃关系的唯一内容",
+    "text": "在唐与吐蕃的交往中，婚姻与使节往来是其中的一部分，但不能把整个唐蕃关系简化成「只有一次和亲」，也不能把双方关系概括为「从此一直和平」。本章对「和亲」这一概念的使用保持谨慎：它用于指称以婚姻形式建立或调整政权间关系的做法，是一个解释性的概念工具，而不是对整段历史的总结。平台同样不作以下表述：把和亲写成此后和平的原因；把联姻双方简化成「赐婚」与「求亲」的单一叙事；或者反过来把联姻贬低为纯粹的政治交易而忽略其中的人员与文化流动。这些内容需要放到更长时段的关系变化中理解。对用户来说，这意味着在看完婚姻与使节这条线之后，还可以继续追问其他层面的往来与变化。本章提供的是一个入口而不是结论；把入口讲清楚，比给出一句概括性的评价更有价值，也更符合材料能支持的范围。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_047",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "tang_exchange",
+      "concept_long_term_tang_tubo_relations"
+    ],
+    "claim_ids": [
+      "claim_modern_concept_not_tang_goal"
+    ],
+    "title": "现代概念不能当作唐代人物的自觉目标",
+    "text": "当被问到「这次交流是不是为了中华民族共同体意识」时，需要作一个概念上的区分。「中华民族共同体意识」是现代语境中的概念与表述，它不能直接作为唐太宗、禄东赞、文成公主当时的主观目标来叙述。这不涉及对历史意义的评价高低，而是一个概念使用是否准确的问题：把现代概念安到古人身上，会让用户误以为当时的人以今天的框架在行动。平台可以讨论的，是长期人员往来与文化联系在历史上的作用与意义；不做的，是把现代概念直接翻译成唐代人物的动机。回答此类问题时，应先说明这一区分，再回到有来源支撑的史实层面。这类区分并不只适用于这一个问题。凡是用户用今天的词汇去问古代的情形，回答都应先做一次概念检查：这个说法在当时是否存在、指的是不是同一件事。做这一步检查，是内容准确性的基本要求，而不是对话技巧。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_048",
+    "source_id": "src_dpm_ludongzan",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "place_changan",
+      "person_ludongzan",
+      "concept_diplomatic_mission"
+    ],
+    "claim_ids": [
+      "claim_ludongzan_mission_changan",
+      "claim_envoy_activity_related_changan"
+    ],
+    "title": "长安：使节活动发生的地点",
+    "text": "长安是唐代都城，也是本章画外关系中的关键地点之一。故宫博物院人物词条记载禄东赞曾亲自前往长安，替松赞干布求婚并迎接文成公主；藏品页记载他于641年春到长安迎接文成公主。因此在图谱中，长安通过「唐蕃使节活动 RELATED_TO 长安」与「唐太宗接见禄东赞 TOOK_PLACE_AT 长安」两条边出现。回答涉及长安的问题时，可以说明它是唐代都城、是使节活动发生的地点。但不应进一步指认会见发生在哪一座宫殿或哪一处宫室：本批来源未提供这一信息，而《步辇图》画面中的空间布置属于绘画构图，不能被当作建筑空间的实测记录。此外，长安在唐代的地位与城市格局属于唐代史的背景内容，本章只在「使节活动发生地点」这一层面上使用它，不展开为都城制度或城市史的叙述，也不据画面构图推测建筑空间。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_049",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "place_changan",
+      "event_tang_tubo_marriage_641",
+      "event_taizong_receives_ludongzan"
+    ],
+    "claim_ids": [
+      "claim_641_related_changan",
+      "claim_reception_took_place_changan"
+    ],
+    "title": "长安在641年前后事件中的位置",
+    "text": "在本章的事件结构中，长安与两条线索相连：一是《步辇图》所表现的接见场景，博物馆资料把这一场景与禄东赞到长安的记载联系起来；二是641年前后的婚姻事件，文成公主自唐朝一方出嫁、禄东赞到长安迎接，这两点都与长安相关。需要说明的边界是：长安是这一系列活动的关联地点，而不是事件的全部空间。婚姻事件的另一半发生在吐蕃，文成公主前往吐蕃完婚，因此图谱中也存在「641年事件 RELATED_TO 吐蕃」这条边。把两地都讲出来，才能避免把整件事讲成长安一地的单一场景，也避免把人物的活动范围窄化。在关系透镜中，长安是第三层展开时会出现的节点之一。用户点开它，看到的是它与使节活动和641年事件的关联，而不是一张地图上的坐标。这种设计是有意的：在缺少权威地理材料的情况下，平台宁可只呈现关系，也不虚构位置精度。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_050",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "region_tubo",
+      "person_songtsen_gampo"
+    ],
+    "claim_ids": [
+      "claim_songtsen_identity"
+    ],
+    "title": "吐蕃与赞普：基本概念说明",
+    "text": "吐蕃是唐代文献中对青藏高原上以赞普为中心的政权的称呼，松赞干布为其赞普。故宫博物院藏品页介绍松赞干布时称他为吐蕃第三十三代藏王，629年即赞普位后兼并诸部、统一吐蕃，定都拉萨。在本章中，吐蕃作为画外区域节点，与641年相关婚姻事件以及文成公主前往吐蕃的行程相连。说明这个概念时需要注意：平台不使用「吐蕃」与今天某一民族或某一行政区域作一一对应的表述；这一政权在不同时期的疆域与政治中心有所变化，相关信息需要专门核验。本章对吐蕃的介绍保持在博物馆资料提供的范围内，不扩展为政权通史。在使用「吐蕃」这个词时，回答应保持在同一层面：它指的是唐代文献中以赞普为中心的政权。至于这一政权与今天的关系，属于需要专门表述的问题，本章不作简化类比，也不以区域名称去指称今天的人群。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_051",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "region_tubo",
+      "concept_personnel_exchange"
+    ],
+    "claim_ids": [
+      "claim_641_supports_personnel_exchange"
+    ],
+    "title": "吐蕃在本章图谱中的位置",
+    "text": "在本章的图谱中，吐蕃是画外区域节点，与三类内容相连：641年相关婚姻事件（关联地区）、文成公主（前往）、以及唐蕃人员往来这一研究概念。它的作用是把人物与事件落到地理层面，让用户看到这件事不止发生在长安一端的宫廷里。使用这个节点时要注意表述边界：区域名称用于指称历史政权所在的空间范围，不用于指称今天的人群；也不由区域标签去推断画面中某位人物的身份。此外，吐蕃与唐朝之间的关系在不同阶段有所变化，本章只呈现与641年前后事件相关的内容，不把两个政权的关系写成始终如一的单一状态。如果用户在关系图中点击吐蕃，能够看到的关联是事件、人物与人员往来这几项。这一节点不承载民族识别功能，也不用于给画面人物贴标签；它只是把历史关系放回地理语境中的一个位置标记。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_052",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "region_tubo",
+      "person_ludongzan",
+      "person_songtsen_gampo"
+    ],
+    "claim_ids": [
+      "claim_ludongzan_mission_changan",
+      "claim_songtsen_participated_641"
+    ],
+    "title": "吐蕃一方的两位核心人物：松赞干布与禄东赞",
+    "text": "在641年前后的唐蕃交往中，吐蕃一方在本章涉及两位核心人物：赞普松赞干布与他的重臣禄东赞。故宫博物院藏品页介绍松赞干布（617—650）为吐蕃第三十三代藏王，629年即赞普位，641年与唐朝联姻迎娶文成公主；故宫博物院人物词条介绍禄东赞为大伦（丞相），与松赞干布同属噶氏家族，受命辅佐赞普治理朝政，并曾亲自前往长安替松赞干布求婚、迎接文成公主入藏。两人的分工在回答中应当讲清楚：松赞干布是赞普与联姻一方，禄东赞是受派遣出使的重臣，也是《步辇图》画面中那位拱手而立的使臣。把二人混为一人，是本平台明确要避免的错误。回答涉及吐蕃一方的问题时，先把两人区分开，再分别说明各自的角色，是比较稳妥的顺序。这样既能回答「他是谁」，也能避免把使臣误认成赞普，或把赞普误认成画面中的人物。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_053",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_tang_figure_painting",
+      "artifact_bunian_tu"
+    ],
+    "claim_ids": [
+      "claim_costume_not_ethnicity"
+    ],
+    "title": "画面服饰可以怎样使用、不能怎样使用",
+    "text": "《步辇图》画面中的人物服饰是可见的图像信息，博物馆资料在描述画面时会提到服色，例如引见官员穿大红袍、内官穿白袍，并提到禄东赞的发型与服饰与中原不同。这些描述可以用于说明画面外观，也可以作为服饰史研究的材料。但必须同时说明它不能支持什么：服饰特征不等于单一民族身份；画面中的艺术表现不能独立证明历史人物的全部社会身份。因此本章明确不做「点击服装自动识别民族」这类功能，也不做「看衣服猜民族」的互动。使用服饰作为证据时，需要按看到什么、来源如何描述、能支持什么、不能推出什么这四层来呈现。在使用这些描述时，还应保留来源归属：服色描述来自故宫博物院藏品页对画面的说明，属于博物馆对画面外观的描述，不是对历史人物身份的判断。把描述与判断分开，是本章处理服饰材料的基本原则。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_tang_054",
+    "source_id": "src_dpm_yuankan_costume_2006",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_tang_figure_painting",
+      "figure_introductory_official"
+    ],
+    "claim_ids": [
+      "claim_costume_study_note",
+      "claim_costume_not_ethnicity"
+    ],
+    "title": "关于画面礼官服色的研究讨论",
+    "text": "《步辇图》中礼官的服色是相关研究的讨论对象之一。例如有研究以唐代礼官服色制度为切入点讨论该画的服色问题，对画面中礼官服色的具体色名提出不同意见。这类讨论属于学术观点，不是已经形成的定论。平台在使用此类材料时遵循三条原则：第一，引用时必须标明是研究观点，说明存在不同看法；第二，不把某一篇论文的结论写成唐代服色制度的一般结论；第三，不用服色讨论去推断画中人物的民族身份或具体官阶。服饰研究可以帮助理解画面，但不能替代对人物身份的独立考证，也不能把画面颜色直接当作当日真实服装颜色的记录。还要说明的是，本批来源中对服色的讨论属于学术研究层面的材料，具体论点与结论范围需要复核原文后才能引用。平台在正式版本中使用时，应当标明作者、刊名与期号，并把它作为「存在不同研究观点」的例证，而不是当作定论。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_tang_055",
+    "source_id": "src_dpm_bunian_collection",
+    "chapter_ids": [
+      "tang_exchange"
+    ],
+    "entity_ids": [
+      "concept_tang_figure_painting",
+      "figure_introductory_official",
+      "group_palace_women"
+    ],
+    "claim_ids": [
+      "claim_costume_not_ethnicity"
+    ],
+    "title": "为什么本章不做「看衣服猜民族」",
+    "text": "《步辇图》很容易被做成「点击服装，自动识别民族」的互动，本章第一版明确不做，理由是这种推断在方法上不成立。服饰特征不等于单一民族身份：同一种服饰元素可能在不同人群、不同场合、不同时期被使用；画面中的服饰又经过了画家的艺术处理，无法当作实地观察记录。此外，把画面人物按服饰划分成不同民族，还会把复杂的身份问题简化成标签问题。因此，如果使用画面服饰作为证据，必须显示四层信息：看到什么、故宫或学术研究如何描述、能支持什么、不能直接推出什么。这一原则适用于画面中的引见官员、内官与宫女群体等所有人物。如果用户希望了解画面中人物的服饰特征，可以按四层说明来回答：看到什么（例如大红袍、白袍）、故宫或学术研究如何描述、能支持什么（服饰样式与画面表现的讨论）、不能推出什么（民族身份与具体官阶）。这四层缺一不可。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  }
+]

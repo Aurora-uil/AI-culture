@@ -1,0 +1,405 @@
+{
+  "chapter_id": "han_encounter",
+  "flow_lens": {
+    "id": "han_flow_lens",
+    "name": "物品流动透镜",
+    "mode": "flow_items",
+    "intro": "每一项是一个“交流类别”，不是一条唯一的传播路线。点击类别会显示两栏内容：可以确认什么，以及不能直接推出什么。",
+    "question_flow": [
+      {"step": 1, "action": "打开物品流动透镜", "ui": "BTN-H02-02 / 物品流动"},
+      {"step": 2, "action": "选择一个交流类别", "ui": "FLOW-*"},
+      {"step": 3, "action": "查看“可以确认 / 不能直接推出”两栏说明", "ui": "Flow Item Card"},
+      {"step": 4, "action": "点击“看相关地点”，在基础地图上高亮相关节点", "ui": "BTN-H03-07"},
+      {"step": 5, "action": "点击“史料来源”，进入史料依据页查看对应来源条目", "ui": "BTN-H03-08"}
+    ],
+    "global_forbidden_inference": [
+      "不能把所有丝织品流动归因于张骞",
+      "不能将示意方向理解为唯一运输路线",
+      "不能为任何一类物品绑定唯一的原产地与目的地",
+      "不能把所有物种、器物的传播归功于张骞",
+      "不能把“某地出土某类物品”直接等同于“某条路线上的贸易”"
+    ],
+    "no_single_origin_policy": "本项目不把任何一类交流物品标注为单一原产地。用户询问“这东西从哪里来”时，回答应说明可以确认的交流事实、相关地点，以及现有资料不能支持的唯一来源结论。"
+  },
+  "flow_items": [
+    {
+      "id": "flow_silk_textiles",
+      "entity_id": "flow_silk_textiles",
+      "chapter_id": "han_encounter",
+      "name": "丝织品",
+      "category": "material_exchange",
+      "sort_order": 1,
+      "short_summary": "长距离交流中的重要高价值商品之一。",
+      "summary": "丝织品是本章物品流动透镜中的一类交流类别。这里的“丝织品”是一个类别名称，不是一条唯一的传播路线。",
+      "can_confirm": [
+        "丝绸是长距离交流中的重要高价值商品之一",
+        "尼雅遗址的出土物中包含丝绸类文物，说明织物类实物出现在丝路沿线的遗址中"
+      ],
+      "cannot_infer": [
+        "所有丝织品都沿同一条路线流动",
+        "所有丝织品都由同一群人运输或携带",
+        "某一件具体织物的出土地点就等于它的生产地点",
+        "丝织品的流动可以归因于张骞个人"
+      ],
+      "evidence_note": "本章可以确认的是丝绸作为高价值商品参与长距离交流，以及在沿线遗址中发现织物类实物；不能确认任何单一的原产地—目的地关系。",
+      "forbidden_inference": [
+        "不能把所有丝织品流动归因于张骞",
+        "不能将示意方向理解为唯一运输路线"
+      ],
+      "origin_display": {
+        "mode": "no_single_origin",
+        "text": "不为丝织品标注唯一的原产地与目的地。织物的流动可能包含多次转手、馈赠、赏赐与再分配，这些环节在材料中往往无法逐一还原。",
+        "related_node_ids": ["map_node_niya", "map_node_changan", "map_node_western_regions"]
+      },
+      "related_entity_ids": ["concept_silk_road_network", "concept_material_exchange", "site_niya"],
+      "claim_ids": ["claim_flow_silk_evidence"],
+      "source_ids": ["src_chnmuseum_silk_road", "src_ncha_niya"],
+      "primary_asset_id": null,
+      "review_status": "approved"
+    },
+    {
+      "id": "flow_horses",
+      "entity_id": "flow_horses",
+      "chapter_id": "han_encounter",
+      "name": "马匹",
+      "category": "material_exchange",
+      "sort_order": 2,
+      "short_summary": "汉代西向联系中受到关注的交流内容之一。",
+      "summary": "马匹是本章物品流动透镜中的一类交流类别，指马匹及相关畜产在不同地区之间的流动。",
+      "can_confirm": [
+        "在汉代西向联系的背景下，马匹是受到关注的交流内容之一",
+        "马匹及相关畜产可以作为一个独立的交流类别来观察"
+      ],
+      "cannot_infer": [
+        "马匹的引入或改良可以归功于张骞个人",
+        "具体马种名称、传入年代与路线（本章未核定的内容）",
+        "“某地出土马骨或马具”等于“某条路线上的马匹贸易”"
+      ],
+      "evidence_note": "本类别的具体证据与学术来源尚待补充，属于实施规格附录 A.4「学术来源待补」的范围。",
+      "forbidden_inference": [
+        "不能把马匹的引入或改良归功于张骞个人",
+        "不能写出未经核定的马种名称、传入年代与路线",
+        "不能由出土马骨或马具直接推定贸易路线"
+      ],
+      "origin_display": {
+        "mode": "no_single_origin",
+        "text": "不为马匹标注唯一的原产地与目的地。现有资料不足以支持任何具体的来源地结论。",
+        "related_node_ids": ["map_node_western_regions", "map_node_central_asia"]
+      },
+      "related_entity_ids": ["flow_horses", "concept_material_exchange", "region_western_regions"],
+      "claim_ids": ["claim_material_exchange_scope"],
+      "source_ids": ["src_chnmuseum_qin_han"],
+      "primary_asset_id": null,
+      "review_status": "review",
+      "content_team_todo": "待核验：需补充汉代马匹交流的学术来源，再逐条建立事实主张；在此之前本类别不进入 AI 检索。"
+    },
+    {
+      "id": "flow_plants_food",
+      "entity_id": "flow_plants_food",
+      "chapter_id": "han_encounter",
+      "name": "植物与食物",
+      "category": "material_exchange",
+      "sort_order": 3,
+      "short_summary": "作物、果木、饲草与食品等在不同地区之间的流动。",
+      "summary": "植物与食物是本章物品流动透镜中的一类交流类别。这一类别是最容易被简化的地方，常见说法会把某些物种的传入直接说成“张骞带回来的”，本章不接受这种写法。",
+      "can_confirm": [
+        "植物与食物可以作为汉代西向交流中的一个观察类别",
+        "物种传播需要通过多批次、多路径的交换与试种发生，在不同地区的接受时间也不相同"
+      ],
+      "cannot_infer": [
+        "葡萄、苜蓿等物种的传入可以归因于张骞个人",
+        "物种传播是一次完成的事件",
+        "物种传播是单一方向的传入",
+        "任何未经核定的传入年代与路径"
+      ],
+      "evidence_note": "关于葡萄、苜蓿等具体物种的传入年代、路径与文献依据，尚需补充学术来源并逐条建立事实主张。",
+      "forbidden_inference": [
+        "不能把葡萄、苜蓿等物种的传入全部归因于张骞个人",
+        "不能把物种传播写成一次完成的事件或单一方向的传入",
+        "不能给出未经核定的传入年代与路径"
+      ],
+      "origin_display": {
+        "mode": "no_single_origin",
+        "text": "不为植物与食物类物品标注唯一的原产地与目的地。用户问“葡萄从哪里来”时，回答应说明现有资料不足，并说明本章不把物种传播归功于张骞个人。",
+        "related_node_ids": ["map_node_western_regions", "map_node_central_asia"]
+      },
+      "related_entity_ids": ["flow_plants_food", "concept_material_exchange"],
+      "claim_ids": ["claim_species_not_all_zhangqian"],
+      "source_ids": ["src_chnmuseum_qin_han"],
+      "primary_asset_id": null,
+      "review_status": "review",
+      "content_team_todo": "待核验：需补充汉代物种交流的学术来源，再逐条建立事实主张；在此之前本类别不进入 AI 检索。"
+    },
+    {
+      "id": "flow_objects_technology",
+      "entity_id": "flow_objects_technology",
+      "chapter_id": "han_encounter",
+      "name": "器物与工艺",
+      "category": "material_exchange",
+      "sort_order": 4,
+      "short_summary": "器物本身的移动，与制作这些器物的技术的移动，需要分开取证。",
+      "summary": "器物与工艺是本章物品流动透镜中的一类交流类别。这一类别的难点在于区分两件事：器物本身的移动，与技术知识的移动。",
+      "can_confirm": [
+        "器物与工艺可以作为一个独立的交流类别来观察",
+        "同一处遗址中可能同时出现不同来源的器物"
+      ],
+      "cannot_infer": [
+        "由“某地出土外来风格器物”直接推出“技术由某地传入某地”",
+        "由本地出现模仿性产品推出技术已经完整传入",
+        "把具体技术或器物的传播归功于某一个人物或某一趟行程"
+      ],
+      "evidence_note": "判断技术传播还需要考虑本地仿制、多源影响与后代扰动等可能；相关学术来源待补充。",
+      "forbidden_inference": [
+        "不能由外来风格器物的出土直接推定技术传播方向",
+        "不能把具体技术或器物的传播归功于某一个人物"
+      ],
+      "origin_display": {
+        "mode": "no_single_origin",
+        "text": "不为器物与工艺标注唯一的原产地与目的地。器物的出土地点不等于技术的起源地。",
+        "related_node_ids": ["map_node_niya", "map_node_western_regions", "map_node_changan"]
+      },
+      "related_entity_ids": ["flow_objects_technology", "concept_material_exchange", "concept_cultural_exchange"],
+      "claim_ids": ["claim_material_exchange_scope"],
+      "source_ids": ["src_chnmuseum_qin_han"],
+      "primary_asset_id": null,
+      "review_status": "review",
+      "content_team_todo": "待核验：需补充汉代器物与工艺交流的学术来源，再逐条建立事实主张；在此之前本类别不进入 AI 检索。"
+    },
+    {
+      "id": "flow_envoys_people",
+      "entity_id": "flow_envoys_people",
+      "chapter_id": "han_encounter",
+      "name": "人员与使者",
+      "category": "people_exchange",
+      "sort_order": 5,
+      "short_summary": "使者及其随行人员的往来，是被文献记录较多的一类人员流动形式。",
+      "summary": "人员与使者是本章物品流动透镜中的一类交流类别，指使者及其随行人员在不同地区之间的往来。",
+      "can_confirm": [
+        "张骞第一次与第二次出使西域都从长安出发",
+        "第二次出使之后，汉与西域多个地区之间的使者往来进一步增加"
+      ],
+      "cannot_infer": [
+        "使者往来等同于人员流动的全部",
+        "所有文化交流都由官方使节推动",
+        "本类别可以画成一条固定的官方路线",
+        "由使者往来证明某个具体人物到过某个具体地点"
+      ],
+      "evidence_note": "被文献记录较多的是使者往来；商旅、工匠与在不同地区定居的人群记录较少，却构成网络的日常部分。",
+      "forbidden_inference": [
+        "不能把使者往来等同于人员流动的全部",
+        "不能把全部文化交流归因于官方使节推动",
+        "不能把本类别画成一条固定的官方路线"
+      ],
+      "origin_display": {
+        "mode": "no_single_origin",
+        "text": "本类别以人员与人群为主体，不使用“原产地—目的地”的表达；地图只高亮相关节点，不绘制唯一的往来方向。",
+        "related_node_ids": ["map_node_changan", "map_node_western_regions", "map_node_hexi_corridor"]
+      },
+      "related_entity_ids": ["flow_envoys_people", "concept_people_mobility", "concept_cultural_exchange"],
+      "claim_ids": ["claim_second_mission_envoys_increase", "claim_people_mobility_scope"],
+      "source_ids": ["src_chnmuseum_qin_han", "src_unesco_changan_tianshan"],
+      "primary_asset_id": null,
+      "review_status": "approved"
+    }
+  ],
+  "requested_flow_items_not_in_spec": {
+    "note": "任务要求中提到的“香料”与“金银器”两类物品，未出现在本章实施规格的交流类别清单中。规格 §9.2、§9.4、§24.3、§25.4 与 §33 给出的第一版类别为：丝织品、马匹、植物与食物、器物与工艺、人员与使者。为避免编造，本文件不新建这两类物品的实体与主张。",
+    "items": [
+      {"proposed_name": "香料", "status": "not_in_spec", "todo": "如需加入，需先补充权威来源（附录 A.4 学术来源待补），建立实体、事实主张与来源绑定，通过历史审核后再进入检索。"},
+      {"proposed_name": "金银器", "status": "not_in_spec", "todo": "如需加入，需先补充权威来源，建立实体、事实主张与来源绑定，通过历史审核后再进入检索。若加入，应归入“器物与工艺”类别或作为其子类，并按同一规则处理传播路径。"}
+    ]
+  },
+  "forbidden_relations": {
+    "note": "实施规格 §28.4 明确禁止把下列关系写成图谱边。relations.json 不包含这些边，仅在本字段登记说明。",
+    "relations": [
+      {"source_entity_id": "person_zhang_qian", "relation_type": "BROUGHT", "target": "artifact_five_star_brocade", "display_label": "携带", "reason": "现有资料不支持张骞与“五星出东方利中国”锦护膊存在直接关系。"},
+      {"source_entity_id": "person_zhang_qian", "relation_type": "SAW", "target": "artifact_five_star_brocade", "display_label": "见过", "reason": "现有资料不支持二者存在直接关系；该文物断代为汉晋。"},
+      {"source_entity_id": "person_zhang_qian", "relation_type": "CREATED", "target": "concept_silk_road_network", "display_label": "创造", "reason": "丝绸之路是长期形成、不断变化的交通与交流网络，不是由某一个人一次创造。"},
+      {"source_entity_id": "person_zhang_qian", "relation_type": "INTRODUCED", "target": "所有西域物种", "display_label": "引入", "reason": "只有在证据明确支持时，才可把具体物种传播与具体人物绑定；不得整体归因。"},
+      {"source_entity_id": "artifact_five_star_brocade", "relation_type": "OWNED_BY", "target": "person_zhang_qian", "display_label": "为…所有", "reason": "现有资料不支持二者存在直接关系。"}
+    ],
+    "relation_guard": {
+      "id": "guard_zhangqian_fivestar_no_direct_fact_relation",
+      "entity_a_id": "person_zhang_qian",
+      "entity_b_id": "artifact_five_star_brocade",
+      "guard_type": "NO_DIRECT_FACT_RELATION",
+      "reason": "实施规格 §25.6 要求的首条关系守卫记录。张骞与五星锦只能通过更长时段的交通网络、区域联系与章节策展逻辑发生间接连接。",
+      "review_status": "approved"
+    }
+  },
+  "chronology_assertions": [
+    {
+      "id": "chron_zhangqian_first_mission",
+      "entity_id": "event_zhangqian_first_mission",
+      "time_start": -138,
+      "time_end": null,
+      "time_precision": "year_start_only",
+      "display_label": "公元前138年起",
+      "claim_id": "claim_wudi_ordered_first_mission",
+      "review_status": "approved"
+    },
+    {
+      "id": "chron_fivestar_han_jin",
+      "entity_id": "artifact_five_star_brocade",
+      "time_start": -202,
+      "time_end": 420,
+      "time_precision": "period_range",
+      "display_label": "汉晋（公元前202—公元420年）",
+      "claim_id": "claim_fivestar_dating_hanjin_label",
+      "review_status": "approved"
+    },
+    {
+      "id": "chron_fivestar_excavation",
+      "entity_id": "artifact_five_star_brocade",
+      "time_start": 1995,
+      "time_end": 1995,
+      "time_precision": "year",
+      "display_label": "1995年（出土）",
+      "claim_id": "claim_fivestar_excavated_1995_m8",
+      "review_status": "approved"
+    },
+    {
+      "id": "chron_zhangqian_second_mission",
+      "entity_id": "event_zhangqian_second_mission",
+      "time_start": null,
+      "time_end": null,
+      "time_precision": "unknown",
+      "display_label": null,
+      "claim_id": "claim_zhangqian_second_mission_exists",
+      "review_status": "review",
+      "note": "实施规格未给出第二次出使的具体年代，因此不写入任何起止值。"
+    },
+    {
+      "id": "chron_period_western_han",
+      "entity_id": "period_western_han",
+      "time_start": null,
+      "time_end": null,
+      "time_precision": "unknown",
+      "display_label": null,
+      "claim_id": "claim_period_western_han_context",
+      "review_status": "review",
+      "note": "西汉起止年代待内容团队核定后回填，本文件不写入未经核定的年份。"
+    }
+  ],
+  "route_scope_vocabulary": {
+    "note": "实施规格 §9.1 要求“张骞行程相关”与“长期交通网络”必须分开。本章据此为地图节点、区段与图谱边使用以下 route_scope 取值。",
+    "values": {
+      "ZHANG_QIAN_ITINERARY": "与张骞出使直接相关的节点与关系",
+      "LONG_TERM_NETWORK": "长期交通网络覆盖的节点与关系",
+      "BOTH": "同时属于两个视图（本章为长安与西域）"
+    }
+  },
+  "evidence_page_groups": [
+    {
+      "group": "official",
+      "ui_label": "官方文博资料",
+      "source_ids": ["src_chnmuseum_silk_road", "src_chnmuseum_qin_han", "src_ncha_niya", "src_xjmuseum_five_star"],
+      "supports": ["公元前138年张骞出使", "汉代西域交通发展", "五星锦名称、断代、出土背景", "尼雅遗址基本情况"]
+    },
+    {
+      "group": "world_heritage",
+      "ui_label": "世界遗产资料",
+      "source_ids": ["src_unesco_changan_tianshan"],
+      "supports": ["丝绸之路是复杂路网", "长安—河西—天山交通廊道", "人员、商品、思想与技术交流"]
+    },
+    {
+      "group": "academic",
+      "ui_label": "学术研究",
+      "source_ids": ["src_han_shu_xiyu_zhuan", "src_rmrb_five_star"],
+      "supports": ["“西域”作为历史地域概念的文献表述", "五星锦铭文释读与形制的背景参考"]
+    }
+  ],
+  "source_gaps": {
+    "note": "实施规格附录 A.4「学术来源待补」列出的方向，本项目尚未登记具体来源；在补齐之前，相关类别的知识切片保持 review，不进入 AI 检索。",
+    "missing": [
+      {"topic": "张骞出使研究", "status": "todo"},
+      {"topic": "汉代西域交通研究", "status": "todo"},
+      {"topic": "河西走廊交通研究", "status": "todo"},
+      {"topic": "尼雅遗址考古资料（发掘报告）", "status": "todo"},
+      {"topic": "五星锦专业研究", "status": "todo"},
+      {"topic": "汉晋织锦研究", "status": "todo"}
+    ]
+  },
+  "spec_conflicts_and_gaps": {
+    "note": "以下为撰写本章内容数据时发现的、实施规格内部或规格与外部资料之间的不一致与缺口，供内容团队核验时参考。本文件不据此改写规格基线事实。",
+    "items": [
+      {
+        "type": "conflict",
+        "topic": "五星锦断代",
+        "detail": "实施规格 §2.1 与中国国家博物馆展览资料使用“汉晋（公元前202—公元420年）”；另有公开报道将该锦的织造时代表述为东汉。本项目对外统一采用“汉晋”，来源 src_rmrb_five_star 仅用于铭文释读与形制背景，且已在该来源的 review 备注中登记。"
+      },
+      {
+        "type": "spec_inconsistency",
+        "topic": "争议状态取值",
+        "detail": "实施规格 §2.5 要求铭文相关解释使用 controversy_status = review_required；而 SCHEMA.md 与数据库约束只允许 stable | disputed 两个取值。本文件按任务要求统一使用 disputed，并在 claims.json 中标注。"
+      },
+      {
+        "type": "missing_id",
+        "topic": "§28 关系对象缺少实体 ID",
+        "detail": "实施规格 §28.2 使用“长安—天山廊道交通网络”、§28.3 使用“丝路沿线社会与文化”“汉晋时期纺织技术与文化信息”作为关系对象，但 §26 的第一批实体 ID 清单未给出对应 ID。本文件补充了三个实体（concept_changan_tianshan_corridor、concept_silk_road_society_culture、concept_hanjin_textile_technology），全部标记 review。"
+      },
+      {
+        "type": "missing_data",
+        "topic": "§28.3 关系主体表述笼统",
+        "detail": "§28.3 第一条写作“张骞出使 | SUPPORTS_STUDY_OF | 汉与西域人员往来”，未指明是第一次出使、第二次出使还是统称。本文件将其绑定到 event_zhangqian_first_mission，并标记为需核验。"
+      },
+      {
+        "type": "missing_data",
+        "topic": "文物收藏机构缺失",
+        "detail": "实施规格 §32 文物录入模板要求填写“收藏/保管机构”，但规格正文未给出该文物的收藏机构。实体中的 collection 字段留空，等待内容团队依据官方藏品页核定。"
+      },
+      {
+        "type": "missing_data",
+        "topic": "第二次出使年代缺失",
+        "detail": "§2.1 只写到“张骞此后还进行了第二次出使”，未给出具体年代。本文件不为该事件写入任何起止年份。"
+      },
+      {
+        "type": "missing_data",
+        "topic": "西汉起止年代未给定",
+        "detail": "§26 只给出 period_western_han 的实体 ID，未给出年代范围。本文件不写入未经核定的年份，等待内容团队核定后回填。"
+      },
+      {
+        "type": "scope_gap",
+        "topic": "香料与金银器不在规格类别清单内",
+        "detail": "任务要求中提到的“香料”“金银器”未出现在 §9.2 / §9.4 / §24.3 / §25.4 / §33 的交流类别清单中。本文件不新建这两类物品的实体与主张，详见 requested_flow_items_not_in_spec 字段。"
+      },
+      {
+        "type": "missing_source_url",
+        "topic": "附录 A 未提供 public_url",
+        "detail": "附录 A 只给出三个内部来源编号（src_chnmuseum_silk_road、src_chnmuseum_qin_han、src_unesco_changan_tianshan）与可支持内容，未附公开链接。本文件为每个来源补填了机构官方公开页面地址，全部登记在 sources.json 中并标记 review 或 approved 状态；其中 src_xjmuseum_five_star 仅作为机构入口登记，未据其撰写任何事实主张。"
+      }
+    ]
+  },
+  "review_summary": {
+    "approved_note": "标记为 approved 的内容为实施规格基线事实的直接转写，或对产品规则与表达边界的说明。",
+    "review_entities": [
+      "period_western_han",
+      "place_dunhuang",
+      "place_yumen_pass",
+      "region_central_asia",
+      "concept_changan_tianshan_corridor",
+      "concept_silk_road_society_culture",
+      "concept_hanjin_textile_technology",
+      "flow_horses",
+      "flow_plants_food",
+      "flow_objects_technology"
+    ],
+    "draft_sources": ["src_xjmuseum_five_star"],
+    "review_chunks": [
+      "chunk_han_018",
+      "chunk_han_021",
+      "chunk_han_036",
+      "chunk_han_037",
+      "chunk_han_038",
+      "chunk_han_047",
+      "chunk_han_049",
+      "chunk_han_050"
+    ],
+    "review_relations": [
+      "rel_changan_part_of_corridor",
+      "rel_hexi_part_of_corridor",
+      "rel_niya_supports_society_culture",
+      "rel_fivestar_supports_textile_technology"
+    ]
+  }
+}

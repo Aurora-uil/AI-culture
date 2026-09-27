@@ -1,0 +1,422 @@
+{
+  "chapter_id": "tang_exchange",
+  "chapter_red_lines": {
+    "forbidden_simplification": [
+      "不得把《步辇图》当作历史现场照片：画面站位、表情、动作、颜色都不能等同于历史现场事实。",
+      "文成公主不在画中：不得设为画卷热点，不得出现在任何 DEPICTS 边终点，只能经「禄东赞 → 唐蕃使节活动 → 641年相关婚姻事件 → 文成公主」展开。",
+      "松赞干布不在画中：不得设为画卷热点，也不得把画面中拱手而立者说成他本人。",
+      "一次婚姻不等于唐蕃一直和平：不得使用「此后一直和平」「和亲换来了长久安定」等表述。",
+      "服饰不等于民族身份：不做「看衣服猜民族」，不据画面服饰直接推断某一人物的民族身份。",
+      "作者归属存在研究讨论：不得宣布争议已解决，既不能说「100%无争议的阎立本亲笔真迹」，也不能说「已证明不是阎立本作品」。",
+      "不得把现代「中华民族共同体意识」说成唐太宗、禄东赞、文成公主当时的自觉目标。",
+      "不得编造唐太宗与禄东赞的对白，不得编造文成公主的私人心理活动，不得声称亲眼见证历史现场。",
+      "不得把 641 年事件说成整个唐蕃关系，不得把「和亲」解释为唐蕃关系的唯一内容。",
+      "不得在画中为任何一位宫女指派真实姓名，尤其不得指认为文成公主。"
+    ],
+    "guard_codes": [
+      "DEPICTION_SCOPE_ERROR",
+      "ARTWORK_AS_CAMERA_ERROR",
+      "ATTRIBUTION_OVERCLAIM",
+      "EVENT_SCOPE_OVERCLAIM",
+      "IDENTITY_FROM_COSTUME_OVERCLAIM",
+      "MODERN_CONCEPT_PROJECTION"
+    ],
+    "fixed_disclaimer": "历史画是理解历史的重要图像材料，但画面表现、艺术创作和历史现场之间不能简单画等号。具体历史事实需要与文献和其他材料互相核验。"
+  },
+
+  "depiction_tags": [
+    {
+      "entity_id": "artifact_bunian_tu",
+      "depiction_tag": "ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "作品本体，不属于「被描绘人物」。对应热点 hs_bunian_artwork_self（整卷兜底热点）。",
+      "hotspot_id": "hs_bunian_artwork_self"
+    },
+    {
+      "entity_id": "person_emperor_taizong",
+      "depiction_tag": "IN_ARTWORK",
+      "depicted_in_artwork": true,
+      "display_note": "画中坐于步辇之上的人物，故宫藏品页识别为唐太宗。",
+      "hotspot_id": "hs_bunian_taizong"
+    },
+    {
+      "entity_id": "person_ludongzan",
+      "depiction_tag": "IN_ARTWORK",
+      "depicted_in_artwork": true,
+      "display_note": "画中太宗面前拱手而立的人物，故宫藏品页识别为吐蕃使臣禄东赞。本章唯一的画内—画外桥接节点。",
+      "hotspot_id": "hs_bunian_ludongzan"
+    },
+    {
+      "entity_id": "figure_introductory_official",
+      "depiction_tag": "IN_ARTWORK",
+      "depicted_in_artwork": true,
+      "display_note": "画面人物（角色身份，非确证历史人物）。故宫藏品页描述为三人中最右侧穿大红袍者。",
+      "hotspot_id": "hs_bunian_introductory_official"
+    },
+    {
+      "entity_id": "figure_inner_attendant",
+      "depiction_tag": "IN_ARTWORK",
+      "depicted_in_artwork": true,
+      "display_note": "画面人物（角色身份，非确证历史人物）。故宫藏品页描述为三人中最左侧白袍者。",
+      "hotspot_id": "hs_bunian_inner_attendant"
+    },
+    {
+      "entity_id": "group_palace_women",
+      "depiction_tag": "IN_ARTWORK",
+      "depicted_in_artwork": true,
+      "display_note": "画面群体：抬步辇与掌扇、持华盖的宫女。不拆分个体、不命名。",
+      "hotspot_id": "hs_bunian_palace_women"
+    },
+    {
+      "entity_id": "person_princess_wencheng",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": false,
+      "display_note": "画外关联人物。UI 固定提示「不是《步辇图》画中人物」。禁止设置热点。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "person_songtsen_gampo",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": false,
+      "display_note": "画外关联人物。画面中的禄东赞是其使臣，他本人不在画中。禁止设置热点。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "person_li_daozong",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": false,
+      "display_note": "画外关联人物（实体介绍待核验，暂不进入默认展开结果）。禁止设置热点。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "event_taizong_receives_ludongzan",
+      "depiction_tag": "EVENT",
+      "depicted_in_artwork": null,
+      "display_note": "画面所表现的历史场景，是「画面主题」与「历史事件」的衔接节点。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "event_tang_tubo_envoy_634",
+      "depiction_tag": "EVENT",
+      "depicted_in_artwork": null,
+      "display_note": "画外事件。事件线起点。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "event_tang_tubo_marriage_641",
+      "depiction_tag": "EVENT",
+      "depicted_in_artwork": null,
+      "display_note": "画外事件。由禄东赞经使节活动展开的核心中介节点。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "event_princess_wencheng_journey",
+      "depiction_tag": "EVENT",
+      "depicted_in_artwork": null,
+      "display_note": "画外事件（介绍待核验）。当前不给出任何地理节点。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "place_changan",
+      "depiction_tag": "PLACE",
+      "depicted_in_artwork": null,
+      "display_note": "画外地点。使节活动与接见场景的关联地点。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "region_tubo",
+      "depiction_tag": "PLACE",
+      "depicted_in_artwork": null,
+      "display_note": "画外区域。与641年事件及文成公主行程相连。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "concept_diplomatic_mission",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "画外关系节点（关系中介），非人物、非画面内容。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "concept_personnel_exchange",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "研究概念节点，仅由解释性边进入。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "concept_political_marriage",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "研究概念节点。使用时须避免把和亲当作唐蕃关系唯一内容。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "concept_long_term_tang_tubo_relations",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "范围说明节点，用于回答「是不是一直和平」。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "concept_artwork_historical_evidence",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "图像证据方法节点，支撑固定提示「历史画不是现场照片」。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "concept_cultural_exchange",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "本章主题概念节点。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "concept_tang_figure_painting",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "艺术史类别节点（为 §28.2 三元组新建）。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "concept_political_exchange",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "关系类别节点（为 §28.2 三元组新建）。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "period_tang",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "时代节点，图谱顶层。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "attribution_bunian_yanliben_catalogue",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "归属 Claim 节点。UI 显示「作者：阎立本（故宫现行编目）」。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "attribution_bunian_song_inscription",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "归属 Claim 节点（北宋题识）。",
+      "hotspot_id": null
+    },
+    {
+      "entity_id": "attribution_bunian_research_discussion",
+      "depiction_tag": "OUTSIDE_ARTWORK",
+      "depicted_in_artwork": null,
+      "display_note": "归属 Claim 节点（研究讨论）。回答作者问题时必须与其他三项同时出现。",
+      "hotspot_id": null
+    }
+  ],
+
+  "depiction_rules": {
+    "hotspot_entity_ids": [
+      "person_emperor_taizong",
+      "person_ludongzan",
+      "figure_introductory_official",
+      "figure_inner_attendant",
+      "group_palace_women",
+      "artifact_bunian_tu"
+    ],
+    "forbidden_hotspot_entity_ids": ["person_princess_wencheng", "person_songtsen_gampo"],
+    "forbidden_hotspot_note": "文成公主与松赞干布不得设置为画卷热点，也不得出现在任何 DEPICTS 边的终点（规格文档 §2.2、§28.4）。",
+    "hotspot_annotation_method": "全部人工预标注，不使用视觉识别、人脸识别或 OCR。",
+    "hotspot_review_note": "第一版全部 6 个热点坐标均为初值，review_status = review，待最终高清图确定后重新标注。"
+  },
+
+  "relation_layers": [
+    {
+      "layer": 1,
+      "name": "第一层：作品 → 画中人物",
+      "description": "从《步辇图》出发，展开画面中被描绘的人物。这是用户进入画外关系的起点。",
+      "root_entity_id": "artifact_bunian_tu",
+      "relation_ids": [
+        "rel_bunian_depicts_taizong",
+        "rel_bunian_depicts_ludongzan",
+        "rel_bunian_depicts_introductory_official",
+        "rel_bunian_depicts_inner_attendant",
+        "rel_bunian_depicts_palace_women"
+      ],
+      "entity_ids": [
+        "person_emperor_taizong",
+        "person_ludongzan",
+        "figure_introductory_official",
+        "figure_inner_attendant",
+        "group_palace_women"
+      ],
+      "ui_note": "UI 上对应「只看画中人物」筛选（IN_ARTWORK）。"
+    },
+    {
+      "layer": 2,
+      "name": "第二层：画中人物 → 画外人物与活动",
+      "description": "以禄东赞为桥接节点。他既在画中可见，又直接连接画外的松赞干布与唐蕃使节活动。",
+      "root_entity_id": "person_ludongzan",
+      "relation_ids": [
+        "rel_ludongzan_represented_songtsen",
+        "rel_ludongzan_participated_envoy_activity"
+      ],
+      "entity_ids": ["person_songtsen_gampo", "concept_diplomatic_mission"],
+      "ui_note": "用户点击禄东赞后，「查看画外关系」默认展开本层，至少展开 4 个相关实体。"
+    },
+    {
+      "layer": 3,
+      "name": "第三层：使节活动 → 641 年事件 → 人物与地点",
+      "description": "由使节活动连接到641年前后的婚姻事件，再由事件连接到文成公主、松赞干布与长安。文成公主只在本层出现。",
+      "root_entity_id": "concept_diplomatic_mission",
+      "relation_ids": [
+        "rel_envoy_activity_includes_641",
+        "rel_envoy_activity_includes_634",
+        "rel_envoy_activity_related_songtsen",
+        "rel_envoy_activity_related_changan",
+        "rel_wencheng_participated_641",
+        "rel_songtsen_participated_641",
+        "rel_641_related_changan",
+        "rel_641_related_tubo",
+        "rel_wencheng_participated_journey",
+        "rel_wencheng_journey_related_641"
+      ],
+      "entity_ids": [
+        "event_tang_tubo_marriage_641",
+        "event_tang_tubo_envoy_634",
+        "person_princess_wencheng",
+        "person_songtsen_gampo",
+        "place_changan",
+        "region_tubo",
+        "event_princess_wencheng_journey"
+      ],
+      "ui_note": "默认最多展开 3 层。文成公主在本层作为节点出现，不设画面热点。"
+    }
+  ],
+
+  "fixed_cards": [
+    {
+      "id": "card_why_wencheng_not_in_artwork",
+      "title": "为什么文成公主不在画里？",
+      "trigger_button_label": "为什么文成公主不在画里？",
+      "body_text": "《步辇图》描绘的核心场景是唐太宗接见吐蕃使臣禄东赞。文成公主是与这次唐蕃婚姻事件相关的重要历史人物，但不是画面中被描绘的核心人物。因此平台通过「禄东赞 → 历史事件 → 文成公主」展开她，而不是在画中人为增加不存在的热点。",
+      "buttons": [
+        { "id": "BTN-T03-04-A", "label": "查看故宫资料", "action": "open_source", "target": "src_dpm_bunian_collection" },
+        { "id": "BTN-T03-04-B", "label": "查看相关事件", "action": "open_entity", "target": "event_tang_tubo_marriage_641" }
+      ],
+      "related_entity_ids": ["person_princess_wencheng", "person_ludongzan", "event_tang_tubo_marriage_641"],
+      "source_ids": ["src_dpm_bunian_collection", "src_dpm_minghuaji_bunian"],
+      "review_status": "approved",
+      "note": "文案照抄规格文档 §9.4 固定知识卡，属固定内容，不使用 LLM 实时生成。"
+    },
+    {
+      "id": "card_artwork_evidence_boundary",
+      "title": "这幅画能证明什么、不能证明什么",
+      "trigger_button_label": "阅读图像证据边界",
+      "body_text": "历史画是理解历史的重要图像材料，但画面表现、艺术创作和历史现场之间不能简单画等号。具体历史事实需要与文献和其他材料互相核验。",
+      "four_step": [
+        "画面能直接观察什么",
+        "博物馆资料如何说明",
+        "其他文献能确认什么",
+        "画面不能直接证明什么"
+      ],
+      "source_ids": ["src_dpm_bunian_collection"],
+      "review_status": "approved",
+      "note": "文案照抄规格文档 §2.4 固定提示，属固定内容。"
+    },
+    {
+      "id": "card_attribution_note",
+      "title": "关于作者归属的说明",
+      "trigger_button_label": "查看归属说明",
+      "body_text": "故宫博物院藏品页现行编目为「《步辇图》卷，唐，阎立本作」。故宫名画记资料同时指出，本幅无画家款印，该作归于阎立本的重要依据是北宋章伯益的篆书题识「唐相阎立本笔」。相关研究史对作者归属、是否为原作或后世摹本等问题存在讨论。本平台展示博物馆现行编目，同时如实告知存在不同研究观点，不自行裁定学术争论。",
+      "four_items_must_appear": [
+        "故宫现行编目为阎立本作",
+        "本幅无画家款印",
+        "北宋章伯益篆书题「唐相阎立本笔」",
+        "研究史存在相关讨论"
+      ],
+      "source_ids": ["src_dpm_bunian_collection", "src_dpm_minghuaji_bunian", "src_dpm_yuankan_xie_2018"],
+      "review_status": "approved",
+      "note": "文案依据规格文档 §2.3 与 §10.1 编写；AI 回答作者问题时必须同时保留上述四项信息。"
+    }
+  ],
+
+  "timeline": {
+    "id": "tang_timeline_634_641",
+    "name": "634 → 641 事件线",
+    "description": "本章基础事件线，用于 T02 的「事件线」按钮。所有节点只保留资料能支持的精度，不虚构具体日期。",
+    "forbidden": "不得给出具体到日的日期；不得虚构月份、路线与谈判过程。",
+    "events": [
+      {
+        "id": "tl_tang_634",
+        "date_label": "贞观八年（634年）",
+        "date_start": "0634",
+        "date_end": "0634",
+        "title": "吐蕃遣使至唐",
+        "summary": "吐蕃遣使至唐。这是本章事件线的起点，也是唐蕃使节往来中的一次活动。资料未记载使者姓名、月份与交涉内容。",
+        "event_id": "event_tang_tubo_envoy_634",
+        "entity_ids": ["event_tang_tubo_envoy_634", "concept_diplomatic_mission"],
+        "source_ids": ["src_dpm_bunian_collection"],
+        "claim_ids": ["claim_tang_tubo_envoy_634"],
+        "review_status": "review"
+      },
+      {
+        "id": "tl_tang_640",
+        "date_label": "贞观十四年（640年）",
+        "date_start": "0640",
+        "date_end": "0640",
+        "title": "松赞干布遣使求婚，唐太宗应允",
+        "summary": "据故宫博物院藏品页，松赞干布遣使求婚，唐太宗应允。这是641年完婚的前期环节。",
+        "event_id": "event_tang_tubo_marriage_641",
+        "entity_ids": ["event_tang_tubo_marriage_641", "person_songtsen_gampo", "person_emperor_taizong"],
+        "source_ids": ["src_dpm_bunian_collection"],
+        "claim_ids": ["claim_641_prior_stage_640"],
+        "review_status": "approved"
+      },
+      {
+        "id": "tl_tang_641_spring",
+        "date_label": "贞观十五年（641年）春",
+        "date_start": "0641",
+        "date_end": "0641",
+        "title": "禄东赞到长安迎接文成公主",
+        "summary": "据故宫博物院藏品页，禄东赞于贞观十五年春到长安迎接文成公主。本章的核心画卷场景即描绘唐太宗接见这位吐蕃使臣。",
+        "event_id": "event_taizong_receives_ludongzan",
+        "entity_ids": ["event_taizong_receives_ludongzan", "person_ludongzan", "place_changan"],
+        "source_ids": ["src_dpm_bunian_collection", "src_dpm_ludongzan"],
+        "claim_ids": ["claim_ludongzan_reception_641_spring", "claim_reception_took_place_changan"],
+        "review_status": "approved"
+      },
+      {
+        "id": "tl_tang_641_marriage",
+        "date_label": "贞观十五年（641年）",
+        "date_start": "0641",
+        "date_end": "0641",
+        "title": "文成公主赴吐蕃完婚",
+        "summary": "据故宫博物院藏品页，641年文成公主赴吐蕃完婚，松赞干布与唐朝联姻迎娶文成公主。故宫名画记亦把《步辇图》所画场景系于贞观十五年。",
+        "event_id": "event_tang_tubo_marriage_641",
+        "entity_ids": ["event_tang_tubo_marriage_641", "person_princess_wencheng", "person_songtsen_gampo", "region_tubo"],
+        "source_ids": ["src_dpm_bunian_collection", "src_dpm_minghuaji_bunian"],
+        "claim_ids": ["claim_wencheng_participated_641", "claim_songtsen_participated_641", "claim_wencheng_travelled_tubo"],
+        "review_status": "approved"
+      }
+    ],
+    "period_note": "事件线到此为止。本章不把 641 年之后的关系写成「一直和平」，后续关系阶段须以另行补充的权威来源呈现。"
+  },
+
+  "recommended_questions": [
+    { "id": "q_tang_01", "text": "这幅画画的是哪一次会见？", "intent": "depicted_event", "faq_id": "faq_tang_06" },
+    { "id": "q_tang_02", "text": "禄东赞是谁？", "intent": "ludongzan_identity", "faq_id": "faq_tang_03" },
+    { "id": "q_tang_03", "text": "文成公主为什么不在画里？", "intent": "wencheng_outside_artwork", "faq_id": "faq_tang_22" },
+    { "id": "q_tang_04", "text": "松赞干布在画里吗？", "intent": "songtsen_depiction", "faq_id": "faq_tang_05" },
+    { "id": "q_tang_05", "text": "这幅画和真实历史现场完全一样吗？", "intent": "artwork_evidence_boundary", "faq_id": "faq_tang_08" },
+    { "id": "q_tang_06", "text": "这幅画一定是阎立本亲笔吗？", "intent": "attribution", "faq_id": "faq_tang_11" },
+    { "id": "q_tang_07", "text": "文成公主入吐蕃以后双方是不是一直和平？", "intent": "long_term_relation_scope", "faq_id": "faq_tang_16" },
+    { "id": "q_tang_08", "text": "为什么一幅画可以连接出这么多人？", "intent": "knowledge_graph_explanation", "faq_id": "faq_tang_24" }
+  ],
+
+  "ai_character_notice": "AI数字文物讲述者。第一人称表达属于基于审核资料的数字叙事重构，并非文物真实发言，也不代表历史现场原声。",
+  "offline_fallback_notice": "当前启用演示保障模式，以下内容来自已审核的预设问答库。",
+  "review_status": "review",
+  "content_team_todo": "1) 本文件的热点、关系分层与固定卡片均需随最终高清图与 §43 决策同步更新；2) fixed_cards 中三张卡片已按规格文档原文整理，改文须回到规格文档确认；3) relation_layers 仅包含已核验边，person_li_daozong 与行程地理节点在核验完成前不进入任何层。"
+}

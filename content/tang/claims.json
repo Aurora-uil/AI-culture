@@ -1,0 +1,625 @@
+[
+  {
+    "id": "claim_bunian_collection_dpm",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": null,
+    "claim_text": "《步辇图》现藏故宫博物院。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_catalogued_as_yanliben",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_catalogued_as_yanliben",
+    "claim_text": "故宫博物院藏品页以「《步辇图》卷，唐，阎立本作」著录该作品，属博物馆现行编目。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_no_artist_signature",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": null,
+    "claim_text": "故宫名画记资料说明，《步辇图》本幅无画家款印。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_minghuaji_bunian"]
+  },
+  {
+    "id": "claim_bunian_song_inscription",
+    "entity_id": "attribution_bunian_song_inscription",
+    "relation_id": "rel_bunian_has_attribution_song_inscription",
+    "claim_text": "北宋章伯益以篆书题称「唐相阎立本笔」，这是《步辇图》长期以来被归于阎立本名下的重要依据；该题识属北宋人题写，不是画家本人的款印。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_minghuaji_bunian"]
+  },
+  {
+    "id": "claim_bunian_attribution_discussion",
+    "entity_id": "attribution_bunian_research_discussion",
+    "relation_id": "rel_bunian_has_attribution_research",
+    "claim_text": "故宫相关研究记录过学界关于《步辇图》作者归属的讨论，涉及阎立本真迹、宋人摹本等问题；作者归属存在不同研究观点，尚未形成可宣布为定论的共识。",
+    "claim_type": "interpretation",
+    "controversy_status": "disputed",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_minghuaji_bunian", "src_dpm_yuankan_xie_2018"]
+  },
+  {
+    "id": "claim_bunian_dimensions_record",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": null,
+    "claim_text": "故宫博物院藏品页著录《步辇图》为绢本设色、纵38.5厘米、横129厘米；故宫名画记同一作品页面记为横139厘米，两处著录存在出入。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "disputed",
+    "review_status": "review",
+    "source_ids": ["src_dpm_bunian_collection", "src_dpm_minghuaji_bunian"],
+    "content_team_todo": "同一作品的横向尺寸在故宫两处官方页面不一致，须向院方核对后确定唯一权威值；在核定前，任何AI回答都不得给出单一确定尺寸。"
+  },
+  {
+    "id": "claim_bunian_depicts_taizong",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_depicts_taizong",
+    "claim_text": "故宫博物院藏品页把《步辇图》画面中坐于步辇之上的人物识别为唐太宗。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_depicts_ludongzan",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_depicts_ludongzan",
+    "claim_text": "故宫博物院藏品页把《步辇图》画面中唐太宗面前拱手而立的人物识别为吐蕃使臣禄东赞。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_depicts_introductory_official",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_depicts_introductory_official",
+    "claim_text": "故宫博物院藏品页描述画面中唐太宗面前站立三人，其中最右侧穿大红袍者为引见官员。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_depicts_inner_attendant",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_depicts_inner_attendant",
+    "claim_text": "故宫博物院藏品页描述画面中唐太宗面前站立三人，其中最左侧白袍者为内官。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_depicts_palace_women",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_depicts_palace_women",
+    "claim_text": "故宫博物院藏品页描述唐太宗坐于由六名宫女抬着的步辇上，另有三位宫女分别掌扇、持华盖。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_associated_reception",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_associated_reception",
+    "claim_text": "故宫博物院藏品页说明，《步辇图》表现的是唐太宗在宫内接见松赞干布派来的吐蕃使臣禄东赞的历史场景。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_theme_wencheng_marriage",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": null,
+    "claim_text": "故宫名画记把《步辇图》与唐贞观十五年（641）唐太宗将文成公主许配吐蕃赞普松赞干布一事联系起来，画面表现太宗接见前来求亲的吐蕃使臣禄东赞的场景。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_minghuaji_bunian"]
+  },
+  {
+    "id": "claim_taizong_identity",
+    "entity_id": "person_emperor_taizong",
+    "relation_id": null,
+    "claim_text": "唐太宗即李世民（599—649），唐高祖李渊次子，627年至649年在位。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_taizong_participated_reception",
+    "entity_id": "person_emperor_taizong",
+    "relation_id": "rel_taizong_participated_reception",
+    "claim_text": "在《步辇图》所表现的历史场景中，唐太宗是接见一方的核心人物。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_ludongzan_identity_dalun",
+    "entity_id": "person_ludongzan",
+    "relation_id": null,
+    "claim_text": "故宫博物院人物词条记载，禄东赞担任的官职为大伦，即丞相，与松赞干布同属噶氏家族。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan"]
+  },
+  {
+    "id": "claim_ludongzan_served_songtsen",
+    "entity_id": "person_ludongzan",
+    "relation_id": null,
+    "claim_text": "故宫博物院人物词条记载，禄东赞在松赞干布即位之初被任命为大伦，辅佐赞普治理朝政、开拓疆土。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan"]
+  },
+  {
+    "id": "claim_ludongzan_mission_changan",
+    "entity_id": "person_ludongzan",
+    "relation_id": "rel_ludongzan_represented_songtsen",
+    "claim_text": "故宫博物院人物词条记载，禄东赞曾亲自前往长安，替松赞干布求婚，并迎接文成公主入藏。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan"]
+  },
+  {
+    "id": "claim_ludongzan_not_songtsen",
+    "entity_id": "person_ludongzan",
+    "relation_id": null,
+    "claim_text": "禄东赞是松赞干布的重臣与使臣，不是松赞干布本人；《步辇图》画面中的拱手而立者据故宫资料为禄东赞。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan", "src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_ludongzan_lifetime_unknown",
+    "entity_id": "person_ludongzan",
+    "relation_id": null,
+    "claim_text": "故宫博物院人物词条未提供禄东赞的生卒年与去世时间，本平台不补充无来源的推测。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan"]
+  },
+  {
+    "id": "claim_ludongzan_reception_641_spring",
+    "entity_id": "person_ludongzan",
+    "relation_id": "rel_ludongzan_participated_reception",
+    "claim_text": "故宫博物院藏品页记载，禄东赞于贞观十五年（641年）春到长安迎接文成公主。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_ludongzan_participated_reception",
+    "entity_id": "person_ludongzan",
+    "relation_id": "rel_ludongzan_participated_reception",
+    "claim_text": "禄东赞作为吐蕃使臣参与《步辇图》所表现的接见场景；故宫博物院藏品页把画面中拱手而立者识别为禄东赞。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection", "src_dpm_ludongzan"]
+  },
+  {
+    "id": "claim_ludongzan_participated_envoy_activity",
+    "entity_id": "person_ludongzan",
+    "relation_id": "rel_ludongzan_participated_envoy_activity",
+    "claim_text": "禄东赞受松赞干布派遣赴长安求婚、迎亲，属唐蕃使节往来中的具体活动。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan", "src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_reception_took_place_changan",
+    "entity_id": "event_taizong_receives_ludongzan",
+    "relation_id": "rel_reception_took_place_at_changan",
+    "claim_text": "故宫博物院人物词条记载禄东赞曾亲自前往长安，藏品页记载其于641年春到长安迎接文成公主，相关使节活动与接见场景均与长安相关联。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan", "src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_wencheng_identity",
+    "entity_id": "person_princess_wencheng",
+    "relation_id": null,
+    "claim_text": "文成公主是唐朝宗室女。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_wencheng_participated_641",
+    "entity_id": "person_princess_wencheng",
+    "relation_id": "rel_wencheng_participated_641",
+    "claim_text": "故宫博物院藏品页记载，贞观十四年（640年）松赞干布遣使求婚、唐太宗应允，641年文成公主赴吐蕃完婚。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_wencheng_not_depicted",
+    "entity_id": "person_princess_wencheng",
+    "relation_id": null,
+    "claim_text": "文成公主不是《步辇图》画面中被描绘的核心人物；她与这幅画的关系经由相关历史事件建立，而不通过画面。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection", "src_dpm_minghuaji_bunian"]
+  },
+  {
+    "id": "claim_wencheng_journey_items",
+    "entity_id": "event_princess_wencheng_journey",
+    "relation_id": null,
+    "claim_text": "故宫博物院藏品页称文成公主入藏时带去乐队、工匠、家具、绸缎、经籍与谷物种子等，并称这促进了中原与吐蕃在政治、经济、文化、宗教方面的交流。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_wencheng_participated_journey",
+    "entity_id": "person_princess_wencheng",
+    "relation_id": "rel_wencheng_participated_journey",
+    "claim_text": "文成公主是641年前往吐蕃行程的主体人物。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_wencheng_travelled_tubo",
+    "entity_id": "person_princess_wencheng",
+    "relation_id": "rel_wencheng_travelled_tubo",
+    "claim_text": "故宫博物院藏品页记载，641年文成公主赴吐蕃完婚。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_songtsen_identity",
+    "entity_id": "person_songtsen_gampo",
+    "relation_id": null,
+    "claim_text": "松赞干布（617—650）为吐蕃赞普，629年即赞普位，此后兼并诸部、统一吐蕃，定都拉萨，641年迎娶文成公主。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_songtsen_participated_641",
+    "entity_id": "person_songtsen_gampo",
+    "relation_id": "rel_songtsen_participated_641",
+    "claim_text": "松赞干布是641年唐蕃婚姻事件的当事人之一，故宫博物院藏品页记载其于641年与唐朝联姻迎娶文成公主。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_songtsen_not_depicted",
+    "entity_id": "person_songtsen_gampo",
+    "relation_id": null,
+    "claim_text": "松赞干布不是《步辇图》画面中被描绘的人物；画面表现的是唐太宗接见其派出的使臣禄东赞，他本人不在画面中。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_tang_tubo_envoy_634",
+    "entity_id": "event_tang_tubo_envoy_634",
+    "relation_id": null,
+    "claim_text": "贞观八年（634年），吐蕃遣使至唐。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_tang_tubo_marriage_641",
+    "entity_id": "event_tang_tubo_marriage_641",
+    "relation_id": null,
+    "claim_text": "贞观十五年（641年），与文成公主入吐蕃相关的历史事件发生。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection", "src_dpm_minghuaji_bunian"]
+  },
+  {
+    "id": "claim_641_prior_stage_640",
+    "entity_id": "event_tang_tubo_marriage_641",
+    "relation_id": null,
+    "claim_text": "故宫博物院藏品页记载，贞观十四年（640年）松赞干布遣使求婚、唐太宗应允，属641年完婚的前期环节。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_641_related_long_term",
+    "entity_id": "event_tang_tubo_marriage_641",
+    "relation_id": "rel_641_related_long_term",
+    "claim_text": "641年相关婚姻事件是唐蕃长期交往中的一个节点，可作为研究长期唐蕃关系的材料。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_envoy_activity_includes_634",
+    "entity_id": "concept_diplomatic_mission",
+    "relation_id": "rel_envoy_activity_includes_634",
+    "claim_text": "贞观八年（634年）吐蕃遣使至唐，属唐蕃使节往来中的一次活动，也是本章634至641事件线的起点。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_envoy_activity_includes_641",
+    "entity_id": "concept_diplomatic_mission",
+    "relation_id": "rel_envoy_activity_includes_641",
+    "claim_text": "641年相关婚姻事件包含求婚、允婚、迎亲等使节环节，在关系结构上归属于唐蕃使节活动。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection", "src_dpm_ludongzan"]
+  },
+  {
+    "id": "claim_envoy_activity_related_songtsen",
+    "entity_id": "concept_diplomatic_mission",
+    "relation_id": "rel_envoy_activity_related_songtsen",
+    "claim_text": "松赞干布是唐蕃使节活动中的派遣一方，其重臣禄东赞受命赴长安为其求婚。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan", "src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_envoy_activity_related_changan",
+    "entity_id": "concept_diplomatic_mission",
+    "relation_id": "rel_envoy_activity_related_changan",
+    "claim_text": "长安是唐蕃使节活动的重要发生地点，禄东赞赴长安求婚并在长安迎接文成公主。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan", "src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_641_related_changan",
+    "entity_id": "event_tang_tubo_marriage_641",
+    "relation_id": "rel_641_related_changan",
+    "claim_text": "641年相关婚姻事件与长安相关联：文成公主自唐朝一方出嫁，禄东赞于641年春到长安迎接。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection", "src_dpm_ludongzan"]
+  },
+  {
+    "id": "claim_641_related_tubo",
+    "entity_id": "event_tang_tubo_marriage_641",
+    "relation_id": "rel_641_related_tubo",
+    "claim_text": "641年相关婚姻事件与吐蕃相关联：文成公主赴吐蕃与赞普松赞干布完婚。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_wencheng_journey_related_641",
+    "entity_id": "event_princess_wencheng_journey",
+    "relation_id": "rel_wencheng_journey_related_641",
+    "claim_text": "文成公主前往吐蕃的行程，是641年相关婚姻事件的组成部分。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_related_period_tang",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_related_period_tang",
+    "claim_text": "故宫博物院藏品页将《步辇图》编目为唐代作品，作品归属时代为唐。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_related_depicted_scene_period",
+    "entity_id": "event_taizong_receives_ludongzan",
+    "relation_id": null,
+    "claim_text": "作品被编目的时代（唐）与画面所表现事件的年代（据故宫资料系于641年前后）是两个不同的问题，须分别表述。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_dpm_bunian_collection", "src_dpm_minghuaji_bunian"],
+    "content_team_todo": "该表述由实现者依据两条故宫资料的时间信息整理而成，须经内容审核确认后再转 approved。"
+  },
+  {
+    "id": "claim_bunian_supports_tang_figure_painting",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_supports_tang_figure_painting",
+    "claim_text": "《步辇图》可作为研究唐代历史人物画与工笔重彩人物画的材料；故宫博物院藏品页描述其用细劲多变的线条塑造人物、设色浓重鲜艳，属工笔重彩人物画。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_supports_envoy_exchange",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_supports_envoy_exchange",
+    "claim_text": "《步辇图》可作为研究唐蕃使节交往的图像材料，其画面主题与使臣会见相关；它支持研究，不代表证明使节交往的全部细节。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection", "src_dpm_ludongzan"]
+  },
+  {
+    "id": "claim_bunian_supports_artwork_evidence",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_supports_artwork_evidence",
+    "claim_text": "《步辇图》可作为讨论图像史料与历史现场关系的材料：画面可支持观察层面的描述，历史事实须与文献和其他材料互相核验。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_dpm_yuankan_xie_2018"],
+    "content_team_todo": "本条为项目方法说明性质，所引来源为《步辇图》研究论文。建议补充一则图像史料学方法论来源，使其不止依赖单篇论文与项目内部表述。"
+  },
+  {
+    "id": "claim_641_supports_personnel_exchange",
+    "entity_id": "event_tang_tubo_marriage_641",
+    "relation_id": "rel_641_supports_personnel_exchange",
+    "claim_text": "641年相关婚姻事件可作为研究唐蕃人员往来的材料，其中包含使臣迎亲与随行人员流动等内容。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection", "src_dpm_ludongzan"]
+  },
+  {
+    "id": "claim_641_supports_cultural_exchange",
+    "entity_id": "event_tang_tubo_marriage_641",
+    "relation_id": "rel_641_supports_cultural_exchange",
+    "claim_text": "641年相关婚姻事件可作为研究文化交流的材料；故宫博物院藏品页称文成公主入藏带去乐队、工匠、家具、绸缎、经籍与谷物种子等，并称其促进了中原与吐蕃在政治、经济、文化、宗教方面的交流。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_envoy_activity_supports_political_exchange",
+    "entity_id": "concept_diplomatic_mission",
+    "relation_id": "rel_envoy_activity_supports_political_exchange",
+    "claim_text": "唐蕃使节活动可作为研究政权间政治交往的材料；使用 SUPPORTS_STUDY_OF 而不是因果边，避免把使节往来写成某一结果的原因。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_ludongzan", "src_dpm_bunian_collection"]
+  },
+  {
+    "id": "claim_bunian_curatorial_wencheng",
+    "entity_id": "artifact_bunian_tu",
+    "relation_id": "rel_bunian_curatorial_wencheng",
+    "claim_text": "本平台通过禄东赞和相关历史事件，从《步辇图》扩展到文成公主节点。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_dpm_bunian_collection"],
+    "curatorial_note": "该关系为数字叙事组织关系，不表示文成公主出现在画面中。默认更推荐通过事件中介连接，此边仅用于需要直接显示时使用。"
+  },
+  {
+    "id": "claim_artwork_not_photograph",
+    "entity_id": "concept_artwork_historical_evidence",
+    "relation_id": null,
+    "claim_text": "历史画是理解历史的重要图像材料，但画面表现、艺术创作和历史现场之间不能简单画等号；画中人物站位、表情、动作与颜色不能直接等同于历史现场事实。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_dpm_yuankan_xie_2018"],
+    "content_team_todo": "本条对应规格文档 §2.4 的固定内容边界，属项目方法说明。建议补充一则图像史料学或博物馆图像研究方法来源，使其具备独立的公开来源支撑。"
+  },
+  {
+    "id": "claim_artwork_not_all_participants",
+    "entity_id": "concept_artwork_historical_evidence",
+    "relation_id": null,
+    "claim_text": "画中人物不等于当日现场所有参与者；画面中的人数与在场名单只是本幅画面的呈现方式。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_dpm_bunian_collection"],
+    "content_team_todo": "同上，属项目方法说明，须经内容审核并考虑补充公开方法论来源。"
+  },
+  {
+    "id": "claim_costume_not_ethnicity",
+    "entity_id": "concept_tang_figure_painting",
+    "relation_id": null,
+    "claim_text": "服饰特征不等于单一民族身份；画面中的艺术表现不能独立证明历史人物的全部社会身份，不得据画面服饰直接推断人物民族。",
+    "claim_type": "interpretation",
+    "controversy_status": "disputed",
+    "review_status": "review",
+    "source_ids": ["src_dpm_yuankan_costume_2006"],
+    "content_team_todo": "服色与身份的关系本身在研究中存在讨论（参见所引《唐代礼官服色考》）。本条须由内容审核确认表述边界：只说明「服饰不能直接推出民族身份」，不讨论具体服色等级结论。"
+  },
+  {
+    "id": "claim_costume_study_note",
+    "entity_id": "concept_tang_figure_painting",
+    "relation_id": null,
+    "claim_text": "《步辇图》中的礼官服色是相关研究的讨论对象之一，例如有研究讨论画面中礼官服色应为绯色而非朱色等问题；此类讨论属于学术观点，不作为定论，也不用于推断人物身份。",
+    "claim_type": "interpretation",
+    "controversy_status": "disputed",
+    "review_status": "review",
+    "source_ids": ["src_dpm_yuankan_costume_2006"],
+    "content_team_todo": "须复核论文原文的具体论点、页码与结论范围后再定稿；引用时不得把该文观点写成唐代服色制度定论。"
+  },
+  {
+    "id": "claim_641_not_all_relations",
+    "entity_id": "concept_long_term_tang_tubo_relations",
+    "relation_id": null,
+    "claim_text": "641年相关婚姻事件是长期唐蕃关系中的一个节点，不能代表此后全部唐蕃关系，也不能据此推出此后双方一直和平。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_dpm_bunian_collection"],
+    "content_team_todo": "本条是规格文档 §2.5 与用户故事 US-06 要求的范围说明，但当前来源只能支持641年事件本身，不足以支撑「此后关系存在不同阶段」。须补充唐蕃关系通史性或专题性权威来源后转 approved。"
+  },
+  {
+    "id": "claim_long_term_relations_complex",
+    "entity_id": "concept_long_term_tang_tubo_relations",
+    "relation_id": null,
+    "claim_text": "唐与吐蕃的关系具有长期性与复杂性，使节往来、婚姻关系、人员流动与文化联系是其中的一部分，双方关系在不同阶段存在变化，也包含冲突与紧张。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_dpm_bunian_collection"],
+    "content_team_todo": "与上一条同因：需补充唐蕃关系权威来源。该条直接支撑AI回答「是不是一直和平」，须优先完成审核。"
+  },
+  {
+    "id": "claim_tang_tubo_not_only_marriage",
+    "entity_id": "concept_political_marriage",
+    "relation_id": null,
+    "claim_text": "婚姻与使节交往只是唐蕃关系的一部分，不能把整个唐蕃关系简化为「只有一次和亲」或「从此一直和平」。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_dpm_bunian_collection"],
+    "content_team_todo": "需补充唐蕃关系权威来源后转 approved。"
+  },
+  {
+    "id": "claim_modern_concept_not_tang_goal",
+    "entity_id": "tang_exchange",
+    "relation_id": null,
+    "claim_text": "现代语境中的「中华民族共同体意识」是当代概念，不能表述为唐太宗、禄东赞、文成公主当时使用的概念或他们的自觉目标；可以讨论的是长期人员往来与文化联系的历史意义。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": [],
+    "curatorial_note": "该条为平台叙事边界说明，直接来自规格文档 §2.7 与 §11.4 的禁止项，不属于可由博物馆资料支撑的史实性 Claim，因此不绑定外部来源，也不参与任何图谱边。AI回答涉及此问题时，应说明这是现代概念与历史概念的区分问题。",
+    "content_team_todo": "该条不绑定外部来源，须由内容审核与项目史学研究确认表述，并决定是否在正式版本中补充一则公开的史学方法论来源。"
+  }
+]

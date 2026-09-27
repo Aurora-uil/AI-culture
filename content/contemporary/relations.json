@@ -1,0 +1,1016 @@
+[
+  {
+    "id": "rel_qiang_has_tiaohua",
+    "source_entity_id": "ich_qiang_embroidery",
+    "target_entity_id": "technique_tiaohua",
+    "relation_type": "HAS_TECHNIQUE",
+    "display_label": "包含针法",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_tiaohua"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": null
+  },
+  {
+    "id": "rel_qiang_has_zhizi",
+    "source_entity_id": "ich_qiang_embroidery",
+    "target_entity_id": "technique_zhizi",
+    "relation_type": "HAS_TECHNIQUE",
+    "display_label": "包含针法",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_zhizi"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": null
+  },
+  {
+    "id": "rel_qiang_has_nahua",
+    "source_entity_id": "ich_qiang_embroidery",
+    "target_entity_id": "technique_nahua",
+    "relation_type": "HAS_TECHNIQUE",
+    "display_label": "包含针法",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_nahua"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": null
+  },
+  {
+    "id": "rel_qiang_has_piehua",
+    "source_entity_id": "ich_qiang_embroidery",
+    "target_entity_id": "technique_piehua",
+    "relation_type": "HAS_TECHNIQUE",
+    "display_label": "包含针法",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_piehua"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": null
+  },
+  {
+    "id": "rel_qiang_has_gouhua",
+    "source_entity_id": "ich_qiang_embroidery",
+    "target_entity_id": "technique_gouhua",
+    "relation_type": "HAS_TECHNIQUE",
+    "display_label": "包含针法",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_gouhua"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": null
+  },
+  {
+    "id": "rel_qiang_has_motif_flora",
+    "source_entity_id": "ich_qiang_embroidery",
+    "target_entity_id": "motif_flora",
+    "relation_type": "HAS_MOTIF_CATEGORY",
+    "display_label": "题材类别",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_motif_flora",
+      "claim_motif_flora_split_note"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "官方表述为「花草蔬果」；本平台拆分为 motif_flora 与 motif_fruit 属内部目录粒度调整，界面须说明。"
+  },
+  {
+    "id": "rel_qiang_has_motif_birds_animals",
+    "source_entity_id": "ich_qiang_embroidery",
+    "target_entity_id": "motif_birds_animals",
+    "relation_type": "HAS_MOTIF_CATEGORY",
+    "display_label": "题材类别",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_motif_birds_animals"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": null
+  },
+  {
+    "id": "rel_qiang_has_motif_people",
+    "source_entity_id": "ich_qiang_embroidery",
+    "target_entity_id": "motif_people",
+    "relation_type": "HAS_MOTIF_CATEGORY",
+    "display_label": "题材类别",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_motif_people"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": null
+  },
+  {
+    "id": "rel_qiang_protected_by_wenchuan",
+    "source_entity_id": "ich_qiang_embroidery",
+    "target_entity_id": "institution_wenchuan_cultural_center",
+    "relation_type": "PROTECTED_BY",
+    "display_label": "保护单位",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_qiang_protection_unit"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "保护单位身份不构成素材授权依据；素材可否展示 / 生成 / 训练以各自 rights_record 为准。"
+  },
+  {
+    "id": "rel_li_inheritor_qiang",
+    "source_entity_id": "person_li_xingxiu",
+    "target_entity_id": "ich_qiang_embroidery",
+    "relation_type": "REPRESENTATIVE_INHERITOR_OF",
+    "display_label": "代表性传承人",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_ihchina_li_xingxiu"
+    ],
+    "claim_ids": [
+      "claim_li_xingxiu_representative",
+      "claim_boundary_persona_relation_note"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "该事实关系不授权本平台模拟其人格、声音或个人风格。"
+  },
+  {
+    "id": "rel_digital_archiving_supports_qiang",
+    "source_entity_id": "practice_digital_archiving",
+    "target_entity_id": "ich_qiang_embroidery",
+    "relation_type": "SUPPORTS_PRESERVATION_OF",
+    "display_label": "支持保护",
+    "claim_type": "interpretation",
+    "review_status": "approved",
+    "source_ids": [
+      "src_wenchuan_qiang_2024"
+    ],
+    "claim_ids": [
+      "claim_practice_digital_archiving_fact",
+      "claim_practice_digital_archiving_interpretation"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "策展关联，界面以虚线渲染。该关联不表示数字化建档已使素材获得生成或训练授权。"
+  },
+  {
+    "id": "rel_ich_workshop_supports_qiang",
+    "source_entity_id": "practice_ich_workshop",
+    "target_entity_id": "ich_qiang_embroidery",
+    "relation_type": "SUPPORTS_PRESERVATION_OF",
+    "display_label": "支持保护",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_wenchuan_qiang_2024"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_ich_workshop_supports"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": null
+  },
+  {
+    "id": "rel_school_education_supports_qiang",
+    "source_entity_id": "practice_school_education",
+    "target_entity_id": "ich_qiang_embroidery",
+    "relation_type": "SUPPORTS_PRESERVATION_OF",
+    "display_label": "支持保护",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_wenchuan_qiang_2024"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_school_education_supports"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": null
+  },
+  {
+    "id": "rel_contemporary_design_supports_qiang",
+    "source_entity_id": "practice_contemporary_design",
+    "target_entity_id": "ich_qiang_embroidery",
+    "relation_type": "SUPPORTS_PRESERVATION_OF",
+    "display_label": "支持保护",
+    "claim_type": "fact",
+    "review_status": "approved",
+    "source_ids": [
+      "src_wenchuan_qiang_2024",
+      "src_mct_traditional_crafts_2022"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_contemporary_design_supports",
+      "claim_mct_policy_background"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当代文创开发指由人完成的当代设计实践，与 AI 辅助生成的文化创意图像属不同类别。"
+  },
+  {
+    "id": "rel_copyright_protection_supports_qiang",
+    "source_entity_id": "practice_copyright_protection",
+    "target_entity_id": "ich_qiang_embroidery",
+    "relation_type": "SUPPORTS_PRESERVATION_OF",
+    "display_label": "支持保护",
+    "claim_type": "fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_copyright_supports"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "该来源缺少公开 URL（附录 A.5 未提供），来源核验完成前本边保持 review。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_001_rights",
+    "source_entity_id": "pattern_qiang_001",
+    "target_entity_id": "rights_pattern_qiang_001",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_001_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_002_rights",
+    "source_entity_id": "pattern_qiang_002",
+    "target_entity_id": "rights_pattern_qiang_002",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_002_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_003_rights",
+    "source_entity_id": "pattern_qiang_003",
+    "target_entity_id": "rights_pattern_qiang_003",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_003_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_004_rights",
+    "source_entity_id": "pattern_qiang_004",
+    "target_entity_id": "rights_pattern_qiang_004",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_004_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_005_rights",
+    "source_entity_id": "pattern_qiang_005",
+    "target_entity_id": "rights_pattern_qiang_005",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_005_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_006_rights",
+    "source_entity_id": "pattern_qiang_006",
+    "target_entity_id": "rights_pattern_qiang_006",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_006_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_007_rights",
+    "source_entity_id": "pattern_qiang_007",
+    "target_entity_id": "rights_pattern_qiang_007",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_007_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_008_rights",
+    "source_entity_id": "pattern_qiang_008",
+    "target_entity_id": "rights_pattern_qiang_008",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_008_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_009_rights",
+    "source_entity_id": "pattern_qiang_009",
+    "target_entity_id": "rights_pattern_qiang_009",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_009_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_010_rights",
+    "source_entity_id": "pattern_qiang_010",
+    "target_entity_id": "rights_pattern_qiang_010",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_010_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_011_rights",
+    "source_entity_id": "pattern_qiang_011",
+    "target_entity_id": "rights_pattern_qiang_011",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_011_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_012_rights",
+    "source_entity_id": "pattern_qiang_012",
+    "target_entity_id": "rights_pattern_qiang_012",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_012_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_013_rights",
+    "source_entity_id": "pattern_qiang_013",
+    "target_entity_id": "rights_pattern_qiang_013",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_013_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_014_rights",
+    "source_entity_id": "pattern_qiang_014",
+    "target_entity_id": "rights_pattern_qiang_014",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_014_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_015_rights",
+    "source_entity_id": "pattern_qiang_015",
+    "target_entity_id": "rights_pattern_qiang_015",
+    "relation_type": "HAS_RIGHTS_RECORD",
+    "display_label": "权利记录",
+    "claim_type": "curatorial",
+    "review_status": "review",
+    "source_ids": [
+      "src_wenchuan_qiang_copyright_2026"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_015_registered",
+      "claim_boundary_default_deny_rights"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "当前权利记录为未获授权状态下的默认拒绝值。"
+  },
+  {
+    "id": "rel_pattern_qiang_001_category",
+    "source_entity_id": "pattern_qiang_001",
+    "target_entity_id": "motif_flora",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_001_registered"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "题材类别归属为平台按官方题材类型所作的目录划分，具体元素名称与来源作品待核验后本边方可转 approved。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_002_category",
+    "source_entity_id": "pattern_qiang_002",
+    "target_entity_id": "motif_flora",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_002_registered"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "题材类别归属待核验。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_003_category",
+    "source_entity_id": "pattern_qiang_003",
+    "target_entity_id": "motif_flora",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_003_registered"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "题材类别归属待核验。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_004_category",
+    "source_entity_id": "pattern_qiang_004",
+    "target_entity_id": "motif_flora",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_004_registered"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "题材类别归属待核验。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_005_category",
+    "source_entity_id": "pattern_qiang_005",
+    "target_entity_id": "motif_fruit",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_005_registered",
+      "claim_motif_flora_split_note"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "motif_fruit 为平台拆分类别，不是官方分类；若内容组决定回退，本边需一并调整。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_006_category",
+    "source_entity_id": "pattern_qiang_006",
+    "target_entity_id": "motif_fruit",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_006_registered",
+      "claim_motif_flora_split_note"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "motif_fruit 为平台拆分类别，待内容组确认。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_007_category",
+    "source_entity_id": "pattern_qiang_007",
+    "target_entity_id": "motif_fruit",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_007_registered",
+      "claim_motif_flora_split_note"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "motif_fruit 为平台拆分类别，待内容组确认。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_008_category",
+    "source_entity_id": "pattern_qiang_008",
+    "target_entity_id": "motif_birds_animals",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_008_registered"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "题材类别归属待核验。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_009_category",
+    "source_entity_id": "pattern_qiang_009",
+    "target_entity_id": "motif_birds_animals",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_009_registered"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "题材类别归属待核验；动物题材需逐案人工审核方可进入共创。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_010_category",
+    "source_entity_id": "pattern_qiang_010",
+    "target_entity_id": "motif_birds_animals",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_010_registered"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "题材类别归属待核验。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_011_category",
+    "source_entity_id": "pattern_qiang_011",
+    "target_entity_id": "motif_people",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_011_registered"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "人物题材默认不进入 AI 生成。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_012_category",
+    "source_entity_id": "pattern_qiang_012",
+    "target_entity_id": "motif_people",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_012_registered"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "人物题材默认不进入 AI 生成。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_013_category",
+    "source_entity_id": "pattern_qiang_013",
+    "target_entity_id": "motif_geometric",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_013_registered",
+      "claim_motif_geometric_no_official_source"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "motif_geometric 类别缺少官方资料来源，本边与类别本身均待核验。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_014_category",
+    "source_entity_id": "pattern_qiang_014",
+    "target_entity_id": "motif_geometric",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_014_registered",
+      "claim_motif_geometric_no_official_source"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "motif_geometric 类别待核验。",
+    "note": null
+  },
+  {
+    "id": "rel_pattern_qiang_015_category",
+    "source_entity_id": "pattern_qiang_015",
+    "target_entity_id": "motif_geometric",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "catalogue_fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_pattern_qiang_015_registered",
+      "claim_motif_geometric_no_official_source"
+    ],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "content_team_todo": "motif_geometric 类别待核验。",
+    "note": null
+  },
+  {
+    "id": "rel_demo_pattern_demo_flora_01_belongs_category",
+    "source_entity_id": "pattern_demo_flora_01",
+    "target_entity_id": "motif_flora",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "演示元素与其题材类别的归属关系。元素本身为项目自绘。"
+  },
+  {
+    "id": "rel_demo_pattern_demo_bird_01_belongs_category",
+    "source_entity_id": "pattern_demo_bird_01",
+    "target_entity_id": "motif_birds_animals",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "演示元素与其题材类别的归属关系。元素本身为项目自绘。"
+  },
+  {
+    "id": "rel_demo_pattern_demo_geometric_01_belongs_category",
+    "source_entity_id": "pattern_demo_geometric_01",
+    "target_entity_id": "motif_geometric",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "演示元素与其题材类别的归属关系。元素本身为项目自绘。"
+  },
+  {
+    "id": "rel_demo_pattern_demo_composite_01_belongs_category",
+    "source_entity_id": "pattern_demo_composite_01",
+    "target_entity_id": "motif_flora",
+    "relation_type": "BELONGS_TO_CATEGORY",
+    "display_label": "属于题材",
+    "claim_type": "fact",
+    "review_status": "review",
+    "source_ids": [
+      "src_ihchina_qiang_embroidery"
+    ],
+    "claim_ids": [],
+    "time_scope": null,
+    "route_scope": null,
+    "certainty": null,
+    "source_perspective": null,
+    "note": "演示元素与其题材类别的归属关系。元素本身为项目自绘。"
+  }
+]

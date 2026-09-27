@@ -1,0 +1,1223 @@
+[
+  {
+    "id": "chunk_qiang_001",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_qiang_ich_project",
+      "claim_qiang_project_code",
+      "claim_qiang_project_sequence"
+    ],
+    "title": "羌族刺绣的国家级非遗项目身份",
+    "text": "羌族刺绣是国家级非物质文化遗产代表性项目。中国非物质文化遗产网公开信息显示，该项目的项目序号为 852，项目编号为 Ⅶ-76。项目编号中的「Ⅶ」对应国家级非遗代表性项目分类体系中的「传统美术」这一类别。在本平台的界面与回答中，提到这一项目时应当使用完整的项目信息，而不是只给一个模糊的「很有名的羌绣」。需要特别注意的是，项目编号 Ⅶ-76 与项目序号 852 是两个不同的字段：前者是分类编号，后者是公布名录中的排列序号，两者不能互相替代，也不能混写。本平台把这两个字段作为项目基础信息的一部分固定保存，并在「项目来源」页面提供给用户直接核对。任何回答中出现的编号都应当与该来源保持一致，不得凭印象填写。在本平台中，这条项目信息同时出现在章节首页的项目卡与实体详情抽屉中，用户可以在任何一处点击「查看非遗项目来源」跳到来源说明页进行核对。项目编号与项目序号一旦在来源核验中被确认，就会以固定字段的形式保存，不参与任何自动改写或摘要压缩，以保证在任何一处引用时都保持一致。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_002",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_qiang_announcement_year",
+      "claim_qiang_category",
+      "claim_qiang_applicant_region"
+    ],
+    "title": "公布时间、批次、类别与申报地区",
+    "text": "根据中国非物质文化遗产网公开信息，羌族刺绣于 2008 年公布，属于第二批国家级非物质文化遗产代表性项目；其类别为传统美术；申报地区或单位为四川省汶川县。这三个字段合起来回答的是「这个项目是怎么进入国家级名录的」。本平台在界面上把它们作为项目卡的基础信息展示，并在用户点击「查看非遗项目来源」时链接到对应的公开页面。需要提醒的是，申报地区或单位记录的是该项目申报时的申报主体所在地或单位，不等于这项技艺只存在于这一个县，也不等于它的流行范围可以被行政区划框定。官方资料对流行范围的表述是「流行于四川等地羌族聚居区」，这是一个范围性描述，不应被改写成精确的行政边界。本平台把公布时间、批次、类别与申报地区四个字段放在同一张项目卡上，是为了让用户一眼看到这个项目进入国家级名录时的完整登记信息。这些字段都不做任何形式的推演：不根据批次推断项目的历史长短，不根据类别推断技艺的用途范围，也不根据申报地区推断技艺的全部分布。如果用户对这些字段有疑问，平台提供直接的来源链接，让用户自行核对公开页面上的原始登记内容。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_003",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery",
+      "institution_wenchuan_cultural_center"
+    ],
+    "claim_ids": [
+      "claim_qiang_protection_unit"
+    ],
+    "title": "保护单位：汶川县文化馆",
+    "text": "中国非物质文化遗产网公开信息显示，国家级非物质文化遗产代表性项目「羌族刺绣」的保护单位为汶川县文化馆。保护单位在非遗保护工作中通常承担项目建档、资料保存、传承活动组织、展示传播等基础性工作，是把一个名录上的项目与具体保护工作连接起来的机构节点。本平台把汶川县文化馆作为一个可查询的机构实体，用来回答「这个项目由谁保护」这一问题。这里有一条必须守住的边界：保护单位身份来自官方非遗公开信息，它是一个保护工作层面的身份，不是版权方身份，也不是素材授权方身份。一份羌绣图片能不能在本平台展示、能不能作为 AI 生成的输入、能不能用于模型训练，都必须逐条查看这份素材自己的权利记录，不能由「保护单位」这四个字推导出来。此外，保护单位这一节点在本章的知识图谱中也承担一个结构作用：它把「项目」这个抽象条目与「具体开展保护工作的机构」连接起来，使用户在浏览图谱时能够看到一个项目背后有实际的组织在运转。平台在这样的机构节点上不展示任何联系方式与业务信息，只展示可核验的公开身份以及它在项目中的角色。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_004",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_qiang_knowledge_base_basis"
+    ],
+    "title": "本平台关于这一项目的内容依据与核验流程",
+    "text": "本平台在当代这一章里，关于羌族刺绣的可确认事实，来自一组公开的权威资料：中国非物质文化遗产网的项目页面与传承人页面、汶川县人民政府门户网站关于羌绣保护传承实践的公开信息、全国标准信息公共服务平台关于《羌族刺绣》国家标准制定项目的公开信息，以及文化和旅游部等部门关于推动传统工艺高质量传承发展的公开文件。这些资料在进入本平台之前，需要经过一条固定的处理流程：来源录入、拆分为可溯源的 Claim、建立实体、文化内容审核、图片与音视频资产登记、建立权利记录、确定展示与生成与训练的权限、生成策略审核，最后才标记为可用。因此在本平台中，任何一条关于这一项目的事实陈述都应当能指回具体的来源，而不是来自模型的记忆或推测。这一流程中有一个容易被忽略的环节是「图片与音视频资产登记」：它要求在文化内容之外，单独为每一份视觉资产建立权利记录，并确定它在展示、裁切、生成与训练几个维度上的权限。只有两个环节都完成，一份内容才可能被标记为可用；只完成文化审核而缺少权利记录的素材，仍然不能进入生成素材库。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_005",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_qiang_distribution"
+    ],
+    "title": "羌族刺绣的流布范围如何表述",
+    "text": "官方资料介绍，羌族刺绣流行于四川等地羌族聚居区。这是一条范围性表述，本平台在引用时保持原样，不做精确化改写。在实际回答中，容易出现三类不恰当的加工。第一类是把范围性表述改写成精确的行政区划，例如说成「只分布在某一个县」。第二类是把它与人口统计数字绑定，例如给出一个具体的使用人数。第三类是把它与族群边界一一对应，暗示某种纹样只能属于某个民族。这三类加工在本平台都没有来源支持，因此不被允许。正确做法是：直接引用「流行于四川等地羌族聚居区」这一表述，并在用户追问更细的范围时说明当前审核资料没有提供更细的分布记录。这条规则与本章的整体原则一致：资料支持到什么程度，回答就到什么程度。平台把这类范围性表述完整保留在实体卡与回答中，并且在知识图谱上不使用行政区划形状去表现它，避免用户在视觉上把范围理解成边界。当用户希望进一步了解分布情况时，平台会说明当前审核资料没有提供更细的分布记录，并提示可以查看该项目的公开信息页面。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_006",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery",
+      "technique_tiaohua"
+    ],
+    "claim_ids": [
+      "claim_qiang_mingqing_tiaohua"
+    ],
+    "title": "明清时期的羌族挑花刺绣",
+    "text": "官方非遗资料介绍，明清时期羌族挑花刺绣已较为盛行。这是本平台当前掌握的一条关于时间维度的公开表述。它说明的是在明清这一历史时段内，挑花刺绣这一技艺已经达到较为盛行的程度，而不是说这项技艺起源于明清，也不是说它在明清之前不存在。本平台在引用这条表述时，不做起源推断，不补充具体年代，也不把它扩展成一条完整的技艺发展史。如果用户追问更早的起源或更细的演变过程，应当说明当前审核资料没有提供相应记录。此外需要注意，「盛行」描述的是技艺在当时的使用状况，不能被改写成产量、从业人数或商品化程度的量化结论。在这条表述上，平台还避免把「明清时期」与某一个具体年份绑定。公开资料给出的是一个时段，不是一个时点；把它精确化会制造出一种来源并不支持的确定感。用户在平台上查看项目历史时，看到的是这条时段性表述原文，以及一条说明：本平台当前没有掌握更早或更细的技艺演变记录。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_007",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery",
+      "concept_living_heritage"
+    ],
+    "claim_ids": [
+      "claim_qiang_life_relation"
+    ],
+    "title": "羌绣与日常生活的关系",
+    "text": "羌绣既具有装饰性，也与服饰、生活用品和日常使用场景有关。这一条来自官方资料，是本平台理解「为什么刺绣不只是图案」的关键依据。它意味着理解一项刺绣技艺，不能只停留在看图案好不好看，还要看它出现在什么物件上、被什么人用在什么场合。本平台据此把「绣品与使用场景」作为与「针法」「纹样题材」并列的一个探索入口。同时也需要注意这句话的边界：它说明的是羌绣与生活用品、日常场景有关这一总体事实，并没有提供「某一种绣品必然对应某一种针法」「某一种绣品只出现在某一种场合」这样的逐项对应关系。因此本平台不建立绣品与针法、绣品与纹样之间的具体关系边，除非未来补充了有来源支持的记录。这条总体性表述也解释了为什么平台在介绍绣品时不给出「使用方法」或「穿戴规范」之类的内容：来源支持的是关联的存在，不支持具体的使用规则。平台把可确认的关联与其边界一并呈现，让用户能够区分「与生活有关」这一事实和「应该怎么用」这一规范。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_008",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery",
+      "technique_tiaohua",
+      "technique_zhizi",
+      "technique_nahua",
+      "technique_piehua",
+      "technique_gouhua"
+    ],
+    "claim_ids": [
+      "claim_qiang_technique_list"
+    ],
+    "title": "官方资料列出的五种常见针法",
+    "text": "官方资料列出的羌族刺绣常见针法包括：架花（挑花）、织字（提花）、纳花（扎花）、撇花（平绣花）、勾花（链子扣）等。需要注意三种写法上的细节。第一，每一组名称的前后两部分是同一针法的不同叫法，例如「架花」与「挑花」指同一针法，不能当成两种针法分别计数。第二，官方表述的结尾是「等」字，说明这是一个列举而非穷尽清单，本平台不因此断言羌绣只有这五种针法。第三，本平台当前只说明这些针法被官方资料列为常见针法这一公开事实，不展开每一种针法的完整工艺流程。如果用户追问某一针法的具体绣制步骤，应当说明当前审核资料没有提供足够的工艺细节，并提示本平台的针法结构示意只用于帮助理解，不等于完整传统技艺教学。平台把五种针法作为并列的五个实体存储，每一个都带有自己的别名列表与来源标识。这样的结构使得用户可以从任何一个针法名称出发进入详情页，也可以在知识图谱中看到它们分别与项目相连。平台不在五种针法之间建立任何排序、从属或演化关系边，因为来源没有提供支持这些关系的信息。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_009",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery",
+      "concept_cultural_context"
+    ],
+    "claim_ids": [
+      "claim_boundary_no_digital_equals_craft",
+      "claim_boundary_ai_not_technique"
+    ],
+    "title": "针法不是图像风格：一条必须反复强调的边界",
+    "text": "挑花、纳花、勾花这些名称，指的是具体的手工技艺，不是图像风格标签，也不是滤镜预设。本平台在这条边界上执行两条硬性规则。第一，数字示意不等于实际手工技艺：页面上用来帮助理解针线关系的结构图与动画，以及由 AI 生成的平面图案，都不代表真实针法与绣制过程，不能作为判断一件实物是否属于某种针法作品的依据，也不能替代技艺传习。第二，AI 生成的平面图案不得被表述为「这就是挑花作品」。正确的说法是：该图像在构图上参考了经过审核的羌绣元素，用于数字文化创意示意，它并不等于由传统针法实际绣制的羌族刺绣作品。任何一个把针法当作风格关键词的用法，例如「用挑花风格生成一张海报」，都属于本平台明确不提供的功能。这条边界同样适用于平台自己的界面文案：即使某个界面元素在视觉上使用了类似线迹的纹理，文案也不会声称它展示了某种真实针法。当用户把针法名称当作风格词用于提问时，系统会先解释针法与图像风格的区别，再回答用户真正想了解的内容。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_010",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_tiaohua",
+      "technique_nahua",
+      "concept_cultural_context"
+    ],
+    "claim_ids": [
+      "claim_qiang_technique_list"
+    ],
+    "title": "如何回答「挑花和纳花有什么区别」",
+    "text": "这是一个很常见的问题，也是容易出错的地方。可以确认的部分是：架花（挑花）与纳花（扎花）都被官方资料列为羌族刺绣的常见针法，它们是两种不同的手工技艺，各自有不同的名称与别名。不能确认的部分是：它们在手工艺层面的逐项差别，例如针脚组织方式、绣制顺序、适用纹样范围等，本平台当前的第一批来源没有提供对应的工艺说明。因此正确的回答方式是：先说明两者都被官方资料列为常见针法并且是不同的技艺，再明确说明当前审核资料没有提供足以逐项对比的工艺细节，而不是自行比较出一个看起来专业的结论。本平台不做针法优劣比较，也不做「哪种更正宗」的判断，更不对任何实物做针法鉴定或针法真实性自动评分。平台在实现层面把这类问题归入「工艺细节对比」这一类别，并在检索时优先查找有来源的专业说明；如果没有找到，就直接返回资料不足的结论。平台不会为了回答的完整性而把通用的刺绣常识套用过来，因为通用的刺绣常识不等于这两种羌绣针法的实际记录。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_011",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_tiaohua",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_tiaohua"
+    ],
+    "title": "挑花（架花）：官方资料中的定位",
+    "text": "架花，又称挑花，是官方非遗资料中列出的羌族刺绣常见针法之一。中国非物质文化遗产网公开资料把它列为羌族刺绣的重要针法之一，这一项目在官方资料中也被介绍为明清时期已较为盛行的挑花刺绣。本平台在这条信息上能确认的是名称与定位：它是羌绣的常见针法，别名包括挑花与架花。本平台不能确认也不提供的是：完整的挑花教学、对具体实物的针法鉴定、以及「某张图片是不是挑花」的判断。用户在浏览这一针法时，界面会同时显示一条固定的提示：数字示意不等于实际手工技艺。这一提示不是装饰性文案，而是本章内容边界的一部分，任何关于挑花的回答都应当与它保持一致。这条固定提示在界面上的位置紧邻针法结构示意图，用户在查看示意图的同时就会看到它，而不需要展开折叠内容。这样安排的目的是让边界信息与展示内容处在同一视野内，而不是被放在不起眼的说明页里。当用户把该针法加入探索记录时，这条提示也会一并出现在探索总结的相关条目下。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_012",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_tiaohua"
+    ],
+    "claim_ids": [
+      "claim_boundary_no_digital_equals_craft"
+    ],
+    "title": "挑花页面上「可以确认」与「不能推出」的分界",
+    "text": "在挑花这一针法的详情页上，本平台把信息明确分成两栏。可以确认的一栏写的是：官方非遗资料将架花（挑花）列为羌族刺绣的重要针法之一，别名包括挑花与架花。不能推出的一栏包括几项：不能由这一名称推出它在任何一件具体实物上的使用；不能由图像外观推出它出自挑花；不能由挑花推出一件绣品的年代、产地或制作者；不能由挑花推出使用者或制作者的身份、地域或民族支系。这一分栏结构在本章中反复出现，原因是本章的一个核心设计判断：先让用户知道资料支持什么，再让用户知道资料不支持什么。只有这两栏同时可见，用户才不会把一个名称误当成一个可以到处套用的结论。这个分栏结构同时决定了平台在回答时的句式：凡是属于「可以确认」一栏的内容，回答可以使用确认性表述并给出引用；凡是属于「不能推出」一栏的内容，回答需要明确说明平台不做此类判断。用户在资料模式下能够看到这两栏的区分，在简明模式下则会在回答末尾看到一条简短说明。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_013",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_tiaohua",
+      "concept_ai_cocreation"
+    ],
+    "claim_ids": [
+      "claim_boundary_ai_not_technique"
+    ],
+    "title": "挑花能否作为 AI 共创的参考",
+    "text": "在本章的共创机制中，针法只能作为视觉结构参考参与 Prompt 编译，不能作为「风格名称」直接交给图像模型，也不能在生成结果中宣称完成了该针法。具体到挑花：如果用户选择了以挑花作为结构参考，编译后的生成目标仍然是「AI 辅助文化创意图像」，而不是「一件挑花作品」。生成结果页会说明哪些内容来自传统参考、哪些是 AI 新增，并固定标注「AI辅助文化创意作品 · 非传统羌绣原作」。任何输出中出现「这是真实手工挑花作品」「由挑花针法绣制」之类的表述，都会被内容校验拦截并重写。此外，本平台的针法是否可作为生成结构参考，需要由后台配置决定，不由模型实时判断；在当前第一批配置中，五种针法的该权限均为待审核状态。在权利层面，针法元素本身也不是可自由使用的素材：它同样需要生成策略的配置才能进入共创流程。平台把「针法是否可作为结构参考」记录在针法实体的字段中，并在共创流程开始生成之前再次校验，确保一次生成所使用的所有参考元素都处于允许状态。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_014",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_tiaohua",
+      "object_embroidery_shoes"
+    ],
+    "claim_ids": [
+      "claim_object_technique_relation_blocked"
+    ],
+    "title": "为什么图谱里没有「挑花—绣花鞋」这条线",
+    "text": "本章的知识图谱示例图中出现过「挑花 → 绣花鞋 → 授权作品 → 文化元素」这样一条链路。需要说明的是，这张示例图的作用是演示图谱可以怎样由针法延伸到绣品、再由绣品延伸到具体元素，它本身不是一条已确认的关系。本平台执行的一条规则是：具体绣品与针法、纹样之间的关系必须绑定来源 Claim 才能建立。第一批来源没有提供「绣花鞋由挑花绣制」这样的逐项对应记录，因此这条边不会被写入数据。用户在知识图谱中如果找不到这类连接，界面会提示这条关系需要来源支持。这样处理会牺牲一点图谱的视觉丰富度，但它避免了用示意图冒充事实。平台在图谱界面上对这类缺失关系有统一的处理方式：当用户尝试展开一个绣品节点时，如果没有可展开的来源支持关系，界面会提示该节点当前没有可展示的已确认关系，而不是显示一条占位连线。这种处理会让部分节点看起来没有连接，但它的好处是用户不会把任何一条线误当成有来源支持的事实。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_015",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_zhizi",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_zhizi"
+    ],
+    "title": "织字（提花）：官方资料中的定位",
+    "text": "织字，又称提花，是官方非遗资料中列出的羌族刺绣常见针法之一。本平台在这条信息上能确认的是名称与定位，以及它的别名写法。需要特别提醒的是「织字」这一名称本身容易引起过度联想：名称中的「字」不等于任何一件具体实物上一定带有文字内容，也不等于纹样中出现的几何外形可以被读成某个字或某句话。把外形读成字，属于看图推测，本平台不提供这类判断。如果用户询问这一针法是否与特定文字相关，正确的回答是说明当前审核资料没有提供该针法所涉文字内容的记录，而不是给出一个看起来合理的字。同样，这一针法在共创中也只能作为视觉结构参考，不得输出「这是真实手工织字作品」之类的表述。平台在针法说明中不使用任何可能被解读为文字示例的图示，也不展示任何所谓的「字形对照」，以避免用户把外形与文字建立本不存在的联系。如果用户主动提出这类联想，系统会说明这属于看图推测，平台不提供此类判断，并提示可以查看有来源的公开资料。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_016",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_zhizi"
+    ],
+    "claim_ids": [
+      "claim_boundary_no_fabricated_names"
+    ],
+    "title": "针法名称能推出什么、不能推出什么",
+    "text": "针法名称是本平台第一批内容中最稳定的信息之一，因为它们直接来自官方资料的列举。但名称的稳定性不等于它可以承载推论。以「织字（提花）」为例，名称告诉我们的是这一针法在官方资料中的叫法，它不能告诉我们：这种针法在具体实物上的使用频率；它出现的地域范围；它与某一类题材的固定搭配关系；以及它在不同村寨之间是否存在不同叫法。本平台对针法名称的使用限制在「名称、别名、被列为常见针法这一事实」三件事上。任何超出这三件事的补充，都必须先有来源 Claim。这条规则的直接后果是：当用户问一个本平台没有资料支持的针法细节问题时，系统会明确回答「当前审核资料没有提供」，而不是生成一段听起来专业的描述。这条限制同样适用于平台内部的检索与生成流程：当用户的问题需要某个平台没有记录的针法细节时，检索环节会返回空结果，回答环节据此给出资料不足的结论，而不是让语言模型依据通用知识补全。这样做的代价是平台对某些问题显得不够「博学」，但它保证了每一条关于羌绣针法的陈述都能指回具体的公开来源。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_017",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_zhizi",
+      "concept_ai_cocreation"
+    ],
+    "claim_ids": [
+      "claim_boundary_ai_not_technique",
+      "claim_boundary_policy_set_by_human"
+    ],
+    "title": "织字在 AI 共创中的位置",
+    "text": "在本章的共创流程中，五种针法都属于「可作为视觉结构参考的候选元素」，但它们是否真的可以进入 Prompt，需要由后台配置的生成策略决定，取值为 ALLOW_COMBINATION、ALLOW_COLOR_VARIATION、ALLOW_SCALE_ONLY、DISPLAY_ONLY、REVIEW_REQUIRED、BLOCKED 六档之一。这个判断不由模型实时做出，因为让模型判断某个文化元素是否敏感、是否可用，本身就是本章明确不做的事。以织字为例，它当前处于待审核状态，因此在第一批配置中不会进入任何生成任务。如果用户尝试把一个尚不可用于共创的元素加入创作篮，系统会说明该元素目前仅允许展示或尚待审核，并说明原因，而不是静默失败或绕过校验。在界面上，这类元素会显示一个明确的状态标记，例如「仅展示」或「待审核」，用户点击该标记可以查看具体的生成策略与作出该判断的依据。平台不在界面上使用模糊表述如「暂不支持」，因为模糊表述会让用户以为这是一个技术问题，而实际上它是一个权利与文化审核问题。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_018",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_nahua",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_nahua"
+    ],
+    "title": "纳花（扎花）：官方资料中的定位",
+    "text": "纳花，又称扎花，是官方非遗资料中列出的羌族刺绣常见针法之一。本平台在这条信息上能确认的是它的名称、别名与常见针法这一定位。与其它几种针法一样，本平台不展开这一针法的完整工艺流程，也不做针法之间的横向比较结论。需要额外说明的一点是：官方资料的列举方式是把若干针法并列给出，这种并列并不暗示这些针法之间存在重要性排序、年代先后或地域归属上的差别。当一个用户问「哪一种针法最能代表羌绣」时，本平台不会给出排序，因为第一批来源没有提供任何支持排序的依据。这类问题属于典型的「听起来合理但没有资料支持」的问题，正确的处理是说明资料不足，并提示可以查看五种针法各自的公开说明。平台在五种针法的详情页上使用同一套字段结构，这样可以避免某种针法因为资料多而显得更重要。用户在浏览时会发现五种针法的信息粒度一致，这本身也传达了平台的一条立场：不虚构资料之间的差别，也不为了页面好看而给某一种针法补写内容。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_019",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_nahua",
+      "concept_cultural_context"
+    ],
+    "claim_ids": [
+      "claim_boundary_no_digital_equals_craft"
+    ],
+    "title": "为什么「纳花风格」不是一个可用的说法",
+    "text": "在日常表达中，人们容易把针法名称当作一种视觉风格的名称来使用，例如说「这件设计很有纳花风格」。在本平台中，这种用法会造成实质性的混淆，因为它把一个手工技艺的范畴与一个图像外观的范畴混在了一起。针法描述的是线如何穿过布面、针脚如何组织，它属于制作过程；图像外观描述的是平面上看起来是什么样子，它属于结果。两者之间没有自动的对应关系：一张看起来朴素的图不一定出自某一种针法，一张看起来精致的图也不一定出自另一种针法。因此本平台在界面文案与 AI 回答中都会避免把针法名称用作风格形容词，并且在用户这样提问时，先解释这一区分，再说明可以查看该针法在官方资料中的公开定位。平台在检索环节也会处理这类表述：当用户的问题把针法名称用作风格词时，查询改写会把问题重新表述为关于该针法公开定位的问题，而不是把它当作一个图像风格的检索请求。改写后的检索会优先命中有来源的针法说明，而不是任何与风格相关的材料。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_020",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_nahua",
+      "technique_tiaohua"
+    ],
+    "claim_ids": [
+      "claim_qiang_technique_list",
+      "claim_boundary_policy_set_by_human"
+    ],
+    "title": "五种针法在本平台的统一处理方式",
+    "text": "本平台对五种针法采用统一的处理方式，避免出现某种针法信息多、某种针法信息少的失衡。统一处理包括四点。第一，每一种针法都展示名称与别名，并说明它被官方资料列为常见针法。第二，每一种针法都附带同一条固定提示：数字示意不等于实际手工技艺。第三，每一种针法都不建立与具体绣品、具体纹样的关系边，除非该关系绑定了来源 Claim。第四，每一种针法的「是否可作为生成结构参考」都由后台配置，不由模型判断，当前五种针法均处于待审核状态。这种统一处理的一个副作用是：用户在比较针法时，会看到它们在信息粒度上是一样的，这本身也传达了一条信息——本平台不假装知道得比资料更多。这种统一处理也延伸到针法相关的问答模板上：无论用户询问哪一种针法，回答的结构都遵循同样的顺序——名称与别名、官方资料中的定位、平台能确认的内容、平台不能推出的内容，以及资料不足时的说明。顺序固定带来一个好处：用户在比较不同针法时，能更容易看出哪些信息每一种针法都有，哪些只有个别针法有。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_021",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_piehua",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_piehua"
+    ],
+    "title": "撇花（平绣花）：官方资料中的定位",
+    "text": "撇花，又称平绣花，是官方非遗资料中列出的羌族刺绣常见针法之一。本平台在这条信息上能确认的是名称、别名与常见针法这一定位，不展开具体绣制手法、线迹走向或适用纹样。名称中的「平」字容易引发一种看图推测：看到一张表面平整、线条均匀的图案，就判断它是平绣花。这类推断在本平台不被允许，原因有两个。第一，图像外观的平整与手工线迹的组织方式是两回事，平面的数字化图像不携带针脚信息。第二，本平台不做针法鉴定，也不提供「上传图片自动判断是不是某种针法」的功能。用户如果问到这类问题，系统会说明无法由图像判断针法，并建议查看有来源的实物或工艺记录。平台在针法页面上不使用「效果示例图」这一说法，因为「效果」容易被理解为某种可复制的外观结果。取而代之的是结构示意图这一表述，并在旁边说明它描述的是针线关系而非成品外观。用户如果希望看到实物，平台会引导其查看已获授权的作品条目；在第一批内容中，这类作品条目尚未建立。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_022",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_piehua",
+      "concept_cultural_context"
+    ],
+    "claim_ids": [
+      "claim_boundary_no_identity_inference"
+    ],
+    "title": "针法信息不能用来推断人的身份",
+    "text": "本平台不做民族身份识别，也不由纹样或针法推断用户或创作者的民族身份、所属支系或社会角色。这条规则在针法问题上尤其重要，因为关于「哪种针法属于哪个群体」的说法在网络上流传很广，而这些说法往往没有可核验的来源。具体执行上有三点。第一，当用户问「用某种针法是不是就说明是某个民族的人」时，系统必须说明针法本身不能用于身份判断，也不存在本平台资料支持的这种对应关系。第二，平台不提供任何形式的身份识别功能，包括上传图片自动判断、纹样归属推断、民族风格纯度评分与传统度百分比。第三，在本平台的实体卡与回答中，涉及人群的描述一律使用官方资料中的范围性表述，不做细分。平台还把这条规则写入了回答核验环节：任何出现民族身份推断的回答都会被标记为不合规并重写。核验覆盖的情形包括直接的身份判断、隐含的身份关联，以及通过地域、纹样、针法组合进行的间接推断。这条核验与其他几项核验一起，在回答返回用户之前执行。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_023",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_piehua",
+      "concept_digital_preservation"
+    ],
+    "claim_ids": [
+      "claim_boundary_no_digital_equals_craft"
+    ],
+    "title": "数字示意能做到什么、做不到什么",
+    "text": "本平台在针法页面上提供的结构示意与动画，目标只有一个：帮助用户建立对「针、线、布面之间的关系」的初步印象。它做不到的事情包括：完整还原真实绣制流程；替代实际传习；作为判断实物针法的依据；作为针法教学的教材。这一区分在本章中会以固定提示的形式出现在每一个针法页面上。之所以反复强调，是因为数字化展示容易产生一种「看过就等于懂了」的错觉。本平台的立场是：数字化保护与数字化展示的价值在于让资料更可查、更可长期保存、更容易被理解，它不能替代技艺本身，也不能把「看过示意图」转换成「掌握了针法」。这条边界同时写在平台的数字化保护概念说明中。平台在数字化保护这一概念的说明中同样写入了这条边界，并且在针法页面、绣品页面与共创页面重复使用同一套提示文案。统一的文案可以避免不同页面给出强弱不一的说法，也方便用户在任意位置获得一致的预期。当用户就针法细节提问时，回答会先说明平台的资料范围，再给出可确认的部分。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_024",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_gouhua",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_qiang_has_gouhua"
+    ],
+    "title": "勾花（链子扣）：官方资料中的定位",
+    "text": "勾花，又称链子扣，是官方非遗资料中列出的羌族刺绣常见针法之一。本平台在这条信息上能确认的是名称、别名与常见针法这一定位。别名「链子扣」描述的是一种成链状的线迹外观，这个别名同样容易引发看图推测：看到一条像链条一样的线，就说这是链子扣。这一推断的问题在于，线迹外观相似并不代表制作方式相同，而且数字图像中的线条是绘制或渲染出来的，与布面上的线迹没有对应关系。因此本平台不会由线条外观反推针法。用户在共创中选择勾花作为结构参考时，生成的仍然只是 AI 辅助文化创意图像，不会被表述为链子扣作品。平台把这一类由名称引发的联想归入看图推测，并在回答核验中检查是否出现由外观反推针法的表述。如果模型在回答中写出了类似的推断，核验环节会要求重写。用户在问及这类问题时，会得到一段说明：线条外观与制作方式是两回事，平台无法由图像判断针法，也不提供此类功能。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_025",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_gouhua",
+      "concept_ai_cocreation"
+    ],
+    "claim_ids": [
+      "claim_boundary_ai_not_technique"
+    ],
+    "title": "为什么不能把勾花写进生成提示词当作风格词",
+    "text": "本平台在共创中不使用自由提示词直接调用图像模型，而是先由用户选择已审核、允许共创的文化元素，再经过受约束的 Prompt 编译流程。在这个过程中，针法只能作为视觉结构参考，不能被写成「以勾花风格生成」这样的自由指令。原因是：一旦针法进入自由提示词，模型会把它当作一种视觉风格去拟合，输出一些看起来像某种线迹的图案，而生成结果随后又容易被用户理解成「这就是勾花」。这两步叠加起来，正好构成了本章禁止的「把针法当滤镜」。本平台的 Prompt 编译器在执行时会删除此类请求并返回提示，用户会看到一条说明：针法不能作为生成风格使用，只能作为结构参考，且需该元素已获共创许可。平台在 Prompt 编译器中维护一份被删除请求的记录，这些记录会随生成依据一并保存，用户可以在生成依据页面上看到本次有哪些请求被移除以及移除的原因。这样的设计让「平台限制了什么」也成为可查看的信息，而不是一个不可见的后台行为。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_026",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "technique_gouhua",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_qiang_technique_list"
+    ],
+    "title": "五种针法的来源与可核对方式",
+    "text": "本平台列出的五种常见针法，来源是中国非物质文化遗产网关于羌族刺绣的项目页面。用户可以在界面上通过「查看来源」进入来源与权利说明页，看到这一来源具体支持了哪些内容：项目编号、批次、类别、申报地区、保护单位，以及常见针法与常见题材。这种「来源支持了什么」的展示方式，是为了让用户能够自己核对，而不是只接受平台的转述。需要说明的是，同一份来源支持的是一组事实，而不是全部事实。它支持「这五种针法被列为常见针法」，不支持「这五种针法的具体工艺流程」，也不支持「某种绣品必然使用某种针法」。因此当用户在平台内看到某条信息时，可以点开对应的来源说明，看看这条信息到底落在来源支持的哪一部分。当用户在平台内看到一条关于针法的信息时，界面会提供「这个来源支持了什么？」的入口，展开后显示该来源所支持的具体条目清单。用户可以据此判断这条信息是来自来源的直接表述，还是平台在来源基础上所做的组织与说明。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_027",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "motif_flora",
+      "motif_birds_animals",
+      "motif_people",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_qiang_motif_types"
+    ],
+    "title": "官方资料列出的常见题材类型",
+    "text": "官方资料将花草蔬果、飞禽走兽、人物等列为羌族刺绣的常见题材类型。这句话里有三个需要小心处理的点。第一，这是一份列举，结尾带有「等」字，说明它不是穷尽清单，本平台不据此断言羌绣只有这几种题材。第二，题材类型是高层分类，不是具体纹样名称；说某个图案属于花草蔬果题材，并不说明它是哪一种花、哪一种果，也不说明它有哪一种含义。第三，题材类型与具体寓意之间没有自动通道；一个元素属于某个题材类别，本身不构成对它的文化含义的任何说明。本平台据此把题材类别作为浏览入口，而不是作为含义结论。用户在界面上看到的「题材：花草植物」只回答「它大致属于哪一类」，不回答「它是什么意思」。平台在题材类别的说明页上重复这条区分，并在每一个元素卡上把「题材」与「文化含义」作为两个独立的字段展示。这样用户在浏览时能够直观地看到两者的差别：题材栏通常有内容，含义栏在多数情况下显示的是资料不足的固定说明。",
+    "source_level": "S",
+    "meaning_status": "GENERAL_CATEGORY_ONLY",
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_028",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "motif_flora",
+      "motif_fruit",
+      "concept_cultural_context"
+    ],
+    "claim_ids": [
+      "claim_motif_flora_split_note"
+    ],
+    "title": "为什么本平台把「花草蔬果」拆成了两类",
+    "text": "官方资料的题材表述是「花草蔬果」。本平台为便于分类浏览，把它拆成「花草植物」与「蔬果」两个更细的类别。必须如实说明：这一拆分属于本平台的目录处理方式，不是官方分类，本平台也没有获得「蔬果是一个独立的官方题材类别」这样的资料支持。因此在本平台上，属于这两类的元素，其题材信息只能表述为「属于官方资料所列花草蔬果题材范围」，不能表述为「官方认定的蔬果题材传统纹样」。这类内部目录调整在本章中有多处，处理原则是同一条：凡是平台为了产品需要所做的结构化处理，都要与来源原本的表述区分开，并在界面上可被用户看到。用户在查看题材类别的说明时，会直接读到这段拆分说明。平台把这类内部调整记录在内容团队的待办清单中，并在类别实体的属性里标注该类别是否为官方分类。用户在类别说明页上会看到这一标注，从而知道哪些类别来自官方表述，哪些是平台为浏览方便而设置的。类别一旦被内容组确认调整为与官方表述一致，相应的元素归属也会同步调整。",
+    "source_level": "S",
+    "meaning_status": "GENERAL_CATEGORY_ONLY",
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_029",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "motif_geometric",
+      "concept_cultural_context"
+    ],
+    "claim_ids": [
+      "claim_motif_geometric_no_official_source",
+      "claim_boundary_no_symbolism_for_all"
+    ],
+    "title": "「几何构图」这一类别的资料来源问题",
+    "text": "本平台列出的题材类别中包含「几何构图」。需要如实说明一处资料缺口：实施规格所引用的官方题材类型表述为「花草蔬果、飞禽走兽、人物等」，其中没有出现「几何」作为独立题材类别。因此这一类别目前缺少官方资料的直接支持，其类别地位待内容组核验。在核验完成之前，本平台对这一类别采取最保守的处理：属于它的元素，含义状态一律不高于 UNKNOWN；界面对这些元素固定显示「当前审核资料没有提供足够依据解释这一具体纹样的固定文化寓意」；并且不建立任何指向具体含义的关系边。特别要避免的情形是：看到一个由直线、折线或菱格组成的图案，就顺手把它解释成太阳、星辰、山河或某种宇宙观。这类解释在本平台没有来源支持。平台把这一缺口记录在类别实体的说明与内容团队待办中，并在图谱上不建立任何从该类别指向具体含义的关系边。当用户询问这一类别的来源时，回答会如实说明类别依据待核验，以及平台在核验完成前所采取的保守处理方式。",
+    "source_level": "S",
+    "meaning_status": "UNKNOWN",
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_qiang_030",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_cultural_context",
+      "motif_flora"
+    ],
+    "claim_ids": [
+      "claim_motif_category_not_name",
+      "claim_boundary_meaning_requires_source"
+    ],
+    "title": "题材类别不等于纹样名称，也不等于寓意",
+    "text": "这是本章内容边界中最容易被忽略的一条。题材类别回答的是「大致属于哪一类」，纹样名称回答的是「它叫什么」，文化寓意回答的是「它被资料记录为什么含义」。这三件事在本平台的数据结构里是分开的字段，不能互相填充。常见错误有两种。第一种是把类别当名称，例如把「花草题材」当作某个具体纹样的名字。第二种是把类别当寓意，例如因为一个元素属于动物题材，就推断它象征勇猛或吉祥。本平台对含义字段执行一条硬规则：只有含义状态为 DOCUMENTED 的元素才能展示具体寓意；其余情况界面固定显示「当前审核资料没有提供足够依据解释这一具体纹样的固定文化寓意」。这条规则适用于所有元素，不因为用户追问而改变。这条规则在实现上由含义防护环节执行：当用户的问题涉及某个元素的象征含义，而该元素的含义状态不是已记录时，系统会强制切换到资料不足的回答模式，输出的内容不包含任何具体寓意的表述，只说明当前审核资料不足以解释该元素的固定文化寓意。",
+    "source_level": "S",
+    "meaning_status": "GENERAL_CATEGORY_ONLY",
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_031",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "object_apron",
+      "object_embroidery_shoes",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_object_types_from_spec",
+      "claim_qiang_life_relation"
+    ],
+    "title": "绣品与使用场景：第一批条目从哪里来",
+    "text": "本平台第一批列出的绣品与使用场景包括围腰、绣花鞋、袖套、头巾、香包、鞋垫。需要如实说明这批条目的来源：它们出自实施规格的第一批清单与用户故事举例，而不是出自当前引用的官方非遗资料。官方资料能够支持的是「羌绣与服饰、生活用品和日常使用场景有关」这一总体表述，以及它的装饰性特征。因此这批绣品条目目前保持待核验状态，界面上呈现为条目，但不作为已确认的官方表述使用。上线与否取决于三个条件是否齐备：来源、视觉资产、权利记录。目前这三项都还没有到位，所以这批条目在本平台上属于「可浏览但不可用于共创」的状态。平台对每一个绣品条目单独记录三项状态：是否有来源支持、是否有视觉资产、是否有权利记录。三项都齐备的条目才会转为可用状态，目前这批条目在这三项上均未完成。用户在浏览时会看到待核验标记，并在详情页看到一条说明，指出这些条目的名称与使用场景来自实施规格的第一批清单，尚待以公开资料核验。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_qiang_032",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "object_sachet",
+      "object_headscarf",
+      "concept_cultural_context"
+    ],
+    "claim_ids": [
+      "claim_object_types_from_spec"
+    ],
+    "title": "为什么绣品条目上的信息比针法条目少",
+    "text": "用户可能会注意到，针法页面上有名称、别名、官方定位说明与固定提示，而绣品页面上的信息要少得多。这不是疏忽，而是两者资料来源不同的直接结果。五种针法来自官方非遗资料的明确列举，因此可以说明「被列为常见针法」这一事实。而围腰、香包、头巾这些具体绣品名称，第一批来源没有提供对应的官方表述，也没有提供它们与针法、纹样的对应记录。本平台的处理方式是：资料支持到哪一步，页面就展示到哪一步，剩余部分明确标注为待核验，而不是用通用描述把页面填满。这种做法会让部分页面显得空，但它避免了让用户误以为平台掌握了并不存在的记录。平台在内容层面接受这种信息密度的差异，并在实体卡上如实展示资料状态，而不是通过补充通用描述来让页面显得完整。用户在比较不同类型的条目时，实际上也在看到平台资料基础的实际情况：哪些部分来自官方列举，哪些部分还只是待核验的登记条目。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_qiang_033",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "object_embroidery_shoes",
+      "concept_cultural_context"
+    ],
+    "claim_ids": [
+      "claim_object_technique_relation_blocked"
+    ],
+    "title": "绣品与针法之间为什么暂时没有连线",
+    "text": "本平台执行一条规则：具体绣品与针法、纹样之间的关系必须绑定来源 Claim 才能建立。这不是一条技术限制，而是一条内容规则，目的是避免图谱中出现「看起来合理但没有依据」的连接。以绣花鞋为例，网络上常见「绣花鞋多用挑花」这样的说法，但本平台当前引用的第一批来源并没有提供这一对应记录，因此不会建立这条边。这一规则在执行中会带来一个可见后果：知识图谱里绣品节点可能显得比较孤立。平台的界面对此有说明，用户点击这类节点时会看到「该关系需要来源支持」的提示。这样处理牺牲了一些视觉上的连贯性，但保住了图谱的可解释性。平台把这条规则同样应用于反向查询：用户选择一件绣品时，平台不会自动推荐「常用针法」或「常见纹样」。界面上提供的相关入口是「查看关系」，它展示的是已经建立并有来源支持的关系；如果没有，则说明当前没有可展示的已确认关系。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_034",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "object_apron",
+      "object_sleeve_cover",
+      "object_insole"
+    ],
+    "claim_ids": [
+      "claim_object_types_from_spec"
+    ],
+    "title": "绣品条目的规格内部不一致说明",
+    "text": "本平台在整理第一批绣品条目时发现了一处规格内部的不一致：实施规格列出的第一批绣品与使用场景包含「鞋垫」，而同章用户故事中列举的绣品例子为「围腰、绣花鞋、袖套、头巾、香包等」，没有提到鞋垫。本平台按清单保留了鞋垫这一条目，并将其明确标记为待确认。之所以要把这种不一致写出来而不是悄悄抹平，是因为本章的一条基本原则是：凡是平台自己做的判断，都要让用户能看到它是一个判断。用户在这些条目上会看到待核验标记，内容组确认后再转为正式状态。类似的处理也适用于本平台对「花草蔬果」类别的拆分。平台把发现的不一致记录在条目的待确认字段中，而不是自行选择其中一种说法。这样的处理方式与平台对资料缺口的一般做法一致：当两份材料不一致时，平台不自行裁定哪一份正确，而是保留分歧、标注来源，并把它交给内容组或传承实践方复核。用户在查看这类条目时会看到待核验标记。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_qiang_035",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery",
+      "concept_living_heritage"
+    ],
+    "claim_ids": [
+      "claim_qiang_life_relation",
+      "claim_boundary_ich_not_pattern_library"
+    ],
+    "title": "为什么本章要从绣品讲起，而不是从纹样讲起",
+    "text": "本章把「绣品与使用场景」放在与「针法」「纹样题材」并列的位置，是因为官方资料明确说明羌绣与服饰、生活用品和日常使用场景有关。这意味着刺绣不是先有一堆图案再去找地方用，而是与具体的物件和使用场合连在一起的。把绣品放在同等位置，也回应了本章要处理的一个问题：非遗不是纹样素材库。如果页面的结构是「纹样—纹样—纹样」，用户自然会把它理解成一个素材下载站。而当用户看到围腰、香包、绣花鞋这些物件与针法、题材并列出现时，更容易建立「这是一套与生活有关的技艺」的理解。这个顺序安排不是装饰，它是本章核心产品判断在页面结构上的体现。这一结构安排也影响了平台的默认图谱形状：图谱以项目为中心，向针法、题材类别、保护单位、传承人与传承实践展开，绣品与纹样元素则作为可进一步查看的节点存在。用户在进入图谱时看到的不是一堆并列的纹样缩略图，而是一张关于项目与其关联要素的关系图。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_036",
+    "source_id": "src_ihchina_li_xingxiu",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "person_li_xingxiu",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_li_xingxiu_representative"
+    ],
+    "title": "代表性传承人的公开身份信息",
+    "text": "中国非物质文化遗产网公开信息显示，李兴秀为国家级非物质文化遗产代表性项目「羌族刺绣」的代表性传承人之一。本平台呈现这条信息的范围是：她作为该项目代表性传承人的公开身份，以及公开资料中可核验的经历信息。这条信息回答的是「谁被官方认定为该项目的代表性传承人」这一问题，它是理解一个非遗项目在当代如何被组织和传承的一个节点。需要明确的是，「代表性传承人」是一个非遗保护工作层面的认定身份，它说明的是官方对该项目传承工作的认定，而不是对某一位个人全部作品的著作权归属或授权状态的说明。本平台不呈现公开资料之外的私人信息，也不对其个人生活做任何推测。平台在展示这类人物信息时，只使用公开资料中可核验的部分，并在人物详情页上固定显示一条说明：本平台不会模拟其人格或声音。这条说明不是可折叠的次要信息，而是与人物身份信息一同展示的内容。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_037",
+    "source_id": "src_ihchina_li_xingxiu",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "person_li_xingxiu",
+      "concept_ai_cocreation"
+    ],
+    "claim_ids": [
+      "claim_li_xingxiu_persona_boundary",
+      "claim_boundary_no_living_persona",
+      "claim_boundary_persona_relation_note"
+    ],
+    "title": "为什么本平台不提供传承人人格扮演",
+    "text": "本章可以展示代表性传承人、非遗工坊和保护单位，但第一版的 AI 角色不使用任何真实在世传承人的身份。本平台使用的角色是「羌绣数字工坊讲述者」，它是一个基于已审核非遗资料构建的知识讲述角色，不是任何具体传承人的数字分身，也不代表任何具体传承人的个人观点或原话。这条边界对应三个具体的技术限制：如果某位人物的在世标记为真、而其人格使用许可为假，那么该人物不得进入角色扮演、声音克隆或风格模仿流程；用户要求模仿某位在世传承人时，编译器会删除该要求并返回提示；任何以第一人称自称某位在世传承人的输出，都会被内容校验拦截并重写。需要说明的是，这条限制来自平台的权利边界设定，不是因为相关传承人不重要，恰恰相反，是因为在世传承人的人格与创作风格应当由本人控制。这类限制在平台内以默认关闭的形式存在：三个相关许可字段在没有明确书面许可时一律为假，且不提供用户可绕过的入口。用户如果提出模仿某位在世传承人的请求，会收到一条说明，解释平台为何不提供该功能，并提示可以选择已获许可的文化元素进行共创。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_038",
+    "source_id": "src_ihchina_li_xingxiu",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "person_li_xingxiu",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_boundary_persona_relation_note",
+      "claim_li_xingxiu_representative"
+    ],
+    "title": "代表性传承人这条关系边上的特别说明",
+    "text": "在知识图谱中，「李兴秀 — 代表性传承人 — 羌族刺绣」是一条事实关系，它可以被溯源到中国非物质文化遗产网的传承人公开页面。本平台在这条关系边上额外附加了一条说明，并且这条说明会在用户查看关系证据时一并显示：该事实关系不授权本平台模拟其人格、声音或个人风格。这条附加说明的存在，是为了处理一种常见的误读：用户看到图谱上有一个人物节点，容易认为平台既然建立了这条关系，就可以围绕这个人做更多事情，例如让 AI 扮演她来对话。事实关系的建立与人格使用的授权是两件完全不同的事，前者依据公开资料即可成立，后者需要本人的明确许可。本平台在第一版中没有获得此类许可，因此相关功能一律不提供。平台在关系的证据展示中把这条说明与来源信息并列，使用户在点击「为什么有这条关系？」时能同时看到两件事：这条关系依据哪份公开资料成立，以及这条关系的成立不带来哪些额外的使用许可。这种并列展示的做法，也用于保护单位与保护实践等其它容易引起误读的关系边上。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_039",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_digital_archiving",
+      "practice_ich_workshop",
+      "institution_wenchuan_cultural_center"
+    ],
+    "claim_ids": [
+      "claim_practice_digital_archiving_fact",
+      "claim_rel_practice_ich_workshop_supports"
+    ],
+    "title": "汶川当地开展的羌绣保护传承实践",
+    "text": "汶川县政府公开信息显示，当地已经开展羌绣数字化建档、线上展示、非遗工坊、学校课程和文创开发等保护传承实践。本平台把这几项实践分别建立为可查询的条目，用来回答「这项非遗在当代有哪些具体工作在进行」这一问题。需要保持的是两点克制。第一，公开信息支持的是这些实践已经开展这一事实，不支持具体工坊名称、课程名称、参与人数、产值等细节，因此本平台不编写这些内容。第二，这些实践的存在不构成对任何素材的授权结论。当地开展了数字化建档，不等于建档中的素材可以用于 AI 生成或模型训练；当地开展了文创开发，也不等于本平台可以自行使用相关素材做文创。素材能否使用，仍然逐条以其权利记录为准。平台把这五项实践分别建立为独立条目，是为了让用户能够区分它们的性质：数字化建档与线上展示偏向资料层面，非遗工坊偏向生产与传习，学校课程偏向教育，文创开发偏向当代设计应用。它们在图谱中都以支持保护这一关联与项目相连，性质上属于策展关联。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_040",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "institution_wenchuan_cultural_center",
+      "practice_digital_archiving"
+    ],
+    "claim_ids": [
+      "claim_qiang_protection_unit",
+      "claim_practice_digital_archiving_interpretation"
+    ],
+    "title": "保护单位与保护实践之间的关系怎么呈现",
+    "text": "在本章的知识图谱中，汶川县文化馆作为保护单位与羌族刺绣项目相连，这是一条来自官方非遗公开信息的事实边。而数字化建档、非遗工坊、学校课程、文创开发这几项实践与项目之间的连线，在性质上有所不同：它们表示的是这些实践支持该项目保护工作的一种策展关联，界面以虚线渲染，与事实边区分开。这种区分是必要的，因为「某机构是保护单位」与「某项实践支持了保护工作」是两类不同的陈述。前者来自官方名录信息，后者是平台对公开实践信息的一种组织方式。用户在点击虚线边查看证据时，会看到这条关联所依据的公开信息来源，以及它属于策展关联这一性质说明。平台在实体卡上区分事实来源与策展关联，并在关系证据页中显示关系类型、依据的 Claim 与来源机构。用户在查看一条虚线边时，会看到它属于策展关联这一性质说明，从而知道这条线表达的是平台的组织方式，而不是官方对保护成效的评定。这样的区分在本章的图谱中贯穿始终。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_041",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_ich_workshop",
+      "practice_school_education",
+      "concept_active_inheritance"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_ich_workshop_supports",
+      "claim_rel_practice_school_education_supports"
+    ],
+    "title": "非遗工坊与学校课程在当代传承中的位置",
+    "text": "汶川县政府公开信息显示，当地已经开展羌绣非遗工坊与学校课程相关实践。这两类实践分别对应技艺传承的两条路径：一条是通过生产与传习相结合的方式，让技艺在日常劳作中继续被使用；另一条是通过教育的方式，让技艺在下一代人手中被接触和学习。本平台在介绍这两类实践时，只说明它们已经开展这一公开事实，不编写具体机构、课程与人员信息。同时，本平台自身的针法结构示意与动画明确不属于教学资源，页面会说明它们只用于帮助理解，不构成完整传统技艺教学。这一区分是为了避免一种混淆：把平台上的数字化演示误当成传习活动本身。平台在介绍这两类实践时不使用「成效」「成果」这类评价性表述，也不给出任何量化指标。原因是公开信息支持的是实践已经开展这一事实，不支持对其效果的评定。用户如果询问这些实践的具体情况，平台会说明当前资料的范围，并提示可以查看对应来源的公开页面。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_042",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_digital_archiving",
+      "concept_digital_preservation"
+    ],
+    "claim_ids": [
+      "claim_practice_digital_archiving_fact",
+      "claim_practice_digital_archiving_interpretation"
+    ],
+    "title": "数字化建档的具体含义",
+    "text": "汶川县政府公开信息显示，当地已经开展羌绣数字化建档实践。数字化建档通常指对项目相关资料进行数字化采集、整理与保存，使资料在研究、展示与传承活动中更便于查阅和使用。在本平台的叙述中，它属于数字化保护这一大类工作，与线上展示一起构成资料层面的保护手段。这里有一条贯穿本章的区分：数字化建档与「把素材交给 AI 生成」是两个不同层面的工作。建档解决的是资料如何被保存和查阅，生成解决的是素材如何被再创作，后者需要额外的授权。一份素材可以已完成建档、已在网络上公开展示，同时仍然没有获得用于 AI 生成或模型训练的授权。因此本平台把知识可展示与素材可用于生成当作两套彼此独立的权限来处理。平台在实体卡上把数字化建档与线上展示分别列出，是因为它们对应的资料处理环节不同：建档偏向采集与长期保存，线上展示偏向公开传播。两者都属于资料层面的工作，也都不构成对素材用于生成或训练的许可。用户在这两个条目上会看到相同的边界说明。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_043",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_digital_preservation",
+      "concept_rights_traceability"
+    ],
+    "claim_ids": [
+      "claim_boundary_knowledge_vs_generation"
+    ],
+    "title": "数字化保护不等于把非遗变成生成素材",
+    "text": "数字化保护的目的是让资料更可查、更可理解、更可长期保存，而不是把非遗变成可供模型无限取用的素材。本平台据此设置了一条产品层面的分离：知识库准入和生成素材准入是两套权限，走两条不同的审核路径。一份资料要通过知识库准入，需要的是来源清晰、Claim 可溯源、内容审核通过；一份素材要通过生成素材准入，需要的额外条件是权利记录显示它可用于生成。这两套权限在数据层是分开的字段，在界面上也是分开的标记。用户在浏览一个文化元素时，会同时看到「能否解释」与「能否用于共创」两个独立状态，前者为真不代表后者为真。这条分离是本章与前五章最主要的机制差异。这一分离也解释了平台为什么在文化元素卡上同时显示两个看起来相近但彼此独立的状态：含义可信状态与共创可用状态。前者描述的是资料对含义的解释程度，后者描述的是权利与策略维度上的可用性。一个元素可以含义状态为已记录而共创状态为不可用，也可以含义状态为未知而共创状态为待审核，各种组合都可能出现，二者之间没有推导关系。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_044",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_digital_archiving",
+      "concept_ai_cocreation"
+    ],
+    "claim_ids": [
+      "claim_boundary_ai_not_restoration"
+    ],
+    "title": "为什么数字化与 AI 都不能被称为「复原传统」",
+    "text": "在讨论非遗数字化时，「复原」是一个很容易被使用的词，但它在本平台是不被允许的。生成结果不得写成「AI复原羌族传统纹样」「AI还原正宗羌绣」或「100%传统羌绣」，正确的表述是「AI辅助文化创意」「基于已审核元素进行数字组合」。原因在于，「复原」预设了一个已知的、完整的、可以还原的目标状态，而传统技艺并不存在这样一个静态的完成态：它一直在被实践、被调整、被重新使用。数字化建档保存的是资料，AI 生成产出的是新的图像，两者都不是把技艺带回到某个过去的状态。本平台在设计上避免使用「复原」「还原」「正宗度」这类词，是为了不让一个技术动作被误读成一项文化结论。平台在生成结果的说明中使用「数字组合」「AI 新增」这类描述性表述，并明确区分哪些内容来自经过审核的传统参考、哪些是系统在构图、色彩与排列上的新增。生成依据页面会列出本次使用的元素、来源、模型与模型版本以及 Prompt 模板版本，使用户能够完整回看一次生成是由什么构成的。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_045",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_ich_workshop",
+      "concept_active_inheritance"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_ich_workshop_supports"
+    ],
+    "title": "非遗工坊与 AI 生成作品的区别在哪里",
+    "text": "本平台在同时介绍非遗工坊与 AI 共创功能时，必须把两者的产出分清楚。非遗工坊中产生的作品，是由人手工绣制的当代人工创作；本平台 AI 共创产生的，是数字图像，类别为 AI 辅助生成。这两者在数据层是分开的类别，在结果页的标签上也是分开的。具体执行上：任何 AI 生成结果都固定标注「AI辅助文化创意作品 · 非传统羌绣原作」；平台不把 AI 输出与工坊实物作品混为一类，也不声称 AI 输出与工坊作品同质；用户导出的图像不会带有任何暗示其为手工制品的标识。本章区分的作品类别包括传统参考作品、当代人工创新作品、AI 辅助生成作品与 AI 场景示意四类，工坊作品属于其中的当代人工创新。平台在介绍非遗工坊时不展示任何由 AI 生成的示意图作为工坊场景配图，除非该图带有 AI 辅助文化场景示意这一固定标识。这样处理是为了避免用户把一张生成图误当成某个工坊的现场照片。同理，平台不使用 AI 生成的图像来代表任何真实存在的实物作品、机构或个人。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_046",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_ich_workshop",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_ich_workshop_supports"
+    ],
+    "title": "本平台不编写工坊的具体细节",
+    "text": "汶川县政府公开信息显示当地已经开展羌绣非遗工坊相关实践。在本平台的内容中，用户不会看到具体工坊的名称、成立时间、规模、成员人数、产品线或经营数据。这不是因为平台不愿意提供，而是因为当前引用的来源没有提供这些逐项记录，而本平台有一条明确的内容规则：不编写来源未提供的信息。这条规则在本章中尤其重要，因为涉及具体机构与个人的信息一旦写错，损害的是真实存在的机构与个人。因此本平台在遇到资料缺口时，采取的处理方式是明确说明缺口，并在内容团队的工作清单中记录待补事项，而不是用一段合理的推测把内容填满。用户在平台上看到的相关条目会带有待核验标记。平台把待补事项集中记录在内容团队的工作清单中，并在实体的待办字段里写明具体缺什么。这些记录本身也是内容资产的一部分，它们使得后续接手的人能够清楚地知道哪些信息已经核验、哪些还只是登记条目。用户在界面上看到的待核验标记，对应的就是这些尚未完成的核验项。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_047",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_ich_workshop",
+      "concept_rights_traceability"
+    ],
+    "claim_ids": [
+      "claim_boundary_knowledge_vs_generation",
+      "claim_boundary_default_deny_rights"
+    ],
+    "title": "为什么工坊信息可以在平台展示，工坊图片却不能直接使用",
+    "text": "这是一个用户很容易困惑的问题：既然平台上介绍了非遗工坊这一实践，为什么不能直接用相关图片来做生成。答案在于本平台把两件事分开了。展示一条关于实践的信息，需要的是这条信息有公开来源支持；使用一张图片，需要的是这张图片有明确的授权。前者是知识层面的准入，后者是素材层面的准入。这两套权限在数据层是分开的字段。本平台执行的一条硬性默认值是：没有明确授权的素材，一律不可展示、不可裁切、不可变换、不可用于生成、不可用于训练、不可下载原图、不可商业使用。权利状态未知时不得默认放行，权利接口失败时默认不生成。这条默认拒绝的规则，是本章区别于一般图像生成产品的地方。平台在权利接口调用失败时采取默认不生成的处理方式，并明确告知用户当前无法完成权利校验。这条规则在演示环境下也适用：当系统无法联系到权利服务时，界面会显示演示保障说明，而不是绕开校验直接使用本地素材生成。平台把这条默认值写入权利记录与生成流程两处，确保任何一条路径都不会绕过它。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_048",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_school_education",
+      "concept_active_inheritance"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_school_education_supports"
+    ],
+    "title": "教育实践与平台的数字化演示有什么区别",
+    "text": "汶川县政府公开信息显示，当地已经开展羌绣相关的学校课程实践。这类实践的意义在于让技艺在下一代人手中继续被接触和学习。本平台提供的数字化内容与这类教育实践有一个明确区别：平台提供的是理解性材料，不是教学课程。这一点在界面上有固定说明：针法结构示意与动画仅帮助理解针线关系，不代表完整传统技艺教学，也不替代任何形式的实际传习。本平台不提供针法教学视频、不提供绣制步骤指导、不对用户的操作做点评或评分。用户如果希望学习技艺，平台会引导其了解当地已有的传习与教育渠道，而不是让用户以为在平台上点几下就完成了学习。平台在介绍教育类实践时不展示任何课程安排、教材内容或教学成果，也不把平台自身的知识内容包装成课程。平台在这一条目上的定位是一个知识入口：它说明当地存在这类实践，并为用户理解技艺传承提供背景，而不承担教学功能。用户在相关页面上会看到这一说明。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_049",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_school_education",
+      "concept_digital_preservation"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_school_education_supports",
+      "claim_boundary_no_digital_equals_craft"
+    ],
+    "title": "数字化工具有助于理解，但不承担传承职责",
+    "text": "本平台把教育类实践作为理解羌绣当代传承的一条独立线索来介绍，同时明确平台自身在这条线索上的位置。平台能做的：提供有来源支持的针法与题材说明；提供结构示意帮助建立初步印象；提供知识图谱帮助看清项目、针法、绣品、保护实践之间的关系。平台不能做的：替代实际传习；对用户的技艺水平做判断；提供技艺认证；把「在平台上完成了一次共创」等同于「参与了一次传承实践」。这条自我限制与本章的整体设计判断一致：数字化工具的价值在于帮助用户先理解，而不是替代人与技艺之间的实际接触。用户完成本章探索后获得的，是一条理解与参与的记录，不是任何形式的技艺资质。平台在探索成果页上总结的是用户走过的理解路径，例如查看过哪些针法、哪些纹样元素、哪些绣品与来源，而不是用户的学习成就。总结文案只使用用户已探索的节点生成，不推断用户的兴趣、身份或价值观，也不把用户完成的 AI 生成称为传统作品。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_050",
+    "source_id": "src_wenchuan_qiang_2024",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_contemporary_design",
+      "ich_qiang_embroidery"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_contemporary_design_supports",
+      "claim_mct_policy_background"
+    ],
+    "title": "羌绣的当代文创开发实践",
+    "text": "汶川县政府公开信息显示，当地已经开展羌绣文创开发实践。文化和旅游部等部门发布的关于推动传统工艺高质量传承发展的公开文件，提供了传统工艺保护、创新、知识产权和现代生活应用的政策背景。这两条信息合起来说明：传统工艺进入当代生活应用，是一项有政策背景支持的实践方向。本平台在此处需要保持的边界是：政策背景支持的是方向，不是具体授权。一个地区开展了文创开发实践，不等于本平台可以自行取用相关素材做文创，也不等于用户可以把自己在本平台生成的图像当作该地区的文创产品。本平台不编写具体文创产品名称、合作品牌与销售数据，用户在本平台生成的结果始终标注为非传统羌绣原作的 AI 辅助文化创意作品。平台在介绍当代文创开发时，不使用任何具体的产品案例作为配图，也不展示任何品牌标识。文创开发这一条目的作用是说明传统工艺在当代有进入生活应用的实践方向，而不是提供一个可以借鉴的产品目录。用户在平台上进行的共创，与这类人工文创实践属于不同类别。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_051",
+    "source_id": "src_mct_traditional_crafts_2022",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_contemporary_design",
+      "concept_active_inheritance"
+    ],
+    "claim_ids": [
+      "claim_mct_policy_background"
+    ],
+    "title": "传统工艺传承发展的政策背景",
+    "text": "文化和旅游部等部门发布的《关于推动传统工艺高质量传承发展的通知》，提供了传统工艺保护、创新、知识产权和现代生活应用的政策背景。本平台引用这份文件，是为了说明本章所讨论的几个方向——保护、创新、知识产权、现代生活应用——不是平台自己发明的概念，而是有公开政策文件作为背景的。需要说明的是，政策文件提供的是方向性表述与工作要求，它不构成对任何具体素材的权利判定，也不构成对任何具体做法的授权。本平台在引用政策背景时，不使用它来论证某个具体元素是否可以用于生成，也不把它当作平台上任何素材的授权依据。素材的可否使用，仍然只以其自身的权利记录为准。平台在引用政策背景时，会在来源说明中标注该文件的发布机构与公开链接，并说明它属于政策背景类来源，用于解释方向与工作背景。平台不使用这类来源去论证任何具体素材的权利状态，也不把它当作对某一做法的许可。政策背景与实际授权在平台的数据结构中处于不同的字段与不同的审核环节。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_052",
+    "source_id": "src_mct_traditional_crafts_2022",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_active_inheritance",
+      "concept_ai_cocreation"
+    ],
+    "claim_ids": [
+      "claim_mct_policy_background",
+      "claim_boundary_ich_not_pattern_library"
+    ],
+    "title": "「传承」不等于把传统纹样无限复制",
+    "text": "在讨论传统工艺的当代发展时，有一种常见的简化：把传承理解为把已有的纹样尽可能多地复制和传播。本平台不采用这种理解。原因在于，如果一项技艺的价值被压缩为它的图案外观，那么复制图案就等于完成了传承，而实际绣制、口传心授、使用场合、社区生活这些构成技艺的部分就被省略掉了。这正是本章要处理的核心问题：非遗不是纹样素材库。把羌绣处理成「下载一批纹样再交给图像模型无限生成」的流程，会把活态技艺压缩成视觉风格素材。本平台的替代方案是先理解技艺与生活，再使用视觉元素：用户需要先经过知识探索，再在来源清楚、权利明确、文化边界可见的前提下参与一次可追溯的共创。平台在本章中把理解放在使用之前，正是为了回应这个问题：用户先认识针法、题材、绣品与保护实践，再决定是否参与共创；参与时只能选择已审核并允许共创的元素；生成后系统保留完整的生成依据。这条路径把非遗保护、文化知识、AI 问答、知识图谱与版权意识连接在一起，而不是把它们压缩成一个生成按钮。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_053",
+    "source_id": "src_wenchuan_qiang_copyright_2026",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "practice_copyright_protection",
+      "concept_rights_traceability"
+    ],
+    "claim_ids": [
+      "claim_rel_practice_copyright_supports"
+    ],
+    "title": "羌绣版权保护实践涉及的方向",
+    "text": "汶川县政府公开信息显示，当地已经开展羌绣相关的版权保护实践，涉及数字化保存、版权登记、授权合作与知识产权保护等方向。本平台在本章中设置「权利可追溯」这一核心机制，与这项实践的方向是一致的：每一个视觉资产都应当能回答一组基本问题——谁提供、权利人是谁、依据是什么、能否网页展示、能否裁切、能否变换、能否作为生成输入、能否用于模型训练、能否下载原图、能否商业使用、是否需要署名、授权从什么时候开始到什么时候结束。本平台把这些问题结构化为权利记录字段，并在每个素材的详情页提供入口。需要再次强调：当地开展了版权保护实践，不等于本平台所引用的任何具体素材已经完成了授权。平台把权利记录与来源记录分开保存，并在元素的详情页提供两个独立入口：查看文化来源与查看权利说明。用户在权利说明页上能够看到该素材在展示、裁切、变换、生成、训练、下载与商用各维度上的具体取值，以及该取值的依据与当前审核状态。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "review"
+  },
+  {
+    "id": "chunk_qiang_054",
+    "source_id": "src_wenchuan_qiang_copyright_2026",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_rights_traceability",
+      "concept_ai_cocreation"
+    ],
+    "claim_ids": [
+      "claim_boundary_default_deny_rights"
+    ],
+    "title": "权利记录的默认拒绝规则",
+    "text": "本平台在权利判定上执行一条默认拒绝的规则：没有明确授权的素材，一律记为不可展示、不可裁切、不可变换、不可用于 AI 生成、不可用于模型训练、不可下载原图、不可商业使用。权利状态未知时不得默认放行。当权利接口调用失败时，平台的默认行为是不生成，而不是先出一张图再补校验。这条规则在实现上意味着，一个素材要想进入 AI 共创可用元素库，必须有正向的授权记录，而不是「没有被禁止」就可以用。对用户而言，最直接的可见结果是：当某个元素不能加入共创时，界面会说明它目前仅允许展示或尚待审核，并给出查看权利说明的入口，而不是静默失败。平台在创作篮与生成流程中都会重新校验权利状态，而不是只在元素被加入时校验一次。这样处理的理由是授权可能随时间变化，例如授权到期或授权范围调整。生成任务开始前，系统会再次检查所用元素的权利记录是否仍然有效；校验不通过时，任务会以权利受限的状态终止并告知用户。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_055",
+    "source_id": "src_wenchuan_qiang_copyright_2026",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_rights_traceability",
+      "concept_digital_preservation"
+    ],
+    "claim_ids": [
+      "claim_boundary_no_training_from_public_web",
+      "claim_boundary_knowledge_vs_generation"
+    ],
+    "title": "网上公开的羌绣图片能不能用于训练模型",
+    "text": "不能。本平台的一条明确规则是：网上公开可访问的图片不等于可以用于模型训练。公开可访问、可网页展示与可用于训练是三件不同的事，需要分别取得相应的许可。具体执行上，本平台不抓取互联网图片作为生成参考，不未经授权抓取作品训练 LoRA，也不把用户上传的内容自动加入训练。在权利记录的字段上，「可网页展示」与「可用于模型训练」是两个彼此独立的布尔字段，前者为真不蕴含后者为真。这条区分在本章中反复出现，因为它是「知识可展示不等于素材可用于生成」这一总原则在训练场景下的具体体现。用户如果询问平台使用了哪些图片训练模型，应当得到明确的说明：平台的第一版不使用用户数据或网络图片训练模型。平台在用户协议与生成结果页上都会说明这条区分，并在内容团队的工作流程中把可训练权限单独列为一项审核内容。在第一批内容中，没有任何素材的模型训练权限被设为允许。平台也不提供任何让用户上传图片并加入训练的功能，用户上传的内容不会进入平台的模型训练流程。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_056",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_ai_cocreation",
+      "concept_active_inheritance"
+    ],
+    "claim_ids": [
+      "claim_boundary_three_work_categories",
+      "claim_boundary_ai_not_traditional_original"
+    ],
+    "basis_note": "本切片陈述的是平台在本章中执行的产品规则（实施规格 §2.5、§19、§20），非遗项目来源用于提供语境，不用于论证该规则。",
+    "title": "AI 生成图能不能叫「正宗羌绣」",
+    "text": "不能。本平台的生成结果固定标注为「AI辅助文化创意作品 · 非传统羌绣原作」，不得称为「正宗羌绣」「非遗作品原作」「100%传统羌绣」。原因是：AI 生成的是平面数字图像，它没有经过选料、上绷、配线、运针这些构成一件刺绣作品的过程，也不涉及任何传承实践。本平台在数据层把作品分成四类：传统参考作品、当代人工创新作品、AI 辅助生成作品、AI 场景示意。用户在本平台生成的结果属于第三类。这一分类不是文字游戏，它决定了结果页上显示什么标签、导出图带什么标识、分享图带什么说明。用户在进入共创之前需要确认一段话：我知道生成结果是 AI 辅助文化创意，不等同于传统羌绣原作。平台在导出图与分享图上同样保留这一标识，使用户把图像带离平台后，标签仍然可见。这意味着一件 AI 生成作品在被转发、截图或二次使用时，接收方仍然能够看到它不是传统羌绣原作这一说明。平台不在任何情况下提供去除该标识的选项，也不因为用户选择的用途不同而改变标识内容。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_057",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_ai_cocreation",
+      "technique_tiaohua"
+    ],
+    "claim_ids": [
+      "claim_boundary_ai_not_technique",
+      "claim_boundary_ai_not_restoration"
+    ],
+    "basis_note": "本切片陈述的是平台在本章中执行的产品规则（实施规格 §2.4、§2.8、§15 Prompt F），非遗项目来源用于提供语境。",
+    "title": "AI 生成是不是完成了挑花针法",
+    "text": "不是。挑花是具体的手工技艺，包含选布、数纱、按格运针等一系列需要实际操作的动作；AI 生成图像的过程中不存在这些动作。用户在本平台的共创流程中可以选择以挑花作为视觉结构参考，但这只影响生成图像在构图与排列上的参考方向，不构成对该针法的任何执行。因此平台禁止输出「AI 完成了挑花针法」「这是挑花作品」之类的表述，也禁止把生成结果描述为对传统纹样的复原。正确的说明方式是：这张图像在构图上参考了经过审核的羌绣元素，用于数字文化创意示意，它并不等于由传统针法实际绣制的羌族刺绣作品。这条说明会出现在结果页的固定位置，不随用户的选择而改变。平台在回答这类问题时遵循同样的结构：先说明 AI 生成与手工针法是两件事，再说明本次生成实际使用了什么，最后给出资料范围说明。任何把生成结果描述为对传统纹样复原或对某种针法的执行的表述，都属于平台禁止的表达范围，会在回答核验环节被识别并要求重写。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_058",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_ai_cocreation",
+      "concept_rights_traceability"
+    ],
+    "claim_ids": [
+      "claim_boundary_policy_set_by_human",
+      "claim_boundary_knowledge_vs_generation"
+    ],
+    "basis_note": "本切片陈述的是平台在本章中执行的产品规则（实施规格 §2.9、§14.6、§19.7），非遗项目来源用于提供语境。",
+    "title": "为什么有些元素不能加入共创",
+    "text": "一个文化元素能不能加入共创，由后台配置的生成策略决定，不由模型实时判断。生成策略共六档：可组合、可改色、仅可缩放、仅展示、需审核、禁止使用。在第一批配置中，本平台的纹样元素与针法均处于需审核或仅展示状态，原因是这些元素对应的视觉资产尚未取得授权。用户在创作篮中尝试加入一个不可用于共创的元素时，会看到一条说明：你选择的一个元素目前仅允许展示，暂不能用于 AI 共创。平台也会提供「为什么不能使用？」入口，展示该元素的权利记录与生成策略依据。这样设计的目的，是让「不能用」这件事本身也是可解释的，而不是一个黑箱式的拒绝。平台在创作篮抽屉中对每个元素显示状态标记与生成策略，用户在加入元素之前就能看到它是否可用。如果用户尝试加入一个不可用的元素，界面不会直接拒绝，而是显示该元素的当前状态与查看依据的入口，让用户理解不能使用的原因。这种设计把限制变成了可学习的信息。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_059",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_rights_traceability",
+      "concept_ai_cocreation"
+    ],
+    "claim_ids": [
+      "claim_boundary_default_deny_rights",
+      "claim_boundary_policy_set_by_human"
+    ],
+    "basis_note": "本切片陈述的是平台在本章中执行的产品规则（实施规格 §2.6、§31、§36），非遗项目来源用于提供语境。",
+    "title": "为什么要先看来源再生成",
+    "text": "本平台的共创流程不是「输入提示词直接出图」，而是五步：选择文化元素、选择用途、确定构图、确认来源与使用说明、生成。第三步之前用户必须看到每个元素的名称、来源、文化说明与使用权限。这个顺序安排的理由是：AI 生成不能先于文化理解。如果用户一进页面就看到输入框，他自然会把它当成一个题材生成器，而不会去关心这些元素从哪来、资料有没有解释过它们、它们能不能被使用。把来源确认放在生成之前，还有一个实际作用：用户在确认页上会看到哪些元素只能展示、哪些可以组合、哪些需要审核，从而在动手之前就知道自己的边界在哪里。生成完成后，平台会保存本次使用的元素、来源、模型与模型版本、Prompt 模板版本与权利记录，供用户随时回看。平台把生成依据分为几个部分保存：本次使用的元素、参考的针法、依据的来源、权利记录、Prompt 模板版本、编译输出的哈希值、模型名称与模型版本以及生成时间。用户在结果页点击查看生成依据时，看到的就是这组信息。这组信息不随界面改版而丢失。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_060",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_ai_cocreation"
+    ],
+    "claim_ids": [
+      "claim_boundary_three_work_categories",
+      "claim_boundary_ai_not_traditional_original"
+    ],
+    "basis_note": "本切片陈述的是平台在本章中执行的产品规则（实施规格 §2.5、§20），非遗项目来源用于提供语境。",
+    "title": "生成结果页上的标签为什么固定不变",
+    "text": "本平台的生成结果页固定显示两行文字：「AI辅助文化创意作品」与「非传统羌绣原作」。这个标签不随用户的用途选择、构图选择或元素选择而变化，也不因为生成质量高而调整。原因是这个标签回答的是一个类别问题，而不是一个质量或风格问题：它说明的是这张图像的来源类别，而不是它的好坏。结果页还会额外说明两件事：本次使用了哪些文化元素，以及 AI 在哪些方面新增了内容，例如构图排列、数字背景与色彩组合。这样用户在查看结果时，能够区分哪些来自传统参考、哪些是系统新增的。同样，结果页上的这些说明不可由用户自定义或删除。平台在结果页上不使用任何可以由用户自定义的标签或标题，用户可以对生成结果做自己的用途说明，但系统标签区的内容固定不变。结果页同时提供查看生成依据、查看文化来源与重新组合三个入口，使用户在查看结果时能够立即回到来源与依据，而不是只看到一张图像。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_061",
+    "source_id": "src_ihchina_qiang_embroidery",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "concept_ai_cocreation",
+      "concept_rights_traceability"
+    ],
+    "claim_ids": [
+      "claim_boundary_three_work_categories"
+    ],
+    "basis_note": "本切片陈述的是平台在本章中执行的产品规则（实施规格 §2.5、§32.3），非遗项目来源用于提供语境。",
+    "title": "传统作品、当代人工创新与 AI 作品的三分",
+    "text": "本平台在数据层区分四类作品：传统参考作品、当代人工创新作品、AI 辅助生成作品与 AI 场景示意。这一分类影响三件事。第一，展示方式：传统参考作品与当代人工创新作品需要来源与授权信息才能展示，AI 生成作品带固定标签。第二，内容说明：AI 生成作品必须说明哪些内容来自传统参考、哪些是 AI 新增。第三，用户预期：用户在进入共创前后都会被告知，生成结果不是传统羌绣原作。这个三分结构在处理当代作品时尤其重要，因为当代人工创作的作品有具体的创作者与版权人，需要单独的授权文件，而这类授权与传统文化元素的公开资料是两回事。本平台在未取得明确授权时，不展示、不生成、不训练。平台在数据层为每一类作品保留独立的类型字段，并在展示层面根据类型决定显示哪些标识与说明。这保证了一件作品在被引用时，它的类别属性不会因为展示位置的改变而丢失。用户在本平台上看到的每一件作品，其类别都可以在详情中被查到。",
+    "source_level": "S",
+    "meaning_status": null,
+    "review_status": "approved"
+  },
+  {
+    "id": "chunk_qiang_062",
+    "source_id": "src_samr_qiang_standard_project",
+    "chapter_ids": [
+      "contemporary_qiang_embroidery"
+    ],
+    "entity_ids": [
+      "ich_qiang_embroidery",
+      "concept_digital_preservation"
+    ],
+    "claim_ids": [
+      "claim_samr_standard_project_status",
+      "claim_samr_standard_project_scope",
+      "claim_samr_standard_project_digital",
+      "claim_samr_standard_project_caveat"
+    ],
+    "title": "《羌族刺绣》国家标准制定项目的公开信息",
+    "text": "截至本规格编写时，全国标准信息公共服务平台显示，《羌族刺绣》为推荐性国家标准制定项目。该项目的公开页面显示，其公开范围涉及羌族刺绣的运用范围、种类与纹样类型、针法工艺等，并提到对常见针法进行系统分类，以及计划提供相关针法、纹样等数字化表达内容。本平台引用这一信息时有一条硬性限制：在正式标准发布生效之前，只能表述为「国家标准制定项目公开信息」，不能表述为已经生效的国家标准正文，也不能引用为技术要求依据。此外，该来源的公开链接与项目计划号、下达日期、起草单位、当前状态等信息尚待补充核验，因此相关内容在本平台中保持待核验状态。平台把这一来源的相关内容单独标注为待核验状态，并在回答中使用带时效限定的表述，例如「截至相关规格编写时」。当该标准项目后续发布或状态变化时，内容需要重新核验并更新表述。平台不使用这一来源论证任何具体针法或纹样的含义，也不把它当作对素材使用的许可依据。",
+    "source_level": "A",
+    "meaning_status": null,
+    "review_status": "review"
+  }
+]

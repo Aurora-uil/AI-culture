@@ -1,0 +1,712 @@
+[
+  {
+    "id": "claim_qiang_ich_project",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "羌族刺绣是国家级非物质文化遗产代表性项目。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_project_code",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "羌族刺绣的项目编号为 Ⅶ-76。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_project_sequence",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "羌族刺绣的项目序号为 852。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_announcement_year",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "羌族刺绣于 2008 年公布，属于第二批国家级非物质文化遗产代表性项目。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_category",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "羌族刺绣在国家级非物质文化遗产代表性项目中属于传统美术类别。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_applicant_region",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "羌族刺绣的申报地区或单位为四川省汶川县。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_protection_unit",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": "rel_qiang_protected_by_wenchuan",
+    "claim_text": "中国非物质文化遗产网公开信息显示，羌族刺绣的保护单位为汶川县文化馆。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_distribution",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "官方资料介绍，羌族刺绣流行于四川等地羌族聚居区。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_mingqing_tiaohua",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "官方非遗资料介绍，明清时期羌族挑花刺绣已较为盛行。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_technique_list",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "官方资料列出的羌族刺绣常见针法包括架花（挑花）、织字（提花）、纳花（扎花）、撇花（平绣花）、勾花（链子扣）等。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_motif_types",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "官方资料将花草蔬果、飞禽走兽、人物等列为羌族刺绣的常见题材类型。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_life_relation",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "羌绣既具有装饰性，也与服饰、生活用品和日常使用场景有关。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_qiang_knowledge_base_basis",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "实施规格 §2.1 列明，第一版内容库可围绕国家级非遗公开资料、汶川县政府公开信息、中国非物质文化遗产网传承人公开信息、全国标准信息公共服务平台公开信息等权威公开资料支持的事实建立。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery", "src_wenchuan_qiang_2024"]
+  },
+  {
+    "id": "claim_rel_qiang_has_tiaohua",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": "rel_qiang_has_tiaohua",
+    "claim_text": "中国非物质文化遗产网公开资料将架花（挑花）列为羌族刺绣的常见针法之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_rel_qiang_has_zhizi",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": "rel_qiang_has_zhizi",
+    "claim_text": "中国非物质文化遗产网公开资料将织字（提花）列为羌族刺绣的常见针法之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_rel_qiang_has_nahua",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": "rel_qiang_has_nahua",
+    "claim_text": "中国非物质文化遗产网公开资料将纳花（扎花）列为羌族刺绣的常见针法之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_rel_qiang_has_piehua",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": "rel_qiang_has_piehua",
+    "claim_text": "中国非物质文化遗产网公开资料将撇花（平绣花）列为羌族刺绣的常见针法之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_rel_qiang_has_gouhua",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": "rel_qiang_has_gouhua",
+    "claim_text": "中国非物质文化遗产网公开资料将勾花（链子扣）列为羌族刺绣的常见针法之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_rel_qiang_has_motif_flora",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": "rel_qiang_has_motif_flora",
+    "claim_text": "官方资料将花草蔬果列为羌族刺绣的常见题材类型之一；本平台的「花草植物」类别取自该表述的范围。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_rel_qiang_has_motif_birds_animals",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": "rel_qiang_has_motif_birds_animals",
+    "claim_text": "官方资料将飞禽走兽列为羌族刺绣的常见题材类型之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_rel_qiang_has_motif_people",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": "rel_qiang_has_motif_people",
+    "claim_text": "官方资料将人物列为羌族刺绣的常见题材类型之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_motif_flora_split_note",
+    "entity_id": "motif_flora",
+    "relation_id": null,
+    "claim_text": "本平台把官方表述的「花草蔬果」拆分为「花草植物」与「蔬果」两个细分类别，这一拆分属于平台内部目录粒度调整，不是官方分类。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_motif_geometric_no_official_source",
+    "entity_id": "motif_geometric",
+    "relation_id": null,
+    "claim_text": "实施规格 §2.1 列出的官方题材类型表述为「花草蔬果、飞禽走兽、人物等」，未见「几何」作为独立题材类别，因此本平台的「几何构图」类别目前缺少官方资料的直接支持。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_motif_category_not_name",
+    "entity_id": "concept_cultural_context",
+    "relation_id": null,
+    "claim_text": "题材类别不等于具体传统纹样名称：说一个元素属于某一题材类别，不说明它是哪一种具体纹样，也不说明它有哪一种固定文化寓意。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_li_xingxiu_representative",
+    "entity_id": "person_li_xingxiu",
+    "relation_id": "rel_li_inheritor_qiang",
+    "claim_text": "中国非物质文化遗产网公开信息显示，李兴秀为国家级非物质文化遗产代表性项目「羌族刺绣」的代表性传承人之一。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_li_xingxiu"]
+  },
+  {
+    "id": "claim_li_xingxiu_persona_boundary",
+    "entity_id": "person_li_xingxiu",
+    "relation_id": null,
+    "claim_text": "中国非物质文化遗产网关于李兴秀的公开资料支持的是其代表性传承人公开身份与经历这一事实层面；它不构成对本平台模拟其人格、口吻、声音、形象或个人创作风格的任何授权。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_li_xingxiu"]
+  },
+  {
+    "id": "claim_practice_digital_archiving_fact",
+    "entity_id": "practice_digital_archiving",
+    "relation_id": "rel_digital_archiving_supports_qiang",
+    "claim_text": "汶川县政府公开信息显示，当地已经开展羌绣数字化建档实践。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_wenchuan_qiang_2024"]
+  },
+  {
+    "id": "claim_practice_digital_archiving_interpretation",
+    "entity_id": "practice_digital_archiving",
+    "relation_id": "rel_digital_archiving_supports_qiang",
+    "claim_text": "在本章的策展叙述中，数字化建档被呈现为支持羌族刺绣保护的一类当代实践；这条关联属于策展解释，不是官方对保护成效的评定结论。",
+    "claim_type": "interpretation",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_wenchuan_qiang_2024"]
+  },
+  {
+    "id": "claim_rel_practice_ich_workshop_supports",
+    "entity_id": "practice_ich_workshop",
+    "relation_id": "rel_ich_workshop_supports_qiang",
+    "claim_text": "汶川县政府公开信息显示，当地已经开展羌绣非遗工坊相关实践。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_wenchuan_qiang_2024"]
+  },
+  {
+    "id": "claim_rel_practice_school_education_supports",
+    "entity_id": "practice_school_education",
+    "relation_id": "rel_school_education_supports_qiang",
+    "claim_text": "汶川县政府公开信息显示，当地已经开展羌绣相关的学校课程实践。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_wenchuan_qiang_2024"]
+  },
+  {
+    "id": "claim_rel_practice_contemporary_design_supports",
+    "entity_id": "practice_contemporary_design",
+    "relation_id": "rel_contemporary_design_supports_qiang",
+    "claim_text": "汶川县政府公开信息显示，当地已经开展羌绣文创开发实践；文化和旅游部等部门公开文件提供了传统工艺进入现代生活的政策背景。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_wenchuan_qiang_2024", "src_mct_traditional_crafts_2022"]
+  },
+  {
+    "id": "claim_rel_practice_copyright_supports",
+    "entity_id": "practice_copyright_protection",
+    "relation_id": "rel_copyright_protection_supports_qiang",
+    "claim_text": "汶川县政府公开信息显示，当地已经开展羌绣相关的版权保护实践，涉及数字化保存、版权登记、授权合作与知识产权保护。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_wenchuan_qiang_copyright_2026"]
+  },
+  {
+    "id": "claim_samr_standard_project_status",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "截至本规格编写时，全国标准信息公共服务平台显示《羌族刺绣》为推荐性国家标准制定项目。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_samr_qiang_standard_project"]
+  },
+  {
+    "id": "claim_samr_standard_project_scope",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "上述标准制定项目公开页面显示，其公开范围涉及羌族刺绣的运用范围、种类与纹样类型、针法工艺等。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_samr_qiang_standard_project"]
+  },
+  {
+    "id": "claim_samr_standard_project_digital",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "上述标准制定项目公开页面还提到对常见针法进行系统分类，并计划提供相关针法、纹样等数字化表达内容。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_samr_qiang_standard_project"]
+  },
+  {
+    "id": "claim_samr_standard_project_caveat",
+    "entity_id": "ich_qiang_embroidery",
+    "relation_id": null,
+    "claim_text": "在正式标准发布生效之前，《羌族刺绣》只能表述为「国家标准制定项目公开信息」，不得表述为已经生效的国家标准正文，也不得引用为技术要求依据。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_samr_qiang_standard_project"]
+  },
+  {
+    "id": "claim_mct_policy_background",
+    "entity_id": "practice_contemporary_design",
+    "relation_id": null,
+    "claim_text": "文化和旅游部等部门发布的《关于推动传统工艺高质量传承发展的通知》，提供了传统工艺保护、创新、知识产权和现代生活应用的政策背景。",
+    "claim_type": "fact",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_mct_traditional_crafts_2022"]
+  },
+  {
+    "id": "claim_object_types_from_spec",
+    "entity_id": "object_apron",
+    "relation_id": null,
+    "claim_text": "围腰、绣花鞋、袖套、头巾、香包、鞋垫等绣品类型出自实施规格 §8.4 与用户故事 US-04 的第一批清单；第一批来源尚未提供这些具体绣品名称的官方表述，因此相关条目保持待核验状态。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_object_technique_relation_blocked",
+    "entity_id": "object_embroidery_shoes",
+    "relation_id": null,
+    "claim_text": "具体绣品与针法、纹样之间的关系必须绑定来源 Claim 才能建立；第一批来源未提供该逐项对应记录，因此本平台暂不建立任何绣品—针法或绣品—纹样关系边。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_ich_not_pattern_library",
+    "entity_id": "concept_living_heritage",
+    "relation_id": null,
+    "claim_text": "非遗不是纹样素材库：把羌绣处理成「下载纹样再交给图像模型无限生成」会把活态技艺压缩成视觉风格素材，本平台不采用这种产品逻辑。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_meaning_requires_source",
+    "entity_id": "concept_cultural_context",
+    "relation_id": null,
+    "claim_text": "只有 meaning_status 为 DOCUMENTED 的元素才能解释具体文化含义；其余情况界面固定显示「当前审核资料没有提供足够依据解释这一具体纹样的固定文化寓意。」",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_no_fabricated_names",
+    "entity_id": "concept_cultural_context",
+    "relation_id": null,
+    "claim_text": "本平台不为没有来源支持的纹样编造名称或寓意；对还没有确定传统名称的元素，只使用明确标注为实现方临时编号名的占位名称。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_ai_not_traditional_original",
+    "entity_id": "concept_ai_cocreation",
+    "relation_id": null,
+    "claim_text": "AI 生成结果固定标注为「AI辅助文化创意作品 · 非传统羌绣原作」，不得称为「正宗羌绣」「非遗作品原作」「100%传统羌绣」。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_ai_not_technique",
+    "entity_id": "concept_ai_cocreation",
+    "relation_id": null,
+    "claim_text": "针法不是滤镜：AI 生成的平面图案不代表完成了真实手工针法，不得表述为「这就是挑花作品」；针法在共创中只能作为视觉结构参考。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_ai_not_restoration",
+    "entity_id": "concept_ai_cocreation",
+    "relation_id": null,
+    "claim_text": "AIGC 不是「复原传统」：生成结果不得写成「AI复原羌族传统纹样」「AI还原正宗羌绣」，只能表述为基于已审核元素进行的数字组合与 AI 辅助文化创意。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_three_work_categories",
+    "entity_id": "concept_ai_cocreation",
+    "relation_id": null,
+    "claim_text": "传统参考作品、当代人工创新作品与 AI 辅助生成作品必须在数据与界面中分开表示，类别为 TRADITIONAL_REFERENCE、CONTEMPORARY_HUMAN_CREATION、AI_ASSISTED_CREATION、AI_SCENE_ILLUSTRATION。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_knowledge_vs_generation",
+    "entity_id": "concept_rights_traceability",
+    "relation_id": null,
+    "claim_text": "知识库准入和生成素材准入是两套彼此独立的权限：一份资料可以被用于知识问答，同时仍然不能被用于 AI 生成或模型训练。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_wenchuan_qiang_copyright_2026", "src_mct_traditional_crafts_2022"]
+  },
+  {
+    "id": "claim_boundary_default_deny_rights",
+    "entity_id": "concept_rights_traceability",
+    "relation_id": null,
+    "claim_text": "没有明确授权的素材，默认 can_display=false、can_crop=false、can_transform=false、can_use_for_generation=false、can_use_for_training=false、can_download_original=false、commercial_use=false；权利状态未知时不得默认放行。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_wenchuan_qiang_copyright_2026"]
+  },
+  {
+    "id": "claim_boundary_no_training_from_public_web",
+    "entity_id": "concept_rights_traceability",
+    "relation_id": null,
+    "claim_text": "网上公开可访问的羌绣图片不等于可以用于模型训练；公开可访问、可网页展示与可用于训练是三件不同的事，本平台不抓取网络图片训练模型，也不把用户上传内容自动加入训练。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_wenchuan_qiang_copyright_2026", "src_mct_traditional_crafts_2022"]
+  },
+  {
+    "id": "claim_boundary_no_living_persona",
+    "entity_id": "person_li_xingxiu",
+    "relation_id": null,
+    "claim_text": "第一版 AI 角色为「羌绣数字工坊讲述者」，不使用任何真实在世传承人的身份；不模拟其人格、口吻、声音，也不以其个人创作风格作为生成模板。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_li_xingxiu"]
+  },
+  {
+    "id": "claim_boundary_no_identity_inference",
+    "entity_id": "concept_cultural_context",
+    "relation_id": null,
+    "claim_text": "本平台不通过纹样推断用户或创作者的民族身份、所属支系或社会角色，也不做民族身份识别与「民族风格纯度」判断。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_policy_set_by_human",
+    "entity_id": "concept_ai_cocreation",
+    "relation_id": null,
+    "claim_text": "文化元素的使用范围由后台配置的 generation_policy 决定，不由 LLM 实时判断；取值为 ALLOW_COMBINATION、ALLOW_COLOR_VARIATION、ALLOW_SCALE_ONLY、DISPLAY_ONLY、REVIEW_REQUIRED、BLOCKED。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_persona_relation_note",
+    "entity_id": "person_li_xingxiu",
+    "relation_id": "rel_li_inheritor_qiang",
+    "claim_text": "李兴秀与羌族刺绣之间的代表性传承人关系是一条事实关系；该事实关系不授权本平台模拟其人格、声音或个人风格。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_li_xingxiu"]
+  },
+  {
+    "id": "claim_boundary_no_digital_equals_craft",
+    "entity_id": "concept_digital_preservation",
+    "relation_id": null,
+    "claim_text": "数字示意不等于实际手工技艺：平台的针法结构图、动画与 AI 生成图案都不代表真实针法与绣制过程，不能作为实物针法判断依据，也不能替代技艺传习。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_boundary_no_symbolism_for_all",
+    "entity_id": "motif_geometric",
+    "relation_id": null,
+    "claim_text": "不得声称「所有羌绣纹样都有固定象征意义」；官方资料支持的表述是，很多羌绣图案具有吉祥寓意、表达对美好生活的愿望，但这不等于任何一个具体几何纹都可以被解释为太阳、祖先或爱情。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "approved",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_001_registered",
+    "entity_id": "pattern_qiang_001",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_001 为实现方登记的花草题材纹样元素条目，使用临时编号名，题材类别归属依据官方资料所列题材类型，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_002_registered",
+    "entity_id": "pattern_qiang_002",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_002 为实现方登记的花草题材纹样元素条目，使用临时编号名，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_003_registered",
+    "entity_id": "pattern_qiang_003",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_003 为实现方登记的花草题材纹样元素条目，使用临时编号名，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_004_registered",
+    "entity_id": "pattern_qiang_004",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_004 为实现方登记的花草题材纹样元素条目，使用临时编号名，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_005_registered",
+    "entity_id": "pattern_qiang_005",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_005 为实现方登记的蔬果题材纹样元素条目，其类别为本平台从官方「花草蔬果」表述中拆分出的细分类别，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_006_registered",
+    "entity_id": "pattern_qiang_006",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_006 为实现方登记的蔬果题材纹样元素条目，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_007_registered",
+    "entity_id": "pattern_qiang_007",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_007 为实现方登记的蔬果题材纹样元素条目，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_008_registered",
+    "entity_id": "pattern_qiang_008",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_008 为实现方登记的飞禽走兽题材纹样元素条目，题材类别归属依据官方资料所列题材类型，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_009_registered",
+    "entity_id": "pattern_qiang_009",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_009 为实现方登记的飞禽走兽题材纹样元素条目，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_010_registered",
+    "entity_id": "pattern_qiang_010",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_010 为实现方登记的飞禽走兽题材纹样元素条目，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_011_registered",
+    "entity_id": "pattern_qiang_011",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_011 为实现方登记的人物题材纹样元素条目，人物题材默认不进入 AI 生成，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_012_registered",
+    "entity_id": "pattern_qiang_012",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_012 为实现方登记的人物题材纹样元素条目，人物题材默认不进入 AI 生成，具体传统名称、来源作品与含义均待核验。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_013_registered",
+    "entity_id": "pattern_qiang_013",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_013 为实现方登记的几何构图纹样元素条目，其类别依据待核验，含义状态为 UNKNOWN，不解释为太阳、星辰等任何具体含义。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_014_registered",
+    "entity_id": "pattern_qiang_014",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_014 为实现方登记的几何构图纹样元素条目，含义状态为 UNKNOWN，不解释为太阳、星辰等任何具体含义。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_qiang_015_registered",
+    "entity_id": "pattern_qiang_015",
+    "relation_id": null,
+    "claim_text": "pattern_qiang_015 为实现方登记的几何构图纹样元素条目，含义状态为 UNKNOWN，在演示中用于说明「无证据不解释寓意」的边界。",
+    "claim_type": "catalogue_fact",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_ihchina_qiang_embroidery"]
+  },
+  {
+    "id": "claim_pattern_elements_rights_pending",
+    "entity_id": "concept_rights_traceability",
+    "relation_id": null,
+    "claim_text": "第一批纹样元素对应视觉资产尚未取得任何展示、裁切、变换、生成、训练、下载或商用授权，其权利记录一律按默认拒绝值建档，待授权文件到位后逐项复核。",
+    "claim_type": "curatorial",
+    "controversy_status": "stable",
+    "review_status": "review",
+    "source_ids": ["src_wenchuan_qiang_copyright_2026"]
+  }
+]

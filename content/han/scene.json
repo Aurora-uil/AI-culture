@@ -1,0 +1,254 @@
+{
+  "scene": {
+    "id": "han_silk_road_network",
+    "name": "丝路历史网络主场景",
+    "scene_kind": "map",
+    "background_asset_id": "/assets/han/map_base.webp",
+    "width": 2400,
+    "height": 1350,
+    "disclaimer": "历史交通网络示意，并非现代导航路线。古代路线会随时期、政治环境、自然条件和具体行程而变化，图中连线不等同于现代导航轨迹。",
+    "version": 1,
+    "status": "review"
+  },
+  "map": {
+    "id": "han_silk_road_network",
+    "coordinate_system": "normalized_canvas",
+    "nodes": [
+      {
+        "id": "map_node_changan",
+        "entity_id": "place_changan",
+        "node_type": "historical_place",
+        "label": "长安",
+        "x": 0.18,
+        "y": 0.52,
+        "certainty": "confirmed",
+        "route_scope": "BOTH",
+        "claim_ids": ["claim_changan_han_context", "claim_changan_part_of_network"],
+        "source_ids": ["src_chnmuseum_silk_road", "src_unesco_changan_tianshan"],
+        "sort_order": 1
+      },
+      {
+        "id": "map_node_hexi_corridor",
+        "entity_id": "region_hexi_corridor",
+        "node_type": "historical_region",
+        "label": "河西走廊",
+        "x": 0.32,
+        "y": 0.46,
+        "certainty": "confirmed_region",
+        "route_scope": "LONG_TERM_NETWORK",
+        "claim_ids": ["claim_hexi_part_of_network", "claim_hexi_corridor_region_note"],
+        "source_ids": ["src_unesco_changan_tianshan"],
+        "sort_order": 2
+      },
+      {
+        "id": "map_node_dunhuang_gateway",
+        "entity_id": "place_dunhuang",
+        "node_type": "historical_place",
+        "label": "敦煌 / 关隘区域",
+        "x": 0.46,
+        "y": 0.42,
+        "certainty": "confirmed_region",
+        "route_scope": "LONG_TERM_NETWORK",
+        "claim_ids": ["claim_dunhuang_corridor_node"],
+        "source_ids": ["src_unesco_changan_tianshan"],
+        "sort_order": 3
+      },
+      {
+        "id": "map_node_yumen_pass",
+        "entity_id": "place_yumen_pass",
+        "node_type": "historical_place",
+        "label": "玉门关",
+        "x": 0.53,
+        "y": 0.50,
+        "certainty": "confirmed_region",
+        "route_scope": "LONG_TERM_NETWORK",
+        "claim_ids": ["claim_yumen_pass_gateway"],
+        "source_ids": ["src_han_shu_xiyu_zhuan"],
+        "sort_order": 4
+      },
+      {
+        "id": "map_node_western_regions",
+        "entity_id": "region_western_regions",
+        "node_type": "historical_region",
+        "label": "西域",
+        "x": 0.66,
+        "y": 0.38,
+        "certainty": "confirmed_region",
+        "route_scope": "BOTH",
+        "claim_ids": ["claim_western_regions_concept_note", "claim_first_mission_mission_to_western_regions"],
+        "source_ids": ["src_han_shu_xiyu_zhuan", "src_chnmuseum_silk_road"],
+        "sort_order": 5
+      },
+      {
+        "id": "map_node_niya",
+        "entity_id": "site_niya",
+        "node_type": "archaeological_site",
+        "label": "尼雅遗址",
+        "x": 0.68,
+        "y": 0.64,
+        "certainty": "confirmed",
+        "route_scope": "LONG_TERM_NETWORK",
+        "claim_ids": ["claim_niya_location_minfeng", "claim_niya_part_of_silk_road_network"],
+        "source_ids": ["src_ncha_niya"],
+        "sort_order": 6
+      },
+      {
+        "id": "map_node_central_asia",
+        "entity_id": "region_central_asia",
+        "node_type": "aggregate_expand_node",
+        "label": "向中亚继续展开的聚合节点",
+        "x": 0.86,
+        "y": 0.30,
+        "certainty": "approximate_region",
+        "route_scope": "LONG_TERM_NETWORK",
+        "claim_ids": ["claim_central_asia_geographic_note"],
+        "source_ids": ["src_unesco_changan_tianshan"],
+        "sort_order": 7,
+        "expand_state": "EXPANDABLE",
+        "expand_note": "更深层节点（大宛、康居、大月氏、大夏、乌孙等）由用户继续探索时逐层展开；相关实体、事实主张与来源尚未在实施规格 §26 中给出，需内容团队补齐并审核后方可上线。"
+      }
+    ],
+    "segments": [
+      {
+        "id": "seg_han_changan_hexi",
+        "from_node_id": "map_node_changan",
+        "to_node_id": "map_node_hexi_corridor",
+        "label": "历史交通廊道示意",
+        "geometry": [[0.18, 0.52], [0.24, 0.49], [0.32, 0.46]],
+        "certainty": "high_level",
+        "render_type": "schematic",
+        "route_scope": "LONG_TERM_NETWORK",
+        "source_ids": ["src_unesco_changan_tianshan"],
+        "claim_ids": ["claim_changan_part_of_network", "claim_hexi_part_of_network"],
+        "review_status": "approved"
+      },
+      {
+        "id": "seg_han_hexi_dunhuang",
+        "from_node_id": "map_node_hexi_corridor",
+        "to_node_id": "map_node_dunhuang_gateway",
+        "label": "历史交通廊道示意",
+        "geometry": [[0.32, 0.46], [0.39, 0.44], [0.46, 0.42]],
+        "certainty": "high_level",
+        "render_type": "schematic",
+        "route_scope": "LONG_TERM_NETWORK",
+        "source_ids": ["src_unesco_changan_tianshan"],
+        "claim_ids": ["claim_hexi_part_of_network", "claim_dunhuang_corridor_node"],
+        "review_status": "approved"
+      },
+      {
+        "id": "seg_han_dunhuang_yumen",
+        "from_node_id": "map_node_dunhuang_gateway",
+        "to_node_id": "map_node_yumen_pass",
+        "label": "关隘方向示意",
+        "geometry": [[0.46, 0.42], [0.50, 0.46], [0.53, 0.50]],
+        "certainty": "approximate_corridor",
+        "render_type": "schematic",
+        "route_scope": "LONG_TERM_NETWORK",
+        "source_ids": ["src_han_shu_xiyu_zhuan"],
+        "claim_ids": ["claim_dunhuang_corridor_node", "claim_yumen_pass_gateway"],
+        "review_status": "review"
+      },
+      {
+        "id": "seg_han_yumen_western_regions",
+        "from_node_id": "map_node_yumen_pass",
+        "to_node_id": "map_node_western_regions",
+        "label": "历史交通廊道示意",
+        "geometry": [[0.53, 0.50], [0.59, 0.44], [0.66, 0.38]],
+        "certainty": "approximate_corridor",
+        "render_type": "schematic",
+        "route_scope": "LONG_TERM_NETWORK",
+        "source_ids": ["src_han_shu_xiyu_zhuan"],
+        "claim_ids": ["claim_yumen_pass_gateway", "claim_western_regions_concept_note"],
+        "review_status": "review"
+      },
+      {
+        "id": "seg_han_western_regions_niya",
+        "from_node_id": "map_node_western_regions",
+        "to_node_id": "map_node_niya",
+        "label": "沿线遗址方向示意",
+        "geometry": [[0.66, 0.38], [0.66, 0.51], [0.68, 0.64]],
+        "certainty": "approximate_corridor",
+        "render_type": "schematic",
+        "route_scope": "LONG_TERM_NETWORK",
+        "source_ids": ["src_ncha_niya"],
+        "claim_ids": ["claim_niya_part_of_silk_road_network"],
+        "review_status": "approved"
+      },
+      {
+        "id": "seg_han_western_regions_central_asia",
+        "from_node_id": "map_node_western_regions",
+        "to_node_id": "map_node_central_asia",
+        "label": "继续向西方向（具体走向不确定）",
+        "geometry": [],
+        "certainty": "uncertain_segment",
+        "render_type": "dashed",
+        "route_scope": "LONG_TERM_NETWORK",
+        "source_ids": ["src_unesco_changan_tianshan"],
+        "claim_ids": ["claim_central_asia_geographic_note"],
+        "review_status": "review",
+        "geometry_note": "证据不足，宁可不给出几何点，也不虚构精度。仅以虚线表示存在继续向西的方向，不表示具体路线。"
+      },
+      {
+        "id": "seg_han_zhangqian_itinerary_link",
+        "from_node_id": "map_node_changan",
+        "to_node_id": "map_node_western_regions",
+        "label": "张骞行程相关节点示意连接（非实际路线）",
+        "geometry": [[0.18, 0.52], [0.40, 0.60], [0.66, 0.38]],
+        "certainty": "schematic",
+        "render_type": "schematic",
+        "route_scope": "ZHANG_QIAN_ITINERARY",
+        "source_ids": ["src_chnmuseum_silk_road"],
+        "claim_ids": ["claim_first_mission_departed_changan", "claim_first_mission_mission_to_western_regions"],
+        "review_status": "approved",
+        "geometry_note": "本条连线仅在“张骞行程相关”视图中显示，用于标出与张骞出使直接相关的两个节点，不表示张骞的实际行进路线，也不表示沿途逐日行程。"
+      }
+    ]
+  },
+  "legend": [
+    {"symbol": "●", "text": "确认历史节点", "note": "有史料支持的历史地点或区域"},
+    {"symbol": "━", "text": "历史交通廊道示意", "note": "可依据研究展示的大体交通方向，不是具体道路"},
+    {"symbol": "? ", "text": "路线存在不确定性", "note": "具体走向无法精确确认，宁可不给几何点"},
+    {"symbol": "┄", "text": "策展关系", "note": "同章叙述结构中的关联，不表示史实关系"}
+  ],
+  "interaction": {
+    "default_node_id": "map_node_changan",
+    "first_screen_node_ids": [
+      "map_node_changan",
+      "map_node_hexi_corridor",
+      "map_node_dunhuang_gateway",
+      "map_node_western_regions",
+      "map_node_niya",
+      "map_node_central_asia"
+    ],
+    "node_states": ["LOCKED", "UNSEEN", "SEEN", "SELECTED", "EXPANDED"],
+    "route_lens_filters": ["ZHANG_QIAN_ITINERARY", "LONG_TERM_NETWORK", "ALL", "UNSEEN_ONLY"],
+    "route_scope_values": {
+      "ZHANG_QIAN_ITINERARY": "与张骞出使直接相关的节点，数量有限",
+      "LONG_TERM_NETWORK": "长期交通网络覆盖的节点，空间范围更大",
+      "BOTH": "同时属于两个视图的节点（本章为长安与西域）"
+    },
+    "certainty_values": {
+      "confirmed": "有史料支持的具体历史地点",
+      "confirmed_region": "有研究支持的历史区域范围",
+      "approximate_region": "聚合或展开节点，范围表述为近似",
+      "high_level": "较高置信的历史交通廊道方向",
+      "approximate_corridor": "大体交通区段，具体走向不确定",
+      "uncertain_segment": "具体走向无法确认，不给出几何点",
+      "schematic": "为帮助理解绘制的示意连接，不是历史路线",
+      "curatorial_connector": "策展关联，不表示史实关系"
+    },
+    "guide_texts": [
+      "先点击长安，再沿着发光节点向西探索。",
+      "开启路线透镜，看看与张骞直接相关的节点有多少。",
+      "切换到“长期交通网络”，比较两个视图覆盖的范围。",
+      "沿着网络走到尼雅遗址，那里出土了一件真实的织物。"
+    ]
+  },
+  "notices": {
+    "route_note": "本页用于帮助理解历史空间关系。古代路线会随时期、政治环境、自然条件和具体行程而变化，图中连线不等同于现代导航轨迹。",
+    "coordinate_note": "节点坐标为产品示意坐标，用于表达相对位置关系，不是历史地理的精确复原。",
+    "network_note": "丝绸之路是长期形成、不断变化的交通与交流网络，不是一条唯一固定的道路，也不是由某一个人一次走出来的。",
+    "scene_review_note": "本场景标记为 review：地图背景资产尚未确定，节点与区段的最终取舍见实施规格 §43 待定事项。"
+  },
+  "content_team_todo": "待核验：1) 地图背景资产 /assets/han/map_base.webp 是否采用抽象历史地图或地理底图加艺术化覆盖层（实施规格 §43 第1条）；2) 首屏最终保留哪几个节点（§43 第2条）；3) 敦煌与玉门关是否合并为一个节点（§43 第3条）；4) 各节点坐标与区段几何点为内容团队拟定的示意值，需与历史地图审核一并确认。"
+}
