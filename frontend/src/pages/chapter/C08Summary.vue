@@ -27,7 +27,35 @@ const EVIDENCE_LABELS: Record<string, string> = {
   script_old_uyghur: '回鹘文',
   script_chinese: '汉文',
   script_tangut: '西夏文',
+  sample_a: '统一施工校样',
+  sample_b: '结构调整校样',
+  position_marks: '位置标记',
+  scale_baseline: '尺度基准',
+  handoff_marks: '交接记号',
+  spacing_shift: '间距变化',
+  direction_change: '书写方向',
+  structure_break: '文本结构断裂',
+  water_mark: '纸边水痕',
+  fold_line: '折线错位',
+  ink_spread: '墨迹扩散',
+  version_layers: '两阶段版本关系',
+  shared_rules: '三层共同规则',
+  script_people_boundary: '文字与人群边界',
+  archive_record: '校验后的档案表述',
+  decision_chain: '修缮裁决链',
 }
+
+interface YuanStorySummaryState {
+  investigationChoice?: string
+  knowledgeChoice?: string
+  finalChoice?: string
+  finalDeductionAttempts?: number
+  keepOldVersion?: boolean | null
+}
+
+const yuanStoryState = ref<YuanStorySummaryState | null>(null)
+
+const returnPath = computed(() => slug.value === 'yuan' ? '/chapter/yuan/story' : `/chapter/${slug.value}/scene`)
 
 const decision = computed(() =>
   meta.value.decision.choices.find((choice) => choice.id === state.value.decisionId),
@@ -47,25 +75,60 @@ const dominantMethod = computed(() => {
   return [...items].sort((a, b) => b[1] - a[1])[0]?.[0] ?? '求真'
 })
 
+const yuanRoute = computed(() => {
+  if (slug.value !== 'yuan' || !yuanStoryState.value) return null
+  const story = yuanStoryState.value
+  const routes = {
+    over_simplify: {
+      title: '快速推进 · 版本链受损',
+      summary: '你让施工按期推进，却把未经证实的版本关系写成了确定结论。档案端保留了这次判断造成的证据缺口。',
+    },
+    limited_confirm: {
+      title: '有限确认 · 协作继续',
+      summary: '你只统一得到证据支持的施工外层，同时保留文本差异与版本未知，让行动和证据边界一起进入记录。',
+    },
+    evidence_insufficient: {
+      title: '停工复核 · 工期承压',
+      summary: '你最大程度保存了证据，也承担了停工与重排人手的现实成本。谨慎并非没有代价。',
+    },
+  }
+  const route = routes[story.finalChoice as keyof typeof routes] ?? routes.limited_confirm
+  return {
+    ...route,
+    archive: story.keepOldVersion ? '旧版可继续复核' : '旧版未保留，版本链留下缺口',
+    trust: story.investigationChoice === 'blame' ? '曾经草率归责，人物信任受损' : '将移动事实与人物归责分开',
+    attempts: Math.max(1, story.finalDeductionAttempts ?? 1),
+  }
+})
+
 onMounted(async () => {
   game.bootstrap()
+  if (slug.value === 'yuan') {
+    try {
+      yuanStoryState.value = JSON.parse(localStorage.getItem('tongxin.yuan.story.v6') ?? 'null')
+    } catch {
+      yuanStoryState.value = null
+    }
+  }
   const id = SLUG_TO_ID[slug.value]
   if (!id) return
   if (chapterStore.current?.id !== id) await chapterStore.loadChapter(id)
-  await exploration.refresh(id)
-  const ids = exploration.progress?.visited_entity_ids ?? state.value.evidenceIds
-  if (ids.length) {
-    try {
-      const all = await getEntities()
-      visited.value = all.filter((entity) => ids.includes(entity.id))
-    } catch { visited.value = [] }
+  if (slug.value !== 'yuan') {
+    await exploration.refresh(id)
+    const ids = exploration.progress?.visited_entity_ids ?? state.value.evidenceIds
+    if (ids.length) {
+      try {
+        const all = await getEntities()
+        visited.value = all.filter((entity) => ids.includes(entity.id))
+      } catch { visited.value = [] }
+    }
   }
   if (canComplete.value) {
     game.mark(slug.value, 'COMPLETE')
     exploration.track('CHAPTER_COMPLETE', {}, id)
   }
   loading.value = false
-  void exploration.buildSummary(id)
+  if (slug.value !== 'yuan') void exploration.buildSummary(id)
 })
 
 function methodWidth(value: number) {
@@ -75,13 +138,19 @@ function methodWidth(value: number) {
 function evidenceLabel(id: string) {
   return EVIDENCE_LABELS[id] ?? id.replaceAll('_', ' ')
 }
+
+function replayYuan() {
+  localStorage.removeItem('tongxin.yuan.story.v6')
+  game.resetChapter('yuan')
+  void router.push('/chapter/yuan/story')
+}
 </script>
 
 <template>
   <div v-if="chapter" class="ending" :style="{ '--era-accent': chapter.accent }">
     <div class="ending__grain" aria-hidden="true" />
     <header class="ending__nav">
-      <RouterLink :to="`/chapter/${slug}/scene`">← 返回场景</RouterLink>
+      <RouterLink :to="returnPath">← 返回场景</RouterLink>
       <span>{{ canComplete ? '本章记录已封存' : '本章记录尚未完整' }}</span>
       <RouterLink to="/timeline">千年行卷</RouterLink>
     </header>
@@ -118,11 +187,13 @@ function evidenceLabel(id: string) {
           <p class="ending__label">你留下的选择</p>
           <strong>{{ decision?.label || '尚未作出本章抉择' }}</strong>
           <span>{{ decision?.description || '回到场景，查验三处证据并开启专属透镜。' }}</span>
+          <small v-if="yuanRoute">{{ yuanRoute.trust }} · {{ yuanRoute.archive }}</small>
         </section>
 
         <section class="ending__panel ending__summary">
           <p class="ending__label">档案助手整理</p>
-          <p v-if="exploration.summary">{{ exploration.summary.summary }}</p>
+          <p v-if="yuanRoute"><strong>{{ yuanRoute.title }}</strong><br />{{ yuanRoute.summary }}<small>终局裁决核验 {{ yuanRoute.attempts }} 次。</small></p>
+          <p v-else-if="exploration.summary">{{ exploration.summary.summary }}</p>
           <p v-else-if="loading || exploration.summaryLoading">正在依据你的实际路径整理记录……</p>
           <p v-else>继续探索后，档案助手只会使用你真正见过的内容生成总结。</p>
         </section>
@@ -132,7 +203,7 @@ function evidenceLabel(id: string) {
         <p class="ending__label">本次查验</p>
         <div v-if="path.length">
           <template v-for="(entity, index) in path" :key="entity.id">
-            <RouterLink :to="`/chapter/${slug}/scene?entity=${entity.id}`">{{ entity.display_name || entity.name }}</RouterLink>
+            <RouterLink :to="slug === 'yuan' ? '/chapter/yuan/story' : `/chapter/${slug}/scene?entity=${entity.id}`">{{ entity.display_name || entity.name }}</RouterLink>
             <span v-if="index < path.length - 1">—</span>
           </template>
         </div>
@@ -144,6 +215,7 @@ function evidenceLabel(id: string) {
       </section>
 
       <div class="ending__actions">
+        <button v-if="slug === 'yuan'" type="button" @click="replayYuan">重开元代篇 · 尝试另一条路线</button>
         <button type="button" @click="router.push('/journey')">查看我的千年史册</button>
         <button
           class="primary"
@@ -166,6 +238,7 @@ function evidenceLabel(id: string) {
 .ending__title { margin-top: 28px; text-align: center; }.ending__title > p { font-size: 10px; letter-spacing: .22em; color: rgba(237,228,210,.38); }.ending__title h1 { margin-top: 8px; font-family: var(--font-display); font-size: clamp(48px,7vw,82px); font-weight: 500; color: #f1e7d4; }.ending__title blockquote { max-width: 670px; margin: 20px auto 0; font-family: var(--font-display); font-size: 15px; line-height: 1.9; color: rgba(237,228,210,.62); }
 .ending__grid { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(226,207,169,.12); border-left: 1px solid rgba(226,207,169,.12); }.ending__panel { min-height: 174px; padding: 23px; border-right: 1px solid rgba(226,207,169,.12); border-bottom: 1px solid rgba(226,207,169,.12); background: rgba(255,255,255,.017); }.ending__label { font-size: 9px !important; letter-spacing: .2em; color: rgba(237,228,210,.34) !important; }
 .ending__artifact strong,.ending__choice strong { display: block; margin-top: 17px; font-family: var(--font-display); font-size: 24px; font-weight: 500; color: #dcc47e; }.ending__artifact span,.ending__choice span { display:block; margin-top: 8px; font-size: 11px; line-height: 1.7; color: rgba(237,228,210,.42); }
+.ending__choice small{display:block;margin-top:8px;font-size:9px;line-height:1.55;color:rgba(237,228,210,.32)}.ending__summary strong{font-family:var(--font-display);font-weight:500;color:#dcc47e}.ending__summary small{display:block;margin-top:6px;font-family:var(--font-ui);font-size:9px;color:rgba(237,228,210,.32)}
 .ending__methods > div { margin-top: 12px; display: grid; grid-template-columns: 42px 1fr; align-items: center; gap: 10px; font-size: 10px; color: rgba(237,228,210,.5); }.ending__methods i { height: 3px; background: rgba(255,255,255,.06); }.ending__methods b { display:block; height:100%; min-width: 5px; background: color-mix(in srgb, var(--era-accent) 65%, #dcc47e); }.ending__methods small { display:block; margin-top: 13px; color: rgba(237,228,210,.28); }
 .ending__summary > p:not(.ending__label) { margin-top: 17px; font-family: var(--font-display); line-height: 1.85; color: rgba(237,228,210,.64); }
 .ending__path { padding: 24px 0; border-bottom: 1px solid rgba(226,207,169,.12); }.ending__path > div { display:flex; flex-wrap:wrap; gap: 8px; margin-top: 13px; align-items:center; color: rgba(237,228,210,.3); }.ending__path a,.ending__ids span { font-family: var(--font-display); color: rgba(237,228,210,.62); }.ending__path a:hover { color:#dcc47e; }.ending__ids b { font-weight:400; }
@@ -184,6 +257,7 @@ function evidenceLabel(id: string) {
 .ending__panel{border-color:rgba(40,95,97,.15);background:rgba(248,250,244,.42)}
 .ending__artifact strong,.ending__choice strong{color:#8d6c31}
 .ending__artifact span,.ending__choice span{color:rgba(41,69,74,.58)}
+.ending__choice small,.ending__summary small{color:rgba(41,69,74,.46)}.ending__summary strong{color:#8d6c31}
 .ending__methods>div{color:rgba(41,69,74,.6)}
 .ending__methods i{background:rgba(40,95,97,.1)}
 .ending__methods small{color:rgba(41,69,74,.45)}

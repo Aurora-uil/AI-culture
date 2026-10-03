@@ -61,7 +61,7 @@ onMounted(async () => {
         <button type="button" @click="router.push(`/chapter/${slug}`)">
           <span>接受身份</span><i aria-hidden="true">→</i>
         </button>
-        <button type="button" @click="router.push(`/chapter/${slug}/scene`)">跳过任务简报</button>
+        <button type="button" @click="router.push(slug === 'yuan' ? '/chapter/yuan/story' : `/chapter/${slug}/scene`)">跳过任务简报</button>
       </div>
     </section>
 

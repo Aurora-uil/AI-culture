@@ -31,3 +31,7 @@ Thumbs.db
 # 鏃ュ織
 *.log
 npm-debug.log*
+
+# 超过 GitHub 单文件大小限制
+参考原始资料/culture.zip
+culture.zip

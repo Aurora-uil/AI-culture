@@ -12,6 +12,12 @@ import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 
 const chapterRoutes: RouteRecordRaw[] = [
   {
+    path: '/chapter/yuan/story',
+    name: 'yuan-story',
+    component: () => import('@/chapters/yuan/YuanStoryExperience.vue'),
+    meta: { chapterKey: 'yuan' },
+  },
+  {
     path: '/chapter/:slug',
     name: 'chapter-guide',
     component: () => import('@/pages/chapter/C01Guide.vue'),
@@ -86,6 +92,8 @@ router.beforeEach((to) => {
   const slug = to.params.slug as string | undefined
   if (slug) {
     to.meta.chapterKey = slug
+  } else if (to.name === 'yuan-story') {
+    to.meta.chapterKey = 'yuan'
   }
   return true
 })

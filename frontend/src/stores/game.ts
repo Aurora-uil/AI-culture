@@ -69,7 +69,12 @@ export const useGameStore = defineStore('game', () => {
 
   function choose(slug: ChapterSlug, decisionId: string) {
     const state = stateFor(slug)
-    if (state.decisionId) return
+    // 章节剧本升级后，旧存档里的选项可能已不存在。仅在旧选项仍有效时锁定，
+    // 否则允许玩家在不清空已查验证据的情况下完成新版本抉择。
+    if (
+      state.decisionId &&
+      GAME_CATALOG[slug].decision.choices.some((item) => item.id === state.decisionId)
+    ) return
     const choice = GAME_CATALOG[slug].decision.choices.find((item) => item.id === decisionId)
     if (!choice) return
     state.decisionId = choice.id
@@ -104,6 +109,15 @@ export const useGameStore = defineStore('game', () => {
     save()
   }
 
+  function resetAll() {
+    chapters.value = {}
+    try {
+      localStorage.removeItem(STORAGE_KEY)
+    } catch {
+      // 调试重置失败时不阻断页面交互。
+    }
+  }
+
   const completedCount = computed(
     () => Object.values(chapters.value).filter((state) => state?.completed).length,
   )
@@ -119,5 +133,6 @@ export const useGameStore = defineStore('game', () => {
     progressFor,
     objectiveDone,
     resetChapter,
+    resetAll,
   }
 })

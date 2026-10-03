@@ -9,6 +9,7 @@ const game = useGameStore()
 const ready = ref(false)
 const chapters = Object.values(GAME_CATALOG)
 const completed = computed(() => game.completedCount)
+const resetDone = ref(false)
 
 onMounted(() => {
   window.setTimeout(() => (ready.value = true), 720)
@@ -16,6 +17,14 @@ onMounted(() => {
 
 function enter() {
   void router.push('/timeline')
+}
+
+function resetDebugProgress() {
+  const confirmed = window.confirm('调试重置将清除六个章节的总进度与元代剧情存档，并从首次进入状态重新开始。确定继续吗？')
+  if (!confirmed) return
+  game.resetAll()
+  localStorage.removeItem('tongxin.yuan.story.v6')
+  resetDone.value = true
 }
 </script>
 
@@ -46,6 +55,9 @@ function enter() {
       <div>
         <RouterLink to="/about">史料与 AI 说明</RouterLink>
         <span class="splash__progress">已结成 {{ completed }}/6</span>
+        <button class="splash__reset" type="button" @click="resetDebugProgress">
+          {{ resetDone ? '进度已重置' : '调试 · 重置进度' }}
+        </button>
       </div>
     </nav>
 
@@ -125,6 +137,9 @@ function enter() {
 .splash__nav div { display: flex; align-items: center; gap: 24px; font-size: 12px; color: rgba(33,76,83,.62); }
 .splash__nav a:hover { color: var(--color-scroll-red); }
 .splash__progress { padding-left: 24px; border-left: 1px solid rgba(40,95,97,.18); }
+.splash__reset { min-height: 30px; border: 1px solid rgba(178,81,61,.34); border-radius: 2px; padding: 0 11px; background: rgba(255,255,255,.28); color: #9b493b; font-size: 10px; letter-spacing: .08em; transition: color .18s ease, border-color .18s ease, background-color .18s ease; }
+.splash__reset:hover { border-color: var(--color-scroll-red); background: rgba(255,255,255,.66); color: var(--color-scroll-red); }
+.splash__reset:focus-visible { outline: 2px solid rgba(178,81,61,.42); outline-offset: 3px; }
 
 .splash__hero { position: relative; z-index: 4; width: min(1440px, calc(100% - 96px)); margin: clamp(45px, 7vh, 76px) auto 0; padding-right:min(38vw,520px); }
 .splash__eyebrow { color: #c76249; font-size: 12px; letter-spacing: .26em; opacity: 0; transform: translateY(10px); transition: .7s ease .15s; }
@@ -161,6 +176,7 @@ function enter() {
 @media (max-width: 620px) {
   .splash__nav { padding: 0 20px; }
   .splash__nav a, .splash__progress { display: none; }
+  .splash__reset { padding: 0 9px; font-size: 9px; }
   .splash__hero { margin-top: 56px; }
   .splash h1 span { font-size: 52px; }
   .splash__chapters { grid-template-columns: 1fr; }

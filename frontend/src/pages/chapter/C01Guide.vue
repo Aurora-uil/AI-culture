@@ -51,7 +51,7 @@ onMounted(async () => {
 
 function startExplore() {
   game.mark(slug.value, 'ENTER')
-  void router.push(`/chapter/${slug.value}/scene`)
+  void router.push(slug.value === 'yuan' ? '/chapter/yuan/story' : `/chapter/${slug.value}/scene`)
 }
 
 function goChat() {
