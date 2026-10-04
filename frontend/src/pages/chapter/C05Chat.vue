@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import GlobalHeader from '@/components/global/GlobalHeader.vue'
 import AiChatPanel from '@/components/chat/AiChatPanel.vue'
 import SourceDrawer from '@/components/source/SourceDrawer.vue'
 import EntityDrawer from '@/components/entity/EntityDrawer.vue'
 import { useChapterStore, SLUG_TO_ID } from '@/stores/chapter'
+import { useChatStore } from '@/stores/chat'
 import { useEntityStore } from '@/stores/entity'
 import { useExplorationStore } from '@/stores/exploration'
 import { useGameStore } from '@/stores/game'
@@ -27,6 +28,21 @@ const game = useGameStore()
 const slug = computed(() => route.params.slug as string)
 const chapter = computed(() => chapterStore.current)
 const contextEntityId = ref<string | null>(null)
+const chat = useChatStore()
+const yuanAiTracked = ref(false)
+
+/** 元代：第一条 AI 完成回答即记为自由追问完成（只记一次，不读回答内容） */
+watch(
+  () => chat.messages.length,
+  () => {
+    if (slug.value !== 'yuan' || yuanAiTracked.value) return
+    const done = chat.messages.some((m: any) => m.role === 'assistant' && (m.status === 'DONE' || (m.content && m.content.length > 0)))
+    if (done) {
+      yuanAiTracked.value = true
+      exploration.track('YUAN_AI_QUESTION_COMPLETED', {}, chapter.value?.id)
+    }
+  },
+)
 
 onMounted(async () => {
   const id = SLUG_TO_ID[slug.value as keyof typeof SLUG_TO_ID]
@@ -49,6 +65,7 @@ function backToScene() {
 function onSource(sourceId: string) {
   const entityId = contextEntityId.value || chapterStore.selectedEntityId
   if (entityId) void entityStore.openSources(entityId, chapter.value?.id)
+  if (slug.value === 'yuan') exploration.track('YUAN_SOURCE_VIEWED', { entity_id: sourceId }, chapter.value?.id)
 }
 
 function onExplore(entityId: string) {

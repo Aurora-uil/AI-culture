@@ -126,6 +126,7 @@ onMounted(async () => {
   if (canComplete.value) {
     game.mark(slug.value, 'COMPLETE')
     exploration.track('CHAPTER_COMPLETE', {}, id)
+    if (slug.value === 'yuan') exploration.track('YUAN_CHAPTER_COMPLETED', {}, id)
   }
   loading.value = false
   if (slug.value !== 'yuan') void exploration.buildSummary(id)

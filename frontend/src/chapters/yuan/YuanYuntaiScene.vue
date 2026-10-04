@@ -43,7 +43,15 @@ const emit = defineEmits<{
 const VB_W = 1600
 const VB_H = 900
 
-const hotspots = computed<Hotspot[]>(() => props.scene?.hotspots ?? [])
+const hotspots = computed<Hotspot[]>(() => {
+  const base: Hotspot[] = props.scene?.hotspots ?? []
+  try {
+    const raw = localStorage.getItem('tongxin.yuan.hotspots.debug.v1')
+    if (!raw) return base
+    const over = JSON.parse(raw) as Record<string, number[][]>
+    return base.map((h) => (over[h.id] ? { ...h, normalized_points: over[h.id] } : h))
+  } catch { return base }
+})
 const hasHotspots = computed(() => hotspots.value.length > 0)
 
 /** 券顶与石雕属于空间构造热点，不计入「六体文字」的进度与透镜区域 */
@@ -166,6 +174,34 @@ const lensMode = ref<'ALL' | 'UNSEEN'>('ALL')
 const whyOpen = ref(false)
 const debugOpen = ref(false)
 const mouseXY = ref({ x: 0, y: 0 })
+const debugHotspotId = ref('')
+const debugPointsText = ref('')
+const debugMsg = ref('')
+function debugExport(): string {
+  try {
+    return localStorage.getItem('tongxin.yuan.hotspots.debug.v1') ?? '{}'
+  } catch { return '{}' }
+}
+function debugLoadSelected() {
+  const h = hotspots.value.find((x) => x.id === debugHotspotId.value) ?? hotspots.value[0]
+  if (!h) return
+  debugHotspotId.value = h.id
+  debugPointsText.value = JSON.stringify(h.normalized_points)
+}
+function debugApply() {
+  try {
+    const pts = JSON.parse(debugPointsText.value)
+    const raw = localStorage.getItem('tongxin.yuan.hotspots.debug.v1')
+    const over = raw ? JSON.parse(raw) : {}
+    over[debugHotspotId.value] = pts
+    localStorage.setItem('tongxin.yuan.hotspots.debug.v1', JSON.stringify(over))
+    debugMsg.value = `已暂存 ${debugHotspotId.value} 本地覆盖，导出后请回填 scene.json（标签由内容组确认）`
+  } catch { debugMsg.value = '坐标不是合法 JSON（形如 [[0.31,0.27],[0.41,0.25],[0.42,0.39],[0.30,0.40]]）' }
+}
+function debugReset() {
+  try { localStorage.removeItem('tongxin.yuan.hotspots.debug.v1') } catch { /* ignore */ }
+  debugMsg.value = '已清除本地覆盖，恢复 scene.json 原坐标'
+}
 const SCRIPT_ORDER = ['script_sanskrit_lantsa','script_tibetan','script_phagspa','script_old_uyghur','script_chinese','script_tangut']
 const lensIndex = ref(0)
 const orderedRegions = computed(() => {
@@ -355,7 +391,7 @@ const svgLabel = computed(
           <span>题刻标注正在整理中</span>
         </div>
 
-        <div v-else-if="lensOpen" class="ys__lens">
+        <div v-else-if="lensOpen" class="ys__lens" @mousemove="onSvgMouse">
           <!-- 区域边界：坐标与热点层共用同一套 0–1 归一化数据 -->
           <svg class="ys__regions" viewBox="0 0 1600 900" preserveAspectRatio="none">
             <path
@@ -418,8 +454,22 @@ const svgLabel = computed(
             <button class="ys__chip ys__chip--why" type="button" @click="debugOpen = !debugOpen">坐标调试</button>
             <span class="ys__bar-count">已探索 {{ seenScriptCount }}/{{ scriptTotal }} 种书写系统</span>
           </div>
-          <div v-if="debugOpen" class="ys__debug" @mousemove="onSvgMouse">
-            归一化坐标 x={{ mouseXY.x }} y={{ mouseXY.y }}（3072×2304，缩放自适应；拖动后请把新坐标回填 scene.json，标签由内容组确认）
+          <div v-if="debugOpen" class="ys__debug">
+            <span>归一化坐标 x={{ mouseXY.x }} y={{ mouseXY.y }}（3072×2304，缩放自适应）</span>
+            <span class="ys__debug-row">
+              <select v-model="debugHotspotId" @focus="debugHotspotId || debugLoadSelected()">
+                <option value="" disabled>选择热点</option>
+                <option v-for="h in hotspots" :key="h.id" :value="h.id">{{ h.label || h.id }}</option>
+              </select>
+              <button class="ys__chip" type="button" @click="debugLoadSelected()">载入坐标</button>
+            </span>
+            <input v-model="debugPointsText" class="ys__debug-input" placeholder="[[x,y],…] 归一化多边形" aria-label="热点归一化坐标" />
+            <span class="ys__debug-row">
+              <button class="ys__chip" type="button" @click="debugApply()">本地暂存</button>
+              <button class="ys__chip" type="button" @click="debugReset()">恢复原图</button>
+            </span>
+            <span v-if="debugMsg" class="ys__debug-msg">{{ debugMsg }}</span>
+            <span class="ys__debug-hint">本地覆盖仅存浏览器；正式坐标必须回填 scene.json 并经内容组确认标签含义</span>
           </div>
 
           <!-- 固定知识卡：只讲概念区分与「不做什么」，不给释读、不绑定族群 -->
@@ -746,15 +796,26 @@ const svgLabel = computed(
   top: 52px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 4px 12px;
-  border-radius: var(--radius-pill);
-  background: rgba(12, 20, 19, 0.82);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: min(560px, calc(100% - 16px));
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(12, 20, 19, 0.86);
   color: #f0e7d5;
   font-size: var(--fs-caption);
   font-variant-numeric: tabular-nums;
-  white-space: nowrap;
   pointer-events: auto;
 }
+.ys__debug-row { display: flex; gap: 6px; align-items: center; }
+.ys__debug-input {
+  width: 100%;
+  font-size: var(--fs-caption);
+  font-family: ui-monospace, monospace;
+}
+.ys__debug-msg { color: #f3d382; }
+.ys__debug-hint { opacity: 0.72; }
 @media (max-width: 760px) {
   .ys__bar { flex-wrap: wrap; max-width: calc(100% - 16px); border-radius: 14px; }
   .ys__bar-count { display: none; }

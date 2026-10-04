@@ -273,6 +273,11 @@ const YuanFixedDialogue = defineAsyncComponent(() =>
 const YuanRubbingCompare = defineAsyncComponent(
   () => import('@/chapters/yuan/YuanRubbingCompare.vue'),
 )
+/** 已查验的六体文字 id（供拓片比对门槛判断） */
+const yuanSeenScripts = computed(() => {
+  const scripts = ['script_sanskrit_lantsa','script_tibetan','script_phagspa','script_old_uyghur','script_chinese','script_tangut']
+  return game.stateFor('yuan').evidenceIds.filter((id) => scripts.includes(id))
+})
 function startFixedDialogue() {
   if (slug.value !== 'yuan') return
   dialogueOpen.value = true
@@ -283,8 +288,7 @@ function onDialogueDone(choiceId?: string) {
   exploration.track('YUAN_DIALOGUE_COMPLETED', {}, chapter.value?.id)
   if (choiceId) exploration.track('YUAN_DIALOGUE_CHOICE_RECORDED', { entity_id: choiceId }, chapter.value?.id)
 }
-function onRubbingSubmit(payload: { choice: string }) {
-  exploration.track('YUAN_DECISION_SUBMITTED', { entity_id: payload.choice }, chapter.value?.id)
+function onRubbingSubmit(payload: { choice: string }) {  exploration.track('YUAN_DECISION_SUBMITTED', { entity_id: payload.choice }, chapter.value?.id)
   const map: Record<string, string> = { pending: 'leave_pending', compare: 'compare_neighbours', submit: 'submit_preliminary' }
   game.choose(chapterSlug.value, map[payload.choice] ?? 'leave_pending')
   showRubbing.value = false
@@ -420,7 +424,7 @@ watch(
     <div v-if="slug === 'yuan' && showRubbing" class="cs__dialogue-overlay" role="dialog" aria-label="拓片校勘">
       <div class="cs__dialogue-box">
         <Suspense>
-          <YuanRubbingCompare :seen-scripts="[]" @submit="onRubbingSubmit" />
+          <YuanRubbingCompare :seen-scripts="yuanSeenScripts" @submit="onRubbingSubmit" />
           <template #fallback><p>校勘面板加载中……</p></template>
         </Suspense>
         <button class="cs__guide-btn" type="button" @click="showRubbing = false">返回场景（状态保留）</button>

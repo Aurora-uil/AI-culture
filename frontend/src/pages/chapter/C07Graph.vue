@@ -59,6 +59,7 @@ onMounted(async () => {
   if (chapterStore.current?.id !== id) await chapterStore.loadChapter(id)
   await exploration.ensureSession(id)
   game.mark(slug.value as ChapterSlug, 'GRAPH')
+  if (slug.value === 'yuan') exploration.track('YUAN_GRAPH_OPENED', {}, id)
 
   if (centerId.value) {
     try {
@@ -92,6 +93,9 @@ async function onNodeSelect(id: string) {
   graphStore.selectNode(id)
   if (selectedEdge.value) {
     await graphStore.loadEvidence(selectedEdge.value.id, chapter.value?.id)
+    if (slug.value === 'yuan') {
+      exploration.track('YUAN_RELATION_EVIDENCE_VIEWED', { relation_id: selectedEdge.value.id }, chapter.value?.id)
+    }
   }
   void router.replace({ query: { ...route.query, entity: id } })
 }
