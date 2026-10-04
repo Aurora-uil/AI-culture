@@ -197,6 +197,7 @@ export const GAME_CATALOG: Record<ChapterSlug, ChapterGameMeta> = {
       title: '今天到底按什么做',
       context: '两份校样可能属于不同阶段。第二版更尊重文本结构，第一版也建立了仍被沿用的共同施工标准。天黑以前，你必须给出一个能够承担后果的判断。',
       choices: [
+
         { id: 'over_simplify', label: '采用第二版，判定第一版错误', description: '施工可以继续，但把尚未证实的版本关系写成确定结论。', response: '施工判断基本可执行，历史叙述却过度确定。你后来发现，第一版仍保留着后续沿用的共同规范。', impact: { connection: 1 } },
         { id: 'limited_confirm', label: '有限确认，并保留两份版本', description: '沿用共同标准，保留文本差异，也把前一版作为版本证据保存。', response: '旧版本没有因为不再使用而失去价值；共同标准与应被保留的差异同时进入档案。', impact: { truth: 2, connection: 2, empathy: 1 } },
         { id: 'evidence_insufficient', label: '证据不足，暂缓施工', description: '避免草率判断，但承担施工延误的现实成本。', response: '档案证据得到完整保存，工程却因此延后。承认未知并不意味着没有代价。', impact: { truth: 2, empathy: 1 } },

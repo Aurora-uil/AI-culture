@@ -32,6 +32,19 @@ onMounted(async () => {
     exploration.track('CHAPTER_ENTER', {}, id)
   }
 })
+
+function acceptRole() {
+  exploration.track('CHAPTER_ENTER', {}, chapterStore.current?.id)
+  if (slug.value === 'yuan') {
+    exploration.track('YUAN_ROLE_ACCEPTED', {}, chapterStore.current?.id)
+    try {
+      const raw = localStorage.getItem('tongxin.yuan.task.v1')
+      const st = raw ? JSON.parse(raw) : {}
+      localStorage.setItem('tongxin.yuan.task.v1', JSON.stringify({ ...st, roleAccepted: true, phase: 'ROLE_ACCEPTED' }))
+    } catch { /* 本地记录失败不阻断 */ }
+  }
+  router.push(`/chapter/${slug.value}`)
+}
 </script>
 
 <template>
@@ -58,7 +71,7 @@ onMounted(async () => {
         <small>{{ meta.roleNote }}</small>
       </div>
       <div class="intro__actions">
-        <button type="button" @click="router.push(`/chapter/${slug}`)">
+        <button type="button" @click="acceptRole">
           <span>接受身份</span><i aria-hidden="true">→</i>
         </button>
         <button type="button" @click="router.push(slug === 'yuan' ? '/chapter/yuan/story' : `/chapter/${slug}/scene`)">跳过任务简报</button>

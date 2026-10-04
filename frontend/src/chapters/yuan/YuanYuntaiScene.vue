@@ -164,6 +164,29 @@ function nichePath(cx: number, cy: number): string {
 
 const lensMode = ref<'ALL' | 'UNSEEN'>('ALL')
 const whyOpen = ref(false)
+const debugOpen = ref(false)
+const mouseXY = ref({ x: 0, y: 0 })
+const SCRIPT_ORDER = ['script_sanskrit_lantsa','script_tibetan','script_phagspa','script_old_uyghur','script_chinese','script_tangut']
+const lensIndex = ref(0)
+const orderedRegions = computed(() => {
+  const map = new Map(regions.value.map((r) => [r.h.entity_id, r]))
+  return SCRIPT_ORDER.map((id) => map.get(id)).filter(Boolean) as Region[]
+})
+function prevScript() {
+  if (!orderedRegions.value.length) return
+  lensIndex.value = (lensIndex.value - 1 + orderedRegions.value.length) % orderedRegions.value.length
+  emit('select-hotspot', orderedRegions.value[lensIndex.value].h)
+}
+function nextScript() {
+  if (!orderedRegions.value.length) return
+  lensIndex.value = (lensIndex.value + 1) % orderedRegions.value.length
+  emit('select-hotspot', orderedRegions.value[lensIndex.value].h)
+}
+function onSvgMouse(e: MouseEvent) {
+  const el = e.currentTarget as SVGElement
+  const rect = el.getBoundingClientRect()
+  mouseXY.value = { x: Number(((e.clientX - rect.left) / rect.width).toFixed(3)), y: Number(((e.clientY - rect.top) / rect.height).toFixed(3)) }
+}
 
 /** 透镜开启时，已探索的文字区域在场景热点层弱化（§9.3 BTN-Y03-03） */
 const lensFilter = computed(() => {
@@ -390,7 +413,13 @@ const svgLabel = computed(
               <DsIcon name="info" :size="13" />
               为什么是六体？
             </button>
+            <button class="ys__chip" type="button" @click="prevScript()">上一个</button>
+            <button class="ys__chip" type="button" @click="nextScript()">下一个</button>
+            <button class="ys__chip ys__chip--why" type="button" @click="debugOpen = !debugOpen">坐标调试</button>
             <span class="ys__bar-count">已探索 {{ seenScriptCount }}/{{ scriptTotal }} 种书写系统</span>
+          </div>
+          <div v-if="debugOpen" class="ys__debug" @mousemove="onSvgMouse">
+            归一化坐标 x={{ mouseXY.x }} y={{ mouseXY.y }}（3072×2304，缩放自适应；拖动后请把新坐标回填 scene.json，标签由内容组确认）
           </div>
 
           <!-- 固定知识卡：只讲概念区分与「不做什么」，不给释读、不绑定族群 -->
@@ -709,6 +738,28 @@ const svgLabel = computed(
   color: var(--color-ink-500);
   padding-left: var(--sp-2);
   border-left: 1px solid var(--color-border);
+}
+
+/* 坐标调试条 + 低分辨率降级 */
+.ys__debug {
+  position: absolute;
+  top: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(12, 20, 19, 0.82);
+  color: #f0e7d5;
+  font-size: var(--fs-caption);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+@media (max-width: 760px) {
+  .ys__bar { flex-wrap: wrap; max-width: calc(100% - 16px); border-radius: 14px; }
+  .ys__bar-count { display: none; }
+  .ys__card { width: calc(100% - 16px); right: 8px; top: 108px; }
+  .ys__tag-name { max-width: 22vw; overflow: hidden; text-overflow: ellipsis; }
 }
 
 /* ================= 固定知识卡 ================= */

@@ -95,6 +95,13 @@ onMounted(async () => {
   await exploration.ensureSession(id)
   exploration.track('SCENE_ENTER', {}, id)
   game.mark(slug.value as ChapterSlug, 'ENTER')
+  if (slug.value === 'yuan') {
+    exploration.track('YUAN_SCENE_ENTERED', {}, id)
+    try {
+      const raw = localStorage.getItem('tongxin.yuan.task.v1')
+      if (!raw) localStorage.setItem('tongxin.yuan.task.v1', JSON.stringify({ phase: 'SCENE_ENTERED', sceneEntered: true, seenScripts: [] }))
+    } catch { /* 本地记录失败不阻断 */ }
+  }
 
   // 元代按六体文字顺序切换
   if (slug.value === 'yuan') {
@@ -174,6 +181,21 @@ async function onHotspot(h: Hotspot) {
   const entity = await entityStore.load(h.entity_id, chapter.value?.id, { source_page: 'C02' })
   showDiscovery(entity.display_name || entity.name || h.label || '新线索')
   game.mark(slug.value as ChapterSlug, 'INSPECT', h.entity_id)
+  if (slug.value === 'yuan') {
+    exploration.track('YUAN_HOTSPOT_OPENED', { entity_id: h.entity_id }, chapter.value?.id)
+    exploration.track('ENTITY_VIEW', { entity_id: h.entity_id }, chapter.value?.id)
+    try {
+      const raw = localStorage.getItem('tongxin.yuan.task.v1')
+      const st = raw ? JSON.parse(raw) : { seenScripts: [] }
+      const scripts = ['script_sanskrit_lantsa','script_tibetan','script_phagspa','script_old_uyghur','script_chinese','script_tangut']
+      if (scripts.includes(h.entity_id) && !st.seenScripts.includes(h.entity_id)) {
+        st.seenScripts.push(h.entity_id)
+        localStorage.setItem('tongxin.yuan.task.v1', JSON.stringify(st))
+        if (st.seenScripts.length === 3) exploration.track('YUAN_THREE_SCRIPTS_OPENED', {}, chapter.value?.id)
+        if (st.seenScripts.length >= 6) exploration.track('YUAN_ALL_SCRIPTS_OPENED', {}, chapter.value?.id)
+      }
+    } catch { /* ignore */ }
+  }
 }
 
 async function onSelectEntity(entityId: string) {
@@ -193,6 +215,9 @@ function toggleLens() {
   if (next) {
     exploration.track('LENS_OPEN', {}, chapter.value?.id)
     game.mark(slug.value as ChapterSlug, 'LENS')
+    if (slug.value === 'yuan') {
+      exploration.track('YUAN_SCRIPT_LENS_USED', {}, chapter.value?.id)
+    }
   }
 }
 
@@ -232,6 +257,37 @@ function goGraph(entityId?: string) {
 
 function openSources(entityId: string) {
   void entityStore.openSources(entityId, chapter.value?.id)
+}
+
+/* ---- 元代固定剧情 / 拓片校勘（2号只做触发与事件，不实现对话逻辑） ---- */
+const showRubbing = ref(false)
+const dialogueOpen = ref(false)
+const YuanFixedDialogue = defineAsyncComponent(() =>
+  import('@/components/dialogue/YuanFixedDialogue.vue').catch(
+    () =>
+      ({
+        template: `<div><p>固定剧情组件由1号队员提供（content/yuan/dialogues.json 驱动），当前尚未合入。本占位不阻断场景与校勘流程。</p><button type="button" @click="$emit('done')">标记对话完成（联调占位）</button></div>`,
+      }) as any,
+  ),
+)
+const YuanRubbingCompare = defineAsyncComponent(
+  () => import('@/chapters/yuan/YuanRubbingCompare.vue'),
+)
+function startFixedDialogue() {
+  if (slug.value !== 'yuan') return
+  dialogueOpen.value = true
+  exploration.track('YUAN_DIALOGUE_STARTED', {}, chapter.value?.id)
+}
+function onDialogueDone(choiceId?: string) {
+  dialogueOpen.value = false
+  exploration.track('YUAN_DIALOGUE_COMPLETED', {}, chapter.value?.id)
+  if (choiceId) exploration.track('YUAN_DIALOGUE_CHOICE_RECORDED', { entity_id: choiceId }, chapter.value?.id)
+}
+function onRubbingSubmit(payload: { choice: string }) {
+  exploration.track('YUAN_DECISION_SUBMITTED', { entity_id: payload.choice }, chapter.value?.id)
+  const map: Record<string, string> = { pending: 'leave_pending', compare: 'compare_neighbours', submit: 'submit_preliminary' }
+  game.choose(chapterSlug.value, map[payload.choice] ?? 'leave_pending')
+  showRubbing.value = false
 }
 
 watch(
@@ -280,6 +336,14 @@ watch(
           <button class="cs__tool" type="button" @click="goGraph()">
             <DsIcon name="nodes" :size="15" />
             <span>关系图谱</span>
+          </button>
+          <button v-if="slug === 'yuan'" class="cs__tool" type="button" @click="startFixedDialogue()">
+            <DsIcon name="sparkle" :size="15" />
+            <span>固定剧情对话</span>
+          </button>
+          <button v-if="slug === 'yuan'" class="cs__tool" type="button" @click="showRubbing = true">
+            <DsIcon name="document" :size="15" />
+            <span>拓片比对</span>
           </button>
         </div>
       </header>
@@ -344,6 +408,24 @@ watch(
       @close="closeEntity"
     />
     <SourceDrawer />
+    <div v-if="slug === 'yuan' && dialogueOpen" class="cs__dialogue-overlay" role="dialog" aria-label="固定剧情对话">
+      <div class="cs__dialogue-box">
+        <Suspense>
+          <YuanFixedDialogue @done="onDialogueDone" @close="dialogueOpen = false" />
+          <template #fallback><p>剧情加载中……（离线仍可稍后重试，不影响场景状态）</p></template>
+        </Suspense>
+        <button class="cs__guide-btn" type="button" @click="dialogueOpen = false">返回场景（状态保留）</button>
+      </div>
+    </div>
+    <div v-if="slug === 'yuan' && showRubbing" class="cs__dialogue-overlay" role="dialog" aria-label="拓片校勘">
+      <div class="cs__dialogue-box">
+        <Suspense>
+          <YuanRubbingCompare :seen-scripts="[]" @submit="onRubbingSubmit" />
+          <template #fallback><p>校勘面板加载中……</p></template>
+        </Suspense>
+        <button class="cs__guide-btn" type="button" @click="showRubbing = false">返回场景（状态保留）</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -362,6 +444,26 @@ watch(
 }
 
 .game-scene-page { height: 100dvh; overflow: hidden; background: #0c1413; }
+
+/* 元代固定剧情 / 拓片浮层：覆盖但不销毁场景组件，返回后缩放热点透镜保持 */
+.cs__dialogue-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  background: rgba(8, 14, 13, 0.55);
+  padding: 20px;
+}
+.cs__dialogue-box {
+  width: min(720px, 100%);
+  max-height: 88dvh;
+  overflow: auto;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 16px;
+}
 
 .cs__bar {
   flex: none;
