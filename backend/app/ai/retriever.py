@@ -63,6 +63,7 @@ class RetrievedChunk:
             "source_title": self.source_title,
             "source_level": self.source_level,
             "source_perspective": self.source_perspective,
+            "public_url": self.public_url,
         }
 
 

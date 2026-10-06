@@ -41,8 +41,20 @@ const chapter = computed(() => chapterStore.current)
 const scene = computed(() => chapterStore.scene)
 const meta = computed(() => GAME_CATALOG[chapterSlug.value])
 const storyProgress = computed(() => game.progressFor(chapterSlug.value))
+const isExploreMode = computed(() => route.query.module === 'explore')
 const discovery = ref('')
 let discoveryTimer: number | undefined
+const STORY_VISIT_STORAGE_KEY = 'tongxin.chapter.story.visits.v1'
+
+function markStoryVisited(value: ChapterSlug) {
+  try {
+    const visits = JSON.parse(localStorage.getItem(STORY_VISIT_STORAGE_KEY) ?? '{}') as Partial<Record<ChapterSlug, boolean>>
+    visits[value] = true
+    localStorage.setItem(STORY_VISIT_STORAGE_KEY, JSON.stringify(visits))
+  } catch {
+    // 本地进度不可用时不阻断剧情。
+  }
+}
 
 function showDiscovery(label: string) {
   discovery.value = label
@@ -77,9 +89,7 @@ const LENS_LABELS: Record<string, string> = {
   contemporary: '来源与权利透镜',
 }
 const lensLabel = computed(() => LENS_LABELS[slug.value] ?? '证据透镜')
-const canShowLens = computed(
-  () => Boolean(scene.value?.hotspots?.length) || slug.value === 'contemporary',
-)
+const canShowLens = computed(() => Boolean(chapterComponent.value))
 
 /** 六体文字等按预设顺序切换 */
 const entitySequence = ref<string[]>([])
@@ -95,6 +105,13 @@ onMounted(async () => {
   await exploration.ensureSession(id)
   exploration.track('SCENE_ENTER', {}, id)
   game.mark(slug.value as ChapterSlug, 'ENTER')
+  if (route.query.module === 'explore') {
+    chapterStore.setLens(true)
+    exploration.track('LENS_OPEN', { metadata: { entry: 'task_hall' } }, id)
+    game.mark(slug.value as ChapterSlug, 'LENS')
+  } else {
+    markStoryVisited(slug.value as ChapterSlug)
+  }
   if (slug.value === 'yuan') {
     exploration.track('YUAN_SCENE_ENTERED', {}, id)
     try {
@@ -259,17 +276,8 @@ function openSources(entityId: string) {
   void entityStore.openSources(entityId, chapter.value?.id)
 }
 
-/* ---- 元代固定剧情 / 拓片校勘（2号只做触发与事件，不实现对话逻辑） ---- */
+/* ---- 元代拓片校勘 ---- */
 const showRubbing = ref(false)
-const dialogueOpen = ref(false)
-const YuanFixedDialogue = defineAsyncComponent(() =>
-  import('@/components/dialogue/YuanFixedDialogue.vue').catch(
-    () =>
-      ({
-        template: `<div><p>固定剧情组件由1号队员提供（content/yuan/dialogues.json 驱动），当前尚未合入。本占位不阻断场景与校勘流程。</p><button type="button" @click="$emit('done')">标记对话完成（联调占位）</button></div>`,
-      }) as any,
-  ),
-)
 const YuanRubbingCompare = defineAsyncComponent(
   () => import('@/chapters/yuan/YuanRubbingCompare.vue'),
 )
@@ -278,16 +286,6 @@ const yuanSeenScripts = computed(() => {
   const scripts = ['script_sanskrit_lantsa','script_tibetan','script_phagspa','script_old_uyghur','script_chinese','script_tangut']
   return game.stateFor('yuan').evidenceIds.filter((id) => scripts.includes(id))
 })
-function startFixedDialogue() {
-  if (slug.value !== 'yuan') return
-  dialogueOpen.value = true
-  exploration.track('YUAN_DIALOGUE_STARTED', {}, chapter.value?.id)
-}
-function onDialogueDone(choiceId?: string) {
-  dialogueOpen.value = false
-  exploration.track('YUAN_DIALOGUE_COMPLETED', {}, chapter.value?.id)
-  if (choiceId) exploration.track('YUAN_DIALOGUE_CHOICE_RECORDED', { entity_id: choiceId }, chapter.value?.id)
-}
 function onRubbingSubmit(payload: { choice: string }) {  exploration.track('YUAN_DECISION_SUBMITTED', { entity_id: payload.choice }, chapter.value?.id)
   const map: Record<string, string> = { pending: 'leave_pending', compare: 'compare_neighbours', submit: 'submit_preliminary' }
   game.choose(chapterSlug.value, map[payload.choice] ?? 'leave_pending')
@@ -312,6 +310,10 @@ watch(
       <!-- 工具栏 -->
       <header class="cs__bar">
         <div class="cs__bar-left">
+          <button class="cs__hub-link" type="button" @click="router.push(`/chapter/${slug}`)">
+            <span aria-hidden="true">←</span>
+            <span>返回任务大厅</span>
+          </button>
           <span class="cs__era">{{ chapter.era }}</span>
           <span class="cs__title">{{ chapter.title }}</span>
         </div>
@@ -341,10 +343,6 @@ watch(
             <DsIcon name="nodes" :size="15" />
             <span>关系图谱</span>
           </button>
-          <button v-if="slug === 'yuan'" class="cs__tool" type="button" @click="startFixedDialogue()">
-            <DsIcon name="sparkle" :size="15" />
-            <span>固定剧情对话</span>
-          </button>
           <button v-if="slug === 'yuan'" class="cs__tool" type="button" @click="showRubbing = true">
             <DsIcon name="document" :size="15" />
             <span>拓片比对</span>
@@ -360,7 +358,7 @@ watch(
           :title="meta.gameTitle"
           :role="meta.role"
         />
-        <GameQuestDock :slug="chapterSlug" />
+        <GameQuestDock v-if="!isExploreMode" :slug="chapterSlug" />
         <component
           v-if="chapterComponent"
           :is="chapterComponent"
@@ -412,15 +410,6 @@ watch(
       @close="closeEntity"
     />
     <SourceDrawer />
-    <div v-if="slug === 'yuan' && dialogueOpen" class="cs__dialogue-overlay" role="dialog" aria-label="固定剧情对话">
-      <div class="cs__dialogue-box">
-        <Suspense>
-          <YuanFixedDialogue @done="onDialogueDone" @close="dialogueOpen = false" />
-          <template #fallback><p>剧情加载中……（离线仍可稍后重试，不影响场景状态）</p></template>
-        </Suspense>
-        <button class="cs__guide-btn" type="button" @click="dialogueOpen = false">返回场景（状态保留）</button>
-      </div>
-    </div>
     <div v-if="slug === 'yuan' && showRubbing" class="cs__dialogue-overlay" role="dialog" aria-label="拓片校勘">
       <div class="cs__dialogue-box">
         <Suspense>
@@ -449,7 +438,7 @@ watch(
 
 .game-scene-page { height: 100dvh; overflow: hidden; background: #0c1413; }
 
-/* 元代固定剧情 / 拓片浮层：覆盖但不销毁场景组件，返回后缩放热点透镜保持 */
+/* 元代拓片浮层：覆盖但不销毁场景组件，返回后缩放热点透镜保持 */
 .cs__dialogue-overlay {
   position: fixed;
   inset: 0;
@@ -482,6 +471,8 @@ watch(
   gap: var(--sp-3);
   min-width: 0;
 }
+.cs__hub-link{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid rgba(226,207,169,.17);border-radius:var(--radius-btn);background:rgba(255,255,255,.035);color:rgba(238,229,210,.66);font-size:11px;white-space:nowrap}
+.cs__hub-link:hover,.cs__hub-link:focus-visible{border-color:var(--color-luminous-gold);color:#f5e8c8}
 .cs__era {
   font-family: var(--font-display);
   font-size: var(--fs-h3);

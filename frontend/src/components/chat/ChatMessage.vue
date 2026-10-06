@@ -26,6 +26,10 @@ const isUser = computed(() => props.message.role === 'user')
 /** 回答来源层级标注 */
 const tierInfo = computed(() => {
   switch (props.message.response_tier) {
+    case 'live_rag':
+      return { label: '已联网搜索 · DeepSeek 归纳', warn: false }
+    case 'web_search_fallback':
+      return { label: '已联网搜索 · 未经 DeepSeek 归纳', warn: true }
     case 'faq_fallback':
       return { label: '演示保障模式 · 来自已审核问答库', warn: true }
     case 'local_retrieval':
@@ -91,16 +95,27 @@ const tierInfo = computed(() => {
     <!-- 来源 chips -->
     <div v-if="message.citations?.length" class="msg__cites">
       <span class="msg__cites-label">依据：</span>
-      <button
-        v-for="(c, i) in message.citations"
-        :key="c.source_id + i"
-        class="msg__cite"
-        type="button"
-        @click="emit('source', c.source_id)"
-      >
-        <span class="msg__cite-num">{{ i + 1 }}</span>
-        <span>{{ c.title }}</span>
-      </button>
+      <template v-for="(c, i) in message.citations" :key="c.source_id + i">
+        <a
+          v-if="c.public_url"
+          class="msg__cite"
+          :href="c.public_url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="msg__cite-num">{{ i + 1 }}</span>
+          <span>{{ c.title }}</span>
+        </a>
+        <button
+          v-else
+          class="msg__cite"
+          type="button"
+          @click="emit('source', c.source_id)"
+        >
+          <span class="msg__cite-num">{{ i + 1 }}</span>
+          <span>{{ c.title }}</span>
+        </button>
+      </template>
     </div>
 
     <!-- 继续探索 -->
@@ -245,6 +260,7 @@ const tierInfo = computed(() => {
   border: 1px solid var(--color-border);
   background: var(--color-paper-50);
   color: var(--color-ink-700);
+  text-decoration: none;
   transition:
     border-color var(--dur-fast) var(--ease-standard),
     color var(--dur-fast) var(--ease-standard);

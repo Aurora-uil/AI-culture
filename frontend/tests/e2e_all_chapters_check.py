@@ -49,8 +49,12 @@ def run_chapter(page: Page, slug: str, lens_label: str, selector: str) -> None:
     page.goto(f"{BASE_URL}/chapter/{slug}/intro", wait_until="networkidle")
     page.get_by_role("button", name="接受身份").click()
     page.wait_for_url(f"**/chapter/{slug}")
-    page.get_by_role("button", name="接受身份，进入场景").click()
-    page.wait_for_url(f"**/chapter/{slug}/scene")
+    if slug == "yuan":
+        # 元代完整 12 幕剧情另有专门回归；这里继续覆盖共用场景任务骨架。
+        page.goto(f"{BASE_URL}/chapter/yuan/scene?module=story", wait_until="networkidle")
+    else:
+        page.locator(".briefing__module").nth(2).click()
+    page.wait_for_url(f"**/chapter/{slug}/scene?module=story")
     page.locator(".cs__stage").wait_for()
 
     page.get_by_role("button", name=lens_label).click()
@@ -78,15 +82,21 @@ def run_chapter(page: Page, slug: str, lens_label: str, selector: str) -> None:
     page.locator(".decision__choices button").first.click()
     page.locator(".choice-result").wait_for()
     page.locator(".choice-result").wait_for(state="hidden", timeout=5000)
-    page.get_by_role("button", name="整理本章记录").click()
-    page.wait_for_url(f"**/chapter/{slug}/summary")
-    page.locator(".ending").wait_for()
+    if slug == "yuan":
+        page.get_by_role("button", name="返回任务大厅", exact=True).click()
+        page.wait_for_url("**/chapter/yuan")
+        page.locator(".briefing__modules").wait_for()
+    else:
+        page.get_by_role("button", name="整理本章记录").click()
+        page.wait_for_url(f"**/chapter/{slug}/summary")
+        page.locator(".ending").wait_for()
 
     state = page.evaluate("JSON.parse(localStorage.getItem('tongxin.game.v2'))")
     assert state[slug]["decisionId"], f"{slug}: choice was not persisted"
     assert len(state[slug]["evidenceIds"]) >= 3, f"{slug}: evidence was not persisted"
     assert state[slug]["actions"]["LENS"], f"{slug}: lens action was not persisted"
-    assert state[slug]["completed"], f"{slug}: summary did not complete chapter"
+    if slug != "yuan":
+        assert state[slug]["completed"], f"{slug}: summary did not complete chapter"
     page.screenshot(path=str(SCREENSHOTS / f"v6-{slug}-summary.png"), full_page=True)
     print(slug, "PASS", state[slug]["decisionId"], len(state[slug]["evidenceIds"]))
 

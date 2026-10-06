@@ -26,10 +26,28 @@ const exploration = useExplorationStore()
 const game = useGameStore()
 
 const slug = computed(() => route.params.slug as string)
-const chapter = computed(() => chapterStore.current)
+const chapterId = computed(
+  () => SLUG_TO_ID[slug.value as keyof typeof SLUG_TO_ID] ?? null,
+)
+// 路由切章时 chapterStore 可能短暂保留上一章；此时不渲染旧章聊天面板，
+// 避免上一章消息在新章节加载完成前闪现。
+const chapter = computed(() =>
+  chapterStore.current?.id === chapterId.value ? chapterStore.current : null,
+)
 const contextEntityId = ref<string | null>(null)
 const chat = useChatStore()
 const yuanAiTracked = ref(false)
+const taskHallPath = computed(() => `/chapter/${slug.value}`)
+const backLabel = computed(() => `返回${chapter.value?.era ?? ''}任务大厅`)
+
+const CHAPTER_CHAT_IMAGES: Record<ChapterSlug, string> = {
+  han: '/assets/han/han-route-scene-v2.png',
+  'northern-wei': '/assets/wei/yungang-cave20-original.jpg',
+  tang: '/assets/tang/bunian-original.jpg',
+  yuan: '/assets/yuan/yuntai-east-wall-original.jpg',
+  qing: '/assets/qing/qing-migration-photoreal-v2.png',
+  contemporary: '/assets/contemporary/qiang-workshop-photoreal-v2.png',
+}
 
 /** 元代：第一条 AI 完成回答即记为自由追问完成（只记一次，不读回答内容） */
 watch(
@@ -45,7 +63,7 @@ watch(
 )
 
 onMounted(async () => {
-  const id = SLUG_TO_ID[slug.value as keyof typeof SLUG_TO_ID]
+  const id = chapterId.value
   if (!id) return
   if (chapterStore.current?.id !== id) await chapterStore.loadChapter(id)
   await exploration.ensureSession(id)
@@ -56,10 +74,7 @@ onMounted(async () => {
 })
 
 function backToScene() {
-  void router.push({
-    path: `/chapter/${slug.value}/scene`,
-    query: contextEntityId.value ? { entity: contextEntityId.value } : undefined,
-  })
+  void router.push(taskHallPath.value)
 }
 
 function onSource(sourceId: string) {
@@ -74,7 +89,10 @@ function onExplore(entityId: string) {
 
 const characterImage = computed(() => {
   // 文物角色直接显示文物本身，不给文物画眼睛嘴巴
-  return entityStore.current?.image_url ?? null
+  if (contextEntityId.value && entityStore.current?.id === contextEntityId.value) {
+    return entityStore.current.image_url ?? CHAPTER_CHAT_IMAGES[slug.value as ChapterSlug] ?? null
+  }
+  return CHAPTER_CHAT_IMAGES[slug.value as ChapterSlug] ?? null
 })
 </script>
 
@@ -86,10 +104,10 @@ const characterImage = computed(() => {
       <header class="cc__bar">
         <button class="cc__back" type="button" @click="backToScene">
           <span aria-hidden="true">←</span>
-          <span>返回场景</span>
+          <span>{{ backLabel }}</span>
         </button>
         <span class="cc__hint">
-          回答基于已审核史料检索生成，可点击来源查看依据
+          回答会先联网检索，再结合已审核史料整理，可点击来源查看依据
         </span>
       </header>
 

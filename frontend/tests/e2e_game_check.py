@@ -55,8 +55,7 @@ def main() -> None:
         page.wait_for_timeout(700)
         page.screenshot(path=str(SCREENSHOTS / "v2-yuan-briefing.png"), full_page=True)
 
-        page.get_by_role("button", name="接受身份，进入场景").click()
-        page.wait_for_url("**/chapter/yuan/scene")
+        page.goto(f"{BASE_URL}/chapter/yuan/scene?module=story", wait_until="networkidle")
         page.get_by_text("当前任务", exact=True).wait_for()
         page.wait_for_timeout(700)
         page.screenshot(path=str(SCREENSHOTS / "v5-yuan-scene-flow.png"), full_page=True)

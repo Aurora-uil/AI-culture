@@ -1,16 +1,14 @@
 import { defineStore } from 'pinia'
-import { ref, computed } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import {
   askQuestion,
   createChatSession,
   getCharacters,
   getRecommendedQuestions,
-  regenerateMessage,
 } from '@/api/endpoints'
 import { describeError } from '@/api/client'
 import { useExplorationStore } from './exploration'
 import type {
-  AnswerMode,
   AnswerStatus,
   Character,
   ChatMessage,
@@ -20,6 +18,30 @@ import type {
 
 let seq = 0
 const uid = (p: string) => `${p}_${Date.now().toString(36)}_${(seq++).toString(36)}`
+
+interface ChapterChatState {
+  sessionId: string | null
+  character: Character | null
+  chaptersCharacters: Character[]
+  messages: ChatMessage[]
+  recommended: RecommendedQuestion[]
+  status: AnswerStatus
+  currentEntityId: string | null
+  streaming: boolean
+}
+
+function createChapterChatState(): ChapterChatState {
+  return {
+    sessionId: null,
+    character: null,
+    chaptersCharacters: [],
+    messages: [],
+    recommended: [],
+    status: 'IDLE',
+    currentEntityId: null,
+    streaming: false,
+  }
+}
 
 /**
  * AI 对话。
@@ -33,19 +55,53 @@ const uid = (p: string) => `${p}_${Date.now().toString(36)}_${(seq++).toString(3
 export const useChatStore = defineStore('chat', () => {
   const exploration = useExplorationStore()
 
-  const sessionId = ref<string | null>(null)
-  const character = ref<Character | null>(null)
-  const chaptersCharacters = ref<Character[]>([])
+  const activeChapterId = ref<string | null>(null)
+  const chapterStates = reactive<Record<string, ChapterChatState>>({})
+  const idleState = reactive(createChapterChatState())
+  const controllers = new Map<string, AbortController>()
 
-  const messages = ref<ChatMessage[]>([])
-  const recommended = ref<RecommendedQuestion[]>([])
+  function stateFor(chapterId: string): ChapterChatState {
+    if (!chapterStates[chapterId]) chapterStates[chapterId] = createChapterChatState()
+    return chapterStates[chapterId]
+  }
 
-  const answerMode = ref<AnswerMode>('narrative')
-  const status = ref<AnswerStatus>('IDLE')
-  const currentEntityId = ref<string | null>(null)
-  const streaming = ref(false)
+  const activeState = computed<ChapterChatState>(() => {
+    const chapterId = activeChapterId.value
+    return chapterId ? stateFor(chapterId) : idleState
+  })
 
-  let controller: AbortController | null = null
+  const sessionId = computed({
+    get: () => activeState.value.sessionId,
+    set: (value: string | null) => { activeState.value.sessionId = value },
+  })
+  const character = computed({
+    get: () => activeState.value.character,
+    set: (value: Character | null) => { activeState.value.character = value },
+  })
+  const chaptersCharacters = computed({
+    get: () => activeState.value.chaptersCharacters,
+    set: (value: Character[]) => { activeState.value.chaptersCharacters = value },
+  })
+  const messages = computed({
+    get: () => activeState.value.messages,
+    set: (value: ChatMessage[]) => { activeState.value.messages = value },
+  })
+  const recommended = computed({
+    get: () => activeState.value.recommended,
+    set: (value: RecommendedQuestion[]) => { activeState.value.recommended = value },
+  })
+  const status = computed({
+    get: () => activeState.value.status,
+    set: (value: AnswerStatus) => { activeState.value.status = value },
+  })
+  const currentEntityId = computed({
+    get: () => activeState.value.currentEntityId,
+    set: (value: string | null) => { activeState.value.currentEntityId = value },
+  })
+  const streaming = computed({
+    get: () => activeState.value.streaming,
+    set: (value: boolean) => { activeState.value.streaming = value },
+  })
 
   const isBusy = computed(
     () => streaming.value || ['RETRIEVING', 'GENERATING', 'VALIDATING'].includes(status.value),
@@ -55,7 +111,7 @@ export const useChatStore = defineStore('chat', () => {
   const statusText = computed(() => {
     switch (status.value) {
       case 'RETRIEVING':
-        return '正在查找史料……'
+        return '正在联网检索并查找史料……'
       case 'GENERATING':
         return '正在组织回答……'
       case 'VALIDATING':
@@ -66,38 +122,48 @@ export const useChatStore = defineStore('chat', () => {
   })
 
   async function init(chapterId: string, characterId: string, entityId?: string) {
-    currentEntityId.value = entityId ?? null
+    if (activeChapterId.value && activeChapterId.value !== chapterId) {
+      stop(activeChapterId.value)
+    }
+    activeChapterId.value = chapterId
+    const chapterState = stateFor(chapterId)
+    chapterState.currentEntityId = entityId ?? null
+
     try {
-      chaptersCharacters.value = await getCharacters(chapterId)
-      character.value =
-        chaptersCharacters.value.find((c) => c.id === characterId) ??
-        chaptersCharacters.value[0] ??
+      chapterState.chaptersCharacters = await getCharacters(chapterId)
+      chapterState.character =
+        chapterState.chaptersCharacters.find((c) => c.id === characterId) ??
+        chapterState.chaptersCharacters[0] ??
         null
     } catch {
-      character.value = null
+      chapterState.character = null
     }
 
     try {
-      recommended.value = await getRecommendedQuestions(chapterId, characterId)
+      chapterState.recommended = await getRecommendedQuestions(chapterId, characterId)
     } catch {
-      recommended.value = []
+      chapterState.recommended = []
     }
 
-    if (!sessionId.value) {
+    if (!chapterState.sessionId) {
       try {
         const res = await createChatSession(chapterId, characterId)
-        sessionId.value = res.session_id
+        chapterState.sessionId = res.session_id
       } catch {
-        sessionId.value = null
+        chapterState.sessionId = null
       }
     }
   }
 
   async function ask(question: string, chapterId: string) {
     const q = question.trim()
-    if (!q || isBusy.value) return
+    const chapterState = stateFor(chapterId)
+    const chapterBusy =
+      chapterState.streaming ||
+      ['RETRIEVING', 'GENERATING', 'VALIDATING'].includes(chapterState.status)
+    if (!q || chapterBusy) return
 
-    messages.value.push({
+    chapterState.messages.push({
       id: uid('msg'),
       role: 'user',
       content: q,
@@ -110,40 +176,39 @@ export const useChatStore = defineStore('chat', () => {
       id: assistantId,
       role: 'assistant',
       content: '',
-      answer_mode: answerMode.value,
       status: 'RETRIEVING',
       created_at: new Date().toISOString(),
     }
-    messages.value.push(assistant)
+    chapterState.messages.push(assistant)
 
-    status.value = 'RETRIEVING'
-    streaming.value = true
-    controller = new AbortController()
+    chapterState.status = 'RETRIEVING'
+    chapterState.streaming = true
+    const controller = new AbortController()
+    controllers.set(chapterId, controller)
 
     const patch = (p: Partial<ChatMessage>) => {
-      const i = messages.value.findIndex((m) => m.id === assistantId)
-      if (i >= 0) messages.value[i] = { ...messages.value[i], ...p }
+      const i = chapterState.messages.findIndex((m) => m.id === assistantId)
+      if (i >= 0) chapterState.messages[i] = { ...chapterState.messages[i], ...p }
     }
 
     try {
       await askQuestion(
         {
-          session_id: sessionId.value ?? 'local',
+          session_id: chapterState.sessionId ?? 'local',
           question: q,
-          answer_mode: answerMode.value,
-          current_entity_id: currentEntityId.value ?? undefined,
+          current_entity_id: chapterState.currentEntityId ?? undefined,
         },
         {
           onStatus: (s) => {
             const mapped = s.toUpperCase() as AnswerStatus
-            status.value = mapped
+            chapterState.status = mapped
             patch({ status: mapped })
           },
           onToken: (text) => {
-            const i = messages.value.findIndex((m) => m.id === assistantId)
+            const i = chapterState.messages.findIndex((m) => m.id === assistantId)
             if (i >= 0) {
-              messages.value[i].content += text
-              messages.value[i].status = 'DONE'
+              chapterState.messages[i].content += text
+              chapterState.messages[i].status = 'DONE'
             }
           },
           onFinal: (data) => {
@@ -154,69 +219,77 @@ export const useChatStore = defineStore('chat', () => {
               uncertainty: data.uncertainty ?? 'low',
               status: (data.status as AnswerStatus) ?? 'DONE',
               response_tier: (data.response_tier as ResponseTier) ?? 'live_rag',
-              content: data.answer_markdown || messages.value.find((m) => m.id === assistantId)?.content || '',
+              content:
+                data.answer_markdown ||
+                chapterState.messages.find((m) => m.id === assistantId)?.content ||
+                '',
             })
-            status.value = (data.status as AnswerStatus) ?? 'DONE'
+            chapterState.status = (data.status as AnswerStatus) ?? 'DONE'
           },
           onError: () => {
             patch({
               status: 'MODEL_TIMEOUT',
               content: 'AI讲述暂时没有完成。你可以重试，或先查看相关史料。',
             })
-            status.value = 'MODEL_TIMEOUT'
+            chapterState.status = 'MODEL_TIMEOUT'
           },
         },
         controller.signal,
       )
 
-      exploration.track('CHAT_ASK', { entity_id: currentEntityId.value ?? undefined }, chapterId)
+      exploration.track(
+        'CHAT_ASK',
+        { entity_id: chapterState.currentEntityId ?? undefined },
+        chapterId,
+      )
     } catch (err) {
+      if (controller.signal.aborted) return
       patch({
         status: 'NETWORK_ERROR',
         content: describeError(err),
       })
-      status.value = 'NETWORK_ERROR'
+      chapterState.status = 'NETWORK_ERROR'
     } finally {
-      streaming.value = false
-      controller?.abort()
-      controller = null
+      chapterState.streaming = false
+      if (controllers.get(chapterId) === controller) controllers.delete(chapterId)
     }
   }
 
-  function stop() {
-    controller?.abort()
-    controller = null
-    streaming.value = false
-    status.value = 'DONE'
+  function stop(chapterId = activeChapterId.value) {
+    if (!chapterId) return
+    controllers.get(chapterId)?.abort()
+    controllers.delete(chapterId)
+    const chapterState = stateFor(chapterId)
+    chapterState.streaming = false
+    chapterState.status = 'DONE'
   }
 
   async function regenerate(messageId: string) {
-    const idx = messages.value.findIndex((m) => m.id === messageId)
+    const chapterId = activeChapterId.value
+    if (!chapterId) return
+    const chapterState = stateFor(chapterId)
+    const idx = chapterState.messages.findIndex((m) => m.id === messageId)
     if (idx < 1) return
-    const question = messages.value[idx - 1]?.content
+    const question = chapterState.messages[idx - 1]?.content
     if (!question) return
-    messages.value.splice(idx, 1)
-    messages.value.splice(idx - 1, 1)
-    await ask(question, exploration.currentChapterId ?? '')
+    chapterState.messages.splice(idx, 1)
+    chapterState.messages.splice(idx - 1, 1)
+    await ask(question, chapterId)
   }
 
-  function clear() {
-    messages.value = []
-    sessionId.value = null
-    status.value = 'IDLE'
-  }
-
-  function setMode(mode: AnswerMode) {
-    answerMode.value = mode
+  function clear(chapterId = activeChapterId.value) {
+    if (!chapterId) return
+    stop(chapterId)
+    chapterStates[chapterId] = createChapterChatState()
   }
 
   return {
     sessionId,
+    activeChapterId,
     character,
     chaptersCharacters,
     messages,
     recommended,
-    answerMode,
     status,
     statusText,
     streaming,
@@ -227,6 +300,5 @@ export const useChatStore = defineStore('chat', () => {
     stop,
     regenerate,
     clear,
-    setMode,
   }
 })

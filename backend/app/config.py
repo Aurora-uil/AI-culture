@@ -44,7 +44,7 @@ class Settings(BaseSettings):
     llm_provider: str = "openai_compatible"  # openai_compatible | anthropic | mock
     llm_base_url: str = "https://api.deepseek.com/v1"
     llm_api_key: str = ""
-    llm_model: str = "deepseek-chat"
+    llm_model: str = "deepseek-flash"
     llm_timeout_seconds: int = 30
     llm_max_tokens: int = 1200
 
@@ -68,6 +68,11 @@ class Settings(BaseSettings):
     retrieval_final_k: int = 5
     # 相似度阈值不要跨模型硬编码，应在自己的验证集上标定
     retrieval_min_score: float = 0.18
+
+    # ---------- 免密钥联网检索 ----------
+    web_search_enabled: bool = True
+    web_search_max_results: int = 5
+    web_search_timeout_seconds: int = 8
 
     # ---------- 服务 ----------
     api_port: int = 8000

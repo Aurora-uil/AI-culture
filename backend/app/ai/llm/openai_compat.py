@@ -62,6 +62,18 @@ class OpenAICompatProvider:
             payload["temperature"] = temperature
         if kw.get("json_mode"):
             payload["response_format"] = {"type": "json_object"}
+
+        # DeepSeek Flash currently enables thinking mode by default. Its reasoning
+        # tokens count against max_tokens, so our deliberately small limits for
+        # query rewriting / reranking can otherwise end before any visible content
+        # is produced. These calls need concise structured output, not a hidden
+        # chain of thought, therefore disable thinking explicitly. Keep the flag
+        # vendor-scoped so other OpenAI-compatible providers are unaffected.
+        is_deepseek = "api.deepseek.com" in self.base_url.lower() or str(
+            payload["model"]
+        ).lower().startswith("deepseek-")
+        if is_deepseek:
+            payload["thinking"] = {"type": "disabled"}
         return payload
 
     def _wrap_error(self, exc: Exception) -> Exception:

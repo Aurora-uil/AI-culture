@@ -42,11 +42,12 @@ const emit = defineEmits<{
    ------------------------------------------------------------------ */
 const VB_W = 1600
 const VB_H = 900
+const HOTSPOT_DEBUG_STORAGE_KEY = 'tongxin.yuan.hotspots.debug.v2'
 
 const hotspots = computed<Hotspot[]>(() => {
   const base: Hotspot[] = props.scene?.hotspots ?? []
   try {
-    const raw = localStorage.getItem('tongxin.yuan.hotspots.debug.v1')
+    const raw = localStorage.getItem(HOTSPOT_DEBUG_STORAGE_KEY)
     if (!raw) return base
     const over = JSON.parse(raw) as Record<string, number[][]>
     return base.map((h) => (over[h.id] ? { ...h, normalized_points: over[h.id] } : h))
@@ -123,12 +124,12 @@ function centroidOf(h: Hotspot): { x: number; y: number } {
 /** 券洞石壁上预先标注的题刻 / 造像区域（内容未就绪时用示意位置） */
 const FALLBACK_PANELS: number[][][] = [
   [[0.3, 0.06], [0.7, 0.06], [0.7, 0.17], [0.3, 0.17]],
-  [[0.17, 0.26], [0.28, 0.24], [0.29, 0.37], [0.18, 0.39]],
-  [[0.31, 0.27], [0.41, 0.25], [0.42, 0.39], [0.3, 0.4]],
-  [[0.5, 0.25], [0.6, 0.23], [0.61, 0.36], [0.51, 0.38]],
-  [[0.22, 0.44], [0.33, 0.42], [0.34, 0.55], [0.23, 0.57]],
-  [[0.72, 0.28], [0.83, 0.26], [0.84, 0.39], [0.73, 0.41]],
-  [[0.55, 0.44], [0.66, 0.42], [0.67, 0.56], [0.56, 0.58]],
+  [[0.03, 0.245], [0.97, 0.245], [0.97, 0.36], [0.03, 0.36]],
+  [[0.03, 0.365], [0.97, 0.365], [0.97, 0.5], [0.03, 0.5]],
+  [[0.025, 0.505], [0.245, 0.505], [0.245, 0.925], [0.025, 0.925]],
+  [[0.255, 0.505], [0.48, 0.505], [0.48, 0.925], [0.255, 0.925]],
+  [[0.49, 0.505], [0.735, 0.505], [0.735, 0.925], [0.49, 0.925]],
+  [[0.745, 0.505], [0.975, 0.505], [0.975, 0.925], [0.745, 0.925]],
   [[0.06, 0.44], [0.17, 0.42], [0.18, 0.56], [0.07, 0.58]],
 ]
 
@@ -179,7 +180,7 @@ const debugPointsText = ref('')
 const debugMsg = ref('')
 function debugExport(): string {
   try {
-    return localStorage.getItem('tongxin.yuan.hotspots.debug.v1') ?? '{}'
+    return localStorage.getItem(HOTSPOT_DEBUG_STORAGE_KEY) ?? '{}'
   } catch { return '{}' }
 }
 function debugLoadSelected() {
@@ -191,18 +192,18 @@ function debugLoadSelected() {
 function debugApply() {
   try {
     const pts = JSON.parse(debugPointsText.value)
-    const raw = localStorage.getItem('tongxin.yuan.hotspots.debug.v1')
+    const raw = localStorage.getItem(HOTSPOT_DEBUG_STORAGE_KEY)
     const over = raw ? JSON.parse(raw) : {}
     over[debugHotspotId.value] = pts
-    localStorage.setItem('tongxin.yuan.hotspots.debug.v1', JSON.stringify(over))
+    localStorage.setItem(HOTSPOT_DEBUG_STORAGE_KEY, JSON.stringify(over))
     debugMsg.value = `已暂存 ${debugHotspotId.value} 本地覆盖，导出后请回填 scene.json（标签由内容组确认）`
   } catch { debugMsg.value = '坐标不是合法 JSON（形如 [[0.31,0.27],[0.41,0.25],[0.42,0.39],[0.30,0.40]]）' }
 }
 function debugReset() {
-  try { localStorage.removeItem('tongxin.yuan.hotspots.debug.v1') } catch { /* ignore */ }
+  try { localStorage.removeItem(HOTSPOT_DEBUG_STORAGE_KEY) } catch { /* ignore */ }
   debugMsg.value = '已清除本地覆盖，恢复 scene.json 原坐标'
 }
-const SCRIPT_ORDER = ['script_sanskrit_lantsa','script_tibetan','script_phagspa','script_old_uyghur','script_chinese','script_tangut']
+const SCRIPT_ORDER = ['script_sanskrit_lantsa','script_tibetan','script_phagspa','script_old_uyghur','script_tangut','script_chinese']
 const lensIndex = ref(0)
 const orderedRegions = computed(() => {
   const map = new Map(regions.value.map((r) => [r.h.entity_id, r]))

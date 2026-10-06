@@ -367,8 +367,6 @@ export interface ComparisonGroup {
 
 /* ---------------- AI 对话 ---------------- */
 
-export type AnswerMode = 'narrative' | 'factual'
-
 /** AI 回答状态机（各章 §13） */
 export type AnswerStatus =
   | 'IDLE'
@@ -382,9 +380,14 @@ export type AnswerStatus =
   | 'NETWORK_ERROR'
   | 'RATE_LIMIT'
   | 'FALLBACK_DEMO'
+  | 'FALLBACK_WEB_SEARCH'
 
 /** 回答来源层级 —— 界面必须如实标注，绝不把兜底伪装成实时 AI */
-export type ResponseTier = 'live_rag' | 'local_retrieval' | 'faq_fallback'
+export type ResponseTier =
+  | 'live_rag'
+  | 'local_retrieval'
+  | 'faq_fallback'
+  | 'web_search_fallback'
 
 export interface Citation {
   source_id: string
@@ -399,7 +402,6 @@ export interface ChatMessage {
   id: string
   role: 'user' | 'assistant'
   content: string
-  answer_mode?: AnswerMode
   status: AnswerStatus
   uncertainty?: 'low' | 'medium' | 'high'
   response_tier?: ResponseTier

@@ -37,9 +37,114 @@ const CHAPTER_STAKES: Record<ChapterSlug, string> = {
 const stake = computed(() => CHAPTER_STAKES[slug.value])
 const narration = ref('')
 const narrationOpen = ref(false)
+const yuanStoryScene = ref<number | null>(null)
+const yuanStoryHasSave = ref(false)
+const STORY_VISIT_STORAGE_KEY = 'tongxin.chapter.story.visits.v1'
+const storyVisits = ref<Partial<Record<ChapterSlug, boolean>>>({})
+
+type ChapterModuleKind = 'explore' | 'ai' | 'story'
+
+interface ChapterModuleCopy {
+  id: ChapterModuleKind
+  title: string
+  description: string
+  experience: string
+}
+
+const CHAPTER_MODULE_COPY: Record<ChapterSlug, ChapterModuleCopy[]> = {
+  han: [
+    { id: 'explore', title: '路线与文物探查', description: '查看道路节点、文物线索与路线证据，开启路线证据透镜。', experience: '路线节点 · 文物查验' },
+    { id: 'ai', title: 'AI 助手问答', description: '围绕张骞、交通路线与锦护膊的证据关系自由提问。', experience: '自由提问 · 回答来源' },
+    { id: 'story', title: '展签校勘剧情', description: '进入现有完整任务，核对年代、路线与出土信息并完成展签抉择。', experience: '证据搜集 · 展签校勘' },
+  ],
+  'northern-wei': [
+    { id: 'explore', title: '双城证据探查', description: '对照云冈、龙门与墓志材料，查看不同证据可以支持到哪里。', experience: '双城对照 · 证据查验' },
+    { id: 'ai', title: 'AI 助手问答', description: '围绕迁都、改革、墓志与石窟证据自由提问并查看来源。', experience: '自由提问 · 回答来源' },
+    { id: 'story', title: '墓志展陈剧情', description: '进入现有完整任务，以元羽墓志为主证物完成展签与展陈抉择。', experience: '物证比较 · 展陈抉择' },
+  ],
+  tang: [
+    { id: 'explore', title: '画卷人物探查', description: '展开《步辇图》，查看画内人物、画外事件与图像证据边界。', experience: '画卷热点 · 画外关系' },
+    { id: 'ai', title: 'AI 助手问答', description: '围绕《步辇图》、禄东赞与文成公主相关史实自由提问。', experience: '自由提问 · 回答来源' },
+    { id: 'story', title: '画外来使剧情', description: '进入现有完整任务，校对会见名册并完成画内—画外展签抉择。', experience: '人物搜证 · 展签校对' },
+  ],
+  yuan: [
+    { id: 'explore', title: '六体文字探查', description: '查看文字热点、开启六体文字透镜，并核对实体与来源信息。', experience: '6 类文字热点 · 透镜查验' },
+    { id: 'ai', title: 'AI 助手问答', description: '围绕云台、题刻、文字与人群关系自由提问，查看回答依据。', experience: '自由提问 · 回答来源' },
+    { id: 'story', title: '12 幕证据剧情', description: '进入双校样证据剧场，完成版本校勘、规则分层与档案校验。', experience: '12 幕剧情 · 证据校勘' },
+  ],
+  qing: [
+    { id: 'explore', title: '东归路线探查', description: '沿时间与迁徙路线查验节点，比较不同来源的精度和叙述范围。', experience: '路线节点 · 时间追索' },
+    { id: 'ai', title: 'AI 助手问答', description: '围绕土尔扈特东归、路线、人数与安置记录自由提问。', experience: '自由提问 · 回答来源' },
+    { id: 'story', title: '多声部东归剧情', description: '进入现有完整任务，把图屏、路线和文本放入同一展柜完成抉择。', experience: '迁徙追索 · 展柜策划' },
+  ],
+  contemporary: [
+    { id: 'explore', title: '羌绣知识探查', description: '查看针法、纹样、用途和权利记录，开启来源与权利透镜。', experience: '工坊卡片 · 权利查验' },
+    { id: 'ai', title: 'AI 助手问答', description: '围绕羌绣技艺、生活用途、传承实践与授权边界自由提问。', experience: '自由提问 · 回答来源' },
+    { id: 'story', title: '授权共创剧情', description: '进入现有完整任务，为具体作品建档并完成授权与生成抉择。', experience: '作品建档 · 授权共创' },
+  ],
+}
+
+const chapterModules = computed(() => {
+  const currentSlug = slug.value
+  const state = game.stateFor(currentSlug)
+  const explorationStatus = state.evidenceIds.length >= 3
+    ? '已查验'
+    : state.evidenceIds.length > 0 || state.actions.LENS
+      ? '进行中'
+      : '未开始'
+  const storyStatus = currentSlug === 'yuan'
+    ? state.completed
+      ? '已完成'
+      : yuanStoryHasSave.value && yuanStoryScene.value !== null
+        ? `第 ${yuanStoryScene.value + 1} 幕`
+        : '未开始'
+    : state.completed
+      ? '已完成'
+      : state.decisionId
+        ? '待总结'
+        : storyVisits.value[currentSlug]
+          ? '进行中'
+          : '未开始'
+
+  return CHAPTER_MODULE_COPY[currentSlug].map((module, index) => ({
+    ...module,
+    index: String(index + 1).padStart(2, '0'),
+    status: module.id === 'explore'
+      ? explorationStatus
+      : module.id === 'ai'
+        ? state.actions.CHAT ? '已访问' : '未开始'
+        : storyStatus,
+    path: module.id === 'ai'
+      ? `/chapter/${currentSlug}/chat`
+      : module.id === 'story' && currentSlug === 'yuan'
+        ? '/chapter/yuan/story'
+        : {
+            path: `/chapter/${currentSlug}/scene`,
+            query: { module: module.id },
+          },
+  }))
+})
 
 onMounted(async () => {
   game.bootstrap()
+  try {
+    storyVisits.value = JSON.parse(localStorage.getItem(STORY_VISIT_STORAGE_KEY) ?? '{}')
+  } catch {
+    storyVisits.value = {}
+  }
+  if (slug.value === 'yuan') {
+    try {
+      const raw = localStorage.getItem('tongxin.yuan.story.v6')
+      if (raw) {
+        const saved = JSON.parse(raw) as { sceneIndex?: number }
+        yuanStoryHasSave.value = true
+        yuanStoryScene.value = Math.min(Math.max(saved.sceneIndex ?? 0, 0), 11)
+      }
+    } catch {
+      yuanStoryHasSave.value = false
+      yuanStoryScene.value = null
+    }
+  }
   const id = SLUG_TO_ID[slug.value]
   if (!id) return
   if (chapterStore.current?.id !== id) await chapterStore.loadChapter(id)
@@ -49,9 +154,8 @@ onMounted(async () => {
   catch { narration.value = chapterStore.current?.narration ?? '' }
 })
 
-function startExplore() {
-  game.mark(slug.value, 'ENTER')
-  void router.push(slug.value === 'yuan' ? '/chapter/yuan/story' : `/chapter/${slug.value}/scene`)
+function openModule(path: string | { path: string; query: { module: ChapterModuleKind } }) {
+  void router.push(path)
 }
 
 function goChat() {
@@ -156,15 +260,32 @@ function goGraph() {
           </div>
         </div>
 
-        <div class="briefing__actions">
-          <button class="briefing__start" type="button" @click="startExplore">
-            <span>{{ game.stateFor(slug).started ? '继续任务' : '接受身份，进入场景' }}</span>
-            <i aria-hidden="true">→</i>
-          </button>
-          <button type="button" @click="narrationOpen = !narrationOpen">
-            {{ narrationOpen ? '收起固定讲述' : '先听一段固定讲述' }}
+        <div class="briefing__modules" :aria-label="`${chapter.era}章节板块`">
+          <button
+            v-for="module in chapterModules"
+            :key="module.id"
+            class="briefing__module"
+            type="button"
+            @click="openModule(module.path)"
+          >
+            <span class="briefing__module-head">
+              <i>{{ module.index }}</i>
+              <em class="briefing__module-progress">当前进度 · {{ module.status }}</em>
+            </span>
+            <strong>{{ module.title }}</strong>
+            <p>{{ module.description }}</p>
+            <span class="briefing__module-experience">预计体验 · {{ module.experience }}</span>
+            <span class="briefing__module-enter">进入板块 <b aria-hidden="true">→</b></span>
           </button>
         </div>
+
+        <button
+          class="briefing__narration-toggle"
+          type="button"
+          @click="narrationOpen = !narrationOpen"
+        >
+          {{ narrationOpen ? '收起固定讲述' : '先听一段固定讲述' }}
+        </button>
 
         <Transition name="reveal">
           <div v-if="narrationOpen" class="briefing__narration">
@@ -242,6 +363,19 @@ function goGraph() {
 .briefing__actions button:hover { border-color: #dfc981; color: #f0e7d6; }
 .briefing__start { flex: 1; display: flex; justify-content: space-between; align-items: center; background: color-mix(in srgb, var(--era-accent) 19%, transparent) !important; border-color: color-mix(in srgb, var(--era-accent) 70%, #dfc981) !important; font-family: var(--font-display); font-size: 15px !important; color: #f0e7d6 !important; }
 .briefing__start i { font-style: normal; color: #dfc981; }
+.briefing__modules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.briefing__module{min-width:0;min-height:158px;padding:13px;display:flex;flex-direction:column;gap:8px;text-align:left;border:1px solid rgba(40,95,97,.2);background:linear-gradient(145deg,rgba(255,255,255,.62),rgba(226,238,228,.42));color:var(--color-slate-text);box-shadow:0 8px 22px rgba(42,77,73,.055);transition:transform var(--dur-fast) var(--ease-standard),border-color var(--dur-fast) var(--ease-standard),box-shadow var(--dur-fast) var(--ease-standard)}
+.briefing__module:hover,.briefing__module:focus-visible{transform:translateY(-4px);border-color:color-mix(in srgb,var(--era-accent) 65%,var(--color-scroll-gold));box-shadow:0 16px 32px rgba(42,77,73,.14);outline:none}
+.briefing__module-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.briefing__module-head i{font-style:normal;font-size:10px;letter-spacing:.16em;color:var(--color-scroll-red)}
+.briefing__module-head em{padding:3px 7px;border-radius:999px;background:rgba(40,95,97,.08);font-size:8px;font-style:normal;color:var(--color-mineral-700)}
+.briefing__module>strong{font-family:var(--font-display);font-size:15px;font-weight:500;color:var(--color-mineral-800)}
+.briefing__module>p{font-size:10px;line-height:1.55;color:rgba(41,69,74,.62)}
+.briefing__module-experience{font-size:9px;line-height:1.45;color:rgba(41,69,74,.5)}
+.briefing__module-enter{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:8px;border-top:1px solid rgba(40,95,97,.12);font-size:9px;letter-spacing:.08em;color:var(--color-mineral-700)}
+.briefing__module-enter b{font-size:15px;font-weight:400;color:var(--color-scroll-red)}
+.briefing__narration-toggle{align-self:flex-end;margin-top:10px;padding:4px 0;border:0;background:transparent;color:rgba(41,69,74,.52);font-size:10px}
+.briefing__narration-toggle:hover,.briefing__narration-toggle:focus-visible{color:var(--color-scroll-red)}
 .briefing__narration { margin-top: 14px; padding: 16px; border-left: 2px solid var(--era-accent); background: rgba(255,255,255,.025); }
 .briefing__narration p { font-family: var(--font-display); line-height: 1.8; color: rgba(238,229,210,.68); }
 .briefing__narration small { display: block; margin-top: 9px; color: rgba(238,229,210,.3); }
@@ -267,6 +401,9 @@ function goGraph() {
   .briefing__anchor strong{white-space:normal}
   .briefing__facts { grid-template-columns: 1fr; }
   .briefing__actions, .briefing__footer { flex-direction: column; align-items: stretch; }
+  .briefing__modules { grid-template-columns: 1fr; }
+  .briefing__module { min-height: 0; }
+  .briefing__narration-toggle { align-self: stretch; min-height: 44px; text-align: left; }
 }
 
 /* V3 青绿任务简报：左右双页摊开，桌面端不滚动整页。 */
@@ -315,6 +452,10 @@ function goGraph() {
   .briefing__main{grid-template-columns:minmax(0,62%) minmax(430px,38%)}
   .briefing__stage{padding:44px 54px 38px;border-right:0;color:#fff9e8;box-shadow:18px 0 52px rgba(29,61,57,.18)}
   .briefing__content{position:relative;padding:34px 44px 24px;background:linear-gradient(145deg,rgba(248,250,242,.98),rgba(226,238,228,.96));box-shadow:-16px 0 48px rgba(22,56,53,.14);overflow-y:auto}
+}
+@media (min-width:981px) and (max-width:1240px){
+  .briefing__modules{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .briefing__module{min-height:0}
 }
 .briefing__art{opacity:1;mask-image:none}
 .briefing__art::after{

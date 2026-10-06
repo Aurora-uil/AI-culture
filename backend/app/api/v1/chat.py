@@ -75,12 +75,11 @@ class CreateChatSessionRequest(BaseModel):
 class AskRequest(BaseModel):
     session_id: str
     question: str
-    answer_mode: str = "narrative"
     current_entity_id: str | None = None
 
 
 class RegenerateRequest(BaseModel):
-    answer_mode: str = "narrative"
+    pass
 
 
 class FeedbackRequest(BaseModel):
@@ -176,7 +175,6 @@ async def post_message(payload: AskRequest, db: Session = Depends(get_db)):
         session_id=session_id,
         role="user",
         content=question,
-        answer_mode=payload.answer_mode,
         status="DONE",
     )
 
@@ -190,7 +188,6 @@ async def post_message(payload: AskRequest, db: Session = Depends(get_db)):
                     stream_db,
                     chapter_id=chapter_id,
                     question=question,
-                    answer_mode=payload.answer_mode,
                     character_id=character_id,
                     current_entity_id=payload.current_entity_id,
                 )
@@ -318,11 +315,19 @@ def _persist_answer(
         related_entity_ids=result.related_entity_ids,
     )
 
-    if not result.citations:
+    # 联网搜索来源是本次请求动态生成的 `web:*` 标识，不存在于本地
+    # sources 表；它们已经随 SSE 返回给前端展示，不能再写入带来源外键的
+    # chat_message_citations。这里只持久化本地、可复用的来源引用。
+    persistable_citations = [
+        citation
+        for citation in result.citations
+        if not citation.source_id.startswith("web:")
+    ]
+    if not persistable_citations:
         return message_id
 
     try:
-        for index, citation in enumerate(result.citations):
+        for index, citation in enumerate(persistable_citations):
             db.add(
                 ChatMessageCitation(
                     message_id=message_id,
@@ -369,7 +374,6 @@ async def regenerate(
         db,
         chapter_id=chapter_id,
         question=question,
-        answer_mode=payload.answer_mode or message.answer_mode or "narrative",
         character_id=chat_session.character_id if chat_session else None,
     )
 
@@ -384,7 +388,7 @@ async def regenerate(
         response_tier=result.response_tier,
         message=result.message,
         answer_markdown=result.answer_markdown,
-        answer_mode=payload.answer_mode or "narrative",
+        answer_mode="factual",
     )
 
 

@@ -102,11 +102,11 @@
     "script_tibetan",
     "script_phagspa",
     "script_old_uyghur",
-    "script_chinese",
-    "script_tangut"
+    "script_tangut",
+    "script_chinese"
   ],
-  "script_order_labels": ["梵文书写系统", "藏文", "八思巴文", "回鹘文", "汉文", "西夏文"],
-  "script_order_note": "六体文字的显示顺序按 §9.1 确定为上表次序，与实体 sort_order 1–6 一致。「下一个文字」按钮（BTN-Y04-05）按此顺序循环。script_sanskrit_lantsa 为项目内部临时 ID，显示名待内容组统一规范。",
+  "script_order_labels": ["梵文书写系统", "藏文", "八思巴文", "回鹘文", "西夏文", "汉文"],
+  "script_order_note": "六体文字的空间浏览顺序按东壁真实版式校准：上方梵文、藏文两条横排，下方从左到右为八思巴文、回鹘文、西夏文、汉文。「下一个文字」按钮（BTN-Y04-05）按此顺序循环。script_sanskrit_lantsa 为项目内部临时 ID，显示名待内容组统一规范。",
   "ai_character": {
     "id": "artifact_yuntai",
     "name": "居庸关云台",

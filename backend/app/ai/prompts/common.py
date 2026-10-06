@@ -170,6 +170,8 @@ def build_evidence_block(chunks: list[dict], estimates: list[dict] | None = None
             meta_bits.append(f"等级：{chunk['source_level']}")
         if chunk.get("source_perspective"):
             meta_bits.append(f"视角：{chunk['source_perspective']}")
+        if chunk.get("public_url"):
+            meta_bits.append(f"网址：{chunk['public_url']}")
         if meta_bits:
             lines.append("（" + "；".join(meta_bits) + "）")
         lines.append(str(chunk.get("text") or ""))

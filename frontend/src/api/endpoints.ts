@@ -115,7 +115,6 @@ export const createChatSession = (chapterId: string, characterId: string) =>
 export interface AskPayload {
   session_id: string
   question: string
-  answer_mode: 'narrative' | 'factual'
   current_entity_id?: string
 }
 
@@ -191,11 +190,6 @@ export async function askQuestion(
     throw err
   }
 }
-
-export const regenerateMessage = (messageId: string, answerMode: 'narrative' | 'factual') =>
-  http
-    .post<any>(`/chat/messages/${messageId}/regenerate`, { answer_mode: answerMode })
-    .then((r) => r.data)
 
 export const submitFeedback = (
   messageId: string,

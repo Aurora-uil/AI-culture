@@ -6,7 +6,7 @@
     "background_asset_id": "/assets/yuan/yuntai-east-wall-original.jpg",
     "width": 3072,
     "height": 2304,
-    "disclaimer": "历史遗址实拍图，画面为云台东壁。题刻的实际位置、尺度与相互关系请以现场与文物部门说明为准；当前热点为预标注，正式展示前须按本图逐点复核。",
+    "disclaimer": "历史遗址实拍图，画面为云台东壁。六种文字热点已按东壁真实版式与本图的 16:9 展示裁切校准；框选边界用于交互导览，不代表文物测绘边界。",
     "asset_source": "historical_site_photo",
     "asset_source_url": "https://commons.wikimedia.org/wiki/File:Yuntai_east_wall.jpg",
     "asset_license": "CC BY-SA 3.0",
@@ -28,67 +28,67 @@
       "id": "hs_script_sanskrit_lantsa",
       "entity_id": "script_sanskrit_lantsa",
       "shape": "polygon",
-      "normalized_points": [[0.17, 0.26], [0.28, 0.24], [0.29, 0.37], [0.18, 0.39]],
+      "normalized_points": [[0.03, 0.245], [0.97, 0.245], [0.97, 0.36], [0.03, 0.36]],
       "label": "梵文书写系统",
       "group_key": null,
       "sort_order": 1,
       "review_status": "review",
-      "content_team_todo": "热点坐标为实现方拟定初值，待按最终高清图重新标注。本热点对应的文字显示名（梵文书写系统）为项目内部临时命名，最终名称以内容组统一规范为准。"
+      "content_team_todo": "坐标已按东壁上方第一条横排题刻校准；文字显示名（梵文书写系统）仍以内容组最终规范为准。"
     },
     {
       "id": "hs_script_tibetan",
       "entity_id": "script_tibetan",
       "shape": "polygon",
-      "normalized_points": [[0.31, 0.27], [0.41, 0.25], [0.42, 0.39], [0.30, 0.40]],
+      "normalized_points": [[0.03, 0.365], [0.97, 0.365], [0.97, 0.50], [0.03, 0.50]],
       "label": "藏文",
       "group_key": null,
       "sort_order": 2,
-      "review_status": "approved",
-      "content_team_todo": null
+      "review_status": "review",
+      "content_team_todo": "坐标已按东壁上方第二条横排题刻校准；框选边界保留内容复核状态。"
     },
     {
       "id": "hs_script_phagspa",
       "entity_id": "script_phagspa",
       "shape": "polygon",
-      "normalized_points": [[0.50, 0.25], [0.60, 0.23], [0.61, 0.36], [0.51, 0.38]],
+      "normalized_points": [[0.025, 0.505], [0.245, 0.505], [0.245, 0.925], [0.025, 0.925]],
       "label": "八思巴文",
       "group_key": null,
       "sort_order": 3,
       "review_status": "review",
-      "content_team_todo": "热点坐标为实现方拟定初值，待按最终高清图重新标注。"
+      "content_team_todo": "坐标已按东壁下方最左侧竖排题刻校准；框选边界保留内容复核状态。"
     },
     {
       "id": "hs_script_old_uyghur",
       "entity_id": "script_old_uyghur",
       "shape": "polygon",
-      "normalized_points": [[0.22, 0.44], [0.33, 0.42], [0.34, 0.55], [0.23, 0.57]],
+      "normalized_points": [[0.255, 0.505], [0.48, 0.505], [0.48, 0.925], [0.255, 0.925]],
       "label": "回鹘文",
       "group_key": null,
       "sort_order": 4,
       "review_status": "review",
-      "content_team_todo": "热点坐标为实现方拟定初值，待按最终高清图重新标注。"
+      "content_team_todo": "坐标已按东壁下方左起第二栏竖排题刻校准；框选边界保留内容复核状态。"
     },
     {
       "id": "hs_script_chinese",
       "entity_id": "script_chinese",
       "shape": "polygon",
-      "normalized_points": [[0.72, 0.28], [0.83, 0.26], [0.84, 0.39], [0.73, 0.41]],
+      "normalized_points": [[0.745, 0.505], [0.975, 0.505], [0.975, 0.925], [0.745, 0.925]],
       "label": "汉文",
       "group_key": null,
-      "sort_order": 5,
+      "sort_order": 6,
       "review_status": "review",
-      "content_team_todo": "热点坐标为实现方拟定初值，待按最终高清图重新标注。"
+      "content_team_todo": "坐标已按东壁下方最右侧竖排题刻校准；框选边界保留内容复核状态。"
     },
     {
       "id": "hs_script_tangut",
       "entity_id": "script_tangut",
       "shape": "polygon",
-      "normalized_points": [[0.55, 0.44], [0.66, 0.42], [0.67, 0.56], [0.56, 0.58]],
+      "normalized_points": [[0.49, 0.505], [0.735, 0.505], [0.735, 0.925], [0.49, 0.925]],
       "label": "西夏文",
       "group_key": null,
-      "sort_order": 6,
+      "sort_order": 5,
       "review_status": "review",
-      "content_team_todo": "热点坐标为实现方拟定初值，待按最终高清图重新标注。"
+      "content_team_todo": "坐标已按东壁下方左起第三栏竖排题刻校准；框选边界保留内容复核状态。"
     },
     {
       "id": "hs_concept_buddhist_stone_carving",
@@ -108,10 +108,10 @@
     "hs_script_tibetan",
     "hs_script_phagspa",
     "hs_script_old_uyghur",
-    "hs_script_chinese",
     "hs_script_tangut",
+    "hs_script_chinese",
     "hs_concept_buddhist_stone_carving"
   ],
   "hotspot_states": ["LOCKED", "UNSEEN", "SEEN", "SELECTED"],
-  "content_team_todo": "除 hs_script_tibetan 使用 §8.2 给定坐标外，其余 7 个热点坐标均为实现方按 §8.1 布局与券洞壁面分布拟定的初值，需在最终高清图确定后由内容组与视觉重新标注并逐点确认。确认前，Y02 主场景与 Y03 六体文字透镜中的框选范围仅供示意。"
+  "content_team_todo": "六种文字热点已按云台东壁真实版式与当前 16:9 展示裁切校准：上方依次为梵文、藏文横排，下方从左到右为八思巴文、回鹘文、西夏文、汉文竖排。交互框选边界仍需内容组按文物测绘资料做最终复核；券顶与石雕热点不属于六体文字范围。"
 }

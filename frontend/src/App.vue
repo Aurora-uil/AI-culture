@@ -44,6 +44,7 @@ onMounted(() => {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: clip;
   background: var(--color-bg);
 }
 .app-view {

@@ -116,24 +116,6 @@ const disclaimer = computed(
     <section class="chat__main">
       <header class="chat__toolbar">
         <span class="chat__toolbar-title">与「{{ chat.character?.name || '角色' }}」对话</span>
-        <div class="chat__modes" role="group" aria-label="回答模式">
-          <button
-            class="chat__mode"
-            :class="{ 'is-on': chat.answerMode === 'narrative' }"
-            type="button"
-            @click="chat.setMode('narrative')"
-          >
-            叙事模式
-          </button>
-          <button
-            class="chat__mode"
-            :class="{ 'is-on': chat.answerMode === 'factual' }"
-            type="button"
-            @click="chat.setMode('factual')"
-          >
-            史实模式
-          </button>
-        </div>
       </header>
 
       <div ref="scroller" class="chat__scroll">
@@ -296,31 +278,6 @@ const disclaimer = computed(
 .chat__toolbar-title {
   font-size: var(--fs-body-s);
   color: var(--color-ink-700);
-}
-
-.chat__modes {
-  display: flex;
-  gap: 2px;
-  padding: 2px;
-  border-radius: var(--radius-btn);
-  background: var(--color-paper-200);
-}
-.chat__mode {
-  border: 0;
-  background: transparent;
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-size: var(--fs-caption);
-  color: var(--color-ink-700);
-  transition:
-    background-color var(--dur-fast) var(--ease-standard),
-    color var(--dur-fast) var(--ease-standard);
-}
-.chat__mode.is-on {
-  background: #fff;
-  color: var(--chapter-accent);
-  font-weight: 600;
-  box-shadow: 0 1px 3px rgba(39, 34, 27, 0.08);
 }
 
 .chat__scroll {

@@ -29,6 +29,9 @@ const chosen = computed(() =>
 const resultChoice = computed(() =>
   meta.value.decision.choices.find((choice) => choice.id === resultChoiceId.value),
 )
+const resultActionLabel = computed(() =>
+  props.slug === 'yuan' ? '返回任务大厅' : '整理本章记录',
+)
 
 const DECISION_ART: Record<ChapterSlug, string> = {
   han: '/assets/han/han-route-scene-v2.png',
@@ -52,7 +55,7 @@ function choose(id: string) {
 }
 
 function openSummary() {
-  router.push(`/chapter/${props.slug}/summary`)
+  router.push(props.slug === 'yuan' ? '/chapter/yuan' : `/chapter/${props.slug}/summary`)
 }
 
 onBeforeUnmount(() => {
@@ -120,7 +123,7 @@ onBeforeUnmount(() => {
         <div v-else class="quest__result">
           <span>你留下的选择</span>
           <strong>{{ chosen?.label }}</strong>
-          <button type="button" @click="openSummary">整理本章记录 <span aria-hidden="true">→</span></button>
+          <button type="button" @click="openSummary">{{ resultActionLabel }} <span aria-hidden="true">→</span></button>
         </div>
       </div>
     </Transition>

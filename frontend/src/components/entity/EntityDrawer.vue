@@ -84,6 +84,14 @@ const visualIsOriginal = computed(() => ['northern-wei', 'tang', 'yuan'].include
       <!-- 局部高清图 -->
       <figure v-if="entity.image_url" class="ed__hero">
         <img :src="entity.image_url" :alt="displayName" />
+        <figcaption v-if="entity.extra?.image_caption" class="ed__visual-label ed__visual-label--entity">
+          <DsIcon name="artifact" :size="18" />
+          <span>{{ entity.extra?.image_caption }}</span>
+          <small>
+            {{ entity.extra?.image_credit }}
+            <template v-if="entity.extra?.image_license"> · {{ entity.extra.image_license }}</template>
+          </small>
+        </figcaption>
       </figure>
       <div
         v-else
@@ -162,6 +170,7 @@ const visualIsOriginal = computed(() => ['northern-wei', 'tang', 'yuan'].include
 
 <style scoped>
 .ed__hero {
+  position: relative;
   margin: 0 0 var(--sp-6);
   border-radius: var(--radius-card);
   overflow: hidden;
@@ -172,6 +181,14 @@ const visualIsOriginal = computed(() => ['northern-wei', 'tang', 'yuan'].include
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  display: block;
+}
+.ed__hero:has(.ed__visual-label--entity)::after {
+  content: '';
+  position: absolute;
+  inset: 45% 0 0;
+  background: linear-gradient(180deg, transparent, rgba(21,55,58,.72));
+  pointer-events: none;
 }
 .ed__hero--empty {
   aspect-ratio: 4 / 3;
@@ -208,6 +225,7 @@ const visualIsOriginal = computed(() => ['northern-wei', 'tang', 'yuan'].include
   color: #fffdf5;
   text-shadow: 0 1px 10px rgba(0,0,0,.34);
 }
+.ed__visual-label--entity { z-index: 1; }
 .ed__visual-label svg { grid-row: 1 / 3; }
 .ed__visual-label span { font-family: var(--font-display); font-size: var(--fs-body-s); }
 .ed__visual-label small { font-size: var(--fs-caption); opacity: .76; }

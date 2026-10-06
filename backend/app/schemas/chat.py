@@ -77,7 +77,7 @@ class RegenerateResultOut(FinalEventOut):
     """`POST /chat/messages/{id}/regenerate` 返回体（非流式，直接给完整结果）。"""
 
     answer_markdown: str = ""
-    answer_mode: str = "narrative"
+    answer_mode: str = "factual"
 
 
 class FeedbackOut(BaseModel):
