@@ -26,7 +26,14 @@ function progressOf(slug: ChapterSlug, chapterId: string) {
 }
 
 function routeOf(slug: ChapterSlug) {
-  return game.stateFor(slug).started ? `/chapter/${slug}` : `/chapter/${slug}/intro`
+  return game.stateFor(slug).started ? `/chapter/${slug}/story` : `/chapter/${slug}/intro`
+}
+
+function stateOf(slug: ChapterSlug, chapterId: string) {
+  const progress = Math.round(progressOf(slug, chapterId))
+  if (progress >= 100) return { label: '已封存', action: '重访档案' }
+  if (progress > 0) return { label: `行至 ${progress}%`, action: '继续行旅' }
+  return { label: '未启程', action: '领取身份' }
 }
 </script>
 
@@ -69,16 +76,14 @@ function routeOf(slug: ChapterSlug) {
             <div class="era__top">
               <span class="era__number">{{ String(index + 1).padStart(2, '0') }}</span>
               <span class="era__date">{{ chapter.date_label }}</span>
-              <span class="era__asset-type">
-                {{ originalVisualSlugs.has(chapter.slug) ? '史料原图' : '原创章节视觉' }}
-              </span>
+              <span class="era__asset-type">{{ originalVisualSlugs.has(chapter.slug) ? '史料原图' : '情境重构' }}</span>
               <span v-if="chapter.slug === 'yuan'" class="era__recommend">建议首玩</span>
             </div>
 
             <div class="era__seal" aria-hidden="true">{{ chapter.keyword.slice(0, 1) }}</div>
 
             <div class="era__copy">
-              <p class="era__dynasty">{{ chapter.era }} · {{ chapter.keyword }}</p>
+              <p class="era__dynasty">{{ chapter.era }} · {{ chapter.keyword }} <b>{{ stateOf(chapter.slug, chapter.id).label }}</b></p>
               <h2>{{ GAME_CATALOG[chapter.slug].gameTitle }}</h2>
               <p class="era__role">你将成为：{{ GAME_CATALOG[chapter.slug].role }}</p>
               <p class="era__mission">{{ GAME_CATALOG[chapter.slug].mission }}</p>
@@ -87,7 +92,7 @@ function routeOf(slug: ChapterSlug) {
             <div class="era__foot">
               <span>{{ GAME_CATALOG[chapter.slug].mechanic }}</span>
               <span>{{ GAME_CATALOG[chapter.slug].duration }}</span>
-              <i aria-hidden="true">进入 →</i>
+              <i aria-hidden="true">{{ stateOf(chapter.slug, chapter.id).action }} →</i>
             </div>
             <div class="era__progress" :aria-label="`完成度 ${Math.round(progressOf(chapter.slug, chapter.id))}%`">
               <span :style="{ width: `${progressOf(chapter.slug, chapter.id)}%` }" />
@@ -251,4 +256,21 @@ function routeOf(slug: ChapterSlug) {
 .era--recommended .era__link{background:linear-gradient(145deg,rgba(255,253,241,.74),rgba(234,242,234,.68))}
 .era--recommended .era__recommend{box-shadow:0 0 20px rgba(217,187,115,.18) inset}
 @media(prefers-reduced-motion:reduce){.era,.era__link,.era__copy,.era__seal,.era__foot,.era__foot i{transition-duration:1ms}.era__link:hover,.era__link:focus-visible{transform:none}.archive__journey:has(.era:hover) .era:not(:hover),.archive__journey:has(.era:focus-within) .era:not(:focus-within){opacity:1;transform:none}}
+
+/* V7 档案目录：提高图文反差，优先显示当前游玩状态。 */
+.archive{background:radial-gradient(circle at 50% -10%,rgba(255,255,255,.96),transparent 42%),linear-gradient(145deg,#e9f0e8,#cfdfd5)}
+.archive__main::before{content:'ARCHIVE · 001—006';position:absolute;right:2px;top:16px;font-size:8px;letter-spacing:.22em;color:rgba(33,76,83,.3)}
+.archive__intro h1{letter-spacing:.015em}.archive__status{background:rgba(255,255,255,.28);padding:10px 14px 10px 20px;border-block:1px solid rgba(40,95,97,.12)}
+.era__link{background:rgba(249,250,243,.8);border-color:rgba(40,88,87,.25);box-shadow:0 14px 34px rgba(36,75,70,.1)}
+.era__link::before{opacity:.28;mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.08) 20%,#000 58%);filter:saturate(.82) contrast(1.02)}
+.era__link::after{inset:6px;border-color:color-mix(in srgb,var(--era-accent) 31%,rgba(178,138,69,.35))}
+.era__seal{background:rgba(244,247,237,.72);backdrop-filter:blur(3px);opacity:.72}
+.era__copy{max-width:77%;text-shadow:0 1px rgba(255,255,255,.7)}
+.era__dynasty{display:flex;align-items:center;gap:8px}.era__dynasty b{padding:2px 6px;border-left:2px solid var(--era-accent);background:rgba(255,255,255,.42);font-family:var(--font-ui);font-size:8px;font-weight:600;letter-spacing:.06em;color:rgba(31,66,67,.66)}
+.era h2{font-size:clamp(23px,1.9vw,31px);color:#163f43}.era__role{font-weight:600;color:rgba(30,66,67,.82)}.era__mission{font-size:11px;color:rgba(34,67,67,.65)}
+.era__foot{color:rgba(27,61,63,.6)}.era__foot i{padding:4px 7px;border:1px solid rgba(178,81,61,.26);background:rgba(255,250,241,.54);font-weight:600}
+.era__asset-type{background:rgba(250,250,242,.76);color:rgba(25,62,64,.7)}
+.era__progress{height:3px;background:rgba(39,81,77,.07)}
+@media(min-width:1051px){.era__copy{margin-top:25px}.era__mission{-webkit-line-clamp:3}.archive__intro{padding-bottom:17px}}
+@media(max-width:720px){.era__copy{max-width:82%}.archive__main::before{display:none}}
 </style>

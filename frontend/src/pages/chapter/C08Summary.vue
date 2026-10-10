@@ -7,6 +7,7 @@ import { useExplorationStore } from '@/stores/exploration'
 import { useGameStore } from '@/stores/game'
 import { getEntities } from '@/api/endpoints'
 import type { ChapterSlug, Entity } from '@/types'
+import { FIVE_CHAPTER_STORIES, isStoryChapterSlug } from '@/chapters/story/fiveChapterStories'
 
 const route = useRoute()
 const router = useRouter()
@@ -43,6 +44,41 @@ const EVIDENCE_LABELS: Record<string, string> = {
   script_people_boundary: '文字与人群边界',
   archive_record: '校验后的档案表述',
   decision_chain: '修缮裁决链',
+  han_caption_split: '错误展签拆解',
+  han_chronology_gap: '人物与文物的年代距离',
+  han_dual_route: '人物行程与长期网络',
+  han_niya_context: '尼雅出土语境',
+  han_network_actors: '长期网络中的多类参与者',
+  han_relation_scale: '关系强度刻度',
+  han_caption_draft: '三层展签草案',
+  wei_scope_split: '个案—制度—社会尺度',
+  wei_epitaph_scope: '元羽墓志证据范围',
+  wei_move_process: '493—494迁都过程',
+  wei_grotto_compare: '云冈—龙门策展对照',
+  wei_costume_boundary: '服饰证据边界',
+  wei_evidence_types: '制度文本—图像—实物',
+  wei_change_model: '采用—改造—并存—延续',
+  tang_absent_search: '画中人物名册',
+  tang_outside_chain: '画内—事件—画外关系链',
+  tang_image_boundary: '历史画证据边界',
+  tang_attribution_layers: '作者归属三层证据',
+  tang_cast_boundary: '画内／画外人物',
+  tang_relation_thread: '有来源的画外关系',
+  tang_guide_line: '导览词空位',
+  qing_arrival_ledger: '抵达、接济与虚构个案三层记录',
+  qing_relief_first: '名册受损时的救急原则',
+  qing_route_scopes: '迁徙—觐见—安置三线',
+  qing_number_sources: '历史数字来源口径',
+  qing_motive_plural: '多重历史背景',
+  qing_relief_chain: '食衣—生计—安置接济链',
+  qing_settlement_ledger: '今夜—明春双页接济簿',
+  contemporary_recovery_chain: '灾后羌绣重建关系链',
+  contemporary_many_hands: '支援—生产—协作行动图',
+  contemporary_learning_network: '当代跨地学习网络',
+  contemporary_exchange_kit: '接针共创包结构',
+  contemporary_ai_boundary: 'AI辅助往返边界',
+  contemporary_exchange_protocol: '起针—回应—回信协议',
+  contemporary_pilot_reply: '首组跨地回信档案',
 }
 
 interface YuanStorySummaryState {
@@ -54,8 +90,9 @@ interface YuanStorySummaryState {
 }
 
 const yuanStoryState = ref<YuanStorySummaryState | null>(null)
+const genericRevisionCount = ref(0)
 
-const returnPath = computed(() => slug.value === 'yuan' ? '/chapter/yuan/story' : `/chapter/${slug.value}/scene`)
+const returnPath = computed(() => `/chapter/${slug.value}/story`)
 
 const decision = computed(() =>
   meta.value.decision.choices.find((choice) => choice.id === state.value.decisionId),
@@ -101,6 +138,52 @@ const yuanRoute = computed(() => {
   }
 })
 
+const STORY_ROUTE_SUMMARIES: Partial<Record<ChapterSlug, Record<string, { title: string; summary: string }>>> = {
+  han: {
+    mark_uncertain: { title: '删去直连 · 问题留下', summary: '你删掉了最醒目的传奇，让观众从“为什么仍要并置”开始理解人物事件与长期网络的距离。' },
+    ask_travellers: { title: '长期网络 · 历史变大', summary: '你保留张骞的重要节点，同时让尼雅织锦回到跨越多个世纪、由许多人共同形成的交通网络。' },
+    follow_fast: { title: '并列年代 · 交出判断', summary: '你没有替观众补写直接关系，而是把出使、断代与出土信息并排交给他们核对。' },
+  },
+  'northern-wei': {
+    compare_first: { title: '明确个案 · 范围站稳', summary: '元羽墓志不再替整个北魏发言，却更准确地说明一个具体人物及其制度背景。' },
+    workshop_together: { title: '多证物并列 · 变化分层', summary: '墓志、石窟与陶俑彼此校正，采用、改造、并存与延续得以同时出现。' },
+    keep_family_mark: { title: '个人尺度 · 宏大落地', summary: '展签从姓名、籍贯和姓氏写起，并把墓主之外的社会经验明确留作未知。' },
+  },
+  tang: {
+    state_absence: { title: '明示缺席 · 空白可信', summary: '你明确写出文成公主不在画中，再用来源说明她如何与画外事件相连。' },
+    follow_envoy: { title: '跟随使臣 · 关系出框', summary: '你从画中禄东赞出发，经由会见与事件走向文成公主，没有把画外人物塞回画里。' },
+    keep_multiple_views: { title: '图文并列 · 彼此限定', summary: '图像与文献互相补充，也互相提醒对方不能独自代表全部历史。' },
+  },
+  qing: {
+    record_range: { title: '先救眼前 · 明日续簿', summary: '你让食衣先到达眼前每个人，也把失散复核、牲畜分配与牧地安排明确留作未完责任，没有把第一碗粮写成故事终点。' },
+    record_names: { title: '先留住名字 · 安排补发', summary: '你让归来者参与逐户核名，许多失散者没有从簿上消失；与此同时，等待中的人被写入优先补发清单。' },
+    follow_route: { title: '双页共写 · 把今夜接到明春', summary: '食衣、家口、牲畜、牧地与责任人进入同一条协作链，归来者不再只是领取物资，也成为重建生活的参与者。' },
+  },
+  contemporary: {
+    remove_asset: { title: '先做档案展 · 联系停在发问', summary: '二十四校看见了灾后支援、本地生产、培训和市场如何相接，也留下许多问题；但没有作品返回工坊，本轮尚不能称作共同创作。' },
+    request_review: { title: '先寄问题卡 · 让双方选择', summary: '项目延期一个月，学生先提出关心的问题，创作者再自主选择回应对象；交流不再由平台预先分配，也失去了整齐的首发效果。' },
+    use_authorized: { title: '八组先往返 · 十六校等待', summary: '八份不同的起针片收到八种不同材料的回应，并由原作者再次答复；规模缩小了，但每条连接的两端都有人。' },
+  },
+}
+
+const localStoryRoute = computed(() => {
+  if (slug.value === 'yuan' || !state.value.decisionId) return null
+  return STORY_ROUTE_SUMMARIES[slug.value]?.[state.value.decisionId] ?? null
+})
+
+const storyRecap = computed(() =>
+  isStoryChapterSlug(slug.value) ? FIVE_CHAPTER_STORIES[slug.value].recap : null,
+)
+
+const routeComparison = computed(() => meta.value.decision.choices.map((choice, index) => ({
+  ...choice,
+  index: String(index + 1).padStart(2, '0'),
+  chosen: choice.id === state.value.decisionId,
+  impactLabels: (Object.entries(choice.impact) as Array<[keyof typeof choice.impact, number]>)
+    .filter(([, value]) => !!value)
+    .map(([key, value]) => `${({ truth: '求真', empathy: '共情', connection: '联结' })[key]} +${value}`),
+})))
+
 onMounted(async () => {
   game.bootstrap()
   if (slug.value === 'yuan') {
@@ -108,6 +191,13 @@ onMounted(async () => {
       yuanStoryState.value = JSON.parse(localStorage.getItem('tongxin.yuan.story.v6') ?? 'null')
     } catch {
       yuanStoryState.value = null
+    }
+  } else {
+    try {
+      const saved = JSON.parse(localStorage.getItem(`tongxin.${slug.value}.story.v1`) ?? 'null') as { revisionCount?: number } | null
+      genericRevisionCount.value = saved?.revisionCount ?? 0
+    } catch {
+      genericRevisionCount.value = 0
     }
   }
   const id = SLUG_TO_ID[slug.value]
@@ -126,7 +216,6 @@ onMounted(async () => {
   if (canComplete.value) {
     game.mark(slug.value, 'COMPLETE')
     exploration.track('CHAPTER_COMPLETE', {}, id)
-    if (slug.value === 'yuan') exploration.track('YUAN_CHAPTER_COMPLETED', {}, id)
   }
   loading.value = false
   if (slug.value !== 'yuan') void exploration.buildSummary(id)
@@ -140,10 +229,11 @@ function evidenceLabel(id: string) {
   return EVIDENCE_LABELS[id] ?? id.replaceAll('_', ' ')
 }
 
-function replayYuan() {
-  localStorage.removeItem('tongxin.yuan.story.v6')
-  game.resetChapter('yuan')
-  void router.push('/chapter/yuan/story')
+function replayStory() {
+  if (slug.value === 'yuan') localStorage.removeItem('tongxin.yuan.story.v6')
+  else localStorage.removeItem(`tongxin.${slug.value}.story.v1`)
+  game.resetChapter(slug.value)
+  void router.push(`/chapter/${slug.value}/story`)
 }
 </script>
 
@@ -194,11 +284,54 @@ function replayYuan() {
         <section class="ending__panel ending__summary">
           <p class="ending__label">档案助手整理</p>
           <p v-if="yuanRoute"><strong>{{ yuanRoute.title }}</strong><br />{{ yuanRoute.summary }}<small>终局裁决核验 {{ yuanRoute.attempts }} 次。</small></p>
+          <p v-else-if="localStoryRoute"><strong>{{ localStoryRoute.title }}</strong><br />{{ localStoryRoute.summary }}</p>
           <p v-else-if="exploration.summary">{{ exploration.summary.summary }}</p>
           <p v-else-if="loading || exploration.summaryLoading">正在依据你的实际路径整理记录……</p>
           <p v-else>继续探索后，档案助手只会使用你真正见过的内容生成总结。</p>
         </section>
       </div>
+
+      <section class="ending__routes" aria-labelledby="route-comparison-title">
+        <header>
+          <div>
+            <p class="ending__label">路线复盘</p>
+            <h2 id="route-comparison-title">同一份证据，三种承担方式</h2>
+          </div>
+          <p>只展开你实际走过的后果；其余路线保留为可重玩的选择，不提前剧透结局。</p>
+        </header>
+        <div>
+          <article
+            v-for="routeItem in routeComparison"
+            :key="routeItem.id"
+            :class="{ 'is-chosen': routeItem.chosen }"
+          >
+            <span>{{ routeItem.index }} · {{ routeItem.chosen ? '本次路线' : '未走过' }}</span>
+            <h3>{{ routeItem.label }}</h3>
+            <p>{{ routeItem.chosen ? routeItem.response : routeItem.description }}</p>
+            <dl>
+              <div><dt>优先保护</dt><dd>{{ routeItem.protects }}</dd></div>
+              <div><dt>接受代价</dt><dd>{{ routeItem.cost }}</dd></div>
+            </dl>
+            <footer>
+              <b v-for="impact in routeItem.impactLabels" :key="impact">{{ impact }}</b>
+              <small>{{ routeItem.chosen ? '后果已写入本章记录' : '重开本章可体验完整后果' }}</small>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <section v-if="storyRecap" class="ending__boundaries" aria-labelledby="boundary-recap-title">
+        <header>
+          <p class="ending__label">史实边界复盘</p>
+          <h2 id="boundary-recap-title">故事结束，证据层级仍然保留</h2>
+        </header>
+        <div>
+          <article><span>史料确证</span><p>{{ storyRecap.confirmed }}</p></article>
+          <article><span>研究解释</span><p>{{ storyRecap.interpretation }}</p></article>
+          <article><span>尚未确认</span><p>{{ storyRecap.unknown }}</p></article>
+          <article><span>剧情虚构</span><p>{{ storyRecap.fiction }}</p></article>
+        </div>
+      </section>
 
       <section class="ending__path">
         <p class="ending__label">本次查验</p>
@@ -215,8 +348,10 @@ function replayYuan() {
         </div>
       </section>
 
+      <p v-if="slug !== 'yuan'" class="ending__revision">本章共修订 {{ genericRevisionCount }} 次。修订不计为失败；它记录你如何让判断重新回到证据边界。</p>
+
       <div class="ending__actions">
-        <button v-if="slug === 'yuan'" type="button" @click="replayYuan">重开元代篇 · 尝试另一条路线</button>
+        <button type="button" @click="replayStory">重开本章 · 尝试另一条路线</button>
         <button type="button" @click="router.push('/journey')">查看我的千年史册</button>
         <button
           class="primary"
@@ -244,7 +379,9 @@ function replayYuan() {
 .ending__summary > p:not(.ending__label) { margin-top: 17px; font-family: var(--font-display); line-height: 1.85; color: rgba(237,228,210,.64); }
 .ending__path { padding: 24px 0; border-bottom: 1px solid rgba(226,207,169,.12); }.ending__path > div { display:flex; flex-wrap:wrap; gap: 8px; margin-top: 13px; align-items:center; color: rgba(237,228,210,.3); }.ending__path a,.ending__ids span { font-family: var(--font-display); color: rgba(237,228,210,.62); }.ending__path a:hover { color:#dcc47e; }.ending__ids b { font-weight:400; }
 .ending__actions { display:flex; justify-content:center; gap:10px; margin-top:32px; }.ending__actions button { height:49px; padding:0 19px; border:1px solid rgba(226,207,169,.18); border-radius:0; background:transparent; color:rgba(237,228,210,.56); }.ending__actions button:hover { border-color:#dcc47e; color:#f1e7d4; }.ending__actions .primary { min-width:270px; background:color-mix(in srgb,var(--era-accent) 18%,transparent); border-color:color-mix(in srgb,var(--era-accent) 68%,#dcc47e); color:#f1e7d4; font-family:var(--font-display); }
+.ending__routes{margin-top:34px;padding-top:28px;border-top:1px solid rgba(226,207,169,.14)}.ending__routes>header{display:flex;justify-content:space-between;gap:28px;align-items:end}.ending__routes h2{margin-top:7px;font-family:var(--font-display);font-size:25px;font-weight:500;color:#f1e7d4}.ending__routes>header>p{max-width:390px;font-size:10px;line-height:1.7;color:rgba(237,228,210,.36);text-align:right}.ending__routes>div{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:17px}.ending__routes article{position:relative;min-height:190px;padding:18px;border:1px solid rgba(226,207,169,.12);background:rgba(255,255,255,.015);opacity:.68}.ending__routes article.is-chosen{border-color:color-mix(in srgb,var(--era-accent) 70%,#dcc47e);background:linear-gradient(145deg,color-mix(in srgb,var(--era-accent) 13%,transparent),rgba(255,255,255,.025));opacity:1;box-shadow:0 15px 38px rgba(0,0,0,.16)}.ending__routes article>span{font-size:8px;letter-spacing:.17em;color:rgba(237,228,210,.34)}.ending__routes article.is-chosen>span{color:#dcc47e}.ending__routes h3{margin-top:12px;font-family:var(--font-display);font-size:18px;font-weight:500;color:rgba(241,231,212,.82)}.ending__routes article>p{margin-top:8px;font-size:10px;line-height:1.7;color:rgba(237,228,210,.42)}.ending__routes footer{display:flex;flex-wrap:wrap;gap:5px;margin-top:15px}.ending__routes footer b{padding:3px 6px;border:1px solid rgba(220,196,126,.2);font-size:8px;font-weight:400;color:rgba(220,196,126,.72)}.ending__routes footer small{width:100%;margin-top:5px;font-size:8px;color:rgba(237,228,210,.28)}
 @media (max-width:680px) { .ending__grid { grid-template-columns:1fr; }.ending__nav { grid-template-columns:1fr 1fr; }.ending__nav span { display:none; }.ending__actions { flex-direction:column; } }
+@media(max-width:760px){.ending__routes>header{align-items:start;flex-direction:column}.ending__routes>header>p{text-align:left}.ending__routes>div{grid-template-columns:1fr}.ending__routes article{min-height:0}.ending__routes article:not(.is-chosen){min-height:148px}}
 
 /* V3 青绿结章卷：桌面端一屏完成“结语—信物—路径—下一章”。 */
 .ending{color:var(--color-slate-text);background:radial-gradient(circle at 50% 0,color-mix(in srgb,var(--era-accent) 12%,white),transparent 36%),linear-gradient(145deg,#edf3ea,#d7e6dd)}
@@ -300,4 +437,32 @@ function replayYuan() {
 @keyframes ending-seal{from{opacity:0;transform:rotate(-12deg) scale(.55)}to{opacity:1;transform:rotate(-3deg) scale(1)}}
 @keyframes ending-rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){.ending__seal,.ending__title,.ending__panel{animation:none}.ending__actions button:hover{transform:none}}
+
+/* V8 路线复盘加入后，结章从“一屏奖章”调整为可滚动的通关档案。 */
+.ending__routes{border-top-color:rgba(40,95,97,.16)}
+.ending__routes h2{color:var(--color-mineral-800)}
+.ending__routes>header>p{color:rgba(41,69,74,.56)}
+.ending__routes article{border-color:rgba(40,95,97,.15);background:rgba(248,250,244,.42);opacity:.82}
+.ending__routes article.is-chosen{border-color:color-mix(in srgb,var(--era-accent) 70%,#94753c);background:linear-gradient(145deg,color-mix(in srgb,var(--era-accent) 9%,white),rgba(255,255,255,.46));box-shadow:0 15px 38px rgba(45,81,76,.1)}
+.ending__routes article>span{color:rgba(41,69,74,.47)}
+.ending__routes article.is-chosen>span{color:#9a7333}
+.ending__routes h3{color:var(--color-mineral-800)}
+.ending__routes article>p{color:rgba(41,69,74,.65)}
+.ending__routes dl{display:grid;gap:5px;margin-top:12px;padding-top:10px;border-top:1px solid rgba(40,95,97,.11)}.ending__routes dl>div{display:grid;grid-template-columns:50px 1fr;gap:7px;font-size:8px;line-height:1.45}.ending__routes dt{color:#8d6c31}.ending__routes dd{margin:0;color:rgba(41,69,74,.58)}
+.ending__routes footer b{border-color:rgba(154,115,51,.27);color:#8d6c31;background:rgba(255,255,255,.26)}
+.ending__routes footer small{color:rgba(41,69,74,.43)}
+.ending__revision{margin-top:12px;text-align:center;font-size:9px;color:rgba(41,69,74,.48)}
+.ending__boundaries{margin-top:28px;padding-top:22px;border-top:1px solid rgba(40,95,97,.16)}
+.ending__boundaries>header{display:flex;align-items:end;justify-content:space-between;gap:20px}.ending__boundaries h2{font-family:var(--font-display);font-size:25px;font-weight:500;color:var(--color-mineral-800)}
+.ending__boundaries>div{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:14px}.ending__boundaries article{min-height:132px;padding:15px;border:1px solid rgba(40,95,97,.15);background:rgba(248,250,244,.42)}.ending__boundaries article span{font-size:9px;letter-spacing:.13em;color:#8d6c31}.ending__boundaries article p{margin-top:9px;font-size:10px;line-height:1.75;color:rgba(41,69,74,.66)}
+@media(max-width:760px){.ending__boundaries>header{display:block}.ending__boundaries h2{margin-top:5px;font-size:21px}.ending__boundaries>div{grid-template-columns:1fr 1fr}.ending__boundaries article{min-height:0}}
+@media(min-width:681px){
+  .ending{height:auto;min-height:100dvh;overflow:visible}
+  .ending__main{height:auto;min-height:0;padding:34px 0 52px;display:block}
+  .ending__grid{margin-top:24px;grid-template-rows:none}
+  .ending__panel{min-height:155px;padding:18px 21px}
+  .ending__routes{margin-top:28px}
+  .ending__path{padding:19px 0}
+  .ending__actions{margin-top:22px}
+}
 </style>

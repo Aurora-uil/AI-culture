@@ -10,7 +10,10 @@
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
     "test:artifact-story": "python tests/e2e_artifact_story_check.py",
-    "test:yuan-story": "python tests/e2e_yuan_story_check.py"
+    "test:yuan-story": "python tests/e2e_yuan_story_check.py",
+    "test:five-story": "python tests/e2e_five_story_check.py",
+    "test:ui-audit": "python tests/e2e_ui_audit.py",
+    "test:ui-round3": "python tests/e2e_ui_round3.py"
   },
   "dependencies": {
     "axios": "^1.7.9",

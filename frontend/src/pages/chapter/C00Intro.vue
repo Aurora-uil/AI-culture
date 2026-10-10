@@ -32,19 +32,6 @@ onMounted(async () => {
     exploration.track('CHAPTER_ENTER', {}, id)
   }
 })
-
-function acceptRole() {
-  exploration.track('CHAPTER_ENTER', {}, chapterStore.current?.id)
-  if (slug.value === 'yuan') {
-    exploration.track('YUAN_ROLE_ACCEPTED', {}, chapterStore.current?.id)
-    try {
-      const raw = localStorage.getItem('tongxin.yuan.task.v1')
-      const st = raw ? JSON.parse(raw) : {}
-      localStorage.setItem('tongxin.yuan.task.v1', JSON.stringify({ ...st, roleAccepted: true, phase: 'ROLE_ACCEPTED' }))
-    } catch { /* 本地记录失败不阻断 */ }
-  }
-  router.push(`/chapter/${slug.value}`)
-}
 </script>
 
 <template>
@@ -70,11 +57,16 @@ function acceptRole() {
         <strong>{{ meta.role }}</strong>
         <small>{{ meta.roleNote }}</small>
       </div>
+      <div class="intro__anchor">
+        <span>主证物</span>
+        <strong>{{ meta.storyAnchor.name }}</strong>
+        <em>{{ meta.storyAnchor.statusLabel }}</em>
+      </div>
       <div class="intro__actions">
-        <button type="button" @click="acceptRole">
-          <span>接受身份</span><i aria-hidden="true">→</i>
+        <button type="button" @click="router.push(`/chapter/${slug}`)">
+          <span>进入任务简报</span><i aria-hidden="true">→</i>
         </button>
-        <button type="button" @click="router.push(slug === 'yuan' ? '/chapter/yuan/story' : `/chapter/${slug}/scene`)">跳过任务简报</button>
+        <button type="button" @click="router.push(`/chapter/${slug}/story`)">直接进入剧情</button>
       </div>
     </section>
 
@@ -227,4 +219,11 @@ function acceptRole() {
   .intro__actions button{width:100%}
 }
 @media(prefers-reduced-motion:reduce){.intro__art img{animation:none}}
+
+/* V7 开幕信息卡：把主证物与玩家身份一起交代。 */
+.intro__role{margin-bottom:0;border-bottom-color:rgba(244,221,164,.14)}
+.intro__anchor{width:min(470px,100%);display:grid;grid-template-columns:58px minmax(0,1fr) auto;align-items:center;gap:10px;margin-top:7px;padding:10px 14px;border:1px solid rgba(244,221,164,.24);background:rgba(15,47,45,.58);backdrop-filter:blur(10px);animation:rise .8s .46s both}
+.intro__anchor span{font-size:9px;letter-spacing:.18em;color:rgba(255,246,222,.54)}.intro__anchor strong{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-family:var(--font-display);font-size:13px;font-weight:500;color:#fff5da}.intro__anchor em{padding:3px 6px;border:1px solid rgba(240,205,121,.36);font-size:8px;font-style:normal;letter-spacing:.08em;color:#f1cf7f}
+.intro__actions{margin-top:17px}.intro__actions button:first-child{min-width:245px}
+@media(max-width:760px){.intro__anchor{width:100%}.intro__anchor strong{font-size:12px}}
 </style>

@@ -109,7 +109,7 @@ function methodWidth(value: number) {
 
       <div class="chronicle__layout">
         <section class="ledger" aria-labelledby="ledger-title">
-          <header class="ledger__head"><p>六段人生</p><h2 id="ledger-title">你的章节记录</h2></header>
+          <header class="ledger__head"><p>六份证据责任</p><h2 id="ledger-title">你的章节记录</h2></header>
           <ol class="ledger__list">
             <li
               v-for="record in records"

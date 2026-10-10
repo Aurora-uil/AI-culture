@@ -18,6 +18,12 @@ const chapterRoutes: RouteRecordRaw[] = [
     meta: { chapterKey: 'yuan' },
   },
   {
+    path: '/chapter/:slug/story',
+    name: 'chapter-story',
+    component: () => import('@/chapters/story/ChapterStoryExperience.vue'),
+    meta: { chapterKey: 'dynamic' },
+  },
+  {
     path: '/chapter/:slug',
     name: 'chapter-guide',
     component: () => import('@/pages/chapter/C01Guide.vue'),

@@ -274,10 +274,10 @@ const compLabel = computed(
 
     <main class="co page-body">
       <header class="co__head">
-        <h1 class="co__title">AI文化共创</h1>
+        <p class="co__eyebrow">RIGHTS LEDGER · 09 / CONTEMPORARY</p>
+        <h1 class="co__title">授权共创工作台</h1>
         <p class="co__sub">
-          先理解元素与来源，再参与创作。传统纹样不是被 AI 替代，而是通过 AI
-          辅助理解、保护、再设计与传播。
+          先核对作品、用途与权利，再启动生成。这里记录的不只是结果，也记录谁允许了什么。
         </p>
       </header>
 
@@ -498,8 +498,11 @@ const compLabel = computed(
   gap: var(--sp-5, 20px);
   padding-top: var(--sp-8);
   padding-bottom: var(--sp-12);
-  max-width: 1000px;
+  max-width: 1080px;
 }
+.page{background:radial-gradient(circle at 82% 8%,rgba(195,163,91,.12),transparent 26%),linear-gradient(135deg,#edf2e9,#e4eee7)}
+.co__head{position:relative;padding:0 0 19px 18px;border-left:2px solid var(--chapter-accent);border-bottom:1px solid rgba(40,95,97,.14)}
+.co__eyebrow{margin-bottom:7px;font-size:8px;letter-spacing:.19em;color:var(--color-scroll-gold)}
 
 .co__title {
   font-family: var(--font-display);
@@ -519,15 +522,18 @@ const compLabel = computed(
   list-style: none;
   margin: var(--sp-4) 0 0;
   padding: 0;
-  gap: var(--sp-2);
+  gap: 6px;
+  padding:9px;
+  border:1px solid rgba(40,95,97,.14);
+  background:rgba(249,250,242,.62);
 }
 .co__step {
   flex: 1;
   display: flex;
   align-items: center;
   gap: var(--sp-2);
-  padding-bottom: var(--sp-3);
-  border-bottom: 2px solid var(--color-border);
+  padding:9px 8px;
+  border-bottom: 2px solid rgba(40,95,97,.12);
   font-size: var(--fs-body-s);
   color: var(--color-ink-500);
 }
@@ -571,6 +577,10 @@ const compLabel = computed(
 /* ---------- 内容 ---------- */
 .co__body {
   min-height: 320px;
+  padding:25px;
+  border:1px solid rgba(40,95,97,.16);
+  background:rgba(250,250,243,.76);
+  box-shadow:0 20px 60px rgba(45,76,70,.08),inset 0 0 0 5px rgba(255,255,255,.26);
 }
 .co__h2 {
   font-family: var(--font-display);
@@ -877,4 +887,5 @@ const compLabel = computed(
 .co__foot-right {
   margin-left: auto;
 }
+@media(max-width:700px){.co{padding-top:22px}.co__steps{overflow-x:auto}.co__step{min-width:92px}.co__step-label{font-size:10px}.co__body{padding:17px}.co__result{grid-template-columns:1fr}.co__head{padding-left:13px}.co__sub{line-height:1.7}}
 </style>

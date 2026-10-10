@@ -34,12 +34,16 @@ def continue_story(page: Page) -> None:
     cue.wait_for()
     assert cue.inner_text() in {"点击继续剧情", "点击进入证据剧场"}, "当前调查尚未满足推进条件"
     page.locator(".dialogue-panel").click()
+    page.wait_for_timeout(120)
+    interlude = page.locator('.yuan-interlude')
+    if interlude.is_visible():
+        interlude.get_by_role('button').click()
     page.locator(".scene-transition").wait_for(state="hidden", timeout=2000)
 
 
 def assert_scene(page: Page, scene_id: str, title: str) -> None:
     display_index = str(int(scene_id) + 1).zfill(2)
-    page.get_by_text(f"SCENE {display_index} / 12", exact=True).wait_for()
+    page.get_by_text(f"第 {display_index} 幕", exact=True).wait_for()
     page.locator(".scene-heading").get_by_role("heading", name=title, exact=True).wait_for()
     assert page.locator(".scene-heading span, .scene-heading small").count() == 0
     background = page.locator(".story-backdrop__main").get_attribute("src")
@@ -181,10 +185,10 @@ def main() -> None:
         page.locator(".dialogue-panel").click()
         page.wait_for_url("**/chapter/yuan/summary")
         page.get_by_text("共存之结", exact=True).wait_for()
-        page.get_by_text("有限确认，并保留两份版本", exact=True).wait_for()
+        page.locator(".ending__choice strong").get_by_text("有限确认，并保留两份版本", exact=True).wait_for()
         page.get_by_text("有限确认 · 协作继续", exact=True).wait_for()
         page.get_by_text("旧版可继续复核", exact=False).wait_for()
-        assert page.get_by_role("button", name="重开元代篇 · 尝试另一条路线", exact=True).is_visible()
+        assert page.get_by_role("button", name="重开本章 · 尝试另一条路线", exact=True).is_visible()
 
         assert len(SEEN_FRAMINGS) == 12, f"场景镜头不足: {sorted(SEEN_FRAMINGS)}"
         # 六套底图经过前、中、后景叠加、镜头裁切和色调变化，组成十二种独立构图。

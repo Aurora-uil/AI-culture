@@ -1,12 +1,12 @@
 {
   "scene": {
     "id": "qiang_workbench",
-    "name": "羌绣数字工坊",
+    "name": "接针工坊与回信档案台",
     "scene_kind": "workbench",
     "background_asset_id": null,
     "width": null,
     "height": null,
-    "disclaimer": "本章没有空间场景，也没有热点坐标。所有元素均以知识卡与关系图的形式呈现，不使用视觉识别或 OCR 生成任何标注。",
+    "disclaimer": "本章以知识卡与关系图呈现灾后保护、生产帮扶和当代交流；不根据图像推断针法、纹样寓意或个人经历，也不把短期学习成果冒充传统羌绣。",
     "chapter_id": "contemporary_qiang_embroidery",
     "primary_interaction": "knowledge_cocreation",
     "ai_character_id": "qiang_workshop_narrator",

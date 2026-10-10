@@ -2,6 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { useGameStore } from '@/stores/game'
+import { getSoundEnabled, playGameCue, setSoundEnabled, type GameCue } from '@/game/audio'
 import {
   ARCHIVE_CHECKS,
   CONSTRUCTION_CLUES,
@@ -59,6 +60,7 @@ interface SavedStoryState {
   rainRelations: Record<string, RelationAnswer>
   relationsChecked: boolean
   overlapOffset: number
+  interludesSeen: string[]
 }
 
 const STORAGE_KEY = 'tongxin.yuan.story.v6'
@@ -101,7 +103,10 @@ const archiveStep = ref(0)
 const evidencePage = ref(0)
 const evidenceOpen = ref(false)
 const feedback = ref('')
-const soundEnabled = ref(localStorage.getItem('tongxin.yuan.sound') !== 'off')
+const soundEnabled = ref(getSoundEnabled())
+const largeText = ref(localStorage.getItem('tongxin.reading.largeText') === '1')
+const interludeOpen = ref(false)
+const interludesSeen = ref<string[]>([])
 const transitionKey = ref(0)
 type SceneTransitionPhase = 'idle' | 'cover' | 'reveal'
 const transitionPhase = ref<SceneTransitionPhase>('idle')
@@ -185,6 +190,14 @@ const dialogueComplete = computed(
 )
 const currentLine = computed(() => branchDialogue.value[Math.min(dialogueStep.value, branchDialogue.value.length - 1)])
 const progress = computed(() => Math.round(((sceneIndex.value + 1) / YUAN_STORY_SCENES.length) * 100))
+
+const YUAN_INTERLUDES: Record<number, { eyebrow: string; title: string; summary: string; connection: string; next: string }> = {
+  2: { eyebrow: '第一卷 · 两份校样', title: '都用过，不等于有一份错', summary: '你已经确认两份校样承担过真实工作，也看见了共同施工基准。版本先后仍然未知，不能用整齐故事填上空白。', connection: '两份版本共同证明：不同文字的营造者曾在同一工程中协作，并共享可执行的定位规则。', next: '下一卷：检查被统一的结构' },
+  5: { eyebrow: '第二卷 · 归责链拆解', title: '水痕不能替人认错', summary: '受潮、移动与版本冲突可以发生关联，却不足以证明是谁放错旧稿。两份校样更可能属于不同工作阶段。', connection: '版本差异没有切断协作；它记录了现场如何在调整中继续传递尺度、位置与工序。', next: '下一卷：共同规则与文字边界' },
+  8: { eyebrow: '第三卷 · 现场裁决', title: '行动必须与证据强度相称', summary: '你已分开共同施工规则、文字自身结构与仍然未知的版本关系。接下来，现场决定会在人物之间产生真正后果。', connection: '共同规则使协作成为可能，而保留文字自身结构，才让共存不等于被磨成相同。', next: '下一卷：让决定接受时间检验' },
+}
+
+const currentInterlude = computed(() => YUAN_INTERLUDES[sceneIndex.value] ?? null)
 const activeComparison = computed(() => SAMPLE_COMPARE_ROWS[compareStep.value])
 const activeLayoutControl = computed(() => LAYOUT_CONTROLS[layoutStep.value])
 const activeRainRelation = computed(() => RAIN_RELATIONS[relationStep.value])
@@ -350,6 +363,40 @@ const archiveOptions: { id: ArchiveAnswer; label: string }[] = [
   { id: 'unsupported', label: '不能推出' },
 ]
 
+const showDebugAnswers = import.meta.env.DEV
+const debugAnswer = computed(() => {
+  switch (currentScene.value.id) {
+    case '01':
+      return COMPARISON_OPTIONS.find((option) => option.id === activeComparison.value.answer)?.label ?? ''
+    case '02':
+      return RELAY_STEPS.map((step) => step.label).join(' → ')
+    case '03': {
+      const control = activeLayoutControl.value
+      return control.answer === 'shared' ? control.sharedLabel : control.preserveLabel
+    }
+    case '04':
+      if (relationsChecked.value && rainRelationsCorrect.value) return '阶段判断：记录嫌疑，但暂不归责'
+      return RELATION_OPTIONS.find((option) => option.id === activeRainRelation.value.answer)?.label ?? ''
+    case '05':
+      return '将滑块移至中点 50，使共同定位角重合'
+    case '06':
+      return RULE_GROUPS.find((group) => group.id === activeRuleCard.value.answer)?.label ?? ''
+    case '07':
+      if (knowledgeChecked.value && knowledgeInferencesCorrect.value) return '回应无唯一答案；推荐“不能直接对应”'
+      return PEOPLE_INFERENCE_OPTIONS.find((option) => option.id === activePeopleInference.value.answer)?.label ?? ''
+    case '08': {
+      if (finalDeductionChecked.value && finalDeductionCorrect.value) return '现实裁决无唯一答案；推荐“有限确认，并保留两份版本”'
+      const stage = activeDeductionStage.value
+      return stage.options.find((option) => option.id === stage.answer)?.label ?? ''
+    }
+    case '10':
+      if (archiveCorrect.value) return '推荐：作为版本证据保留'
+      return archiveOptions.find((option) => option.id === activeArchiveCheck.value.answer)?.label ?? ''
+    default:
+      return ''
+  }
+})
+
 const rulesCorrect = computed(() =>
   RULE_CARDS.every((card) => ruleAssignments.value[card.id] === card.answer),
 )
@@ -416,6 +463,7 @@ function save() {
     rainRelations: rainRelations.value,
     relationsChecked: relationsChecked.value,
     overlapOffset: overlapOffset.value,
+    interludesSeen: interludesSeen.value,
   }
   localStorage.setItem(STORAGE_KEY, JSON.stringify(state))
 }
@@ -450,6 +498,7 @@ function restore() {
     rainRelations.value = state.rainRelations ?? {}
     relationsChecked.value = state.relationsChecked ?? false
     overlapOffset.value = state.overlapOffset ?? 20
+    interludesSeen.value = state.interludesSeen ?? []
 
     dialogueStep.value = Math.min(
       Math.max(state.dialogueStep ?? 0, 0),
@@ -492,40 +541,19 @@ function track(event: YuanTelemetryEvent, detail: Record<string, string | number
   }
 }
 
-let audioContext: AudioContext | null = null
-
-function playCue(kind: 'paper' | 'confirm' | 'warning' | 'transition') {
-  if (!soundEnabled.value) return
-  try {
-    audioContext ??= new AudioContext()
-    void audioContext.resume()
-    const oscillator = audioContext.createOscillator()
-    const gain = audioContext.createGain()
-    const now = audioContext.currentTime
-    const cue = {
-      paper: { from: 178, to: 132, duration: 0.055, volume: 0.018, wave: 'triangle' as OscillatorType },
-      confirm: { from: 280, to: 430, duration: 0.12, volume: 0.028, wave: 'sine' as OscillatorType },
-      warning: { from: 150, to: 105, duration: 0.16, volume: 0.024, wave: 'sawtooth' as OscillatorType },
-      transition: { from: 96, to: 164, duration: 0.22, volume: 0.018, wave: 'triangle' as OscillatorType },
-    }[kind]
-    oscillator.type = cue.wave
-    oscillator.frequency.setValueAtTime(cue.from, now)
-    oscillator.frequency.exponentialRampToValueAtTime(cue.to, now + cue.duration)
-    gain.gain.setValueAtTime(0.0001, now)
-    gain.gain.exponentialRampToValueAtTime(cue.volume, now + 0.018)
-    gain.gain.exponentialRampToValueAtTime(0.0001, now + cue.duration)
-    oscillator.connect(gain).connect(audioContext.destination)
-    oscillator.start(now)
-    oscillator.stop(now + cue.duration + 0.01)
-  } catch {
-    // 浏览器不支持或拒绝音频时保持静默。
-  }
+function playCue(kind: GameCue) {
+  playGameCue(kind, soundEnabled.value)
 }
 
 function toggleSound() {
   soundEnabled.value = !soundEnabled.value
-  localStorage.setItem('tongxin.yuan.sound', soundEnabled.value ? 'on' : 'off')
+  setSoundEnabled(soundEnabled.value)
   if (soundEnabled.value) playCue('confirm')
+}
+
+function toggleLargeText() {
+  largeText.value = !largeText.value
+  localStorage.setItem('tongxin.reading.largeText', largeText.value ? '1' : '0')
 }
 
 function inspect(id: string) {
@@ -664,6 +692,17 @@ function advanceFromDialogue() {
     finishChapter()
     return
   }
+  if (currentInterlude.value && !interludesSeen.value.includes(currentScene.value.id)) {
+    interludesSeen.value = [...interludesSeen.value, currentScene.value.id]
+    interludeOpen.value = true
+    playCue('transition')
+    return
+  }
+  nextScene()
+}
+
+function continueFromInterlude() {
+  interludeOpen.value = false
   nextScene()
 }
 
@@ -671,7 +710,8 @@ function onStoryKeydown(event: KeyboardEvent) {
   if (evidenceOpen.value || isTransitioning.value || event.repeat) return
   if (event.key === ' ' || event.key === 'Enter') {
     event.preventDefault()
-    advanceFromDialogue()
+    if (interludeOpen.value) continueFromInterlude()
+    else advanceFromDialogue()
   }
 }
 
@@ -887,11 +927,13 @@ function resetStory() {
   relationStep.value = 0
   archiveStep.value = 0
   evidencePage.value = 0
+  interludesSeen.value = []
+  interludeOpen.value = false
   feedback.value = ''
 }
 
 watch(
-  [sceneIndex, dialogueStep, evidenceIds, inspectedIds, investigationChoice, twistRevealed, ruleAssignments, rulesChecked, knowledgeInferences, knowledgeChecked, knowledgeChoice, finalChoice, finalDeduction, finalDeductionChecked, finalDeductionAttempts, archiveAnswers, keepOldVersion, comparisonAnswers, comparisonChecked, relayOrder, relayChecked, layoutChoices, layoutChecked, rainRelations, relationsChecked, overlapOffset],
+  [sceneIndex, dialogueStep, evidenceIds, inspectedIds, investigationChoice, twistRevealed, ruleAssignments, rulesChecked, knowledgeInferences, knowledgeChecked, knowledgeChoice, finalChoice, finalDeduction, finalDeductionChecked, finalDeductionAttempts, archiveAnswers, keepOldVersion, comparisonAnswers, comparisonChecked, relayOrder, relayChecked, layoutChoices, layoutChecked, rainRelations, relationsChecked, overlapOffset, interludesSeen],
   save,
   { deep: true },
 )
@@ -911,21 +953,22 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="yuan-story" :class="{ 'is-archive': isArchive }">
+  <div class="yuan-story" :class="{ 'is-archive': isArchive, 'is-large-text': largeText }">
     <header class="story-nav">
-      <RouterLink to="/chapter/yuan">← 任务简报</RouterLink>
+      <RouterLink to="/timeline">← 千年行卷</RouterLink>
       <div class="story-brand">
         <span>元代篇 · 证据剧场</span>
         <strong>石壁上的六种声音</strong>
       </div>
       <div class="story-progress" aria-label="章节剧情进度">
-        <span>SCENE {{ String(sceneIndex + 1).padStart(2, '0') }} / {{ YUAN_STORY_SCENES.length }}</span>
-        <i><b :style="{ width: `${progress}%` }" /></i>
-        <em>{{ progress }}%</em>
+        <div><span>第 {{ String(sceneIndex + 1).padStart(2, '0') }} 幕</span><em>{{ currentScene.title }}</em></div>
+        <ol aria-hidden="true"><li v-for="(scene, index) in YUAN_STORY_SCENES" :key="scene.id" :class="{ 'is-current': index === sceneIndex, 'is-done': index < sceneIndex }" /></ol>
+        <b>{{ progress }}%</b>
       </div>
       <div class="story-nav-actions">
-        <button type="button" :aria-label="soundEnabled ? '关闭音效' : '开启音效'" :title="soundEnabled ? '关闭音效' : '开启音效'" @click="toggleSound">{{ soundEnabled ? '声' : '静' }}</button>
-        <button type="button" @click="toggleEvidence">证据卷 · {{ evidenceIds.length }}</button>
+        <button type="button" :aria-pressed="largeText" @click="toggleLargeText">{{ largeText ? '标准字' : '大字' }}</button>
+        <button type="button" :aria-label="soundEnabled ? '关闭音效' : '开启音效'" :title="soundEnabled ? '关闭音效' : '开启音效'" @click="toggleSound">{{ soundEnabled ? '音效开' : '音效关' }}</button>
+        <button type="button" @click="toggleEvidence">证据卷 <b>{{ evidenceIds.length }}</b></button>
       </div>
     </header>
 
@@ -974,7 +1017,7 @@ onBeforeUnmount(() => {
           <template v-else-if="currentScene.id === '01'">
             <div class="case-table compare-game">
               <header class="game-head">
-                <div><span>证据台 01 · 双稿对读</span><strong>逐项观察，最后一次性提交推断</strong></div>
+                <div><span>证据台 01 · 双稿对读</span><strong>逐项观察，最后一次性提交推断</strong><small v-if="showDebugAnswers && debugAnswer" class="debug-answer">调试答案：{{ debugAnswer }}</small></div>
                 <em>{{ Object.keys(comparisonAnswers).length }} / {{ SAMPLE_COMPARE_ROWS.length }}</em>
               </header>
               <nav class="case-tabs" aria-label="双稿观察项目">
@@ -1011,7 +1054,7 @@ onBeforeUnmount(() => {
           <template v-else-if="currentScene.id === '02'">
             <div class="case-table relay-game">
               <header class="game-head">
-                <div><span>证据台 02 · 工序接力</span><strong>让同一条定位信号穿过四个工种</strong></div>
+                <div><span>证据台 02 · 工序接力</span><strong>让同一条定位信号穿过四个工种</strong><small v-if="showDebugAnswers && debugAnswer" class="debug-answer">调试答案：{{ debugAnswer }}</small></div>
                 <em>{{ relayOrder.length }} / {{ RELAY_STEPS.length }}</em>
               </header>
               <div class="relay-signal" :style="{ '--relay-progress': `${relayOrder.length * 25}%` }"><i /><span>定位信号</span><b>{{ relayChecked && relayCorrect ? '链路稳定' : '等待闭合' }}</b></div>
@@ -1041,7 +1084,7 @@ onBeforeUnmount(() => {
           <template v-else-if="currentScene.id === '03'">
             <div class="case-table layout-game">
               <header class="game-head">
-                <div><span>证据台 03 · 版面校准</span><strong>每动一个参数，都观察结构是否被改写</strong></div>
+                <div><span>证据台 03 · 版面校准</span><strong>每动一个参数，都观察结构是否被改写</strong><small v-if="showDebugAnswers && debugAnswer" class="debug-answer">调试答案：{{ debugAnswer }}</small></div>
                 <em>{{ Object.keys(layoutChoices).length }} / {{ LAYOUT_CONTROLS.length }}</em>
               </header>
               <nav class="case-tabs layout-tabs" aria-label="版面校准项目">
@@ -1083,7 +1126,7 @@ onBeforeUnmount(() => {
           <template v-else-if="currentScene.id === '04'">
             <div class="case-table relation-game">
               <header class="game-head">
-                <div><span>证据台 04 · 关系链审查</span><strong>给每条因果线标注强度，再决定是否归责</strong></div>
+                <div><span>证据台 04 · 关系链审查</span><strong>给每条因果线标注强度，再决定是否归责</strong><small v-if="showDebugAnswers && debugAnswer" class="debug-answer">调试答案：{{ debugAnswer }}</small></div>
                 <em>{{ Object.keys(rainRelations).length }} / {{ RAIN_RELATIONS.length }}</em>
               </header>
               <nav class="case-tabs relation-tabs" aria-label="关系链节点">
@@ -1124,7 +1167,7 @@ onBeforeUnmount(() => {
           <template v-else-if="currentScene.id === '05'">
             <div class="case-table overlap-game">
               <header class="game-head">
-                <div><span>证据台 05 · 双稿叠合</span><strong>借助透光台寻找共同定位角，而不是对齐所有内容</strong></div>
+                <div><span>证据台 05 · 双稿叠合</span><strong>借助透光台寻找共同定位角，而不是对齐所有内容</strong><small v-if="showDebugAnswers && debugAnswer" class="debug-answer">调试答案：{{ debugAnswer }}</small></div>
                 <em>{{ twistRevealed ? '已锁定' : `吻合 ${alignmentAccuracy}%` }}</em>
               </header>
               <div class="overlap-board" :class="{ solved: twistRevealed }">
@@ -1147,7 +1190,7 @@ onBeforeUnmount(() => {
           <template v-else-if="currentScene.id === '06'">
             <div class="case-table rule-game">
               <header class="game-head">
-                <div><span>证据台 06 · 规则权限矩阵</span><strong>给每条规则划定权限，最后统一核验</strong></div>
+                <div><span>证据台 06 · 规则权限矩阵</span><strong>给每条规则划定权限，最后统一核验</strong><small v-if="showDebugAnswers && debugAnswer" class="debug-answer">调试答案：{{ debugAnswer }}</small></div>
                 <em>{{ Object.keys(ruleAssignments).length }} / {{ RULE_CARDS.length }}</em>
               </header>
               <nav class="case-tabs rule-tabs" aria-label="规则权限项目">
@@ -1175,7 +1218,7 @@ onBeforeUnmount(() => {
           <template v-else-if="currentScene.id === '07'">
             <div class="case-table people-game">
               <header class="game-head">
-                <div><span>证据台 07 · 人群推断边界</span><strong>{{ knowledgeChecked && knowledgeInferencesCorrect ? '用自己的话回应陈砺' : '判断每句话离证据还有多远' }}</strong></div>
+                <div><span>证据台 07 · 人群推断边界</span><strong>{{ knowledgeChecked && knowledgeInferencesCorrect ? '用自己的话回应陈砺' : '判断每句话离证据还有多远' }}</strong><small v-if="showDebugAnswers && debugAnswer" class="debug-answer">调试答案：{{ debugAnswer }}</small></div>
                 <em>{{ knowledgeChecked && knowledgeInferencesCorrect ? '边界成立' : `${Object.keys(knowledgeInferences).length} / ${PEOPLE_INFERENCES.length}` }}</em>
               </header>
               <template v-if="!knowledgeChecked || !knowledgeInferencesCorrect">
@@ -1212,7 +1255,7 @@ onBeforeUnmount(() => {
           <template v-else-if="currentScene.id === '08'">
             <div class="case-table final-deduction">
               <header class="game-head">
-                <div><span>终局推演 · 修缮裁决卷</span><strong>{{ finalDeductionCorrect && finalDeductionChecked ? '选择要承担的现实代价' : '用已查验证据组成一条可执行结论' }}</strong></div>
+                <div><span>终局推演 · 修缮裁决卷</span><strong>{{ finalDeductionCorrect && finalDeductionChecked ? '选择要承担的现实代价' : '用已查验证据组成一条可执行结论' }}</strong><small v-if="showDebugAnswers && debugAnswer" class="debug-answer">调试答案：{{ debugAnswer }}</small></div>
                 <em>{{ finalDeductionChecked && finalDeductionCorrect ? '裁决成立' : `${Object.keys(finalDeduction).length} / 3` }}</em>
               </header>
 
@@ -1270,6 +1313,7 @@ onBeforeUnmount(() => {
               <div class="draft-warning">
                 <span>AI 草稿校验</span>
                 <strong>发现未经支持的一一对应关系</strong>
+                <small v-if="showDebugAnswers && debugAnswer" class="debug-answer">调试答案：{{ debugAnswer }}</small>
               </div>
               <nav v-if="!archiveCorrect" class="case-tabs archive-tabs" aria-label="档案校验项目">
                 <button v-for="(check, index) in ARCHIVE_CHECKS" :key="check.id" :class="{ active: archiveStep === index, done: archiveAnswers[check.id] }" type="button" @click="archiveStep = index">
@@ -1317,6 +1361,7 @@ onBeforeUnmount(() => {
           <span :key="`${currentScene.id}-${dialogueStep}`" class="dialogue-text">{{ currentLine.text }}</span>
         </Transition>
         <span class="dialogue-cue">
+          <kbd>Enter</kbd>
           <span>{{ advanceHint }}</span>
           <i :class="{ paused: dialogueComplete && !canAdvance }">◆</i>
         </span>
@@ -1359,6 +1404,17 @@ onBeforeUnmount(() => {
       <span>{{ isArchive ? '历史遗址照片用于当代档案情境' : '剧情场景美术 · 非史实照片或精确建筑复原' }}</span>
       <span>不展示未经专家校对的古文字字形</span>
     </footer>
+
+    <div v-if="interludeOpen && currentInterlude" class="yuan-interlude" role="dialog" aria-modal="true" aria-label="阶段小结">
+      <section>
+        <span>{{ currentInterlude.eyebrow }}</span>
+        <h2>{{ currentInterlude.title }}</h2>
+        <p>{{ currentInterlude.summary }}</p>
+        <aside><span>仍可确认的联系</span><p>{{ currentInterlude.connection }}</p></aside>
+        <div class="yuan-interlude__ledger"><b>{{ evidenceIds.length }}</b><small>条现场证据已归入云台校勘卷</small></div>
+        <button type="button" @click="continueFromInterlude">{{ currentInterlude.next }} <i>→</i></button>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -1378,6 +1434,7 @@ button{font:inherit}.story-nav{height:66px;display:grid;grid-template-columns:15
 .version-overlap{text-align:center}.version-overlap button{width:min(420px,100%);text-align:center}.version-overlap p{margin-top:15px;color:#efc777;font-family:var(--font-display)}
 .case-table{--game-line:rgba(217,187,115,.2);--game-paper:rgba(243,230,196,.075);display:grid;gap:10px;color:#eee6d5}
 .game-head{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:0 2px 11px;border-bottom:1px solid var(--game-line)}.game-head span{display:block;font-size:9px;letter-spacing:.18em;color:#d8b96f}.game-head strong{display:block;margin-top:4px;font-family:var(--font-display);font-size:17px;font-weight:500}.game-head em{min-width:60px;padding:6px 9px;border:1px solid rgba(217,187,115,.26);color:#ddc17d;font-size:10px;font-style:normal;text-align:center}.game-resolution{padding:9px 12px;border-left:3px solid #78aa91;background:rgba(87,144,114,.13);color:#bfe0ce;font-family:var(--font-display);font-size:12px;line-height:1.5}
+.debug-answer{display:block;margin-top:4px;font-size:8px;line-height:1.45;font-weight:500;letter-spacing:.03em;color:#90c9b0}.draft-warning .debug-answer{margin-top:6px;color:#9fd1bb}
 .compare-row{display:grid;grid-template-columns:78px minmax(0,1fr) minmax(0,1fr) 250px;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06)}.compare-row>strong{font-family:var(--font-display);font-weight:500;color:#efd18a}.compare-row>p{min-height:40px;display:flex;align-items:center;gap:8px;padding:7px 9px;background:var(--game-paper);font-size:10px;color:rgba(238,230,213,.68)}.compare-row>p i{width:19px;height:19px;display:grid;place-items:center;flex:none;border:1px solid rgba(217,187,115,.32);color:#d8b96f;font-style:normal}.compare-row>div{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}.compare-row button,.layout-controls button,.relation-row button{min-height:34px;border:1px solid rgba(255,255,255,.13);background:transparent;color:rgba(238,230,213,.56);font-size:9px}.compare-row button:hover,.layout-controls button:hover,.relation-row button:hover{border-color:#d8b96f;color:#fff}.compare-row button.selected,.layout-controls button.selected,.relation-row button.selected{border-color:#c79555;background:rgba(199,149,85,.12);color:#fff}.compare-row button.correct,.layout-controls button.correct,.relation-row button.correct{border-color:#78aa91;background:rgba(87,144,114,.18);color:#c9e6d6}.compare-row button.wrong{border-color:#b45d4a;background:rgba(180,93,74,.14);color:#efbaa9}
 .relay-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.relay-slots button{position:relative;min-height:72px;padding:10px;border:1px dashed rgba(217,187,115,.24);background:rgba(0,0,0,.15);color:rgba(238,230,213,.42);text-align:left}.relay-slots button::after{content:'›';position:absolute;right:-7px;top:50%;z-index:2;transform:translateY(-50%);color:#d8b96f}.relay-slots button:last-child::after{display:none}.relay-slots button.filled{border-style:solid;background:rgba(217,187,115,.08);color:#eee6d5}.relay-slots button.wrong{border-color:#b45d4a;background:rgba(180,93,74,.12)}.relay-slots span{display:block;font-size:9px;color:#d8b96f}.relay-slots strong{display:block;margin-top:4px;font-family:var(--font-display);font-size:12px;font-weight:500}.relay-slots small{display:block;margin-top:4px;font-size:8px;color:rgba(238,230,213,.34)}.relay-pool{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}.relay-pool button{display:grid;grid-template-columns:30px 1fr;gap:9px;align-items:center;padding:8px 10px;border:1px solid rgba(255,255,255,.11);background:var(--game-paper);color:#eee6d5;text-align:left}.relay-pool button:hover:not(:disabled){border-color:#d8b96f}.relay-pool button:disabled{opacity:.28}.relay-pool i{width:28px;height:28px;display:grid;place-items:center;border:1px solid rgba(217,187,115,.3);font-family:var(--font-display);font-style:normal;color:#d8b96f}.relay-pool strong,.relay-pool small{display:block}.relay-pool strong{font-family:var(--font-display);font-size:11px;font-weight:500}.relay-pool small{margin-top:2px;font-size:8px;color:rgba(238,230,213,.42)}.game-confirm{justify-self:end;min-width:150px;padding:9px 16px;border:1px solid rgba(217,187,115,.5);background:rgba(217,187,115,.11);color:#f1dfb1}.game-confirm:hover:not(:disabled){background:rgba(217,187,115,.2)}.game-confirm:disabled{opacity:.34}
 .layout-game{grid-template-columns:310px 1fr}.layout-game .game-head,.layout-game .game-resolution{grid-column:1/-1}.layout-preview{position:relative;min-height:205px;overflow:hidden;border:1px solid rgba(217,187,115,.2);background:linear-gradient(145deg,rgba(228,211,173,.14),rgba(71,88,76,.08))}.layout-preview::before,.layout-preview::after{content:'';position:absolute;top:23px;bottom:34px;width:1px;background:rgba(217,187,115,.24)}.layout-preview::before{left:50%}.layout-preview::after{left:12%;opacity:.45}.layout-frame{position:absolute;top:34px;width:112px;height:124px;padding:14px;border:1px solid rgba(217,187,115,.42);transition:transform .32s ease,border-color .25s ease}.frame-a{left:24px}.frame-b{right:24px}.outer-shared .frame-a{transform:translateX(21px)}.outer-shared .frame-b{transform:translateX(-21px)}.layout-frame i{display:block;width:70%;height:8px;margin:8px 0;background:#ac8f58;opacity:.62;transition:width .32s ease,margin .32s ease,transform .32s ease}.layout-frame i:nth-child(even){width:42%;margin-left:28%}.frame-b i{transform:rotate(90deg);transform-origin:left center;margin-left:44%;margin-bottom:13px}.spacing-shared .layout-frame i{width:88%;margin-left:0}.flow-shared .frame-b i{transform:none;margin:8px 0}.layout-preview>span{position:absolute;left:0;right:0;bottom:9px;text-align:center;font-size:8px;letter-spacing:.1em;color:rgba(238,230,213,.34)}.layout-controls{display:grid;gap:7px}.layout-controls>div{display:grid;grid-template-columns:95px 1fr 1fr;gap:6px;align-items:center;padding:7px;border-bottom:1px solid rgba(255,255,255,.06)}.layout-controls strong{font-family:var(--font-display);font-size:12px;font-weight:500;color:#efd18a}
@@ -1564,4 +1621,17 @@ button{font:inherit}.story-nav{height:66px;display:grid;grid-template-columns:15
   .phase-cover .transition-sheet--left,.phase-cover .transition-sheet--right,.phase-reveal .transition-sheet--left,.phase-reveal .transition-sheet--right{animation:none;transform:translate3d(0,0,0)}
   .phase-cover .transition-title,.phase-reveal .transition-title{animation:none}.phase-reveal.scene-transition{opacity:0;transition:opacity .12s linear}
 }
+
+/* V7.1 统一商业化外壳：十二幕脊线、全局阅读模式、拓印式阶段小结。 */
+.story-nav{grid-template-columns:126px minmax(190px,.8fr) minmax(390px,1.7fr) 286px;gap:16px;padding:0 22px;background:linear-gradient(90deg,#0a1917,#112622);box-shadow:0 10px 30px rgba(0,0,0,.22)}
+.story-brand{flex-direction:column;align-items:flex-start;gap:1px}.story-brand strong{font-size:17px}.story-brand span{font-size:8px}
+.story-progress{display:grid;grid-template-columns:108px minmax(180px,1fr) 32px;align-items:center;gap:11px}.story-progress>div{display:flex;flex-direction:column;min-width:0}.story-progress>div span{font-size:8px;color:#d9bb73}.story-progress>div em{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-family:var(--font-display);font-size:11px;font-style:normal;letter-spacing:.04em;color:rgba(255,248,230,.72)}.story-progress ol{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;list-style:none;margin:0;padding:0}.story-progress li{height:5px;background:rgba(255,255,255,.09);transform:skewX(-14deg);transition:background-color .25s ease,transform .25s ease}.story-progress li.is-done{background:linear-gradient(90deg,#4d98a9,#9ab7a6)}.story-progress li.is-current{background:#efd083;transform:skewX(-14deg) scaleY(1.65);box-shadow:0 0 12px rgba(217,187,115,.42)}.story-progress>b{display:block;height:auto;background:none;font-size:9px;font-weight:500;color:rgba(255,244,215,.54)}
+.story-nav-actions{display:grid;grid-template-columns:58px 68px 1fr;gap:6px}.story-nav-actions button,.story-nav-actions button:first-child{width:auto;min-height:39px;padding:0 8px;border:1px solid rgba(221,191,123,.2);border-radius:0;background:rgba(255,255,255,.02);font-size:9px;letter-spacing:.06em;color:rgba(238,226,200,.58)}.story-nav-actions button:hover,.story-nav-actions button[aria-pressed='true']{border-color:rgba(221,191,123,.62);color:#f4d68d}.story-nav-actions button:last-child{color:#e5c77f}.story-nav-actions button:last-child b{display:inline-grid;place-items:center;min-width:20px;height:20px;margin-left:5px;border-radius:50%;background:#4d98a9;color:#fff;font-size:8px}
+.workbench::before{content:'RUBBING DESK / 云台校勘台';position:absolute;z-index:2;right:17px;top:8px;font-size:7px;letter-spacing:.15em;color:rgba(217,187,115,.34);pointer-events:none}.speaker-portrait.is-working{opacity:.17;filter:blur(1px) grayscale(.45)}
+.dialogue-cue{display:flex;align-items:center;gap:7px}.dialogue-cue kbd{padding:2px 5px;border:1px solid rgba(255,255,255,.16);border-radius:2px;background:rgba(255,255,255,.04);font:7px/1 var(--font-ui);color:rgba(255,255,255,.5)}.is-large-text .dialogue-text{font-size:clamp(20px,1.75vw,24px);line-height:1.82}.is-large-text .dialogue-panel{min-height:155px}.is-large-text .workbench{font-size:1.05em}
+.yuan-interlude{position:fixed;z-index:80;inset:0;display:grid;place-items:center;padding:24px;background:rgba(3,13,12,.89);backdrop-filter:blur(15px);animation:yuan-interlude-in .35s ease both}.yuan-interlude::before{content:'';position:absolute;inset:12%;border-block:1px solid rgba(217,187,115,.28);pointer-events:none}.yuan-interlude section{position:relative;width:min(700px,92vw);padding:49px 58px 42px;border:1px solid rgba(217,187,115,.68);background:linear-gradient(145deg,#172925,#0d1b19);box-shadow:0 35px 120px rgba(0,0,0,.7),inset 0 0 0 7px rgba(255,255,255,.025);text-align:center}.yuan-interlude section::before{content:'拓';position:absolute;right:24px;top:21px;width:40px;height:40px;display:grid;place-items:center;border:1px solid rgba(77,152,169,.44);font-family:var(--font-display);font-size:21px;color:rgba(123,189,198,.62);transform:rotate(3deg)}.yuan-interlude section>span{font-size:9px;font-weight:650;letter-spacing:.18em;color:#82bdc6}.yuan-interlude h2{margin-top:13px;font-family:var(--font-display);font-size:35px;font-weight:500;color:#f2e6ca}.yuan-interlude p{max-width:555px;margin:17px auto 0;font-family:var(--font-display);font-size:15px;line-height:1.82;color:rgba(238,230,213,.72)}.yuan-interlude__ledger{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:21px}.yuan-interlude__ledger b{font-family:var(--font-display);font-size:30px;font-weight:500;color:#d9bb73}.yuan-interlude__ledger small{max-width:150px;text-align:left;font-size:9px;line-height:1.45;color:rgba(238,230,213,.45)}.yuan-interlude button{min-width:300px;min-height:48px;margin-top:23px;padding:0 18px;border:1px solid rgba(217,187,115,.62);background:linear-gradient(90deg,#305e5c,#397067);color:#fff4dc;font-family:var(--font-display);font-size:13px}.yuan-interlude button:hover{border-color:#efd083;background:linear-gradient(90deg,#39706c,#477d70)}.yuan-interlude button i{margin-left:13px;font-style:normal;color:#efd083}@keyframes yuan-interlude-in{from{opacity:0}to{opacity:1}}
+.yuan-interlude section>aside{max-width:565px;margin:15px auto 0;padding:10px 13px;border:1px solid rgba(123,189,198,.16);background:rgba(123,189,198,.055);text-align:left}.yuan-interlude section>aside span{font-size:8px;letter-spacing:.16em;color:#82bdc6}.yuan-interlude section>aside p{margin-top:5px;font-family:var(--font-ui);font-size:10px;line-height:1.65;color:rgba(238,230,213,.64)}
+@media(max-width:1100px){.story-nav{grid-template-columns:108px 160px minmax(300px,1fr) 242px;gap:9px;padding:0 14px}.story-progress{grid-template-columns:88px 1fr 28px}.story-nav-actions{grid-template-columns:52px 62px 1fr}}
+@media(max-width:900px){.story-nav{grid-template-columns:64px 1fr auto}.story-brand{display:none}.story-progress{display:grid;grid-template-columns:70px minmax(120px,1fr)}.story-progress>b{display:none}.story-nav-actions{grid-template-columns:40px 40px 48px;gap:3px}.story-nav-actions button,.story-nav-actions button:first-child{min-height:40px;padding:0 3px;font-size:8px}.story-nav-actions button:nth-child(2){font-size:0}.story-nav-actions button:nth-child(2)::before{content:'音';font-size:9px}.story-nav-actions button:last-child{font-size:0}.story-nav-actions button:last-child::before{content:'证据';font-size:8px}.story-nav-actions button:last-child b{display:none}.dialogue-cue kbd{display:none}}
+@media(max-width:520px){.story-progress{grid-template-columns:55px minmax(90px,1fr);gap:5px}.story-progress>div em{display:none}.story-progress ol{gap:2px}.yuan-interlude{padding:14px}.yuan-interlude section{padding:40px 23px 31px}.yuan-interlude section::before{right:14px;top:13px;width:32px;height:32px;font-size:17px}.yuan-interlude h2{font-size:27px}.yuan-interlude p{font-size:14px}.yuan-interlude button{width:100%;min-width:0;font-size:12px}}
 </style>

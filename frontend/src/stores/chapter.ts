@@ -9,7 +9,7 @@ const FALLBACK_CHAPTERS: Chapter[] = [
   { id: 'tang_exchange', slug: 'tang', era: '唐代', keyword: '交流', title: '从《步辇图》走进画外历史', date_label: '618—907', guiding_question: '一位使臣背后连接着怎样的人物与事件？', accent: '#9B3D35', primary_interaction: 'scroll_relation', ai_character_id: 'artifact_bunian_tu', core_entity_ids: ['artifact_bunian_tu', 'person_emperor_taizong', 'person_ludongzan', 'person_princess_wencheng'], sort_order: 3 },
   { id: 'yuan_yuntai', slug: 'yuan', era: '元代', keyword: '共存', title: '居庸关云台', date_label: '1271—1368', guiding_question: '为什么多种文字会同时出现在一座建筑上？', accent: '#2C6F89', primary_interaction: 'script_lens', ai_character_id: 'artifact_yuntai', core_entity_ids: ['artifact_yuntai', 'inscription_six_scripts'], sort_order: 4 },
   { id: 'qing_return', slug: 'qing', era: '清代', keyword: '归属', title: '土尔扈特东归', date_label: '1636—1912', guiding_question: '一件宫廷纪念物能记录东归的哪些面向，又遗漏了哪些声音？', accent: '#7A513B', primary_interaction: 'migration_timeline', ai_character_id: 'person_ubashi', core_entity_ids: ['person_ubashi', 'group_torghut', 'event_torghut_return_1771', 'region_ili', 'artifact_wanfa_guiyi_screen'], sort_order: 5 },
-  { id: 'contemporary_qiang_embroidery', slug: 'contemporary', era: '当代', keyword: '传承', title: '羌绣数字工坊', date_label: '1949年至今', guiding_question: '一件羌绣作品进入数字共创前，谁有权决定它如何被使用？', accent: '#B64D43', primary_interaction: 'knowledge_cocreation', ai_character_id: 'qiang_workshop_narrator', core_entity_ids: ['ich_qiang_embroidery', 'technique_tiaohua', 'institution_wenchuan_cultural_center'], sort_order: 6 },
+  { id: 'contemporary_qiang_embroidery', slug: 'contemporary', era: '当代', keyword: '传承', title: '一针之后，二十四封回信', date_label: '1949年至今', guiding_question: '一门具体民族技艺，怎样进入各民族共同参与的当代生活，又不被做成同一种风格？', accent: '#B64D43', primary_interaction: 'knowledge_cocreation', ai_character_id: 'qiang_workshop_narrator', core_entity_ids: ['ich_qiang_embroidery', 'technique_tiaohua', 'institution_wenchuan_cultural_center'], sort_order: 6 },
 ]
 
 const FALLBACK_YUAN_SCENE: Scene = {
@@ -20,15 +20,15 @@ const FALLBACK_YUAN_SCENE: Scene = {
   background_asset_id: '/assets/yuan/yuntai-east-wall-original.jpg',
   width: 3072,
   height: 2304,
-  disclaimer: '历史遗址实拍图，画面为云台东壁。六种文字热点已按东壁真实版式与本图的 16:9 展示裁切校准；框选边界用于交互导览，不代表文物测绘边界。',
+  disclaimer: '历史遗址实拍图，画面为云台东壁。内置演示坐标仅用于表现题刻的相对位置，正式展示须按本图重新审核标注。',
   hotspots: [
     { id: 'hs_artifact_yuntai', entity_id: 'artifact_yuntai', shape: 'polygon', normalized_points: [[0.30,0.06],[0.70,0.06],[0.70,0.17],[0.30,0.17]], label: '券顶', sort_order: 0 },
-    { id: 'hs_script_sanskrit_lantsa', entity_id: 'script_sanskrit_lantsa', shape: 'polygon', normalized_points: [[0.03,0.245],[0.97,0.245],[0.97,0.36],[0.03,0.36]], label: '梵文书写系统', sort_order: 1 },
-    { id: 'hs_script_tibetan', entity_id: 'script_tibetan', shape: 'polygon', normalized_points: [[0.03,0.365],[0.97,0.365],[0.97,0.50],[0.03,0.50]], label: '藏文', sort_order: 2 },
-    { id: 'hs_script_phagspa', entity_id: 'script_phagspa', shape: 'polygon', normalized_points: [[0.025,0.505],[0.245,0.505],[0.245,0.925],[0.025,0.925]], label: '八思巴文', sort_order: 3 },
-    { id: 'hs_script_old_uyghur', entity_id: 'script_old_uyghur', shape: 'polygon', normalized_points: [[0.255,0.505],[0.48,0.505],[0.48,0.925],[0.255,0.925]], label: '回鹘文', sort_order: 4 },
-    { id: 'hs_script_tangut', entity_id: 'script_tangut', shape: 'polygon', normalized_points: [[0.49,0.505],[0.735,0.505],[0.735,0.925],[0.49,0.925]], label: '西夏文', sort_order: 5 },
-    { id: 'hs_script_chinese', entity_id: 'script_chinese', shape: 'polygon', normalized_points: [[0.745,0.505],[0.975,0.505],[0.975,0.925],[0.745,0.925]], label: '汉文', sort_order: 6 },
+    { id: 'hs_script_sanskrit_lantsa', entity_id: 'script_sanskrit_lantsa', shape: 'polygon', normalized_points: [[0.17,0.26],[0.28,0.24],[0.29,0.37],[0.18,0.39]], label: '梵文书写系统', sort_order: 1 },
+    { id: 'hs_script_tibetan', entity_id: 'script_tibetan', shape: 'polygon', normalized_points: [[0.31,0.27],[0.41,0.25],[0.42,0.39],[0.30,0.40]], label: '藏文', sort_order: 2 },
+    { id: 'hs_script_phagspa', entity_id: 'script_phagspa', shape: 'polygon', normalized_points: [[0.50,0.25],[0.60,0.23],[0.61,0.36],[0.51,0.38]], label: '八思巴文', sort_order: 3 },
+    { id: 'hs_script_old_uyghur', entity_id: 'script_old_uyghur', shape: 'polygon', normalized_points: [[0.22,0.44],[0.33,0.42],[0.34,0.55],[0.23,0.57]], label: '回鹘文', sort_order: 4 },
+    { id: 'hs_script_chinese', entity_id: 'script_chinese', shape: 'polygon', normalized_points: [[0.72,0.28],[0.83,0.26],[0.84,0.39],[0.73,0.41]], label: '汉文', sort_order: 5 },
+    { id: 'hs_script_tangut', entity_id: 'script_tangut', shape: 'polygon', normalized_points: [[0.55,0.44],[0.66,0.42],[0.67,0.56],[0.56,0.58]], label: '西夏文', sort_order: 6 },
     { id: 'hs_concept_buddhist_stone_carving', entity_id: 'concept_buddhist_stone_carving', shape: 'polygon', normalized_points: [[0.06,0.44],[0.17,0.42],[0.18,0.56],[0.07,0.58]], label: '石雕', sort_order: 7 },
   ],
 }
@@ -129,10 +129,10 @@ const FALLBACK_QING_SCENE = {
 const FALLBACK_CONTEMPORARY_SCENE: Scene = {
   id: 'qiang_workbench',
   chapter_id: 'contemporary_qiang_embroidery',
-  name: '羌绣数字工坊',
+  name: '接针工坊与回信档案台',
   scene_kind: 'workbench',
   background_asset_id: '/assets/contemporary/qiang-workshop-v1.png',
-  disclaimer: '本章以知识卡与关系图呈现，不使用视觉识别或 OCR 推断针法、纹样名称或文化寓意。只有明确完成权利审核的项目自绘元素可进入共创。',
+  disclaimer: '本章以知识卡与关系图呈现灾后保护、生产帮扶和当代交流；不根据图像推断针法、纹样寓意或个人经历，也不把短期学习成果冒充传统羌绣。',
   hotspots: [],
 }
 

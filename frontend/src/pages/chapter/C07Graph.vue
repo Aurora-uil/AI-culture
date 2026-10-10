@@ -59,7 +59,6 @@ onMounted(async () => {
   if (chapterStore.current?.id !== id) await chapterStore.loadChapter(id)
   await exploration.ensureSession(id)
   game.mark(slug.value as ChapterSlug, 'GRAPH')
-  if (slug.value === 'yuan') exploration.track('YUAN_GRAPH_OPENED', {}, id)
 
   if (centerId.value) {
     try {
@@ -93,9 +92,6 @@ async function onNodeSelect(id: string) {
   graphStore.selectNode(id)
   if (selectedEdge.value) {
     await graphStore.loadEvidence(selectedEdge.value.id, chapter.value?.id)
-    if (slug.value === 'yuan') {
-      exploration.track('YUAN_RELATION_EVIDENCE_VIEWED', { relation_id: selectedEdge.value.id }, chapter.value?.id)
-    }
   }
   void router.replace({ query: { ...route.query, entity: id } })
 }
@@ -115,11 +111,11 @@ async function openDetail(id: string) {
 
     <main class="cg page-body">
       <header class="cg__bar">
-        <button class="cg__back" type="button" @click="backToScene">
-          <span aria-hidden="true">←</span>
-          <span>返回场景</span>
-        </button>
-        <span class="cg__hint">点击节点查看关系，双击展开一层</span>
+        <div class="cg__identity">
+          <span>RELATION ARCHIVE · 07</span>
+          <strong>关系证据图</strong>
+        </div>
+        <span class="cg__hint">每条连线都应能回答：为什么存在这条关系？</span>
         <div class="cg__tools">
           <button
             class="cg__tool"
@@ -129,6 +125,9 @@ async function openDetail(id: string) {
           >
             <DsIcon name="compass" :size="14" />
             <span>仅看我的节点</span>
+          </button>
+          <button class="cg__tool" type="button" @click="backToScene">
+            <span>← 返回场景</span>
           </button>
           <button class="cg__tool" type="button" @click="graphStore.reset(centerId)">
             <DsIcon name="refresh" :size="14" />
@@ -197,8 +196,8 @@ async function openDetail(id: string) {
   display: flex;
   flex-direction: column;
   gap: var(--sp-4);
-  padding-top: var(--sp-4);
-  padding-bottom: var(--sp-4);
+  padding-top: 18px;
+  padding-bottom: 18px;
   height: calc(100vh - var(--header-h));
   min-height: 0;
 }
@@ -208,7 +207,11 @@ async function openDetail(id: string) {
   display: flex;
   align-items: center;
   gap: var(--sp-4);
+  min-height:54px;
+  padding:0 2px 13px;
+  border-bottom:1px solid rgba(40,95,97,.14);
 }
+.cg__identity{display:flex;align-items:baseline;gap:13px;flex:none}.cg__identity span{font-size:8px;letter-spacing:.17em;color:var(--color-scroll-gold)}.cg__identity strong{font-family:var(--font-display);font-size:22px;font-weight:500;color:var(--color-mineral-800)}
 .cg__back {
   display: inline-flex;
   align-items: center;
@@ -267,6 +270,8 @@ async function openDetail(id: string) {
   border-radius: var(--radius-card);
   overflow: hidden;
   min-height: 0;
+  background:rgba(248,248,239,.74);
+  box-shadow:0 18px 55px rgba(45,76,70,.08),inset 0 0 0 5px rgba(255,255,255,.24);
 }
 
 .cg__state {
@@ -287,9 +292,11 @@ async function openDetail(id: string) {
   padding: var(--sp-6);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-card);
-  background: var(--color-paper-50);
+  background: rgba(247,247,237,.88);
+  box-shadow:0 18px 55px rgba(45,76,70,.07);
   overflow-y: auto;
 }
+.page{background:radial-gradient(circle at 84% 0,rgba(195,163,91,.1),transparent 28%),linear-gradient(135deg,#edf2e9,#e2ece5)}
 .cg__node-type {
   font-size: var(--fs-caption);
   color: var(--color-ink-500);
@@ -326,4 +333,5 @@ async function openDetail(id: string) {
     grid-template-columns: 1fr;
   }
 }
+@media(max-width:760px){.cg__identity span,.cg__hint{display:none}.cg__identity strong{font-size:18px}.cg__tools{gap:4px}.cg__tool{padding:6px 7px;font-size:9px}.cg__layout{gap:10px}}
 </style>

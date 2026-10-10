@@ -104,10 +104,10 @@
     "id": "contemporary_qiang_embroidery",
     "era": "当代",
     "keyword": "传承",
-    "title": "羌绣数字工坊",
+    "title": "一针之后，二十四封回信",
     "date_label": "1949年至今",
-    "guiding_question": "一件羌绣作品进入数字共创前，谁有权决定它如何被使用？",
-    "display_question": "如何在理解作品、尊重创作者与明确授权之后参与数字共创？",
+    "guiding_question": "一门具体民族技艺，怎样进入各民族共同参与的当代生活，又不被做成同一种风格？",
+    "display_question": "从灾后共同重建到今天的跨地回信，不同民族、地区和职业的人如何在保留差异的同时彼此连接？",
     "accent": "#B64D43",
     "primary_interaction": "knowledge_cocreation",
     "ai_character_id": "qiang_workshop_narrator",
@@ -116,7 +116,7 @@
       "technique_tiaohua",
       "institution_wenchuan_cultural_center"
     ],
-    "narration": "羌族刺绣是国家级非物质文化遗产代表性项目，常见针法包括架花（挑花）、织字、纳花、撇花、勾花等，题材多取花草蔬果、飞禽走兽与人物。今天，数字化建档、非遗工坊、学校课程与文创开发，都是这项技艺在当代继续发展的一部分。",
+    "narration": "羌族刺绣是国家级非物质文化遗产代表性项目。汶川地震后，非遗保护、技能培训、就业帮扶、生产销售与地方参与共同支撑这门技艺恢复并进入新的生活网络。今天，跨县培训、学校教育、市场协作与数字记录让更多地区和民族的参与者彼此学习；共同参与不等于抹平作者、技艺与生活经验的差异。",
     "sort_order": 6
   }
 ]

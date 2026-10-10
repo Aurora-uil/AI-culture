@@ -32,6 +32,12 @@ Thumbs.db
 *.log
 npm-debug.log*
 
-# ���� GitHub ���ļ���С����
-�ο�ԭʼ����/culture.zip
-culture.zip
+# 本地交付包与大型归档（仓库保留解包后的有序源码和文档）
+同心千年_项目交付包_*/
+同心千年_项目优化交接包_*/
+*.zip
+*.zip.sha256
+
+# 自动化测试临时报告
+test-results/
+playwright-report/
