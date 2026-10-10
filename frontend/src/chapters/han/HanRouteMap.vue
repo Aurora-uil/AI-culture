@@ -850,4 +850,13 @@ function svgPos(n: { x: number; y: number }) {
     stroke-dashoffset: 0;
   }
 }
+/* 队员二：390×844 移动端适配 —— 地图在上、说明在下，不出现横向溢出 */
+@media (max-width: 900px) {
+  .han { flex-direction: column; }
+  .han__side { width: 100%; flex: none; }
+  .han__map { aspect-ratio: 1000 / 560; }
+  .han__tools { flex-wrap: wrap; }
+  .han__tool { min-height: 44px; }
+  .han__act { min-height: 44px; }
+}
 </style>

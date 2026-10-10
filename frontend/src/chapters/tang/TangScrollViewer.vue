@@ -1046,4 +1046,11 @@ const groundLines = computed(() => {
     width: 272px;
   }
 }
+/* 队员二：390×844适配 */
+@media (max-width: 900px) {
+  .tang__body { flex-direction: column; }
+  .tang__rel { width: 100%; max-height: 300px; }
+  .tang__hint { display: none; }
+  .tang__tool { min-height: 44px; }
+}
 </style>

@@ -792,4 +792,13 @@ function onCard(id: string) {
     padding: var(--sp-4);
   }
 }
+/* 队员二：390×844适配 —— 四宫格改单列 */
+@media (max-width: 900px) {
+  .wk__grid { grid-template-columns: 1fr; }
+  .wk__tab, .wk__chip { min-height: 44px; }
+  .wk__cards { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .wk__cards { grid-template-columns: 1fr; }
+}
 </style>

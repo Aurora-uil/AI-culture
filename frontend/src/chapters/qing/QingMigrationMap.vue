@@ -1140,4 +1140,10 @@ const scopeNote = computed(() => {
     gap: var(--sp-6);
   }
 }
+/* 队员二：390×844适配 —— 地图在上、侧栏在下 */
+@media (max-width: 900px) {
+  .qm { grid-template-columns: 1fr; }
+  .qm__side { max-height: none; }
+  .qm__scope, .qm__card-link { min-height: 44px; }
+}
 </style>

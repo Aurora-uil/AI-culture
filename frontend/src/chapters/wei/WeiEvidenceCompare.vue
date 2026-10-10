@@ -1105,4 +1105,12 @@ const uid = Math.random().toString(36).slice(2, 9)
 .wei__foot-flag {
   color: var(--evidence-disputed);
 }
+/* 队员二：390×844 适配 —— 双屏改单列，触屏点击区≥44px */
+@media (max-width: 900px) {
+  .wei__panes { flex-direction: column; min-height: 0; }
+  .wei__pane { min-height: 420px; }
+  .wei__cards { position: static; max-height: 320px; }
+  .wei__stage { position: relative; top: 0; height: 260px; margin-top: 38px; }
+  .wei__cat, .wei__act { min-height: 44px; }
+}
 </style>
